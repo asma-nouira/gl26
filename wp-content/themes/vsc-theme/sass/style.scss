@@ -80,14 +80,15 @@ body::-webkit-scrollbar-thumb {
 
 .cd-deco-tooth {
     position: absolute !important;
-    top: 50%;
-    right: -30px;
+    top: 0;
+    right: -60px;
     transform: translateY(-50%);
     z-index: 0;
     pointer-events: none;
 
     .vce-single-image-figure-inner {
-        width: 320px !important;
+        width: 287px !important;
+		height: auto;
     }
 
     img {
