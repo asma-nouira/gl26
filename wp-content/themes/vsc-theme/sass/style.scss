@@ -346,7 +346,7 @@ body::-webkit-scrollbar-thumb {
 .cd-title-service {
     font-family: 'SuperBlue', serif;
     font-weight: 400;
-    color: #242424;
+    color: #625756;
     text-align: center;
     margin: 0 0 16px 0;
     padding: 0;
@@ -354,16 +354,17 @@ body::-webkit-scrollbar-thumb {
     /* H2 — titre de section */
     h2 {
         font-size: 2.8rem;
-        line-height: 1.2;
+        line-height: 1.1111;
         margin-bottom: 16px;
+		max-width: 513px;
     }
 
     /* H3 — titre de carte */
     h3 {
-        font-size: 1.5rem;
-        line-height: 1.25;
+        font-size: 2.18rem;
+        line-height: 1.14;
         text-align: left;
-        color: #242424;
+        color: #625756;
         margin: 0 0 12px 0;
     }
 }
@@ -371,9 +372,9 @@ body::-webkit-scrollbar-thumb {
 /* Sous-titre de section */
 .cd-text-service {
     font-family: 'Manrope', sans-serif;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: #383839;
-    line-height: 1.7;
+    line-height: 1.25;
     text-align: center;
     max-width: 520px;
     margin: 0 auto 56px;
@@ -387,10 +388,10 @@ body::-webkit-scrollbar-thumb {
 .cd-service-card {
     > .vce-col-inner {
         padding: 0 !important;
-        border-radius: 12px;
+        border-radius: 40px;
         overflow: hidden;
-        background: #ffffff;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+        background: #F3F1ED;
+    
         transition: all 0.35s ease;
         display: flex;
         flex-direction: column;
@@ -445,9 +446,9 @@ body::-webkit-scrollbar-thumb {
 /* Description de la carte */
 .cd-desc-service {
     font-family: 'Manrope', sans-serif;
-    font-size: 0.875rem;
+    font-size: 1.25rem;
     color: #625756;
-    line-height: 1.75;
+    line-height: 1.38;
     margin: 0;
     flex-grow: 1;
 }
