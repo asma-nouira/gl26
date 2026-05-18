@@ -14,7 +14,7 @@
   right: 0;
   z-index: 1000;
   background: #ffffff;
-  padding: 0 40px;
+  padding: 0 140px;
   min-height: 144px;
   display: flex;
   align-items: center;
@@ -129,14 +129,6 @@
 /* ============================================================
    ACTIONS HEADER (téléphone + bouton + facebook)
    ============================================================ */
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  opacity: 0;
-  animation: fadeInRight 0.6s ease 0.5s forwards;
-}
-
 /* Bouton téléphone */
 .btn-phone {
   display: inline-flex;
