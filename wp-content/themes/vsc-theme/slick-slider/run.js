@@ -5,7 +5,7 @@ jQuery(document).on('ready', function() {
         slidesToShow: 3,
         autoplay: false,
         autoplaySpeed: 20000,
-        infinite:  false, 
+        infinite:  true, 
         dots: false,
         arrows: true,
     prevArrow: '<button class="cd-slider-prev">←</button>',
