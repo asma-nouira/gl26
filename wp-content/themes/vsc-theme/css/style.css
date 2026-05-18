@@ -1345,32 +1345,81 @@ body::-webkit-scrollbar-thumb {
   padding: 157px 554px 65px;
 }
 
+/* ============================================================
+   GALLERY SLIDER
+   ============================================================ */
 .cd-gallery-slider {
-  /* Slide centrale — plus grande et pleine luminosité */
-  /* Slides latérales — légèrement assombries */
+  position: relative;
+  padding-bottom: 60px; /* Espace pour les flèches en bas */
+  /* Reset VC sur le wrapper slick */
+  /* Chaque slide */
+  /* Slide centrale — plus grande et lumineuse */
+  /* Flèches custom — centrées en bas */
+}
+.cd-gallery-slider .vce-row-content {
+  overflow: hidden;
 }
 .cd-gallery-slider .cd-gallery-slide {
-  padding: 0 8px;
+  padding: 0 6px;
   transition: transform 0.4s ease;
+  /* Image via VC */
 }
-.cd-gallery-slider .cd-gallery-slide img {
-  width: 100%;
-  height: 340px; /* Hauteur slides latérales */
-  object-fit: cover;
+.cd-gallery-slider .cd-gallery-slide .vce-single-image-figure-inner {
+  width: 100% !important;
   border-radius: 12px;
-  display: block;
-  transition: all 0.4s ease;
+  overflow: hidden;
 }
-.cd-gallery-slider .slick-center {
-  transform: scale(1);
-  z-index: 2;
-  position: relative;
+.cd-gallery-slider .cd-gallery-slide .vce-single-image-inner {
+  padding-bottom: 70% !important; /* Ratio uniforme */
+  overflow: hidden;
 }
-.cd-gallery-slider .slick-center img {
-  height: 460px; /* Plus haute que les latérales */
+.cd-gallery-slider .cd-gallery-slide img.vce-single-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.75);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+.cd-gallery-slider .cd-gallery-slide.slick-center img.vce-single-image {
   filter: brightness(1);
+  transform: scale(1.04);
 }
-.cd-gallery-slider .slick-slide:not(.slick-center) img {
-  filter: brightness(0.8);
+.cd-gallery-slider .cd-slider-prev,
+.cd-gallery-slider .cd-slider-next {
+  position: absolute;
+  bottom: 0;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1.5px solid var(--cd-dark);
+  background: transparent;
+  color: var(--cd-dark);
+  font-size: 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10;
+  line-height: 1;
+}
+.cd-gallery-slider .cd-slider-prev:hover,
+.cd-gallery-slider .cd-slider-next:hover {
+  background: var(--cd-dark);
+  color: #ffffff;
+}
+.cd-gallery-slider .cd-slider-prev.slick-disabled,
+.cd-gallery-slider .cd-slider-next.slick-disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.cd-gallery-slider .cd-slider-prev {
+  left: calc(50% - 50px);
+}
+.cd-gallery-slider .cd-slider-next {
+  left: calc(50% + 8px);
 }
 /*# sourceMappingURL=../css/style.css.map */
