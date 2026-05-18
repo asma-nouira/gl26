@@ -78,7 +78,8 @@ ul {
    ROW HERO — La row VC avec l'image de fond
    ============================================================ */
 #el-8e4a7859 {
-  min-height: calc(100vh - 70px); /* Pleine hauteur moins le header */
+  margin-top: 70px; /* Compense le header fixed */
+  min-height: calc(100vh - 70px);
   position: relative;
   display: flex;
   align-items: center;
