@@ -377,83 +377,55 @@ body::-webkit-scrollbar-thumb {
    Extra class name VC : cd-service-card (sur chaque colonne)
    ============================================================ */
 
+/* ---- Carte : image + titre superposé ---- */
 .cd-service-card {
     > .vce-col-inner {
-        padding: 0 !important;
-        border-radius: 40px;
-        overflow: hidden;
-        background: #F3F1ED;
-    
-        transition: all 0.35s ease;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-
-    &:hover > .vce-col-inner {
-        box-shadow: 0 12px 36px rgba(0,0,0,0.12);
-        transform: translateY(-6px);
-    }
-	/* H3 — titre de carte */
-    h3 {
-        font-size: 2.18rem;
-        line-height: 1.14;
-        text-align: left;
-        color: #625756;
-        margin: 0 0 12px 0;
-		 font-family: 'SuperBlue', serif;
+        position: relative;
     }
 }
 
-/* ---- Image de la carte ---- */
 .cd-img-service {
     position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
 
-    .vce-single-image-figure-inner {
-        width: 100% !important;
-        border-radius: 0 !important;
-    }
-
-    .vce-single-image-inner {
-        padding-bottom: 65% !important; /* Ratio hauteur image */
-        overflow: hidden;
-    }
-
-    img {
+    /* Gradient en bas de l'image pour lisibilité du titre */
+    &::after {
+        content: '';
         position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center top;
-        transition: transform 0.5s ease;
-    }
-
-    .cd-service-card:hover & img {
-        transform: scale(1.05);
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 50%;
+        background: linear-gradient(
+            to bottom,
+            rgba(255,255,255,0) 0%,
+            rgba(255,255,255,0.95) 100%
+        );
+        z-index: 1;
+        pointer-events: none;
     }
 }
 
-/* ---- Contenu texte de la carte ---- */
-.cd-service-card .vce-text-block {
-    padding: 24px 28px 32px;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
+/* H3 superposé sur le bas de l'image */
+h3.cd-title-service {
+    position: relative;
+    margin-top: -60px; /* Remonte le titre sur l'image */
+    z-index: 2;
+    padding: 0 28px;
+    font-size: 2.18rem;
+    text-align: left;
+    color: var(--cd-brown);
 }
 
-/* Description de la carte */
+/* Description reste en dessous normalement */
 .cd-desc-service {
-    font-family: 'Manrope', sans-serif;
-    font-size: 1.25rem;
-    color: #625756;
-    line-height: 1.38;
+    padding: 12px 28px 28px;
     margin: 0;
-    flex-grow: 1;
 }
 
+/* Reset padding du text block */
+.cd-service-card .vce-text-block {
+    padding: 0;
+}
 /* ============================================================
    BOUTON "Nos services" — centré sous les cartes
    ============================================================ */
