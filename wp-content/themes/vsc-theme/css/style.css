@@ -1164,6 +1164,7 @@ body::-webkit-scrollbar-thumb {
    Extra class name VC : cd-service-card (sur chaque colonne)
    ============================================================ */
 .cd-service-card {
+  margin-bottom: 60px;
   /* H3 — titre de carte */
 }
 .cd-service-card > .vce-col-inner {
