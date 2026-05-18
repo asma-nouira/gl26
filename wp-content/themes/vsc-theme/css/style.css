@@ -458,6 +458,7 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   flex-wrap: nowrap;
   padding-left: 0;
+  padding-bottom: 60px;
 }
 
 .cd-team-circle-item {
