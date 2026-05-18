@@ -106,13 +106,7 @@ body::-webkit-scrollbar-thumb {
 .cd-about-col-left {
     position: relative;
     z-index: 1;
-
-    > .vce-col-inner {
-        padding: 80px 60px 80px 80px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+	padding-right: 120px;
 }
 
 /* Titre H2 */
@@ -120,14 +114,9 @@ body::-webkit-scrollbar-thumb {
     font-family: 'SuperBlue', serif;
     font-size: 2.8rem;
     font-weight: 400;
-    color: #242424;
+    color: #625756;
     line-height: 1.15;
-    margin: 0 0 24px 0;
-
-    em {
-        font-style: normal;
-        color: #849994; /* Teal primary */
-    }
+    margin: 0 0 30px 0;
 
     /* Animation */
     opacity: 0;
@@ -137,24 +126,22 @@ body::-webkit-scrollbar-thumb {
 
 /* Paragraphe intro */
 .cd-about-intro {
-    font-family: 'Manrope', sans-serif;
-    font-size: 1rem;
-    color: #383839;
-    line-height: 1.7;
-    margin: 0 0 40px 0;
-    max-width: 380px;
-
+      font-family: 'SuperBlue', serif;
+    font-size: 1.5rem;
+    color: #625756;
+    line-height: 1.25;
+    margin: 0 0 30px 0;
     opacity: 0;
     animation: cdFadeInLeft 0.7s ease 0.35s forwards;
 }
 
 /* ---- Sous-row : logo + horaires ---- */
-.cd-about-col-left .vce-row {
-    margin-bottom: 32px;
+.cd-about-col-left .details {
+    margin-bottom: 40px;
 }
 
 /* Logo clinique */
-.cd-about-col-left .vce-single-image-container.full-width {
+.cd-about-col-left  .details .vce-single-image-container.full-width {
     .vce-single-image-figure-inner {
         width: 200px !important;
     }
@@ -165,12 +152,12 @@ body::-webkit-scrollbar-thumb {
 .btn-action-brown {
     display: inline-flex;
     align-items: center;
-    padding: 12px 32px;
+    padding: 15px 32px;
     background: #625756;
     color: #ffffff !important;
-    font-family: 'Manrope', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
+       font-family: 'SuperBlue', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
     border-radius: 50px;
     text-decoration: none !important;
     transition: all 0.3s ease;
@@ -190,30 +177,14 @@ body::-webkit-scrollbar-thumb {
         border-collapse: collapse;
         font-family: 'Manrope', sans-serif;
         font-size: 0.875rem;
-    }
-
-    tr {
-        border-bottom: 1px solid #e5e3df;
-
-        &:last-child { border-bottom: none; }
+	
     }
 
     td {
         padding: 8px 0;
-        color: #383839;
+       	color:#625756;
         vertical-align: top;
-
-        &:first-child {
-            font-weight: 600;
-            color: #242424;
-            padding-right: 20px;
-            white-space: nowrap;
-        }
-
-        &:last-child {
-            color: #625756;
-            text-align: right;
-        }
+		font-weight: 400;
     }
 }
 
@@ -223,50 +194,48 @@ body::-webkit-scrollbar-thumb {
    ============================================================ */
 
 .cd-about-right {
-    background: #F3F1ED;
     position: relative;
     z-index: 1;
-
-    > .vce-col-inner {
-        padding: 80px 80px 80px 60px;
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        justify-content: center;
-    }
 }
 
 /* ============================================================
-   PHOTOS ÉQUIPE CIRCULAIRES
-   Classe : cd-team-circles — sur la row des photos
-   Classe : cd-team-circle-item — sur chaque image
+   PHOTOS ÉQUIPE — Chevauchement
    ============================================================ */
 
 .cd-team-circles {
     .vce-row-content {
         display: flex;
-        align-items: flex-end; /* Photos alignées en bas = effet de profondeur */
-        gap: 0;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding-left: 20px; /* Compense le premier margin-left négatif */
     }
 }
 
-/* Chaque photo circulaire */
 .cd-team-circle-item {
+    margin-left: -30px; /* Valeur du chevauchement — ajustez selon le rendu */
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &:first-child {
+        margin-left: 0;
+        z-index: 4;
+    }
+
+    /* Ordre z-index inversé pour que la 1ère soit devant */
+    &:nth-child(1) { z-index: 4; }
+    &:nth-child(2) { z-index: 3; }
+    &:nth-child(3) { z-index: 2; }
+    &:nth-child(4) { z-index: 1; }
+
+    /* Au hover — remonte devant tout */
+    &:hover { z-index: 10; }
+
     .vce-single-image-figure-inner {
         border-radius: 50% !important;
         overflow: hidden;
-        border: 3px solid #ffffff;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.12);
-        transition: all 0.3s ease;
-
-        /* Effet chevauchement */
-        margin-left: -20px;
-
-        &:first-child { margin-left: 0; }
-    }
-
-    &:first-child .vce-single-image-figure-inner {
-        margin-left: 0;
+        border: 4px solid #ffffff;
+        box-shadow: -3px 0 8px rgba(0,0,0,0.12);
+        width: 180px !important;
     }
 
     .vce-single-image-inner {
@@ -279,18 +248,11 @@ body::-webkit-scrollbar-thumb {
         object-fit: cover;
         width: 100%;
         height: 100%;
-        transition: transform 0.4s ease;
+        transition: transform 0.3s ease;
     }
 
-    &:hover {
-        .vce-single-image-figure-inner {
-            border-color: #C58E80;
-            box-shadow: 0 8px 24px rgba(197,142,128,0.3);
-            z-index: 2;
-            position: relative;
-        }
-
-        img { transform: scale(1.05); }
+    &:hover img {
+        transform: scale(1.05);
     }
 }
 
@@ -311,8 +273,7 @@ body::-webkit-scrollbar-thumb {
             &:last-child { margin-bottom: 0; }
 
             strong {
-                color: #242424;
-                font-weight: 600;
+                font-weight: 700;
             }
         }
     }
