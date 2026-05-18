@@ -424,11 +424,6 @@ body::-webkit-scrollbar-thumb {
         border-radius: 0 !important;
     }
 
-    .vce-single-image-inner {
-        padding-bottom: 65% !important; /* Ratio hauteur image */
-        overflow: hidden;
-    }
-
     img {
         position: absolute;
         inset: 0;
