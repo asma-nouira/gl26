@@ -1,0 +1,220 @@
+/* ============================================================
+   HERO SECTION — Clinique Dentaire Geneviève Lafrance
+   Fichier : sass/hero.scss
+   Basé sur la structure Visual Composer générée
+   ============================================================ */
+
+/* ============================================================
+   ROW HERO — La row VC avec l'image de fond
+   ============================================================ */
+
+#el-8e4a7859 {
+    min-height: calc(100vh - 70px); /* Pleine hauteur moins le header */
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Image de fond — zoom au chargement */
+#el-8e4a7859 .vce-asset-background-simple-item {
+    transform: scale(1.05);
+    animation: heroZoom 8s ease forwards;
+}
+
+@keyframes heroZoom {
+    from { transform: scale(1.05); }
+    to   { transform: scale(1); }
+}
+
+/* Overlay gradient — gauche sombre, droite transparent */
+#el-8e4a7859 .vce-content-background-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(36, 36, 36, 0.60) 0%,
+        rgba(36, 36, 36, 0.25) 45%,
+        rgba(36, 36, 36, 0) 70%
+    );
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Contenu au-dessus de l'overlay */
+#el-8e4a7859 .vce-row-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Colonne du contenu — alignée à gauche */
+#el-37c30421 .vce-col-content {
+    padding: 80px 60px !important;
+    max-width: 580px;
+}
+
+/* ============================================================
+   TITRE HERO
+   ============================================================ */
+
+.hero-title {
+    font-family: 'SuperBlue', serif;
+    font-size: 3.4rem;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.12;
+    margin: 0 0 28px 0;
+    padding: 0;
+
+    /* Animation entrée depuis la gauche */
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeInLeft 0.8s ease 0.3s forwards;
+}
+
+/* ============================================================
+   ADRESSE HERO
+   ============================================================ */
+
+.hero-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.88);
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+
+    /* Animation entrée décalée */
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 0.7s ease 0.6s forwards;
+
+    /* Icône pin */
+    svg {
+        flex-shrink: 0;
+        margin-top: 3px;
+        color: #C58E80;
+        stroke: #C58E80;
+    }
+
+    span {
+        display: block;
+    }
+
+    /* Reset des balises parasites générées par VC */
+    p, br {
+        display: none;
+    }
+
+    path, circle {
+        display: none; /* Cachés car le SVG est mal fermé dans VC */
+    }
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ============================================================
+   BARRE LATÉRALE (fixed via header.php)
+   ============================================================ */
+
+.hero-sidebar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    opacity: 0;
+    animation: fadeInRight 0.7s ease 0.9s forwards;
+}
+
+.hero-sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    background: rgba(98, 87, 86, 0.78); /* Brun #625756 semi-transparent */
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+
+    svg {
+        width: 22px;
+        height: 22px;
+        stroke: #ffffff;
+        flex-shrink: 0;
+    }
+
+    &:last-child {
+        border-bottom: none;
+        /* Dernier item (pin) — fond légèrement différent */
+        background: rgba(98, 87, 86, 0.60);
+    }
+
+    &:hover {
+        background: #C58E80;
+        width: 60px;
+
+        svg { stroke: #ffffff; }
+    }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(30px) translateY(-50%); }
+    to   { opacity: 1; transform: translateX(0) translateY(-50%); }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1024px) {
+    #el-37c30421 .vce-col-content {
+        padding: 60px 40px !important;
+    }
+
+    .hero-title { font-size: 2.6rem; }
+}
+
+@media (max-width: 768px) {
+    #el-8e4a7859 {
+        min-height: 85vh;
+    }
+
+    #el-37c30421 .vce-col-content {
+        padding: 40px 24px !important;
+        max-width: 100%;
+    }
+
+    .hero-title { font-size: 2rem; }
+
+    #el-8e4a7859 .vce-content-background-container::after {
+        background: linear-gradient(
+            to bottom,
+            rgba(36,36,36,0.5) 0%,
+            rgba(36,36,36,0.3) 100%
+        );
+    }
+
+    .hero-sidebar { display: none; }
+}
