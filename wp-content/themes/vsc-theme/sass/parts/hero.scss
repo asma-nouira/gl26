@@ -98,8 +98,6 @@
     font-style: normal;
     color: rgba(255, 255, 255, 0.88);
     font-family: 'Manrope', sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.6;
     margin: 0;
     text-align: left;
 
@@ -107,13 +105,14 @@
     transform: translateX(-20px);
     animation: cdFadeInLeft 0.7s ease 0.6s forwards;
 
-    svg {
+    img {
         flex-shrink: 0;
         margin-top: 3px;
         stroke: #C58E80;
     }
 
-    span { display: block; }
+    span { display: block;  font-size: 1.5rem;
+    line-height: 1.33;}
 
     /* Nettoyage balises parasites générées par VC Text Block */
     > p   { display: none; }
