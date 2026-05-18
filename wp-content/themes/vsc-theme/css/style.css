@@ -311,4 +311,302 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px; /* roundness of the scroll thumb */
   border: 5px solid #BF9F94; /* creates padding around scroll thumb */
 }
+
+/* ============================================================
+   ABOUT SECTION — "Votre dentiste à Rivière-du-Loup"
+   Fichier : sass/about.scss
+   ============================================================ */
+/* ============================================================
+   ROW PRINCIPALE
+   ============================================================ */
+.cd-about-section {
+  position: relative;
+  background: #F4F3EF;
+  overflow: hidden;
+  /* Les deux colonnes égales */
+}
+.cd-about-section > .vce-row-content {
+  align-items: stretch;
+}
+
+/* ============================================================
+   IMAGE DÉCORATIVE DENT (+🦷)
+   Classe : cd-deco-tooth — sur le vce-single-image-container
+   ============================================================ */
+.cd-deco-tooth {
+  position: absolute !important;
+  top: 50%;
+  right: -30px;
+  transform: translateY(-50%);
+  z-index: 0;
+  opacity: 0.07;
+  pointer-events: none;
+}
+.cd-deco-tooth .vce-single-image-figure-inner {
+  width: 320px !important;
+}
+.cd-deco-tooth img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ============================================================
+   COLONNE GAUCHE
+   Classe : cd-about-col-left
+   ============================================================ */
+.cd-about-col-left {
+  position: relative;
+  z-index: 1;
+}
+.cd-about-col-left > .vce-col-inner {
+  padding: 80px 60px 80px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Titre H2 */
+.cd-about-title {
+  font-family: "SuperBlue", serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #242424;
+  line-height: 1.15;
+  margin: 0 0 24px 0;
+  /* Animation */
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: cdFadeInLeft 0.7s ease 0.2s forwards;
+}
+.cd-about-title em {
+  font-style: normal;
+  color: #849994; /* Teal primary */
+}
+
+/* Paragraphe intro */
+.cd-about-intro {
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  color: #383839;
+  line-height: 1.7;
+  margin: 0 0 40px 0;
+  max-width: 380px;
+  opacity: 0;
+  animation: cdFadeInLeft 0.7s ease 0.35s forwards;
+}
+
+/* ---- Sous-row : logo + horaires ---- */
+.cd-about-col-left .vce-row {
+  margin-bottom: 32px;
+}
+
+/* Logo clinique */
+.cd-about-col-left .vce-single-image-container.full-width .vce-single-image-figure-inner {
+  width: 200px !important;
+}
+.cd-about-col-left .vce-single-image-container.full-width img {
+  width: 100%;
+  height: auto;
+}
+
+/* Bouton Notre équipe */
+.btn-action-brown {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 32px;
+  background: #625756;
+  color: #ffffff !important;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  margin-top: 16px;
+}
+.btn-action-brown:hover {
+  background: #4c4443;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(98, 87, 86, 0.3);
+}
+
+/* ---- Horaires ---- */
+.horaire table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.875rem;
+}
+.horaire tr {
+  border-bottom: 1px solid #e5e3df;
+}
+.horaire tr:last-child {
+  border-bottom: none;
+}
+.horaire td {
+  padding: 8px 0;
+  color: #383839;
+  vertical-align: top;
+}
+.horaire td:first-child {
+  font-weight: 600;
+  color: #242424;
+  padding-right: 20px;
+  white-space: nowrap;
+}
+.horaire td:last-child {
+  color: #625756;
+  text-align: right;
+}
+
+/* ============================================================
+   COLONNE DROITE
+   Classe : cd-about-right
+   ============================================================ */
+.cd-about-right {
+  background: #F3F1ED;
+  position: relative;
+  z-index: 1;
+}
+.cd-about-right > .vce-col-inner {
+  padding: 80px 80px 80px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+}
+
+/* ============================================================
+   PHOTOS ÉQUIPE CIRCULAIRES
+   Classe : cd-team-circles — sur la row des photos
+   Classe : cd-team-circle-item — sur chaque image
+   ============================================================ */
+.cd-team-circles .vce-row-content {
+  display: flex;
+  align-items: flex-end; /* Photos alignées en bas = effet de profondeur */
+  gap: 0;
+}
+
+/* Chaque photo circulaire */
+.cd-team-circle-item .vce-single-image-figure-inner {
+  border-radius: 50% !important;
+  overflow: hidden;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+  /* Effet chevauchement */
+  margin-left: -20px;
+}
+.cd-team-circle-item .vce-single-image-figure-inner:first-child {
+  margin-left: 0;
+}
+.cd-team-circle-item:first-child .vce-single-image-figure-inner {
+  margin-left: 0;
+}
+.cd-team-circle-item .vce-single-image-inner {
+  border-radius: 50% !important;
+  overflow: hidden;
+}
+.cd-team-circle-item img {
+  border-radius: 50% !important;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease;
+}
+.cd-team-circle-item:hover .vce-single-image-figure-inner {
+  border-color: #C58E80;
+  box-shadow: 0 8px 24px rgba(197, 142, 128, 0.3);
+  z-index: 2;
+  position: relative;
+}
+.cd-team-circle-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================================================
+   TEXTE DESCRIPTIF DROITE
+   Classe : cd-about-text
+   ============================================================ */
+.cd-about-text {
+  /* Animation */
+  opacity: 0;
+  animation: cdFadeIn 0.8s ease 0.4s forwards;
+}
+.cd-about-text .vce-text-block-wrapper p {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9rem;
+  color: #383839;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+.cd-about-text .vce-text-block-wrapper p:last-child {
+  margin-bottom: 0;
+}
+.cd-about-text .vce-text-block-wrapper p strong {
+  color: #242424;
+  font-weight: 600;
+}
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes cdFadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes cdFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .cd-about-col-left > .vce-col-inner {
+    padding: 60px 40px 60px 40px;
+  }
+  .cd-about-right > .vce-col-inner {
+    padding: 60px 40px;
+  }
+  .cd-about-title {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .cd-about-section > .vce-row-content {
+    flex-direction: column;
+  }
+  .cd-about-col-left > .vce-col-inner,
+  .cd-about-right > .vce-col-inner {
+    padding: 48px 24px;
+  }
+  .cd-about-title {
+    font-size: 1.8rem;
+  }
+  .cd-deco-tooth {
+    display: none; /* Cachée sur mobile */
+  }
+  .cd-team-circles .vce-row-content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  .cd-team-circle-item .vce-single-image-figure-inner {
+    margin-left: 0 !important;
+  }
+}
 /*# sourceMappingURL=../css/style.css.map */
