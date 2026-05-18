@@ -161,8 +161,6 @@ body::-webkit-scrollbar-thumb {
     border-radius: 50px;
     text-decoration: none !important;
     transition: all 0.3s ease;
-    margin-top: 16px;
-
     &:hover {
         background: darken(#625756, 8%);
         transform: translateY(-2px);
@@ -198,41 +196,49 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* ============================================================
-   PHOTOS ÉQUIPE — Chevauchement
+   PHOTOS ÉQUIPE — HTML custom (Raw HTML dans VC)
    ============================================================ */
 
 .cd-team-circles {
-   padding-bottom: 60px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-left: 0;
 }
 
 .cd-team-circle-item {
-   /* Valeur du chevauchement — ajustez selon le rendu */
-  
+    margin-left: -30px;
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
     &:first-child {
         margin-left: 0;
         z-index: 4;
     }
- margin-left: -30px; 
-   transition: all 0.3s ease;
-    cursor: pointer;
-    /* Ordre z-index inversé pour que la 1ère soit devant */
+
     &:nth-child(1) { z-index: 4; }
     &:nth-child(2) { z-index: 3; }
     &:nth-child(3) { z-index: 2; }
     &:nth-child(4) { z-index: 1; }
 
-    /* Au hover — remonte devant tout */
     &:hover { z-index: 10; }
 
     img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
         object-fit: cover;
-        width: 100%;
-        height: 100%;
+        object-position: top center;
+        border: 4px solid #ffffff;
+        box-shadow: -3px 0 8px rgba(0,0,0,0.12);
+        display: block;
         transition: transform 0.3s ease;
     }
 
     &:hover img {
         transform: scale(1.05);
+        border-color: #C58E80;
     }
 }
 
