@@ -1,74 +1,4 @@
 @charset "UTF-8";
-.center {
-  text-align: center;
-}
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.white {
-  color: white;
-}
-
-.underline {
-  text-decoration: underline;
-}
-
-.nowrap {
-  white-space: nowrap;
-}
-@media (max-width: 767px) {
-  .nowrap {
-    white-space: inherit;
-  }
-}
-
-p {
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-h1, h2, h3 {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  font-weight: inherit;
-}
-
-.vce {
-  margin-bottom: 0;
-}
-
-ul {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding-inline-start: 0;
-}
-
-.test-bloc {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.full-width .vce.vce-single-image-wrapper {
-  width: 100%;
-  height: auto;
-}
-.full-width .vce.vce-single-image-wrapper figure {
-  width: 100%;
-  height: auto;
-}
-.full-width .vce.vce-single-image-wrapper figure .vce-single-image-figure-inner {
-  width: 100% !important;
-  height: auto;
-}
-
 /* ============================================================
    HEADER — Clinique Dentaire Geneviève Lafrance
    Fichier : sass/header.scss
@@ -85,6 +15,7 @@ ul {
   z-index: 1000;
   background: #ffffff;
   padding: 0 40px;
+  min-height: 30px;
   height: 70px;
   display: flex;
   align-items: center;
@@ -94,6 +25,7 @@ ul {
 }
 .site-header.scrolled {
   height: 60px;
+  min-height: 30px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
   background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(8px);
@@ -155,9 +87,9 @@ ul {
   animation-delay: 0.5s;
 }
 .main-nav a {
-  font-family: "Manrope", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 500;
+  font-family: "SuperBlue", serif; /* SuperBlue Regular */
+  font-size: 20px;
+  font-weight: 400; /* Regular */
   color: #383839;
   text-decoration: none;
   position: relative;
@@ -443,9 +375,10 @@ ul {
   }
   .main-nav {
     gap: 20px;
+    /* Réduit légèrement sur tablette */
   }
   .main-nav a {
-    font-size: 0.85rem;
+    font-size: 16px;
   }
   .hero-content {
     padding: 40px;
