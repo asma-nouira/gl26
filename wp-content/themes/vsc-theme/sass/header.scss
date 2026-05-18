@@ -574,7 +574,7 @@ $transition:   all 0.3s ease;
 .hero-sidebar {
     position: fixed; /* fixed au lieu de absolute */
     right: 0;
-    top: 50%;
+    top: 25%;
     transform: translateY(-50%);
     z-index: 999;
     display: flex;
