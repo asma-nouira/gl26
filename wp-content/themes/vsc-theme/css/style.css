@@ -463,7 +463,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .cd-team-circle-item {
-  margin-left: -30px; /* Valeur du chevauchement — ajustez selon le rendu */
+  /* Valeur du chevauchement — ajustez selon le rendu */
+  margin-left: -30px;
   transition: all 0.3s ease;
   cursor: pointer;
   /* Ordre z-index inversé pour que la 1ère soit devant */
@@ -488,19 +489,7 @@ body::-webkit-scrollbar-thumb {
 .cd-team-circle-item:hover {
   z-index: 10;
 }
-.cd-team-circle-item .vce-single-image-figure-inner {
-  border-radius: 50% !important;
-  overflow: hidden;
-  border: 4px solid #ffffff;
-  box-shadow: -3px 0 8px rgba(0, 0, 0, 0.12);
-  width: 180px !important;
-}
-.cd-team-circle-item .vce-single-image-inner {
-  border-radius: 50% !important;
-  overflow: hidden;
-}
 .cd-team-circle-item img {
-  border-radius: 50% !important;
   object-fit: cover;
   width: 100%;
   height: 100%;
