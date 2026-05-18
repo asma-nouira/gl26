@@ -41,8 +41,9 @@ jQuery(document).on('ready', function() {
         ]
     })
 .on('setPosition', function (event, slick) {
-        slick.$slides.css('height', slick.$slideTrack.height() + 'px');
-    });
+    slick.$slides.css('height', slick.$slideTrack.height() + 'px');
+    slick.$slideTrack.css('display', 'flex');
+});
 
 });
 
