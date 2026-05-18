@@ -1,11 +1,11 @@
 jQuery(document).on('ready', function() {
     jQuery(".cd-gallery-slider > .vce-row-content").slick({
         centerMode: true,
-        centerPadding: '200px',
-        slidesToShow: 0,
+        centerPadding: '0',
+        slidesToShow: 3,
         autoplay: false,
         autoplaySpeed: 20000,
-        infinite: true,
+        infinite:  false, 
         dots: false,
         arrows: true,
     prevArrow: '<button class="cd-slider-prev">←</button>',
