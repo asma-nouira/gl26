@@ -1,13 +1,15 @@
 jQuery(document).on('ready', function() {
-    jQuery(".center-slider-full").slick({
+    jQuery(".cd-gallery-slider > .vce-row-content").slick({
         centerMode: true,
-        centerPadding: '0',
-        slidesToShow: 1,
+        centerPadding: '200px',
+        slidesToShow: 0,
         autoplay: false,
         autoplaySpeed: 20000,
         infinite: true,
-        dots: true,
-        arrows:false,
+        dots: false,
+        arrows: true,
+    prevArrow: '<button class="cd-slider-prev">←</button>',
+    nextArrow:  '<button class="cd-slider-next">→</button>',
         responsive: [
             {
                 breakpoint: 1366,
@@ -15,7 +17,7 @@ jQuery(document).on('ready', function() {
                     arrows: true,
                     centerMode: true,
                     centerPadding: '0',
-                    slidesToShow: 1
+                    slidesToShow: 3
                 }
             },
             {

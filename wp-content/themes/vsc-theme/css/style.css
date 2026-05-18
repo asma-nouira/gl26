@@ -1344,4 +1344,33 @@ body::-webkit-scrollbar-thumb {
 .cd-txt-gallery {
   padding: 157px 554px 65px;
 }
+
+.cd-gallery-slider {
+  /* Slide centrale — plus grande et pleine luminosité */
+  /* Slides latérales — légèrement assombries */
+}
+.cd-gallery-slider .cd-gallery-slide {
+  padding: 0 8px;
+  transition: transform 0.4s ease;
+}
+.cd-gallery-slider .cd-gallery-slide img {
+  width: 100%;
+  height: 340px; /* Hauteur slides latérales */
+  object-fit: cover;
+  border-radius: 12px;
+  display: block;
+  transition: all 0.4s ease;
+}
+.cd-gallery-slider .slick-center {
+  transform: scale(1);
+  z-index: 2;
+  position: relative;
+}
+.cd-gallery-slider .slick-center img {
+  height: 460px; /* Plus haute que les latérales */
+  filter: brightness(1);
+}
+.cd-gallery-slider .slick-slide:not(.slick-center) img {
+  filter: brightness(0.8);
+}
 /*# sourceMappingURL=../css/style.css.map */
