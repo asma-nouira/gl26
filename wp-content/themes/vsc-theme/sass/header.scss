@@ -424,7 +424,7 @@ $transition:   all 0.3s ease;
     justify-content: center;
     width: 140px;
     height: 140px;
-    background: rgba(36,36,36,0.75);
+    background: #BF9F94;
     color: $white;
     text-decoration: none;
     transition: $transition;
@@ -433,7 +433,7 @@ $transition:   all 0.3s ease;
     svg { width: 70px; height: 65px; }
 
     &:hover {
-        background: $accent;
+        background: #625756;
         width: 150px;
     }
 }
@@ -574,7 +574,7 @@ $transition:   all 0.3s ease;
 .hero-sidebar {
     position: fixed; /* fixed au lieu de absolute */
     right: 0;
-    top: 25%;
+    top: 50%;
     transform: translateY(-50%);
     z-index: 999;
     display: flex;

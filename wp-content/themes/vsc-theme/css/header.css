@@ -410,7 +410,7 @@
   justify-content: center;
   width: 140px;
   height: 140px;
-  background: rgba(36, 36, 36, 0.75);
+  background: #BF9F94;
   color: #ffffff;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -421,7 +421,7 @@
   height: 65px;
 }
 .hero-sidebar-item:hover {
-  background: #C58E80;
+  background: #625756;
   width: 150px;
 }
 
@@ -586,7 +586,7 @@
 .hero-sidebar {
   position: fixed; /* fixed au lieu de absolute */
   right: 0;
-  top: 25%;
+  top: 50%;
   transform: translateY(-50%);
   z-index: 999;
   display: flex;
