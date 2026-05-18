@@ -23,7 +23,6 @@
     <!-- Logo -->
     <a href="<?php echo esc_url(home_url('/')); ?>" class="site-logo" aria-label="<?php bloginfo('name'); ?> — Accueil">
         <?php
-        // Logo image si disponible, sinon texte
         if (has_custom_logo()) :
             the_custom_logo();
         else : ?>
@@ -36,23 +35,10 @@
     <!-- Navigation principale -->
     <nav role="navigation" aria-label="Navigation principale">
         <?php
-        wp_nav_menu([
-            'theme_location' => 'primary',
-            'menu_class'     => 'main-nav',
-            'container'      => false,
-            'items_wrap'     => '<ul class="main-nav" id="main-nav">%3$s</ul>',
-            'fallback_cb'    => function () {
-                // Menu de fallback si aucun menu assigné
-                echo '<ul class="main-nav">
-                    <li><a href="/">Accueil</a></li>
-                    <li><a href="/equipe">Équipe</a></li>
-                    <li><a href="/la-clinique">La clinique</a></li>
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/blogue">Blogue</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>';
-            },
-        ]);
+       wp_nav_menu( array(
+				'theme_location' => 'menu-1',
+				'menu_id'        => 'primary-menu',
+			) );
         ?>
     </nav>
 
