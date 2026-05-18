@@ -1,6 +1,7 @@
 @import './statics.scss';
 @import './parts/fonts.scss';
 @import './parts/hero.scss';
+@import './parts/components.scss';
 /**************/
 .wpcf7-not-valid-tip{
 	display:none !important;
@@ -325,3 +326,213 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
+/* ============================================================
+   SERVICES SECTION — "Des soins variés pour toute la famille"
+   Fichier : sass/services.scss
+   ============================================================ */
+
+/* ============================================================
+   ROW PRINCIPALE
+   Extra class name VC : cd-service-col (sur la colonne wrapper)
+   ============================================================ */
+
+.cd-service-col {
+    > .vce-col-inner {
+        padding: 130px 175px !important;
+    }
+}
+
+/* Titre principal centré */
+.cd-title-service {
+    font-family: 'SuperBlue', serif;
+    font-weight: 400;
+    color: #242424;
+    text-align: center;
+    margin: 0 0 16px 0;
+    padding: 0;
+
+    /* H2 — titre de section */
+    h2 {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        margin-bottom: 16px;
+    }
+
+    /* H3 — titre de carte */
+    h3 {
+        font-size: 1.5rem;
+        line-height: 1.25;
+        text-align: left;
+        color: #242424;
+        margin: 0 0 12px 0;
+    }
+}
+
+/* Sous-titre de section */
+.cd-text-service {
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    color: #383839;
+    line-height: 1.7;
+    text-align: center;
+    max-width: 520px;
+    margin: 0 auto 56px;
+}
+
+/* ============================================================
+   CARTES DE SERVICE
+   Extra class name VC : cd-service-card (sur chaque colonne)
+   ============================================================ */
+
+.cd-service-card {
+    > .vce-col-inner {
+        padding: 0 !important;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+        transition: all 0.35s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &:hover > .vce-col-inner {
+        box-shadow: 0 12px 36px rgba(0,0,0,0.12);
+        transform: translateY(-6px);
+    }
+}
+
+/* ---- Image de la carte ---- */
+.cd-img-service {
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    .vce-single-image-figure-inner {
+        width: 100% !important;
+        border-radius: 0 !important;
+    }
+
+    .vce-single-image-inner {
+        padding-bottom: 65% !important; /* Ratio hauteur image */
+        overflow: hidden;
+    }
+
+    img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        transition: transform 0.5s ease;
+    }
+
+    .cd-service-card:hover & img {
+        transform: scale(1.05);
+    }
+}
+
+/* ---- Contenu texte de la carte ---- */
+.cd-service-card .vce-text-block {
+    padding: 24px 28px 32px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Description de la carte */
+.cd-desc-service {
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.875rem;
+    color: #625756;
+    line-height: 1.75;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* ============================================================
+   BOUTON "Nos services" — centré sous les cartes
+   ============================================================ */
+
+.cd-service-col {
+    /* Wrapper du bouton */
+    > .vce-col-content > .vce-text-block {
+        text-align: center;
+        margin-top: 48px;
+    }
+}
+
+/* Le bouton lui-même — ajoutez la classe btn-services sur le lien */
+.btn-services,
+.cd-service-col a.btn-services {
+    display: inline-flex;
+    align-items: center;
+    padding: 13px 40px;
+    background: transparent;
+    color: #242424 !important;
+    font-family: 'Manrope', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #242424;
+    border-radius: 50px;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background: #242424;
+        color: #ffffff !important;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 14px rgba(36,36,36,0.2);
+    }
+}
+
+/* ============================================================
+   ANIMATIONS AU SCROLL
+   Ajoutez cd-fade-in sur chaque cd-service-card dans VC
+   ============================================================ */
+
+.cd-service-card {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease,
+                box-shadow 0.35s ease; /* garde la transition hover */
+
+    &.cd-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    &:nth-child(1) { transition-delay: 0.1s; }
+    &:nth-child(2) { transition-delay: 0.25s; }
+    &:nth-child(3) { transition-delay: 0.4s; }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1024px) {
+    .cd-service-col > .vce-col-inner {
+        padding: 60px 40px !important;
+    }
+
+    h2.cd-title-service { font-size: 2.2rem; }
+}
+
+@media (max-width: 768px) {
+    .cd-service-col > .vce-col-inner {
+        padding: 48px 24px !important;
+    }
+
+    h2.cd-title-service { font-size: 1.8rem; }
+
+    .cd-text-service { margin-bottom: 36px; }
+
+    /* Cartes en colonne sur mobile */
+    .cd-service-card {
+        &:nth-child(2) { transition-delay: 0.1s; }
+        &:nth-child(3) { transition-delay: 0.2s; }
+    }
+}

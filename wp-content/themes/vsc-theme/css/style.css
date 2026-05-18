@@ -265,6 +265,544 @@ ul {
     font-size: 1.6rem;
   }
 }
+/* ============================================================
+   COMPONENTS — Classes globales réutilisables
+   Clinique Dentaire Geneviève Lafrance
+   Fichier : sass/_components.scss
+   Import dans style.scss : @import 'components';
+   ============================================================ */
+/* ============================================================
+   1. VARIABLES GLOBALES
+   ============================================================ */
+:root {
+  /* Couleurs */
+  --cd-primary: #849994;
+  --cd-primary-dark: #6d8480;
+  --cd-primary-light: #e8efee;
+  --cd-accent: #C58E80;
+  --cd-accent-dark: #b07060;
+  --cd-accent-light: #f5e8e4;
+  --cd-brown: #625756;
+  --cd-brown-dark: #4e4342;
+  --cd-rose: #BF9F94;
+  --cd-dark: #242424;
+  --cd-text: #383839;
+  --cd-text-light: #8896A6;
+  --cd-bg: #FFFFFF;
+  --cd-bg-alt: #F4F3EF;
+  --cd-bg-warm: #F3F1ED;
+  --cd-border: #e5e3df;
+  /* Polices */
+  --cd-font-heading: "SuperBlue", serif;
+  --cd-font-body: "Manrope", sans-serif;
+  /* Espacements */
+  --cd-section-padding: 80px;
+  --cd-radius: 12px;
+  --cd-radius-full: 50px;
+  --cd-transition: all 0.3s ease;
+}
+
+/* ============================================================
+   2. TYPOGRAPHIE GLOBALE
+   ============================================================ */
+body {
+  font-family: var(--cd-font-body);
+  font-size: 1rem;
+  color: var(--cd-text);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Titres */
+.cd-h1 {
+  font-family: var(--cd-font-heading);
+  font-size: 4.7rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--cd-dark);
+  margin: 0 0 24px;
+}
+
+.cd-h2 {
+  font-family: var(--cd-font-heading);
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--cd-dark);
+  margin: 0 0 16px;
+}
+
+.cd-h3 {
+  font-family: var(--cd-font-heading);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: var(--cd-dark);
+  margin: 0 0 12px;
+}
+
+.cd-h4 {
+  font-family: var(--cd-font-heading);
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--cd-dark);
+  margin: 0 0 8px;
+}
+
+/* Titre de section centré */
+.cd-section-title {
+  font-family: var(--cd-font-heading);
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--cd-dark);
+  text-align: center;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+/* Sous-titre de section centré */
+.cd-section-subtitle {
+  font-family: var(--cd-font-body);
+  font-size: 1rem;
+  color: var(--cd-text);
+  line-height: 1.7;
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 56px;
+}
+
+/* Texte courant */
+.cd-text {
+  font-family: var(--cd-font-body);
+  font-size: 1rem;
+  color: var(--cd-text);
+  line-height: 1.75;
+}
+
+.cd-text-sm {
+  font-size: 0.875rem;
+  line-height: 1.75;
+  color: var(--cd-text);
+}
+
+.cd-text-center {
+  text-align: center;
+}
+
+.cd-text-left {
+  text-align: left;
+}
+
+.cd-text-white {
+  color: #ffffff;
+}
+
+.cd-text-primary {
+  color: var(--cd-primary);
+}
+
+.cd-text-accent {
+  color: var(--cd-accent);
+}
+
+.cd-text-brown {
+  color: var(--cd-brown);
+}
+
+/* ============================================================
+   3. BOUTONS — Système complet
+   Usage : class="cd-btn cd-btn-primary"
+   ============================================================ */
+.cd-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 36px;
+  font-family: var(--cd-font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: var(--cd-radius-full);
+  border: 2px solid transparent;
+  text-decoration: none !important;
+  cursor: pointer;
+  transition: var(--cd-transition);
+  white-space: nowrap;
+  line-height: 1.4;
+  /* Tailles */
+  /* --- Variantes --- */
+  /* Teal — action principale */
+  /* Terracotta — CTA fort */
+  /* Brun — actions secondaires */
+  /* Sombre — neutre */
+  /* Contour teal */
+  /* Contour sombre */
+  /* Blanc — sur fonds colorés */
+  /* Flèche animée */
+}
+.cd-btn.cd-btn-sm {
+  padding: 9px 24px;
+  font-size: 0.875rem;
+}
+.cd-btn.cd-btn-lg {
+  padding: 16px 48px;
+  font-size: 1.125rem;
+}
+.cd-btn.cd-btn-full {
+  width: 100%;
+}
+.cd-btn.cd-btn-primary {
+  background: var(--cd-primary);
+  color: #ffffff !important;
+}
+.cd-btn.cd-btn-primary:hover {
+  background: var(--cd-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(132, 153, 148, 0.35);
+}
+.cd-btn.cd-btn-accent {
+  background: var(--cd-accent);
+  color: #ffffff !important;
+}
+.cd-btn.cd-btn-accent:hover {
+  background: var(--cd-accent-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(197, 142, 128, 0.35);
+}
+.cd-btn.cd-btn-brown {
+  background: var(--cd-brown);
+  color: #ffffff !important;
+}
+.cd-btn.cd-btn-brown:hover {
+  background: var(--cd-brown-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(98, 87, 86, 0.3);
+}
+.cd-btn.cd-btn-dark {
+  background: var(--cd-dark);
+  color: #ffffff !important;
+}
+.cd-btn.cd-btn-dark:hover {
+  background: #383839;
+  transform: translateY(-2px);
+}
+.cd-btn.cd-btn-outline {
+  background: transparent;
+  border-color: var(--cd-primary);
+  color: var(--cd-primary) !important;
+}
+.cd-btn.cd-btn-outline:hover {
+  background: var(--cd-primary);
+  color: #ffffff !important;
+}
+.cd-btn.cd-btn-outline-dark {
+  background: transparent;
+  border-color: var(--cd-dark);
+  color: var(--cd-dark) !important;
+}
+.cd-btn.cd-btn-outline-dark:hover {
+  background: var(--cd-dark);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+.cd-btn.cd-btn-white {
+  background: #ffffff;
+  color: var(--cd-primary) !important;
+}
+.cd-btn.cd-btn-white:hover {
+  background: var(--cd-primary-light);
+  transform: translateY(-2px);
+}
+.cd-btn.cd-btn-arrow::after {
+  content: "→";
+  transition: transform 0.2s ease;
+}
+.cd-btn.cd-btn-arrow:hover::after {
+  transform: translateX(4px);
+}
+
+/* ============================================================
+   4. SECTIONS — Fonds et espacements
+   ============================================================ */
+.cd-section {
+  padding: var(--cd-section-padding) 60px;
+}
+
+.cd-section-sm {
+  padding: 56px 60px;
+}
+
+.cd-section-lg {
+  padding: 100px 60px;
+}
+
+/* Fonds */
+.cd-bg-white {
+  background-color: var(--cd-bg);
+}
+
+.cd-bg-alt {
+  background-color: var(--cd-bg-alt);
+}
+
+.cd-bg-warm {
+  background-color: var(--cd-bg-warm);
+}
+
+.cd-bg-primary {
+  background-color: var(--cd-primary);
+}
+
+.cd-bg-dark {
+  background-color: var(--cd-dark);
+}
+
+/* ============================================================
+   5. CARTES GÉNÉRIQUES
+   ============================================================ */
+.cd-card {
+  background: #ffffff;
+  border-radius: var(--cd-radius);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  transition: var(--cd-transition);
+  /* Contenu */
+  /* Image */
+}
+.cd-card:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+}
+.cd-card .cd-card-body {
+  padding: 24px 28px 32px;
+}
+.cd-card .cd-card-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s ease;
+}
+.cd-card:hover .cd-card-img {
+  transform: scale(1.05);
+}
+
+/* ============================================================
+   6. BANNIÈRE PAGE INTÉRIEURE
+   Usage : class="cd-page-banner" sur la Row VC
+   ============================================================ */
+.cd-page-banner {
+  margin-top: 70px;
+  min-height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  /* Overlay */
+  /* Contenu au-dessus */
+}
+.cd-page-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(36, 36, 36, 0.5);
+  z-index: 1;
+}
+.cd-page-banner .vce-row-content,
+.cd-page-banner .cd-page-banner-content {
+  position: relative;
+  z-index: 2;
+}
+.cd-page-banner h1 {
+  font-family: var(--cd-font-heading);
+  font-size: 3rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* ============================================================
+   7. ANIMATIONS AU SCROLL
+   Ajoutez la classe sur n'importe quel élément VC
+   Le JS IntersectionObserver ajoute .cd-visible au scroll
+   ============================================================ */
+.cd-fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.cd-fade-in.cd-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cd-fade-left {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.cd-fade-left.cd-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.cd-fade-right {
+  opacity: 0;
+  transform: translateX(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.cd-fade-right.cd-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Délais en cascade pour groupes d'éléments */
+.cd-delay-1 {
+  transition-delay: 0.1s;
+}
+
+.cd-delay-2 {
+  transition-delay: 0.25s;
+}
+
+.cd-delay-3 {
+  transition-delay: 0.4s;
+}
+
+.cd-delay-4 {
+  transition-delay: 0.55s;
+}
+
+/* ============================================================
+   8. UTILITAIRES
+   ============================================================ */
+/* Marges */
+.cd-mt-0 {
+  margin-top: 0 !important;
+}
+
+.cd-mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.cd-mt-4 {
+  margin-top: 1rem !important;
+}
+
+.cd-mt-6 {
+  margin-top: 1.5rem !important;
+}
+
+.cd-mt-8 {
+  margin-top: 2rem !important;
+}
+
+.cd-mt-12 {
+  margin-top: 3rem !important;
+}
+
+.cd-mt-16 {
+  margin-top: 4rem !important;
+}
+
+.cd-mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.cd-mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.cd-mb-4 {
+  margin-bottom: 1rem !important;
+}
+
+.cd-mb-6 {
+  margin-bottom: 1.5rem !important;
+}
+
+.cd-mb-8 {
+  margin-bottom: 2rem !important;
+}
+
+.cd-mb-12 {
+  margin-bottom: 3rem !important;
+}
+
+/* Arrondis */
+.cd-rounded {
+  border-radius: var(--cd-radius) !important;
+}
+
+.cd-rounded-lg {
+  border-radius: 20px !important;
+}
+
+.cd-rounded-full {
+  border-radius: var(--cd-radius-full) !important;
+}
+
+/* Ombres */
+.cd-shadow {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+}
+
+.cd-shadow-lg {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+}
+
+/* Images */
+.cd-img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cd-img-circle {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Visibilité responsive */
+.cd-hide-mobile {
+  display: block;
+}
+
+.cd-show-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .cd-hide-mobile {
+    display: none !important;
+  }
+  .cd-show-mobile {
+    display: block !important;
+  }
+  .cd-section,
+  .cd-section-sm,
+  .cd-section-lg {
+    padding: 48px 24px;
+  }
+  .cd-section-title {
+    font-size: 2rem;
+  }
+  .cd-h1 {
+    font-size: 2.5rem;
+  }
+  .cd-h2 {
+    font-size: 2rem;
+  }
+  .cd-page-banner h1 {
+    font-size: 2rem;
+  }
+}
 /**************/
 .wpcf7-not-valid-tip {
   display: none !important;
@@ -580,6 +1118,205 @@ body::-webkit-scrollbar-thumb {
   }
   .cd-team-circle-item .vce-single-image-figure-inner {
     margin-left: 0 !important;
+  }
+}
+/* ============================================================
+   SERVICES SECTION — "Des soins variés pour toute la famille"
+   Fichier : sass/services.scss
+   ============================================================ */
+/* ============================================================
+   ROW PRINCIPALE
+   Extra class name VC : cd-service-col (sur la colonne wrapper)
+   ============================================================ */
+.cd-service-col > .vce-col-inner {
+  padding: 130px 175px !important;
+}
+
+/* Titre principal centré */
+.cd-title-service {
+  font-family: "SuperBlue", serif;
+  font-weight: 400;
+  color: #242424;
+  text-align: center;
+  margin: 0 0 16px 0;
+  padding: 0;
+  /* H2 — titre de section */
+  /* H3 — titre de carte */
+}
+.cd-title-service h2 {
+  font-size: 2.8rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.cd-title-service h3 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  text-align: left;
+  color: #242424;
+  margin: 0 0 12px 0;
+}
+
+/* Sous-titre de section */
+.cd-text-service {
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  color: #383839;
+  line-height: 1.7;
+  text-align: center;
+  max-width: 520px;
+  margin: 0 auto 56px;
+}
+
+/* ============================================================
+   CARTES DE SERVICE
+   Extra class name VC : cd-service-card (sur chaque colonne)
+   ============================================================ */
+.cd-service-card > .vce-col-inner {
+  padding: 0 !important;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #ffffff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  transition: all 0.35s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.cd-service-card:hover > .vce-col-inner {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+  transform: translateY(-6px);
+}
+
+/* ---- Image de la carte ---- */
+.cd-img-service {
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.cd-img-service .vce-single-image-figure-inner {
+  width: 100% !important;
+  border-radius: 0 !important;
+}
+.cd-img-service .vce-single-image-inner {
+  padding-bottom: 65% !important; /* Ratio hauteur image */
+  overflow: hidden;
+}
+.cd-img-service img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  transition: transform 0.5s ease;
+}
+.cd-service-card:hover .cd-img-service img {
+  transform: scale(1.05);
+}
+
+/* ---- Contenu texte de la carte ---- */
+.cd-service-card .vce-text-block {
+  padding: 24px 28px 32px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Description de la carte */
+.cd-desc-service {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.875rem;
+  color: #625756;
+  line-height: 1.75;
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* ============================================================
+   BOUTON "Nos services" — centré sous les cartes
+   ============================================================ */
+.cd-service-col {
+  /* Wrapper du bouton */
+}
+.cd-service-col > .vce-col-content > .vce-text-block {
+  text-align: center;
+  margin-top: 48px;
+}
+
+/* Le bouton lui-même — ajoutez la classe btn-services sur le lien */
+.btn-services,
+.cd-service-col a.btn-services {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 40px;
+  background: transparent;
+  color: #242424 !important;
+  font-family: "Manrope", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid #242424;
+  border-radius: 50px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+.btn-services:hover,
+.cd-service-col a.btn-services:hover {
+  background: #242424;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(36, 36, 36, 0.2);
+}
+
+/* ============================================================
+   ANIMATIONS AU SCROLL
+   Ajoutez cd-fade-in sur chaque cd-service-card dans VC
+   ============================================================ */
+.cd-service-card {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.35s ease; /* garde la transition hover */
+}
+.cd-service-card.cd-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.cd-service-card:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.cd-service-card:nth-child(2) {
+  transition-delay: 0.25s;
+}
+.cd-service-card:nth-child(3) {
+  transition-delay: 0.4s;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .cd-service-col > .vce-col-inner {
+    padding: 60px 40px !important;
+  }
+  h2.cd-title-service {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 768px) {
+  .cd-service-col > .vce-col-inner {
+    padding: 48px 24px !important;
+  }
+  h2.cd-title-service {
+    font-size: 1.8rem;
+  }
+  .cd-text-service {
+    margin-bottom: 36px;
+  }
+  /* Cartes en colonne sur mobile */
+  .cd-service-card:nth-child(2) {
+    transition-delay: 0.1s;
+  }
+  .cd-service-card:nth-child(3) {
+    transition-delay: 0.2s;
   }
 }
 /*# sourceMappingURL=../css/style.css.map */

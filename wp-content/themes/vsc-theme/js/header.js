@@ -55,3 +55,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 });
+// Dans header.js — ajoutez cd-service-card à la liste
+document.querySelectorAll('.cd-fade-in, .cd-fade-left, .cd-fade-right, .cd-service-card')
+    .forEach(el => observer.observe(el));
