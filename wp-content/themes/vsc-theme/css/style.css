@@ -350,7 +350,7 @@ body::-webkit-scrollbar-thumb {
   pointer-events: none;
 }
 .cd-deco-tooth .vce-single-image-figure-inner {
-  width: 287px !important;
+  width: 288px !important;
   height: auto;
 }
 .cd-deco-tooth img {
@@ -437,7 +437,6 @@ body::-webkit-scrollbar-thumb {
   font-size: 0.875rem;
 }
 .horaire td {
-  padding: 8px 0;
   color: #625756;
   vertical-align: top;
   font-weight: 400;
