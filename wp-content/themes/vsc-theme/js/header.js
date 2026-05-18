@@ -5,54 +5,52 @@
 
 document.addEventListener('DOMContentLoaded', function () {
 
-    const header = document.querySelector('.site-header');
+    const header    = document.querySelector('.site-header');
     const hamburger = document.querySelector('.hamburger');
-    const mainNav = document.querySelector('.main-nav');
+    const navWrapper = document.querySelector('.site-header nav > div');
 
     /* --- Header sticky au scroll --- */
     if (header) {
         window.addEventListener('scroll', function () {
-            if (window.scrollY > 30) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
+            header.classList.toggle('scrolled', window.scrollY > 30);
         }, { passive: true });
     }
 
-    /* --- Menu hamburger mobile --- */
-    if (hamburger && mainNav) {
+    /* --- Hamburger mobile --- */
+    if (hamburger && navWrapper) {
         hamburger.addEventListener('click', function () {
-            hamburger.classList.toggle('open');
-            mainNav.classList.toggle('open');
-
-            /* Accessibilité */
-            const isOpen = mainNav.classList.contains('open');
+            const isOpen = navWrapper.classList.toggle('open');
+            hamburger.classList.toggle('open', isOpen);
             hamburger.setAttribute('aria-expanded', isOpen);
-        });
-
-        /* Fermer le menu au clic sur un lien */
-        mainNav.querySelectorAll('a').forEach(function (link) {
-            link.addEventListener('click', function () {
-                hamburger.classList.remove('open');
-                mainNav.classList.remove('open');
-            });
         });
 
         /* Fermer au clic en dehors */
         document.addEventListener('click', function (e) {
             if (!header.contains(e.target)) {
+                navWrapper.classList.remove('open');
                 hamburger.classList.remove('open');
-                mainNav.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', false);
             }
         });
     }
 
-    /* --- Lien actif selon la page courante --- */
+    /* --- Sous-menu mobile en accordéon --- */
+    if (window.innerWidth <= 768) {
+        document.querySelectorAll('#primary-menu .menu-item-has-children > a')
+            .forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const parent = this.closest('li');
+                    parent.classList.toggle('open');
+                });
+            });
+    }
+
+    /* --- Lien actif selon URL courante --- */
     const currentUrl = window.location.href;
-    document.querySelectorAll('.main-nav a').forEach(function (link) {
+    document.querySelectorAll('#primary-menu a').forEach(function (link) {
         if (link.href === currentUrl) {
-            link.classList.add('active');
+            link.closest('li').classList.add('current-menu-item');
         }
     });
 

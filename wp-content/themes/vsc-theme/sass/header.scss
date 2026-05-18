@@ -1,18 +1,19 @@
 /* ============================================================
    HEADER — Clinique Dentaire Geneviève Lafrance
    Fichier : sass/header.scss
+   Adapté à la structure WordPress wp_nav_menu (menu-1 / #primary-menu)
    ============================================================ */
 
 /* --- Variables locales --- */
-$primary:       #849994;
-$accent:        #C58E80;
-$dark:          #242424;
-$text:          #383839;
-$bg-warm:       #F3F1ED;
-$white:         #ffffff;
-$font-heading:  'SuperBlue', serif;
-$font-body:     'Manrope', sans-serif;
-$transition:    all 0.3s ease;
+$primary:      #849994;
+$accent:       #C58E80;
+$dark:         #242424;
+$text:         #383839;
+$bg-warm:      #F3F1ED;
+$white:        #ffffff;
+$font-heading: 'SuperBlue', serif;
+$font-body:    'Manrope', sans-serif;
+$transition:   all 0.3s ease;
 
 /* ============================================================
    HEADER PRINCIPAL
@@ -29,10 +30,9 @@ $transition:    all 0.3s ease;
     min-height: 144px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* logo gauche | groupe droite */
+    justify-content: space-between; /* logo gauche | nav+boutons droite */
     transition: box-shadow 0.4s ease, height 0.4s ease, background 0.4s ease;
 
-    /* État scrollé */
     &.scrolled {
         height: 60px;
         min-height: 30px;
@@ -42,169 +42,297 @@ $transition:    all 0.3s ease;
     }
 }
 
-/* Groupe droite : nav + actions collés ensemble */
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 32px; /* espace entre nav et boutons */
-}
-
 /* ============================================================
-   LOGO
+   LOGO (custom logo WordPress)
    ============================================================ */
 
+.custom-logo-link,
 .site-logo {
     display: flex;
     align-items: center;
     text-decoration: none;
+    flex-shrink: 0;
     opacity: 0;
     transform: translateX(-20px);
     animation: fadeInLeft 0.6s ease 0.1s forwards;
 
-    img,
-    svg {
-        height: 45px;
+    img.custom-logo {
+        height: 50px;
         width: auto;
+        display: block;
         transition: $transition;
     }
 
-    &:hover img,
-    &:hover svg {
+    &:hover img {
         opacity: 0.85;
     }
 }
 
 /* ============================================================
-   NAVIGATION PRINCIPALE
+   NAVIGATION WORDPRESS — #primary-menu
+   wp_nav_menu génère : <div class="menu-..."><ul id="primary-menu">
    ============================================================ */
 
-.main-nav {
+/* Wrapper généré par WordPress — on le neutralise */
+.site-header nav > div {
     display: flex;
     align-items: center;
-    gap: 32px;
+}
+
+/* La <ul> principale */
+#primary-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
     list-style: none;
     margin: 0;
     padding: 0;
 
-    li {
+    /* Animation cascade sur les <li> */
+    > li {
+        position: relative;
         opacity: 0;
         animation: fadeInDown 0.5s ease forwards;
 
-        /* Décalage en cascade pour chaque item */
         &:nth-child(1) { animation-delay: 0.15s; }
         &:nth-child(2) { animation-delay: 0.22s; }
         &:nth-child(3) { animation-delay: 0.29s; }
         &:nth-child(4) { animation-delay: 0.36s; }
         &:nth-child(5) { animation-delay: 0.43s; }
         &:nth-child(6) { animation-delay: 0.50s; }
-    }
+        &:nth-child(7) { animation-delay: 0.57s; }
+        &:nth-child(8) { animation-delay: 0.64s; }
+        &:nth-child(9) { animation-delay: 0.71s; }
 
-    a {
-        font-family: $font-heading; /* SuperBlue Regular */
-        font-size: 20px;
-        font-weight: 400; /* Regular */
-        color: $text;
-        text-decoration: none;
-        position: relative;
-        padding-bottom: 3px;
-        transition: color 0.3s ease;
+        /* Lien par défaut */
+        > a {
+            font-family: $font-heading;
+            font-size: 20px;
+            font-weight: 400;
+            color: $text;
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 3px;
+            white-space: nowrap;
+            transition: color 0.3s ease;
+            display: inline-block;
 
-        /* Underline animé au hover */
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 1.5px;
-            background: $accent;
-            transition: width 0.3s ease;
-        }
-
-        &:hover {
-            color: $accent;
-
+            /* Underline animé au hover */
             &::after {
-                width: 100%;
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 1.5px;
+                background: $accent;
+                transition: width 0.3s ease;
+            }
+
+            &:hover {
+                color: $accent;
+                &::after { width: 100%; }
             }
         }
 
-        /* Lien actif */
-        &.active,
-        &.current-menu-item {
+        /* Lien actif — WordPress ajoute current-menu-item */
+        &.current-menu-item > a,
+        &.current-menu-ancestor > a {
             color: $accent;
             text-decoration: underline;
-            text-underline-offset: 4px;
+            text-underline-offset: 5px;
+            text-decoration-color: $accent;
+        }
+
+        /* ---- Item avec sous-menu (Services) ---- */
+        &.menu-item-has-children {
+            > a {
+                padding-right: 18px;
+
+                /* Flèche discrète */
+                &::before {
+                    content: '▾';
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 12px;
+                    color: $accent;
+                    transition: transform 0.3s ease;
+                }
+            }
+
+            &:hover > a::before {
+                transform: translateY(-50%) rotate(180deg);
+            }
+
+            /* ---- SOUS-MENU dropdown ---- */
+            > .sub-menu {
+                display: block;
+                visibility: hidden;
+                opacity: 0;
+                position: absolute;
+                top: calc(100% + 12px);
+                left: 0;
+                min-width: 280px;
+                background: $white;
+                border-radius: 8px;
+                box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+                padding: 8px 0;
+                list-style: none;
+                margin: 0;
+                transform: translateY(-8px);
+                transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+                z-index: 999;
+
+                /* Petite flèche pointant vers le haut */
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -6px;
+                    left: 24px;
+                    width: 12px;
+                    height: 12px;
+                    background: $white;
+                    transform: rotate(45deg);
+                    box-shadow: -2px -2px 5px rgba(0,0,0,0.05);
+                }
+
+                li {
+                    opacity: 1;
+                    animation: none;
+
+                    a {
+                        display: block;
+                        padding: 10px 20px;
+                        font-family: $font-body;
+                        font-size: 15px;
+                        font-weight: 500;
+                        color: $text;
+                        text-decoration: none;
+                        transition: $transition;
+                        border-left: 3px solid transparent;
+
+                        &:hover {
+                            color: $accent;
+                            background: $bg-warm;
+                            border-left-color: $accent;
+                            padding-left: 24px;
+                        }
+                    }
+
+                    &.current-menu-item a {
+                        color: $accent;
+                        border-left-color: $accent;
+                        padding-left: 24px;
+                        background: $bg-warm;
+                    }
+                }
+            }
+
+            /* Afficher le sous-menu au hover */
+            &:hover > .sub-menu {
+                visibility: visible;
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    }
+
+    /* ============================================================
+     BOUTONS DANS LE MENU (via classe CSS dans WordPress)
+     Classes ajoutées dans Apparence > Menus > Classes CSS
+     ============================================================ */
+
+    /* btn-phone → li avec classe btn-phone */
+    li.btn-phone {
+        opacity: 1;
+        animation: fadeInRight 0.6s ease 0.5s forwards;
+
+        > a {
+            display: inline-flex;
+            align-items: center;
+            padding: 9px 18px;
+            background: $accent;
+            color: $white !important;
+            font-family: $font-body;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none !important;
+            white-space: nowrap;
+            transition: $transition;
+
+            /* Pas d'underline sur le bouton */
+            &::after { display: none; }
+            &::before { display: none; }
+
+            &:hover {
+                background: darken($accent, 8%);
+                transform: translateY(-1px);
+                box-shadow: 0 4px 12px rgba(197,142,128,0.35);
+                color: $white !important;
+            }
+        }
+    }
+
+    /* btn-coin-enfant → li avec classe btn-coin-enfant */
+    li.btn-coin-enfant {
+        opacity: 1;
+        animation: fadeInRight 0.6s ease 0.58s forwards;
+
+        > a {
+            display: inline-flex;
+            align-items: center;
+            padding: 9px 20px;
+            background: $dark;
+            color: $white !important;
+            font-family: $font-body;
+            font-size: 15px;
+            font-weight: 600;
+            border-radius: 50px;
+            text-decoration: none !important;
+            white-space: nowrap;
+            transition: $transition;
+
+            &::after { display: none; }
+            &::before { display: none; }
+
+            &:hover {
+                background: lighten($dark, 15%);
+                transform: translateY(-1px);
+                color: $white !important;
+            }
         }
     }
 }
 
 /* ============================================================
-   ACTIONS HEADER (téléphone + bouton + facebook)
+   HAMBURGER — MOBILE
    ============================================================ */
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
 
-/* Bouton téléphone */
-.btn-phone {
-    display: inline-flex;
-    align-items: center;
-    padding: 9px 18px;
-    background: $accent;
-    color: $white !important;
-    font-family: $font-body;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border-radius: 50px;
-    text-decoration: none !important;
-    transition: $transition;
-    white-space: nowrap;
-
-    &:hover {
-        background: darken($accent, 8%);
-        transform: translateY(-1px);
-        box-shadow: 0 4px 12px rgba(197, 142, 128, 0.35);
-    }
-}
-
-/* Bouton Coin enfant */
-.btn-coin-enfant {
-    display: inline-flex;
-    align-items: center;
-    padding: 9px 20px;
-    background: $dark;
-    color: $white !important;
-    font-family: $font-body;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border-radius: 50px;
-    text-decoration: none !important;
-    transition: $transition;
-    white-space: nowrap;
-
-    &:hover {
-        background: lighten($dark, 15%);
-        transform: translateY(-1px);
-    }
-}
-
-/* Icône Facebook */
-.btn-facebook {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    color: $text;
-    text-decoration: none;
-    transition: $transition;
-
-    svg, i {
-        font-size: 1.2rem;
+    span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: $dark;
+        border-radius: 2px;
+        transition: $transition;
     }
 
-    &:hover {
-        color: #1877f2;
-        transform: scale(1.15);
+    &.open {
+        span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        span:nth-child(2) { opacity: 0; }
+        span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
     }
 }
 
@@ -219,10 +347,9 @@ $transition:    all 0.3s ease;
     display: flex;
     align-items: center;
     overflow: hidden;
-    margin-top: 70px; /* Compense le header fixed */
+    margin-top: 70px;
 }
 
-/* Image de fond */
 .hero-bg {
     position: absolute;
     inset: 0;
@@ -233,19 +360,17 @@ $transition:    all 0.3s ease;
     animation: heroZoom 8s ease forwards;
 }
 
-/* Overlay gradient */
 .hero-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
         to right,
-        rgba(36, 36, 36, 0.55) 0%,
-        rgba(36, 36, 36, 0.2) 50%,
-        rgba(36, 36, 36, 0) 80%
+        rgba(36,36,36,0.55) 0%,
+        rgba(36,36,36,0.2) 50%,
+        rgba(36,36,36,0) 80%
     );
 }
 
-/* Contenu hero */
 .hero-content {
     position: relative;
     z-index: 2;
@@ -256,7 +381,7 @@ $transition:    all 0.3s ease;
 .hero-title {
     font-family: $font-heading;
     font-size: 3.2rem;
-    font-weight: 400; /* SuperBlue est déjà bold par nature */
+    font-weight: 400;
     color: $white;
     line-height: 1.15;
     margin-bottom: 24px;
@@ -277,16 +402,8 @@ $transition:    all 0.3s ease;
     transform: translateX(-20px);
     animation: fadeInLeft 0.7s ease 0.7s forwards;
 
-    svg, .icon-pin {
-        flex-shrink: 0;
-        margin-top: 2px;
-        color: $accent;
-    }
+    svg { flex-shrink: 0; margin-top: 2px; color: $accent; }
 }
-
-/* ============================================================
-   BARRE LATÉRALE ICÔNES (droite)
-   ============================================================ */
 
 .hero-sidebar {
     position: absolute;
@@ -307,16 +424,13 @@ $transition:    all 0.3s ease;
     justify-content: center;
     width: 52px;
     height: 52px;
-    background: rgba(36, 36, 36, 0.75);
+    background: rgba(36,36,36,0.75);
     color: $white;
     text-decoration: none;
     transition: $transition;
     backdrop-filter: blur(4px);
 
-    svg, img {
-        width: 22px;
-        height: 22px;
-    }
+    svg { width: 22px; height: 22px; }
 
     &:hover {
         background: $accent;
@@ -329,36 +443,18 @@ $transition:    all 0.3s ease;
    ============================================================ */
 
 @keyframes fadeInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    from { opacity: 0; transform: translateX(-30px); }
+    to   { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+    from { opacity: 0; transform: translateX(30px); }
+    to   { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-15px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes heroZoom {
@@ -367,113 +463,100 @@ $transition:    all 0.3s ease;
 }
 
 /* ============================================================
-   MENU HAMBURGER — MOBILE
-   ============================================================ */
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 4px;
-
-    span {
-        display: block;
-        width: 24px;
-        height: 2px;
-        background: $dark;
-        border-radius: 2px;
-        transition: $transition;
-    }
-
-    &.open {
-        span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        span:nth-child(2) { opacity: 0; }
-        span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-    }
-}
-
-/* ============================================================
-   RESPONSIVE — MOBILE
+   RESPONSIVE — TABLETTE (1024px)
    ============================================================ */
 
 @media (max-width: 1024px) {
-    .site-header {
-        padding: 0 24px;
+    .site-header { padding: 0 24px; }
+
+    #primary-menu {
+        gap: 18px;
+        > li > a { font-size: 16px; }
     }
 
-    .main-nav {
-        gap: 20px;
-
-        a { font-size: 16px; } /* Réduit légèrement sur tablette */
-    }
-
-    .hero-content {
-        padding: 40px;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
+    .hero-content { padding: 40px; }
+    .hero-title   { font-size: 2.5rem; }
 }
 
+/* ============================================================
+   RESPONSIVE — MOBILE (768px)
+   ============================================================ */
+
 @media (max-width: 768px) {
-    .site-header {
-        padding: 0 20px;
-    }
+    .site-header { padding: 0 20px; }
 
-    .hamburger {
-        display: flex;
-    }
+    .hamburger { display: flex; }
 
-    .main-nav {
-        display: none;
+    /* Nav mobile : dropdown depuis le haut */
+    .site-header nav > div {
         position: absolute;
         top: 70px;
         left: 0;
         right: 0;
+        display: none;
         background: $white;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        z-index: 999;
+
+        &.open { display: block; }
+    }
+
+    #primary-menu {
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
-        padding: 16px 0;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        padding: 12px 0;
 
-        &.open {
-            display: flex;
-        }
-
-        li {
+        > li {
             width: 100%;
-            opacity: 1;
-            animation: none;
+            opacity: 1 !important;
+            animation: none !important;
+
+            > a {
+                display: block;
+                padding: 14px 24px;
+                font-size: 1rem;
+                border-bottom: 1px solid #f0efeb;
+                &::after { display: none; }
+            }
+
+            /* Sous-menu mobile : visible en accordéon */
+            &.menu-item-has-children {
+                > .sub-menu {
+                    position: static;
+                    visibility: visible;
+                    opacity: 1;
+                    transform: none;
+                    box-shadow: none;
+                    border-radius: 0;
+                    padding: 0;
+                    display: none;
+                    background: $bg-warm;
+
+                    &::before { display: none; }
+
+                    li a {
+                        padding-left: 36px;
+                        font-size: 14px;
+                        border-left: none;
+                        border-bottom: 1px solid #ece9e4;
+                    }
+                }
+
+                &.open > .sub-menu { display: block; }
+            }
+
+            /* Boutons en mobile : pleine largeur */
+            &.btn-phone > a,
+            &.btn-coin-enfant > a {
+                margin: 8px 16px;
+                justify-content: center;
+                border-radius: 50px;
+            }
         }
-
-        a {
-            display: block;
-            padding: 14px 24px;
-            font-size: 1rem;
-            border-bottom: 1px solid #f0efeb;
-
-            &::after { display: none; }
-        }
     }
 
-    .header-actions {
-        .btn-phone span { display: none; } /* Affiche seulement l'icône */
-        .btn-coin-enfant { display: none; }
-    }
-
-    .hero-content {
-        padding: 30px 24px;
-        max-width: 100%;
-    }
-
-    .hero-title {
-        font-size: 2rem;
-    }
-
-    .hero-sidebar {
-        display: none;
-    }
+    .hero-content  { padding: 30px 24px; max-width: 100%; }
+    .hero-title    { font-size: 2rem; }
+    .hero-sidebar  { display: none; }
 }

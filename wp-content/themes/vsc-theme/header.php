@@ -21,16 +21,9 @@
 <header class="site-header" role="banner">
 
     <!-- Logo -->
-    <a href="<?php echo esc_url(home_url('/')); ?>" class="site-logo" aria-label="<?php bloginfo('name'); ?> — Accueil">
-        <?php
-        if (has_custom_logo()) :
+    <?php
             the_custom_logo();
-        else : ?>
-            <span style="font-family: 'SuperBlue', serif; font-size: 1.6rem; color: #242424;">
-                +<span style="color: #849994;">🦷</span>GL
-            </span>
-        <?php endif; ?>
-    </a>
+            ?>
 
     <!-- Navigation principale -->
     <nav role="navigation" aria-label="Navigation principale">
