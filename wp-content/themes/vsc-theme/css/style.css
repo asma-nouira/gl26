@@ -1140,21 +1140,10 @@ body::-webkit-scrollbar-thumb {
   text-align: center;
   margin: 0 0 16px 0;
   padding: 0;
-  /* H2 — titre de section */
-  /* H3 — titre de carte */
-}
-.cd-title-service h2 {
   font-size: 2.8rem;
   line-height: 1.1111;
   margin-bottom: 16px;
   max-width: 513px;
-}
-.cd-title-service h3 {
-  font-size: 2.18rem;
-  line-height: 1.14;
-  text-align: left;
-  color: #625756;
-  margin: 0 0 12px 0;
 }
 
 /* Sous-titre de section */
@@ -1172,6 +1161,9 @@ body::-webkit-scrollbar-thumb {
    CARTES DE SERVICE
    Extra class name VC : cd-service-card (sur chaque colonne)
    ============================================================ */
+.cd-service-card {
+  /* H3 — titre de carte */
+}
 .cd-service-card > .vce-col-inner {
   padding: 0 !important;
   border-radius: 40px;
@@ -1185,6 +1177,14 @@ body::-webkit-scrollbar-thumb {
 .cd-service-card:hover > .vce-col-inner {
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
   transform: translateY(-6px);
+}
+.cd-service-card h3 {
+  font-size: 2.18rem;
+  line-height: 1.14;
+  text-align: left;
+  color: #625756;
+  margin: 0 0 12px 0;
+  font-family: "SuperBlue", serif;
 }
 
 /* ---- Image de la carte ---- */

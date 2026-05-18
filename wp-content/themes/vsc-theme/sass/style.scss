@@ -350,24 +350,14 @@ body::-webkit-scrollbar-thumb {
     text-align: center;
     margin: 0 0 16px 0;
     padding: 0;
-
-    /* H2 — titre de section */
-    h2 {
-        font-size: 2.8rem;
+	   font-size: 2.8rem;
         line-height: 1.1111;
         margin-bottom: 16px;
 		max-width: 513px;
-    }
-
-    /* H3 — titre de carte */
-    h3 {
-        font-size: 2.18rem;
-        line-height: 1.14;
-        text-align: left;
-        color: #625756;
-        margin: 0 0 12px 0;
-    }
 }
+
+    
+
 
 /* Sous-titre de section */
 .cd-text-service {
@@ -401,6 +391,15 @@ body::-webkit-scrollbar-thumb {
     &:hover > .vce-col-inner {
         box-shadow: 0 12px 36px rgba(0,0,0,0.12);
         transform: translateY(-6px);
+    }
+	/* H3 — titre de carte */
+    h3 {
+        font-size: 2.18rem;
+        line-height: 1.14;
+        text-align: left;
+        color: #625756;
+        margin: 0 0 12px 0;
+		 font-family: 'SuperBlue', serif;
     }
 }
 
