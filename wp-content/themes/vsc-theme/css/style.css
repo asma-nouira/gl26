@@ -421,15 +421,16 @@ body {
   gap: 8px;
   padding: 13px 36px;
   font-family: var(--cd-font-body);
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 1.25rem;
+  font-weight: 400;
   border-radius: var(--cd-radius-full);
   border: 2px solid transparent;
   text-decoration: none !important;
   cursor: pointer;
   transition: var(--cd-transition);
   white-space: nowrap;
-  line-height: 1.4;
+  line-height: 1.5;
+  font-family: "SuperBlue", serif;
   /* Tailles */
   /* --- Variantes --- */
   /* Teal — action principale */
@@ -1228,7 +1229,7 @@ body::-webkit-scrollbar-thumb {
   line-height: 1.38;
   margin: 0;
   flex-grow: 1;
-  padding: 23px 54px;
+  padding: 23px 54px 25px;
 }
 
 /* ============================================================
