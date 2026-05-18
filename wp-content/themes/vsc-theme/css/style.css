@@ -186,53 +186,6 @@ ul {
     transform: translateX(0);
   }
 }
-/* ============================================================
-   BARRE LATÉRALE (fixed via header.php)
-   ============================================================ */
-.hero-sidebar {
-  position: fixed;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  opacity: 0;
-  animation: fadeInRight 0.7s ease 0.9s forwards;
-}
-
-.hero-sidebar-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 54px;
-  height: 54px;
-  background: rgba(98, 87, 86, 0.78); /* Brun #625756 semi-transparent */
-  color: #ffffff;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.hero-sidebar-item svg {
-  width: 22px;
-  height: 22px;
-  stroke: #ffffff;
-  flex-shrink: 0;
-}
-.hero-sidebar-item:last-child {
-  border-bottom: none;
-  /* Dernier item (pin) — fond légèrement différent */
-  background: rgba(98, 87, 86, 0.6);
-}
-.hero-sidebar-item:hover {
-  background: #C58E80;
-  width: 60px;
-}
-.hero-sidebar-item:hover svg {
-  stroke: #ffffff;
-}
-
 @keyframes fadeInRight {
   from {
     opacity: 0;
