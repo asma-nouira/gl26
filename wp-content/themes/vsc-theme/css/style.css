@@ -1187,6 +1187,12 @@ body::-webkit-scrollbar-thumb {
   color: #625756;
   margin: 0 0 12px 0;
   font-family: "SuperBlue", serif;
+  margin-top: -60px;
+  z-index: 555;
+  position: relative;
+  background-color: #F4F3EF;
+  max-width: 308px;
+  padding: 10px 54px;
 }
 
 /* ---- Image de la carte ---- */
@@ -1217,21 +1223,15 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* ---- Contenu texte de la carte ---- */
-.cd-service-card .vce-text-block {
-  padding: 24px 28px 32px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
 /* Description de la carte */
 .cd-desc-service {
   font-family: "Manrope", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.12rem;
   color: #625756;
   line-height: 1.38;
   margin: 0;
   flex-grow: 1;
+  padding: 23px 54px;
 }
 
 /* ============================================================
