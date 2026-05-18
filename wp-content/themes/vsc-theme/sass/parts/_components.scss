@@ -468,3 +468,21 @@ body {
     .cd-h2            { font-size: 2rem; }
     .cd-page-banner h1 { font-size: 2rem; }
 }
+.cd-h2,
+.cd-section-title,
+h2.cd-title-service,
+h2 {
+    font-family: 'SuperBlue', serif;
+    font-size: 2.8125rem; /* 45px ÷ 16 */
+    font-weight: 400;
+    color: #625756;
+    line-height: 1.2;
+    margin: 0 0 16px;
+}
+@media (max-width: 1024px) {
+    h2, .cd-h2, .cd-section-title { font-size: 2.2rem; }
+}
+
+@media (max-width: 768px) {
+    h2, .cd-h2, .cd-section-title { font-size: 1.8rem; }
+}
