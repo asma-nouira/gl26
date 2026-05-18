@@ -53,7 +53,20 @@ document.addEventListener('DOMContentLoaded', function () {
             link.closest('li').classList.add('current-menu-item');
         }
     });
-// Dans header.js — ajoutez cd-service-card à la liste
-document.querySelectorAll('.cd-fade-in, .cd-fade-left, .cd-fade-right, .cd-service-card')
-    .forEach(el => observer.observe(el));
+
+    /* --- Animations au scroll (IntersectionObserver) --- */
+    const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('cd-visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll(
+        '.cd-fade-in, .cd-fade-left, .cd-fade-right, .cd-service-card'
+    ).forEach(function (el) {
+        observer.observe(el);
+    });
+
 });
