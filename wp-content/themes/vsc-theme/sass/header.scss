@@ -30,7 +30,7 @@ $transition:    all 0.3s ease;
     height: 70px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* logo gauche | groupe droite */
     transition: box-shadow 0.4s ease, height 0.4s ease, background 0.4s ease;
 
     /* État scrollé */
@@ -41,6 +41,13 @@ $transition:    all 0.3s ease;
         background: rgba(255,255,255,0.97);
         backdrop-filter: blur(8px);
     }
+}
+
+/* Groupe droite : nav + actions collés ensemble */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 32px; /* espace entre nav et boutons */
 }
 
 /* ============================================================
