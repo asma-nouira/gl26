@@ -454,11 +454,8 @@ body::-webkit-scrollbar-thumb {
 /* ============================================================
    PHOTOS ÉQUIPE — Chevauchement
    ============================================================ */
-.cd-team-circles .vce-row-content {
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
-  padding-left: 20px; /* Compense le premier margin-left négatif */
+.cd-team-circles {
+  padding-bottom: 60px;
 }
 
 .cd-team-circle-item {

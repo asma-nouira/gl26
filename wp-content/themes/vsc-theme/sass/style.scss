@@ -202,12 +202,7 @@ body::-webkit-scrollbar-thumb {
    ============================================================ */
 
 .cd-team-circles {
-    .vce-row-content {
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
-        padding-left: 20px; /* Compense le premier margin-left négatif */
-    }
+   padding-bottom: 60px;
 }
 
 .cd-team-circle-item {
