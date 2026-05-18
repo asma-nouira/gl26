@@ -1,3 +1,480 @@
 @import './statics.scss';
+/* ============================================================
+   HEADER — Clinique Dentaire Geneviève Lafrance
+   Fichier : sass/header.scss
+   ============================================================ */
 
+/* --- Variables locales --- */
+$primary:       #849994;
+$accent:        #C58E80;
+$dark:          #242424;
+$text:          #383839;
+$bg-warm:       #F3F1ED;
+$white:         #ffffff;
+$font-heading:  'SuperBlue', serif;
+$font-body:     'Manrope', sans-serif;
+$transition:    all 0.3s ease;
+
+/* ============================================================
+   HEADER PRINCIPAL
+   ============================================================ */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: $white;
+    padding: 0 40px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: box-shadow 0.4s ease, height 0.4s ease, background 0.4s ease;
+
+    /* État scrollé */
+    &.scrolled {
+        height: 60px;
+        box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+        background: rgba(255,255,255,0.97);
+        backdrop-filter: blur(8px);
+    }
+}
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+
+.site-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 0.6s ease 0.1s forwards;
+
+    img,
+    svg {
+        height: 45px;
+        width: auto;
+        transition: $transition;
+    }
+
+    &:hover img,
+    &:hover svg {
+        opacity: 0.85;
+    }
+}
+
+/* ============================================================
+   NAVIGATION PRINCIPALE
+   ============================================================ */
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+        opacity: 0;
+        animation: fadeInDown 0.5s ease forwards;
+
+        /* Décalage en cascade pour chaque item */
+        &:nth-child(1) { animation-delay: 0.15s; }
+        &:nth-child(2) { animation-delay: 0.22s; }
+        &:nth-child(3) { animation-delay: 0.29s; }
+        &:nth-child(4) { animation-delay: 0.36s; }
+        &:nth-child(5) { animation-delay: 0.43s; }
+        &:nth-child(6) { animation-delay: 0.50s; }
+    }
+
+    a {
+        font-family: $font-body;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: $text;
+        text-decoration: none;
+        position: relative;
+        padding-bottom: 3px;
+        transition: color 0.3s ease;
+
+        /* Underline animé au hover */
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background: $accent;
+            transition: width 0.3s ease;
+        }
+
+        &:hover {
+            color: $accent;
+
+            &::after {
+                width: 100%;
+            }
+        }
+
+        /* Lien actif */
+        &.active,
+        &.current-menu-item {
+            color: $accent;
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+    }
+}
+
+/* ============================================================
+   ACTIONS HEADER (téléphone + bouton + facebook)
+   ============================================================ */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    animation: fadeInRight 0.6s ease 0.5s forwards;
+}
+
+/* Bouton téléphone */
+.btn-phone {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 18px;
+    background: $accent;
+    color: $white !important;
+    font-family: $font-body;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none !important;
+    transition: $transition;
+    white-space: nowrap;
+
+    &:hover {
+        background: darken($accent, 8%);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(197, 142, 128, 0.35);
+    }
+}
+
+/* Bouton Coin enfant */
+.btn-coin-enfant {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 20px;
+    background: $dark;
+    color: $white !important;
+    font-family: $font-body;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none !important;
+    transition: $transition;
+    white-space: nowrap;
+
+    &:hover {
+        background: lighten($dark, 15%);
+        transform: translateY(-1px);
+    }
+}
+
+/* Icône Facebook */
+.btn-facebook {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    color: $text;
+    text-decoration: none;
+    transition: $transition;
+
+    svg, i {
+        font-size: 1.2rem;
+    }
+
+    &:hover {
+        color: #1877f2;
+        transform: scale(1.15);
+    }
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    margin-top: 70px; /* Compense le header fixed */
+}
+
+/* Image de fond */
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    transform: scale(1.05);
+    animation: heroZoom 8s ease forwards;
+}
+
+/* Overlay gradient */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(36, 36, 36, 0.55) 0%,
+        rgba(36, 36, 36, 0.2) 50%,
+        rgba(36, 36, 36, 0) 80%
+    );
+}
+
+/* Contenu hero */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 60px 80px;
+    max-width: 550px;
+}
+
+.hero-title {
+    font-family: $font-heading;
+    font-size: 3.2rem;
+    font-weight: 400; /* SuperBlue est déjà bold par nature */
+    color: $white;
+    line-height: 1.15;
+    margin-bottom: 24px;
+    opacity: 0;
+    transform: translateX(-30px);
+    animation: fadeInLeft 0.8s ease 0.4s forwards;
+}
+
+.hero-address {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    color: rgba(255,255,255,0.85);
+    font-family: $font-body;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    opacity: 0;
+    transform: translateX(-20px);
+    animation: fadeInLeft 0.7s ease 0.7s forwards;
+
+    svg, .icon-pin {
+        flex-shrink: 0;
+        margin-top: 2px;
+        color: $accent;
+    }
+}
+
+/* ============================================================
+   BARRE LATÉRALE ICÔNES (droite)
+   ============================================================ */
+
+.hero-sidebar {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    opacity: 0;
+    animation: fadeInRight 0.7s ease 0.9s forwards;
+}
+
+.hero-sidebar-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background: rgba(36, 36, 36, 0.75);
+    color: $white;
+    text-decoration: none;
+    transition: $transition;
+    backdrop-filter: blur(4px);
+
+    svg, img {
+        width: 22px;
+        height: 22px;
+    }
+
+    &:hover {
+        background: $accent;
+        width: 58px;
+    }
+}
+
+/* ============================================================
+   ANIMATIONS KEYFRAMES
+   ============================================================ */
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroZoom {
+    from { transform: scale(1.05); }
+    to   { transform: scale(1); }
+}
+
+/* ============================================================
+   MENU HAMBURGER — MOBILE
+   ============================================================ */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+
+    span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: $dark;
+        border-radius: 2px;
+        transition: $transition;
+    }
+
+    &.open {
+        span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        span:nth-child(2) { opacity: 0; }
+        span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    }
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+   ============================================================ */
+
+@media (max-width: 1024px) {
+    .site-header {
+        padding: 0 24px;
+    }
+
+    .main-nav {
+        gap: 20px;
+
+        a { font-size: 0.85rem; }
+    }
+
+    .hero-content {
+        padding: 40px;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        padding: 0 20px;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: $white;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 16px 0;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+
+        &.open {
+            display: flex;
+        }
+
+        li {
+            width: 100%;
+            opacity: 1;
+            animation: none;
+        }
+
+        a {
+            display: block;
+            padding: 14px 24px;
+            font-size: 1rem;
+            border-bottom: 1px solid #f0efeb;
+
+            &::after { display: none; }
+        }
+    }
+
+    .header-actions {
+        .btn-phone span { display: none; } /* Affiche seulement l'icône */
+        .btn-coin-enfant { display: none; }
+    }
+
+    .hero-content {
+        padding: 30px 24px;
+        max-width: 100%;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-sidebar {
+        display: none;
+    }
+}
 

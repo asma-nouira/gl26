@@ -187,6 +187,12 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-
+add_action('wp_enqueue_scripts', 'vsc_theme_header_js');
+function vsc_theme_header_js() {
+    wp_enqueue_script('cdgl-header',
+        get_template_directory_uri() . '/js/header.js',
+        array(), '1.0.0', true // true = chargé en footer
+    );
+}
 
 include_once "integrated_vc.php";

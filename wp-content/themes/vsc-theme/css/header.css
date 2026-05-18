@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .center {
   text-align: center;
 }
@@ -66,5 +67,446 @@ ul {
 .full-width .vce.vce-single-image-wrapper figure .vce-single-image-figure-inner {
   width: 100% !important;
   height: auto;
+}
+
+/* ============================================================
+   HEADER — Clinique Dentaire Geneviève Lafrance
+   Fichier : sass/header.scss
+   ============================================================ */
+/* --- Variables locales --- */
+/* ============================================================
+   HEADER PRINCIPAL
+   ============================================================ */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #ffffff;
+  padding: 0 40px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.4s ease, height 0.4s ease, background 0.4s ease;
+  /* État scrollé */
+}
+.site-header.scrolled {
+  height: 60px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(8px);
+}
+
+/* ============================================================
+   LOGO
+   ============================================================ */
+.site-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLeft 0.6s ease 0.1s forwards;
+}
+.site-logo img,
+.site-logo svg {
+  height: 45px;
+  width: auto;
+  transition: all 0.3s ease;
+}
+.site-logo:hover img, .site-logo:hover svg {
+  opacity: 0.85;
+}
+
+/* ============================================================
+   NAVIGATION PRINCIPALE
+   ============================================================ */
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-nav li {
+  opacity: 0;
+  animation: fadeInDown 0.5s ease forwards;
+  /* Décalage en cascade pour chaque item */
+}
+.main-nav li:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.main-nav li:nth-child(2) {
+  animation-delay: 0.22s;
+}
+.main-nav li:nth-child(3) {
+  animation-delay: 0.29s;
+}
+.main-nav li:nth-child(4) {
+  animation-delay: 0.36s;
+}
+.main-nav li:nth-child(5) {
+  animation-delay: 0.43s;
+}
+.main-nav li:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.main-nav a {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #383839;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 3px;
+  transition: color 0.3s ease;
+  /* Underline animé au hover */
+  /* Lien actif */
+}
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #C58E80;
+  transition: width 0.3s ease;
+}
+.main-nav a:hover {
+  color: #C58E80;
+}
+.main-nav a:hover::after {
+  width: 100%;
+}
+.main-nav a.active, .main-nav a.current-menu-item {
+  color: #C58E80;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* ============================================================
+   ACTIONS HEADER (téléphone + bouton + facebook)
+   ============================================================ */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  opacity: 0;
+  animation: fadeInRight 0.6s ease 0.5s forwards;
+}
+
+/* Bouton téléphone */
+.btn-phone {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 18px;
+  background: #C58E80;
+  color: #ffffff !important;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+.btn-phone:hover {
+  background: #b87564;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(197, 142, 128, 0.35);
+}
+
+/* Bouton Coin enfant */
+.btn-coin-enfant {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 20px;
+  background: #242424;
+  color: #ffffff !important;
+  font-family: "Manrope", sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+.btn-coin-enfant:hover {
+  background: #4a4a4a;
+  transform: translateY(-1px);
+}
+
+/* Icône Facebook */
+.btn-facebook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  color: #383839;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn-facebook svg, .btn-facebook i {
+  font-size: 1.2rem;
+}
+.btn-facebook:hover {
+  color: #1877f2;
+  transform: scale(1.15);
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 70px; /* Compense le header fixed */
+}
+
+/* Image de fond */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  transform: scale(1.05);
+  animation: heroZoom 8s ease forwards;
+}
+
+/* Overlay gradient */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(36, 36, 36, 0.55) 0%, rgba(36, 36, 36, 0.2) 50%, rgba(36, 36, 36, 0) 80%);
+}
+
+/* Contenu hero */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 80px;
+  max-width: 550px;
+}
+
+.hero-title {
+  font-family: "SuperBlue", serif;
+  font-size: 3.2rem;
+  font-weight: 400; /* SuperBlue est déjà bold par nature */
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInLeft 0.8s ease 0.4s forwards;
+}
+
+.hero-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLeft 0.7s ease 0.7s forwards;
+}
+.hero-address svg, .hero-address .icon-pin {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #C58E80;
+}
+
+/* ============================================================
+   BARRE LATÉRALE ICÔNES (droite)
+   ============================================================ */
+.hero-sidebar {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  animation: fadeInRight 0.7s ease 0.9s forwards;
+}
+
+.hero-sidebar-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  background: rgba(36, 36, 36, 0.75);
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+.hero-sidebar-item svg, .hero-sidebar-item img {
+  width: 22px;
+  height: 22px;
+}
+.hero-sidebar-item:hover {
+  background: #C58E80;
+  width: 58px;
+}
+
+/* ============================================================
+   ANIMATIONS KEYFRAMES
+   ============================================================ */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes heroZoom {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/* ============================================================
+   MENU HAMBURGER — MOBILE
+   ============================================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #242424;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE
+   ============================================================ */
+@media (max-width: 1024px) {
+  .site-header {
+    padding: 0 24px;
+  }
+  .main-nav {
+    gap: 20px;
+  }
+  .main-nav a {
+    font-size: 0.85rem;
+  }
+  .hero-content {
+    padding: 40px;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0 20px;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 16px 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  .main-nav.open {
+    display: flex;
+  }
+  .main-nav li {
+    width: 100%;
+    opacity: 1;
+    animation: none;
+  }
+  .main-nav a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 1rem;
+    border-bottom: 1px solid #f0efeb;
+  }
+  .main-nav a::after {
+    display: none;
+  }
+  .header-actions { /* Affiche seulement l'icône */ }
+  .header-actions .btn-phone span {
+    display: none;
+  }
+  .header-actions .btn-coin-enfant {
+    display: none;
+  }
+  .hero-content {
+    padding: 30px 24px;
+    max-width: 100%;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-sidebar {
+    display: none;
+  }
 }
 /*# sourceMappingURL=../css/header.css.map */
