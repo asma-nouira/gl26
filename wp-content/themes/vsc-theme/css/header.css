@@ -15,8 +15,7 @@
   z-index: 1000;
   background: #ffffff;
   padding: 0 40px;
-  min-height: 30px;
-  height: 70px;
+  min-height: 144px;
   display: flex;
   align-items: center;
   justify-content: space-between; /* logo gauche | groupe droite */
