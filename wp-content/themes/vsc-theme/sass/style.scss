@@ -84,7 +84,6 @@ body::-webkit-scrollbar-thumb {
     right: -30px;
     transform: translateY(-50%);
     z-index: 0;
-    opacity: 0.07;
     pointer-events: none;
 
     .vce-single-image-figure-inner {
@@ -116,7 +115,7 @@ body::-webkit-scrollbar-thumb {
     font-weight: 400;
     color: #625756;
     line-height: 1.15;
-    margin: 0 0 30px 0;
+    margin: 97px 0 30px 0;
 
     /* Animation */
     opacity: 0;
