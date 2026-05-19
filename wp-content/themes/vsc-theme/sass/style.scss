@@ -549,50 +549,6 @@ body::-webkit-scrollbar-thumb {
     padding-bottom: 60px;
     overflow: hidden;
 
-    /* Reset des styles VC inline qui cassent Slick */
-    .cd-gallery-slide {
-        padding: 0 8px;
-
-        .vce-col-inner,
-        .vce-col-content {
-            padding: 0 !important;
-            margin: 0 !important;
-        }
-
-        .vce-single-image-container,
-        .vce-single-image-wrapper,
-        figure,
-        .vce-single-image-figure-inner {
-            width: 100% !important;
-            max-width: 100% !important;
-        }
-
-        .vce-single-image-inner {
-            position: relative !important;
-            padding-bottom: 0 !important;
-            width: 100% !important;
-            height: 400px !important;
-            overflow: hidden;
-            border-radius: 12px;
-        }
-
-        img.vce-single-image {
-            position: absolute !important;
-            inset: 0;
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover;
-            display: block;
-            transition: filter 0.4s ease;
-            filter: brightness(0.75);
-        }
-
-        /* Slide centrale */
-        &.slick-center img.vce-single-image {
-            filter: brightness(1);
-        }
-    }
-
     /* Flèches */
     .cd-slider-prev,
     .cd-slider-next {
