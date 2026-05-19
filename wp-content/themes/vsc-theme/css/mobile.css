@@ -1,183 +1,222 @@
 @charset "UTF-8";
-.center {
-  text-align: center;
+/* ============================================================
+   MOBILE.SCSS — Clinique Dentaire Geneviève Lafrance
+   Fichier : sass/parts/mobile.scss
+   Import dans style.scss EN DERNIER : @import './parts/mobile';
+   ============================================================ */
+/* ============================================================
+   FIX GLOBAL — Overflow horizontal (scroll indésirable)
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
-.uppercase {
-  text-transform: uppercase;
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.white {
-  color: white;
-}
-
-.underline {
-  text-decoration: underline;
-}
-
-.nowrap {
-  white-space: nowrap;
-}
-@media (max-width: 767px) {
-  .nowrap {
-    white-space: inherit;
-  }
-}
-
-p {
-  margin-block-start: 0;
-  margin-block-end: 0;
-}
-
-h1, h2, h3 {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  font-weight: inherit;
-}
-
-.vce {
-  margin-bottom: 0;
-}
-
-strong {
-  font-weight: 700;
-}
-
-.semibold {
-  font-weight: 600;
-}
-
-em {
-  font-style: normal;
-  white-space: nowrap;
-}
-
-ul {
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding-inline-start: 0;
-}
-
-.test-bloc {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.full-width .vce.vce-single-image-wrapper {
-  width: 100%;
-  height: auto;
-}
-.full-width .vce.vce-single-image-wrapper figure {
-  width: 100%;
-  height: auto;
-}
-.full-width .vce.vce-single-image-wrapper figure .vce-single-image-figure-inner {
-  width: 100% !important;
-  height: auto;
+.vce-row-container,
+.vce-row,
+.vce-col,
+.vce-row-content {
+  max-width: 100% !important;
 }
 
 /* ============================================================
-   RESPONSIVE MOBILE — Corrections globales
+   TABLETTE — max 1200px
    ============================================================ */
-@media (max-width: 768px) {
-  /* Fix overflow horizontal global */
-  body, html {
-    overflow-x: hidden;
-    max-width: 100%;
-  }
-  /* ---- About section ---- */
+@media (max-width: 1200px) {
   .cd-about-section {
-    padding: 48px 24px !important;
+    padding: 80px 60px !important;
   }
   .cd-about-col-left {
-    padding-right: 0 !important;
+    padding-right: 40px !important;
   }
-  .cd-about-title {
-    padding: 40px 0 20px !important;
-    font-size: 2rem !important;
-    word-break: normal !important;
-    overflow-wrap: break-word;
-    white-space: normal !important;
-  }
-  /* ---- Horaires ---- */
-  .horaire table {
-    width: 100% !important;
-    table-layout: fixed;
-  }
-  .horaire table td {
-    font-size: 0.8rem !important;
-    word-break: break-word;
-    padding: 6px 4px !important;
-  }
-  .horaire table td:first-child {
-    padding-right: 8px !important;
-  }
-  /* ---- Services ---- */
   .cd-service-col > .vce-col-inner {
-    padding: 48px 24px !important;
+    padding: 80px 60px !important;
   }
-  /* ---- Gallery ---- */
   .cd-txt-gallery {
-    padding: 48px 24px !important;
+    padding: 80px 60px 40px !important;
   }
-  /* ---- Urgence / Formulaire ---- */
+  .cd-appoint-section {
+    padding: 80px 60px !important;
+  }
   .cd-urgence-section {
-    padding: 48px 24px !important;
+    padding: 80px 60px !important;
   }
   .cd-urgence-title-wrapper .vce-text-block-wrapper {
     padding-left: 0 !important;
     padding-right: 0 !important;
-    flex-wrap: wrap;
-    margin-bottom: 40px !important;
+  }
+}
+/* ============================================================
+   TABLETTE — max 1024px
+   ============================================================ */
+@media (max-width: 1024px) {
+  .cd-about-section {
+    padding: 60px 40px !important;
+  }
+  .cd-about-col-left {
+    padding-right: 24px !important;
+  }
+  .cd-service-col > .vce-col-inner {
+    padding: 60px 40px !important;
+  }
+  .cd-txt-gallery {
+    padding: 60px 40px 32px !important;
+  }
+  .cd-appoint-section {
+    padding: 60px 40px !important;
+  }
+  .cd-urgence-section {
+    padding: 60px 40px !important;
+  }
+}
+/* ============================================================
+   MOBILE — max 768px
+   ============================================================ */
+@media (max-width: 768px) {
+  /* ---- Paddings globaux reset ---- */
+  .cd-about-section,
+  .cd-urgence-section,
+  .cd-appoint-section {
+    padding: 48px 20px !important;
+  }
+  .cd-service-col > .vce-col-inner {
+    padding: 48px 20px !important;
+  }
+  .cd-txt-gallery {
+    padding: 40px 20px 20px !important;
+  }
+  /* ---- Colonnes VC — pleine largeur ---- */
+  .vce-col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  /* ---- Images ---- */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+  .vce-single-image-figure-inner {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  /* ---- HERO ---- */
+  .cd-hero {
+    margin-top: 60px !important;
+    min-height: 70vh !important;
+  }
+  .hero-title {
+    font-size: 2.2rem !important;
+  }
+  .hero-sidebar {
+    display: none !important;
+  }
+  /* ---- ABOUT ---- */
+  .cd-about-col-left {
+    padding-right: 0 !important;
+  }
+  .cd-about-title {
+    padding: 32px 0 16px !important;
+    font-size: 1.8rem !important;
+    word-break: normal !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+  }
+  .cd-about-intro {
+    font-size: 1.1rem !important;
+  }
+  .cd-deco-tooth {
+    display: none !important;
+  }
+  /* ---- Horaires ---- */
+  .horaire table {
+    table-layout: fixed;
+    width: 100% !important;
+  }
+  .horaire table td {
+    font-size: 0.8rem !important;
+    padding: 6px 2px !important;
+    word-break: break-word;
+  }
+  .horaire table td:first-child {
+    width: 55% !important;
+    padding-right: 6px !important;
+  }
+  .horaire table td:last-child {
+    width: 45% !important;
+  }
+  /* ---- Team circles ---- */
+  .cd-team-circles {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 8px !important;
+  }
+  .cd-team-circle-item {
+    margin-left: 0 !important;
+  }
+  .cd-team-circle-item img {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  /* ---- Services ---- */
+  h2.cd-title-service {
+    font-size: 1.8rem !important;
+  }
+  .cd-text-service {
+    margin-bottom: 32px !important;
+  }
+  /* ---- Gallery slider ---- */
+  .cd-gallery-slider {
+    padding-bottom: 60px !important;
+  }
+  /* ---- Urgence ---- */
+  .cd-urgence-title-wrapper .vce-text-block-wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    margin-bottom: 32px !important;
   }
   .cd-deco-tooth-urgence {
-    width: 80px !important;
+    width: 60px !important;
   }
   /* ---- Formulaire CF7 ---- */
   .cd-form-row {
     grid-template-columns: 1fr !important;
   }
   .contact-form {
-    padding: 24px 16px !important;
+    padding: 20px 16px !important;
   }
-  /* ---- Appointment section ---- */
-  .cd-appoint-section {
-    padding: 60px 24px !important;
-  }
-  /* ---- Boutons débordants ---- */
+  /* ---- Boutons ---- */
   .btn-action-brown,
-  .btn-services,
-  .cd-btn {
-    width: 100%;
-    justify-content: center;
+  .btn-services {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
   }
-}
-/* Tablette */
-@media (max-width: 1024px) {
-  .cd-about-section {
-    padding: 80px 40px !important;
+  /* ---- Footer ---- */
+  .cd-footer {
+    padding: 40px 20px 0 !important;
   }
-  .cd-about-col-left {
-    padding-right: 40px !important;
+  .cd-footer-inner {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
   }
-  .cd-urgence-section {
-    padding: 60px 40px !important;
+  .cd-footer-menu-grid {
+    grid-template-columns: 1fr 1fr !important;
   }
-  .cd-urgence-title-wrapper .vce-text-block-wrapper {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
+  .cd-footer-actions {
+    flex-wrap: wrap !important;
+    gap: 10px !important;
   }
-  .cd-txt-gallery {
-    padding: 80px 40px !important;
-  }
-  .cd-appoint-section {
-    padding: 80px 40px !important;
+  .cd-footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 8px !important;
   }
 }
 /*# sourceMappingURL=../css/mobile.css.map */
