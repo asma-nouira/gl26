@@ -237,9 +237,11 @@ ul {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
-  .cd-hero-col .vce-col-inner,
-  .cd-hero-col .vce-col-content {
+  .cd-hero-col .vce-col-inner {
     padding: 60px 40px !important;
+  }
+  .cd-hero-col .vce-col-content {
+    padding: 0 !important;
   }
   .hero-title {
     font-size: 2.6rem;
