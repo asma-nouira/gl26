@@ -195,11 +195,50 @@ function vsc_theme_header_js() {
     );
 }
 
-
+/* Dans functions.php */
 add_shortcode('cd_blog_section', function() {
-    ob_start();
-    get_template_part('template-parts/blog-section');
-    return ob_get_clean();
+    $args = array(
+        'post_type'      => 'post',
+        'posts_per_page' => 3,
+        'post_status'    => 'publish',
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+    );
+    $posts = new WP_Query($args);
+
+    if (!$posts->have_posts()) return '';
+
+    $html = '<section class="cd-blog-section">';
+    $html .= '<div class="cd-blog-header">';
+    $html .= '<h2>Blogue</h2>';
+    $html .= '<p>L\'équipe de la Clinique dentaire Geneviève Lafrance de Rivière-du-Loup vous propose des articles variés. Ceux-ci vous permettront d\'apprendre davantage sur les différentes manières de conserver une bonne santé buccodentaire.</p>';
+    $html .= '</div>';
+    $html .= '<div class="cd-blog-grid">';
+
+    while ($posts->have_posts()) {
+        $posts->the_post();
+
+        $title     = get_the_title();
+        $permalink = get_the_permalink();
+        $excerpt   = get_the_excerpt();
+        $thumb     = has_post_thumbnail()
+            ? '<a href="' . esc_url($permalink) . '">' . get_the_post_thumbnail(get_the_ID(), 'large') . '</a>'
+            : '';
+
+        $html .= '<article class="cd-blog-card">';
+        $html .= '<div class="cd-blog-card-img">' . $thumb . '</div>';
+        $html .= '<h3 class="cd-blog-card-title"><a href="' . esc_url($permalink) . '">' . esc_html($title) . '</a></h3>';
+        $html .= '<div class="cd-blog-card-excerpt"><p>' . esc_html($excerpt) . '</p></div>';
+        $html .= '<a href="' . esc_url($permalink) . '" class="cd-blog-card-link">Lire plus</a>';
+        $html .= '</article>';
+    }
+
+    wp_reset_postdata();
+
+    $html .= '</div>';
+    $html .= '</section>';
+
+    return $html;
 });
 
 include_once "integrated_vc.php";
