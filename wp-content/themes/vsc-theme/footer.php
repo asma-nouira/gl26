@@ -29,10 +29,10 @@
 
             <!-- Boutons -->
             <div class="cd-footer-actions">
-                <a href="tel:+14188672260" class="cd-btn cd-btn-accent cd-btn-sm">
+                <a href="tel:+14188672260" class="cd-btn cd-btn-accent">
                     (418) 867-2260
                 </a>
-                <a href="/coin-enfant" class="cd-btn cd-btn-brown cd-btn-sm">
+                <a href="/coin-enfant" class="cd-btn cd-btn-brown ">
                     Coin enfant
                 </a>
                 <a href="https://www.facebook.com/cliniquedentairegl"
@@ -41,7 +41,7 @@
                    rel="noopener noreferrer"
                    aria-label="Facebook">
                   <svg xmlns="http://www.w3.org/2000/svg" width="20.103" height="38.691" viewBox="0 0 20.103 38.691">
-  <path id="Tracé_430" data-name="Tracé 430" d="M770.614,48.566h-7.191V30.912h-5.877V24.056h5.85c.013-.289.031-.515.035-.742.034-1.91-.023-3.825.113-5.728a7.937,7.937,0,0,1,8.028-7.7c1.819-.053,3.645.09,5.467.153a4.285,4.285,0,0,1,.61.113v6.154c-.734,0-1.412-.016-2.087,0-.942.026-1.891.016-2.822.133a2.1,2.1,0,0,0-2.009,2.014c-.1,1.832-.027,3.672-.027,5.576h6.717l-.885,6.874h-5.921Z" transform="translate(-757.546 -9.875)" fill="#625756"/>
+  <path id="Tracé_430" data-name="Tracé 430" d="M770.614,48.566h-7.191V30.912h-5.877V24.056h5.85c.013-.289.031-.515.035-.742.034-1.91-.023-3.825.113-5.728a7.937,7.937,0,0,1,8.028-7.7c1.819-.053,3.645.09,5.467.153a4.285,4.285,0,0,1,.61.113v6.154c-.734,0-1.412-.016-2.087,0-.942.026-1.891.016-2.822.133a2.1,2.1,0,0,0-2.009,2.014c-.1,1.832-.027,3.672-.027,5.576h6.717l-.885,6.874h-5.921Z" transform="translate(-757.546 -9.875)"/>
 </svg>
 
                 </a>
