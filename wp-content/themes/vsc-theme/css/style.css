@@ -1441,11 +1441,12 @@ p {
 }
 .wpcf7 p {
   margin: 0;
+  padding-bottom: 0;
 }
 .wpcf7 label {
   font-family: var(--cd-font-body);
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 1.12rem;
+  font-weight: 400;
   color: var(--cd-text);
   display: block;
   margin-bottom: 16px;
@@ -1461,11 +1462,11 @@ p {
   height: 50px;
   padding: 0 18px;
   font-family: var(--cd-font-body);
-  font-size: 0.9rem;
+  font-size: 1.12rem;
   color: var(--cd-dark);
   background: #ffffff;
   border: none;
-  border-radius: 8px;
+  border-radius: 25px;
   box-shadow: none;
   outline: none;
   transition: var(--cd-transition);
@@ -1484,14 +1485,14 @@ p {
 }
 .wpcf7 textarea.wpcf7-textarea {
   width: 100%;
-  min-height: 130px;
+  min-height: 124px;
   padding: 14px 18px;
   font-family: var(--cd-font-body);
-  font-size: 0.9rem;
+  font-size: 1.12rem;
   color: var(--cd-dark);
   background: #ffffff;
   border: none;
-  border-radius: 8px;
+  border-radius: 25px;
   outline: none;
   resize: vertical;
   transition: var(--cd-transition);
