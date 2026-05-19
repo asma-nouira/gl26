@@ -89,21 +89,6 @@ html, body {
   .cd-txt-gallery {
     padding: 40px 20px 20px !important;
   }
-  /* ---- Colonnes VC — pleine largeur ---- */
-  .vce-col {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-  /* ---- Images ---- */
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-  .vce-single-image-figure-inner {
-    max-width: 100% !important;
-    width: 100% !important;
-  }
   /* ---- HERO ---- */
   .cd-hero {
     margin-top: 60px !important;
