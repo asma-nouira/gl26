@@ -1354,7 +1354,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .slick-slide {
-  padding: 0 10vw 0 0 !important;
+  padding: 0 55px 0 0 !important;
 }
 @media (max-width: 767px) {
   .slick-slide {
