@@ -1456,7 +1456,7 @@ p {
 }
 .wpcf7 .wpcf7-form-control-wrap {
   display: block;
-  margin-top: 6px;
+  margin-top: 16px;
 }
 .wpcf7 input[type=text],
 .wpcf7 input[type=email],
