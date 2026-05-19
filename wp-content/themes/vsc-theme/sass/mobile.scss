@@ -1,1 +1,141 @@
 @import './statics.scss';
+/* ============================================================
+   RESPONSIVE MOBILE — Corrections globales
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+    /* Fix overflow horizontal global */
+    body, html {
+        overflow-x: hidden;
+        max-width: 100%;
+    }
+
+    /* ---- About section ---- */
+    .cd-about-section {
+        padding: 48px 24px !important;
+    }
+
+    .cd-about-col-left {
+        padding-right: 0 !important;
+    }
+
+    .cd-about-title {
+        padding: 40px 0 20px !important;
+        font-size: 2rem !important;
+        word-break: normal !important;
+        overflow-wrap: break-word;
+        white-space: normal !important;
+    }
+
+    /* ---- Horaires ---- */
+    .horaire table {
+        width: 100% !important;
+        table-layout: fixed;
+
+        td {
+            font-size: 0.8rem !important;
+            word-break: break-word;
+            padding: 6px 4px !important;
+
+            &:first-child {
+                padding-right: 8px !important;
+            }
+        }
+    }
+
+    /* ---- Services ---- */
+    .cd-service-col {
+        > .vce-col-inner {
+            padding: 48px 24px !important;
+        }
+    }
+
+    /* ---- Gallery ---- */
+    .cd-txt-gallery {
+        padding: 48px 24px !important;
+    }
+
+    /* ---- Urgence / Formulaire ---- */
+    .cd-urgence-section {
+        padding: 48px 24px !important;
+    }
+
+    .cd-urgence-title-wrapper .vce-text-block-wrapper {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        flex-wrap: wrap;
+        margin-bottom: 40px !important;
+    }
+
+    .cd-deco-tooth-urgence {
+        width: 80px !important;
+    }
+
+    /* ---- Formulaire CF7 ---- */
+    .cd-form-row {
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact-form {
+        padding: 24px 16px !important;
+    }
+
+    /* ---- Appointment section ---- */
+    .cd-appoint-section {
+        padding: 60px 24px !important;
+    }
+
+    /* ---- Boutons débordants ---- */
+    .btn-action-brown,
+    .btn-services,
+    .cd-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* ---- Fix VC colonnes ---- */
+    .vce-col {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* ---- Fix images qui débordent ---- */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    .vce-single-image-figure-inner {
+        max-width: 100% !important;
+    }
+}
+
+/* Tablette */
+@media (max-width: 1024px) {
+
+    .cd-about-section {
+        padding: 80px 40px !important;
+    }
+
+    .cd-about-col-left {
+        padding-right: 40px !important;
+    }
+
+    .cd-urgence-section {
+        padding: 60px 40px !important;
+    }
+
+    .cd-urgence-title-wrapper .vce-text-block-wrapper {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .cd-txt-gallery {
+        padding: 80px 40px !important;
+    }
+
+    .cd-appoint-section {
+        padding: 80px 40px !important;
+    }
+}
