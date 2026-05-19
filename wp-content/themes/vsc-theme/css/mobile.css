@@ -129,6 +129,9 @@ html, body {
   .hero-sidebar {
     display: none !important;
   }
+  .cd-about-col-left .details {
+    margin-bottom: 20px !important;
+  }
   .cd-logo-img {
     padding-bottom: 25px;
     text-align: left;
