@@ -157,19 +157,6 @@ ul {
     width: 100%;
     justify-content: center;
   }
-  /* ---- Fix VC colonnes ---- */
-  .vce-col {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-  /* ---- Fix images qui débordent ---- */
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-  .vce-single-image-figure-inner {
-    max-width: 100% !important;
-  }
 }
 /* Tablette */
 @media (max-width: 1024px) {
