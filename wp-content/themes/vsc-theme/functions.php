@@ -221,9 +221,9 @@ add_shortcode('cd_blog_section', function() {
         $title     = get_the_title();
         $permalink = get_the_permalink();
         $excerpt   = get_the_excerpt();
-        $thumb     = has_post_thumbnail()
-            ? '<a href="' . esc_url($permalink) . '">' . get_the_post_thumbnail(get_the_ID(), 'large') . '</a>'
-            : '';
+       $thumb = has_post_thumbnail()
+    ? '<a href="' . esc_url($permalink) . '">' . get_the_post_thumbnail(get_the_ID(), 'large') . '</a>'
+    : '<a href="' . esc_url($permalink) . '"><div class="cd-blog-card-no-img"></div></a>';
 
         $html .= '<article class="cd-blog-card">';
         $html .= '<div class="cd-blog-card-img">' . $thumb . '</div>';

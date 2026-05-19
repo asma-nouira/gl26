@@ -864,7 +864,6 @@ h2 {
 .cd-blog-card {
   display: flex;
   flex-direction: column;
-  /* Image */
   /* Titre */
   /* Extrait */
   /* Lien lire plus */
@@ -874,17 +873,29 @@ h2 {
   overflow: hidden;
   margin-bottom: 20px;
   aspect-ratio: 4/3;
-  background: #ffffff;
+  background: var(--cd-bg-warm); /* Fallback si pas d'image */
+  /* Fallback sans image */
+}
+.cd-blog-card .cd-blog-card-img a {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .cd-blog-card .cd-blog-card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   display: block;
   transition: transform 0.4s ease;
 }
 .cd-blog-card .cd-blog-card-img:hover img {
   transform: scale(1.05);
+}
+.cd-blog-card .cd-blog-card-img .cd-blog-card-no-img {
+  width: 100%;
+  height: 100%;
+  background: var(--cd-bg-warm);
 }
 .cd-blog-card .cd-blog-card-title {
   font-family: var(--cd-font-heading);

@@ -41,27 +41,39 @@
     display: flex;
     flex-direction: column;
 
-    /* Image */
-    .cd-blog-card-img {
-        border-radius: 20px;
-        overflow: hidden;
-        margin-bottom: 20px;
-        aspect-ratio: 4/3;
-        background: #ffffff;
+   .cd-blog-card-img {
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    aspect-ratio: 4/3;
+    background: var(--cd-bg-warm); /* Fallback si pas d'image */
 
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.4s ease;
-        }
-
-        &:hover img {
-            transform: scale(1.05);
-        }
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
     }
 
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+        transition: transform 0.4s ease;
+    }
+
+    &:hover img {
+        transform: scale(1.05);
+    }
+
+    /* Fallback sans image */
+    .cd-blog-card-no-img {
+        width: 100%;
+        height: 100%;
+        background: var(--cd-bg-warm);
+    }
+}
     /* Titre */
     .cd-blog-card-title {
         font-family: var(--cd-font-heading);
