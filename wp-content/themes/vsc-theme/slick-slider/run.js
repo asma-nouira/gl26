@@ -1,8 +1,8 @@
 jQuery(document).on('ready', function() {
     jQuery(".cd-gallery-slider > .vce-row-content").slick({
         centerMode: true,
-        centerPadding: '100px',
-        slidesToShow: 3,
+        centerPadding: '55px',
+        slidesToShow: 1,
         autoplay: false,
         autoplaySpeed: 20000,
         infinite:  true, 
@@ -16,8 +16,8 @@ jQuery(document).on('ready', function() {
                 settings: {
                     arrows: true,
                     centerMode: true,
-                    centerPadding: '0',
-                    slidesToShow: 3
+                    centerPadding: '55px',
+                    slidesToShow: 1
                 }
             },
             {
