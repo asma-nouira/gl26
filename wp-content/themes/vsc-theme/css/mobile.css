@@ -176,13 +176,9 @@ html, body {
   }
   /* ---- Team circles ---- */
   .cd-team-circles {
-    flex-wrap: wrap !important;
     justify-content: center !important;
     gap: 8px !important;
     padding-bottom: 20px !important;
-  }
-  .cd-team-circle-item {
-    margin-left: 0 !important;
   }
   .cd-team-circle-item img {
     width: 90px !important;
