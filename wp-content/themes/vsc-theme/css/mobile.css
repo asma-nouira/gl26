@@ -2,10 +2,6 @@
 /* ============================================================
    MOBILE.SCSS — Clinique Dentaire Geneviève Lafrance
    Fichier : sass/parts/mobile.scss
-   Import dans style.scss EN DERNIER : @import './parts/mobile';
-   ============================================================ */
-/* ============================================================
-   FIX GLOBAL — Overflow horizontal (scroll indésirable)
    ============================================================ */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -23,9 +19,6 @@ html, body {
   max-width: 100% !important;
 }
 
-/* ============================================================
-   TABLETTE — max 1200px
-   ============================================================ */
 @media (max-width: 1200px) {
   .cd-about-section {
     padding: 80px 60px !important;
@@ -50,9 +43,6 @@ html, body {
     padding-right: 0 !important;
   }
 }
-/* ============================================================
-   TABLETTE — max 1024px
-   ============================================================ */
 @media (max-width: 1024px) {
   .cd-about-section {
     padding: 60px 40px !important;
@@ -73,14 +63,16 @@ html, body {
     padding: 60px 40px !important;
   }
 }
-/* ============================================================
-   MOBILE — max 768px
-   ============================================================ */
 @media (max-width: 768px) {
+  /* ---- Header ---- */
   .site-header {
     min-height: 80px !important;
+    padding: 0 16px !important;
   }
-  /* ---- Paddings globaux reset ---- */
+  .custom-logo-link img.custom-logo {
+    height: 38px !important;
+  }
+  /* ---- Paddings globaux ---- */
   .cd-about-section,
   .cd-urgence-section,
   .cd-appoint-section {
@@ -94,11 +86,32 @@ html, body {
   }
   /* ---- HERO ---- */
   .cd-hero {
-    margin-top: 60px !important;
-    min-height: 70vh !important;
+    margin-top: 80px !important;
+    min-height: 85vh !important;
+  }
+  .cd-hero .vce-asset-background-simple-item {
+    background-position: 70% center !important;
+  }
+  .cd-hero .vce-content-background-container::after {
+    background: linear-gradient(to bottom, rgba(36, 36, 36, 0.65) 0%, rgba(36, 36, 36, 0.45) 50%, rgba(36, 36, 36, 0.2) 100%) !important;
+  }
+  .cd-hero-col .vce-col-inner,
+  .cd-hero-col .vce-col-content {
+    padding: 40px 24px !important;
+    max-width: 100% !important;
   }
   .hero-title {
-    font-size: 2.2rem !important;
+    font-size: 2rem !important;
+    margin-bottom: 16px !important;
+  }
+  .hero-address {
+    font-size: 0.85rem !important;
+    gap: 8px !important;
+  }
+  .hero-address svg {
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0 !important;
   }
   .hero-sidebar {
     display: none !important;
