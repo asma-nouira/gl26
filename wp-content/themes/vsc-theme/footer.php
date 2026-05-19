@@ -11,7 +11,7 @@
         <!-- Colonne 1 : Logo + Adresse -->
         <div class="cd-footer-col cd-footer-brand">
             <a href="<?php echo esc_url(home_url('/')); ?>" class="cd-footer-logo">
-                <img src="/wp-content/uploads/2026/05/Logo-Gl.png" alt=" Clinique dentaire Geneviève Lafrance de Rivière-du-Loup" />
+                <img src="/wp-content/uploads/2026/05/Gl-logo-Footer.svg" alt=" Clinique dentaire Geneviève Lafrance de Rivière-du-Loup" />
             </a>
             <address class="cd-footer-address">
                 290, boul. de l'Hôtel-de-Ville,<br>

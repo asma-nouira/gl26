@@ -59,19 +59,16 @@
     margin: 0;
     padding: 0;
 
-    li {
-        margin-bottom: 10px;
-    }
-
     a {
-        font-family: var(--cd-font-body);
-        font-size: 0.875rem;
-        font-weight: 600;
-        color: var(--cd-text);
+        font-family: 'SuperBlue', serif;
+        font-size: 1.12rem;
+        font-weight: 700;
+        color: #625756;
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         transition: color 0.3s ease;
+        line-height: 1.66;
 
         &:hover { color: var(--cd-accent); }
     }
