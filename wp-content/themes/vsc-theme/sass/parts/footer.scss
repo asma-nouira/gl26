@@ -118,7 +118,6 @@
         color: var(--cd-text);
 
         &:first-child {
-            font-weight: 500;
             color: #625756;
             padding-right: 20px;
         }
@@ -138,7 +137,7 @@
     margin: 0 auto;
 
     p {
-        font-size: 0.8rem;
+        font-size: 1.12rem;
         color: var(--cd-text-light);
         margin: 0;
     }
