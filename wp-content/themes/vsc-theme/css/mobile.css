@@ -89,13 +89,14 @@ html, body {
     font-size: 0.75rem !important;
     gap: 6px !important;
   }
-  .hero-address svg {
-    width: 14px !important;
-    height: 14px !important;
+  .hero-address img {
+    width: 40px !important;
+    height: auto !important;
     flex-shrink: 0 !important;
   }
   .hero-address span {
     line-height: 1.4 !important;
+    font-size: 1.18rem !important;
   }
   .cd-hero {
     margin-top: 80px !important;

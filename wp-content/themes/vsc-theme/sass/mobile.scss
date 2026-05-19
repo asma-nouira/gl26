@@ -65,14 +65,15 @@ html, body {
         font-size: 0.75rem !important;
         gap: 6px !important;
 
-        svg {
-            width: 14px !important;
-            height: 14px !important;
+        img {
+            width: 40px !important;
+            height:auto !important;
             flex-shrink: 0 !important;
         }
 
         span {
             line-height: 1.4 !important;
+            font-size: 1.18rem!important;
         }
     }
     .cd-hero {
