@@ -2,9 +2,9 @@ jQuery(document).on('ready', function() {
     jQuery(".cd-gallery-slider > .vce-row-content").slick({
         centerMode: true,
         centerPadding: '55px',
-        slidesToShow: 3,
+        slidesToShow: 1,
         autoplay: false,
-        infinite:  true, 
+       
         dots: false,
         arrows: true,
     prevArrow: '<button class="cd-slider-prev">←</button>',
