@@ -1404,4 +1404,23 @@ body::-webkit-scrollbar-thumb {
 p {
   padding-bottom: 15px;
 }
+
+.cd-urgence-section {
+  padding: 90px 306px 190px 323px;
+}
+
+.cd-urgence-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 90px;
+}
+
+/* Image dent décorative */
+.cd-deco-tooth-urgence {
+  width: 183px;
+  height: auto;
+  flex-shrink: 0;
+}
 /*# sourceMappingURL=../css/style.css.map */
