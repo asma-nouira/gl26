@@ -547,5 +547,10 @@ body::-webkit-scrollbar-thumb {
 .cd-gallery-slider {
   position: relative;
   padding-bottom: 60px;
-
+ .slick-list.draggable {
+    padding: 0 10vw 0 0 !important;
+	@media(max-width:767px){
+		padding: 0!important;
+	}
+}
 }
