@@ -1354,6 +1354,15 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
   /* Flèches */
 }
+.cd-gallery-slider .vce-row-content .vce-single-image-inner {
+  max-width: none !important;
+  position: unset !important;
+}
+.cd-gallery-slider .vce-row-content .vce-single-image-inner img {
+  display: block;
+  width: 97% !important;
+  margin: 0 auto;
+}
 .cd-gallery-slider .cd-slider-prev,
 .cd-gallery-slider .cd-slider-next {
   position: absolute;

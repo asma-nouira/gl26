@@ -545,6 +545,17 @@ body::-webkit-scrollbar-thumb {
    ============================================================ */
 
 .cd-gallery-slider {
+     .vce-row-content{
+  .vce-single-image-inner{
+    max-width: none !important;
+    position: unset !important;
+    img{
+      display: block;
+      width: 97% !important;
+      margin: 0 auto;
+    }
+  }
+}
     position: relative;
     padding-bottom: 280px;
     overflow: hidden;
