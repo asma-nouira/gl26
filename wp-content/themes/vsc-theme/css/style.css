@@ -1572,6 +1572,9 @@ p {
 }
 
 .contact-form {
-  padding: 35px 30px 50px 30px;
+  padding: 35px 30px 20px 30px;
+}
+.contact-form .cd-txt-form {
+  padding-top: 30px;
 }
 /*# sourceMappingURL=../css/style.css.map */
