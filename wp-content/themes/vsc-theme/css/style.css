@@ -1409,11 +1409,13 @@ p {
   padding: 90px 306px 190px 323px;
 }
 
-.cd-urgence-title-wrapper {
+.cd-urgence-title-wrapper .vce-text-block-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 23px;
+  padding-left: 300px;
+  padding-right: 100px;
   margin-bottom: 90px;
 }
 
