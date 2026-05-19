@@ -1391,4 +1391,18 @@ body::-webkit-scrollbar-thumb {
 .cd-gallery-slider .cd-slider-next {
   left: calc(50% + 8px);
 }
+
+.cd-appoint-section {
+  padding: 205px 95px 170px 278px;
+}
+.cd-appoint-section h2 {
+  padding-bottom: 24px;
+}
+.cd-appoint-section a {
+  margin-top: 10px;
+}
+
+p {
+  padding-bottom: 15px;
+}
 /*# sourceMappingURL=../css/style.css.map */
