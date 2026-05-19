@@ -5,6 +5,7 @@ jQuery(document).on('ready', function() {
         slidesToShow: 1,
         autoplay: false,
         autoplaySpeed: 20000,
+        variableWidth: true,
         infinite:  true, 
         dots: false,
         arrows: true,
