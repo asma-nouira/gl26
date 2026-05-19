@@ -241,4 +241,26 @@ add_shortcode('cd_blog_section', function() {
     return $html;
 });
 
+function print_menu_shortcode($atts, $content = null) {
+    extract(shortcode_atts(array('name' => null, 'class' => null), $atts));
+    return wp_nav_menu(array(
+        'menu'       => 'Footer menu1',
+        'menu_class' => 'cd-footer-menu-list', /* ← classe CSS */
+        'container'  => false,                  /* ← pas de div wrapper */
+        'echo'       => false
+    ));
+}
+add_shortcode('footer_menu1', 'print_menu_shortcode');
+
+function print_menuf_shortcode($atts, $content = null) {
+    extract(shortcode_atts(array('name' => null, 'class' => null), $atts));
+    return wp_nav_menu(array(
+        'menu'       => 'Footer menu2',
+        'menu_class' => 'cd-footer-menu-list', /* ← classe CSS */
+        'container'  => false,                  /* ← pas de div wrapper */
+        'echo'       => false
+    ));
+}
+add_shortcode('footer_menu2', 'print_menuf_shortcode');
+
 include_once "integrated_vc.php";

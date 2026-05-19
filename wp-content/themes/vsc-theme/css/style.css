@@ -957,7 +957,7 @@ h2 {
 .cd-footer {
   background: #ffffff;
   border-top: 1px solid var(--cd-border);
-  padding: 60px 80px 0;
+  padding: 80px 370px 80px 323px;
 }
 
 .cd-footer-inner {
@@ -972,30 +972,30 @@ h2 {
 /* --- Logo + Adresse --- */
 .cd-footer-brand .cd-footer-logo {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 27px;
 }
 .cd-footer-brand .cd-footer-logo img {
-  height: 60px;
-  width: auto;
+  max-width: 338px;
+  height: auto;
 }
 
 .cd-footer-address {
   font-style: normal;
   font-family: var(--cd-font-body);
-  font-size: 0.875rem;
-  color: var(--cd-text);
-  line-height: 1.7;
+  font-size: 1.25rem;
+  color: #625756;
+  line-height: 1.35;
 }
 
 /* --- Titres colonnes --- */
 .cd-footer-title {
-  font-family: var(--cd-font-body);
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--cd-text);
+  font-family: "SuperBlue", serif;
+  font-size: 1.37rem;
+  font-weight: 400;
+  color: #BF9F94;
   margin: 0 0 16px;
   padding-bottom: 12px;
-  border-bottom: 1px solid var(--cd-border);
+  border-bottom: 1px solid #BF9F94;
 }
 
 /* --- Menu 2 colonnes --- */

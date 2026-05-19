@@ -11,7 +11,7 @@
         <!-- Colonne 1 : Logo + Adresse -->
         <div class="cd-footer-col cd-footer-brand">
             <a href="<?php echo esc_url(home_url('/')); ?>" class="cd-footer-logo">
-                <?php the_custom_logo(); ?>
+                <img src="/wp-content/uploads/2026/05/Logo-Gl.png" alt=" Clinique dentaire Geneviève Lafrance de Rivière-du-Loup" />
             </a>
             <address class="cd-footer-address">
                 290, boul. de l'Hôtel-de-Ville,<br>
@@ -23,18 +23,8 @@
         <div class="cd-footer-col cd-footer-nav">
             <h4 class="cd-footer-title">Menu</h4>
             <div class="cd-footer-menu-grid">
-                <!-- Colonne gauche du menu -->
-                <ul class="cd-footer-menu-list">
-                    <li><a href="/">Accueil</a></li>
-                    <li><a href="/equipe">Équipe</a></li>
-                    <li><a href="/la-clinique">La clinique</a></li>
-                </ul>
-                <!-- Colonne droite du menu -->
-                <ul class="cd-footer-menu-list">
-                    <li><a href="/services">Services</a></li>
-                    <li><a href="/blogue">Blogue</a></li>
-                    <li><a href="/contact">Contact</a></li>
-                </ul>
+              <?php echo do_shortcode('[footer_menu1]'); ?>
+               <?php echo do_shortcode('[footer_menu2]'); ?>
             </div>
 
             <!-- Boutons -->
