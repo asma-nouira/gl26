@@ -168,6 +168,21 @@
 }
 
 @media (max-width: 768px) {
+     .cd-hero {
+        background-color: #625756 !important;
+        min-height: auto !important;
+    }
+
+    /* Cache l'image de fond */
+    .cd-hero .vce-asset-background-simple-item {
+        display: none !important;
+    }
+
+    /* Cache l'overlay — inutile sans image */
+    .cd-hero .vce-content-background-container::after {
+        display: none !important;
+    }
+
     .cd-hero {
         min-height: 85vh;
 
