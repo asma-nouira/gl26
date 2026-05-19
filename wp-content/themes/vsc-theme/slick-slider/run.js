@@ -1,7 +1,7 @@
 jQuery(document).on('ready', function() {
     jQuery(".cd-gallery-slider > .vce-row-content").slick({
         centerMode: true,
-        centerPadding: '55px',
+        centerPadding: '460px',
         slidesToShow: 1,
         autoplay: false,
        infinite: true,
