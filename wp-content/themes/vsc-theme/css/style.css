@@ -1059,21 +1059,15 @@ h2 {
   width: 100%;
   border-collapse: collapse;
   font-family: var(--cd-font-body);
-  font-size: 0.875rem;
-}
-.cd-footer-hours-table tr {
-  border-bottom: 1px solid var(--cd-border);
-}
-.cd-footer-hours-table tr:last-child {
-  border-bottom: none;
+  font-size: 1.12rem;
 }
 .cd-footer-hours-table td {
-  padding: 8px 0;
+  padding: 3px 0;
   color: var(--cd-text);
 }
 .cd-footer-hours-table td:first-child {
   font-weight: 500;
-  color: var(--cd-dark);
+  color: #625756;
   padding-right: 20px;
 }
 .cd-footer-hours-table td:last-child {

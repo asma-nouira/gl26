@@ -109,20 +109,15 @@
     width: 100%;
     border-collapse: collapse;
     font-family: var(--cd-font-body);
-    font-size: 0.875rem;
-
-    tr {
-        border-bottom: 1px solid var(--cd-border);
-        &:last-child { border-bottom: none; }
-    }
+    font-size: 1.12rem;
 
     td {
-        padding: 8px 0;
+        padding: 3px 0;
         color: var(--cd-text);
 
         &:first-child {
             font-weight: 500;
-            color: var(--cd-dark);
+            color: #625756;
             padding-right: 20px;
         }
 
