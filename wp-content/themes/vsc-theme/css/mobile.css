@@ -194,6 +194,11 @@ html, body {
   .cd-text-service {
     margin-bottom: 32px !important;
   }
+  .cd-service-card h3 {
+    font-size: 1.18rem !important;
+    margin-top: -63px !important;
+    padding: 10px 35px !important;
+  }
   /* ---- Gallery slider ---- */
   .cd-gallery-slider {
     padding-bottom: 60px !important;
