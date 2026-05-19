@@ -10,9 +10,8 @@
 
 .cd-footer-inner {
     display: grid;
-    grid-template-columns: 1fr 1.5fr 1fr;
-    gap: 60px;
-    max-width: 1200px;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 30px;
     margin: 0 auto;
     padding-bottom: 48px;
 }
@@ -27,6 +26,9 @@
     }
 }
 
+.cd-footer-col.cd-footer-nav{
+    padding-right: 60px;
+}
 .cd-footer-address {
     font-style: normal;
     font-family: var(--cd-font-body);
