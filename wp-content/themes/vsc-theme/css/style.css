@@ -1571,10 +1571,11 @@ p {
   margin-bottom: 0;
 }
 
+.cd-txt-form {
+  padding-top: 30px;
+}
+
 .contact-form {
   padding: 35px 30px 20px 30px;
-}
-.contact-form .cd-txt-form {
-  padding-top: 30px;
 }
 /*# sourceMappingURL=../css/style.css.map */
