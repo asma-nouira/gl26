@@ -165,6 +165,9 @@ html, body {
     margin-top: -63px!important;
     padding: 10px 35px!important;
     }
+    .cd-desc-service{
+            padding: 23px 35px 25px!important;
+    }
     /* ---- Gallery slider ---- */
     .cd-gallery-slider { padding-bottom: 60px !important; }
 
@@ -199,5 +202,11 @@ html, body {
         flex-direction: column !important;
         text-align: center !important;
         gap: 8px !important;
+    }
+    .cd-gallery-slider .cd-slider-prev, .cd-gallery-slider .cd-slider-next{
+       bottom: -50px!important; 
+    }
+    .cd-footer-col.cd-footer-nav{
+        padding-left: 0!important;
     }
 }
