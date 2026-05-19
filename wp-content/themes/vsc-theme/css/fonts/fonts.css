@@ -8,6 +8,13 @@
     font-display: swap;
 }
 @font-face {
+    font-family: 'SuperBlue';
+    src: url('/wp-content/themes/vsc-theme/css/fonts/SuperBlue/SuperBlue-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
     font-family: 'Manrope';
     src:  url('/wp-content/themes/vsc-theme/css/fonts/Manrope/Manrope-Regular.ttf') format('truetype');
     font-weight: 400;
