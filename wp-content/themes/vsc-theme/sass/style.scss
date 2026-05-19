@@ -549,3 +549,66 @@ body::-webkit-scrollbar-thumb {
   padding-bottom: 60px;
 
 }
+.cd-gallery-slider {
+    position: relative;
+    padding-bottom: 60px;
+    overflow: hidden;
+
+    .cd-gallery-slide {
+        padding: 0 6px;
+
+        .vce-single-image-figure-inner {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .vce-single-image-inner {
+            padding-bottom: 0 !important; /* Laisse la hauteur naturelle */
+        }
+
+        img.vce-single-image {
+            position: relative !important;
+            width: auto !important;
+            height: 380px; /* Hauteur fixe slides latérales */
+            object-fit: cover;
+            display: block;
+            filter: brightness(0.75);
+            transition: filter 0.4s ease, height 0.4s ease;
+        }
+    }
+
+    /* Slide centrale — juste plus haute */
+    .cd-gallery-slide.slick-center {
+        img.vce-single-image {
+            height: 480px;
+            filter: brightness(1);
+        }
+    }
+
+    /* Flèches */
+    .cd-slider-prev,
+    .cd-slider-next {
+        position: absolute;
+        bottom: 0;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        border: 1.5px solid var(--cd-dark);
+        background: transparent;
+        color: var(--cd-dark);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 10;
+
+        &:hover {
+            background: var(--cd-dark);
+            color: #ffffff;
+        }
+    }
+
+    .cd-slider-prev { left: calc(50% - 50px); }
+    .cd-slider-next { left: calc(50% + 8px); }
+}
