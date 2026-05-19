@@ -178,6 +178,7 @@ html, body {
     flex-wrap: wrap !important;
     justify-content: center !important;
     gap: 8px !important;
+    padding-bottom: 20px !important;
   }
   .cd-team-circle-item {
     margin-left: 0 !important;
