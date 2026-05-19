@@ -153,15 +153,15 @@ html, body {
   }
   .horaire table td {
     font-size: 0.8rem !important;
-    padding: 6px 2px !important;
+    padding: 3px 2px !important;
     word-break: break-word;
   }
   .horaire table td:first-child {
-    width: 55% !important;
+    width: 27% !important;
     padding-right: 6px !important;
   }
   .horaire table td:last-child {
-    width: 45% !important;
+    width: 30% !important;
   }
   /* ---- Team circles ---- */
   .cd-team-circles {
