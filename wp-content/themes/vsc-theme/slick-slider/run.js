@@ -3,7 +3,7 @@ jQuery(document).on('ready', function() {
         centerMode: true,
         centerPadding: '10vw',
         initialSlide: 1,
-        slidesToShow: 1,
+        slidesToShow: 3,
         autoplay: false,
         infinite:  true, 
         dots: false,
