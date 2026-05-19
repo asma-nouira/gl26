@@ -4,7 +4,7 @@ jQuery(document).on('ready', function() {
         centerPadding: '55px',
         slidesToShow: 1,
         autoplay: false,
-       
+       infinite: true,
         dots: false,
         arrows: true,
     prevArrow: '<button class="cd-slider-prev">←</button>',
