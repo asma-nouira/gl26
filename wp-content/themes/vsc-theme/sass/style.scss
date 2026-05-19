@@ -549,33 +549,47 @@ body::-webkit-scrollbar-thumb {
     padding-bottom: 60px;
     overflow: hidden;
 
+    /* Reset des styles VC inline qui cassent Slick */
     .cd-gallery-slide {
         padding: 0 8px;
-        transition: opacity 0.4s ease;
-        opacity: 0.6;  /* Latéraux estompés */
 
+        .vce-col-inner,
+        .vce-col-content {
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .vce-single-image-container,
+        .vce-single-image-wrapper,
+        figure,
         .vce-single-image-figure-inner {
             width: 100% !important;
-            border-radius: 12px;
-            overflow: hidden;
+            max-width: 100% !important;
         }
 
         .vce-single-image-inner {
-            padding-bottom: 65% !important;
+            position: relative !important;
+            padding-bottom: 0 !important;
+            width: 100% !important;
+            height: 400px !important;
             overflow: hidden;
+            border-radius: 12px;
         }
 
         img.vce-single-image {
-            position: absolute;
+            position: absolute !important;
             inset: 0;
-            width: 100%;
-            height: 100%;
+            width: 100% !important;
+            height: 100% !important;
             object-fit: cover;
+            display: block;
+            transition: filter 0.4s ease;
+            filter: brightness(0.75);
         }
 
-        /* Slide centrale — pleine opacité, complète */
-        &.slick-center {
-            opacity: 1;
+        /* Slide centrale */
+        &.slick-center img.vce-single-image {
+            filter: brightness(1);
         }
     }
 
@@ -587,9 +601,9 @@ body::-webkit-scrollbar-thumb {
         width: 42px;
         height: 42px;
         border-radius: 50%;
-        border: 1.5px solid var(--cd-dark);
+        border: 1.5px solid #242424;
         background: transparent;
-        color: var(--cd-dark);
+        color: #242424;
         cursor: pointer;
         display: flex;
         align-items: center;
@@ -598,7 +612,7 @@ body::-webkit-scrollbar-thumb {
         z-index: 10;
 
         &:hover {
-            background: var(--cd-dark);
+            background: #242424;
             color: #ffffff;
         }
     }
