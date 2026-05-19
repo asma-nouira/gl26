@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const header    = document.querySelector('.site-header');
     const hamburger = document.querySelector('.hamburger');
-    const navWrapper = document.querySelector('.site-header nav > div');
+    const navWrapper = document.querySelector('.site-header nav');
 
     /* --- Header sticky au scroll --- */
     if (header) {
