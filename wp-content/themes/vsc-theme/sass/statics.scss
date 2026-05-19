@@ -42,6 +42,9 @@ strong{
 em{
   font-style: normal;
   white-space: nowrap;
+  @media(max-width:768px){
+    white-space: initial;
+  }
 }
 ul{
   margin-block-start: 0;
