@@ -60,9 +60,25 @@ html, body {
     .cd-txt-gallery { padding: 40px 20px 20px !important; }
 
     /* ---- HERO ---- */
+
+     .hero-address {
+        font-size: 0.75rem !important;
+        gap: 6px !important;
+
+        svg {
+            width: 14px !important;
+            height: 14px !important;
+            flex-shrink: 0 !important;
+        }
+
+        span {
+            line-height: 1.4 !important;
+        }
+    }
     .cd-hero {
         margin-top: 80px !important;
         min-height: 85vh !important;
+        align-items: flex-end !important;
     }
     .cd-hero .vce-asset-background-simple-item {
         background-position: 70% center !important;
@@ -77,8 +93,8 @@ html, body {
     }
     .cd-hero-col .vce-col-inner,
     .cd-hero-col .vce-col-content {
-        padding: 40px 24px !important;
-        max-width: 100% !important;
+            padding: 0 24px 48px !important; /* ← padding en bas pour l'espace */
+    max-width: 100% !important;
     }
     .hero-title {
         font-size: 2rem !important;
