@@ -478,6 +478,30 @@ $transition:   all 0.3s ease;
     .hero-title   { font-size: 2.5rem; }
 }
 
+/* Current page — toutes les classes WordPress */
+#primary-menu > li.current-menu-item > a,
+#primary-menu > li.current-menu-ancestor > a,
+#primary-menu > li.current-page-ancestor > a,
+#primary-menu > li.current_page_item > a,
+#primary-menu > li.current_page_ancestor > a {
+    color: #C58E80;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    text-decoration-color: #C58E80;
+}
+.hero-sidebar {
+    position: fixed; /* fixed au lieu de absolute */
+    right: 0;
+    top: 30%;
+    transform: translateY(-50%);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    opacity: 0;
+    animation: fadeInRight 0.7s ease 0.9s forwards;
+}
+
 /* ============================================================
    RESPONSIVE — MOBILE (768px)
    ============================================================ */
@@ -559,27 +583,4 @@ $transition:   all 0.3s ease;
     .hero-content  { padding: 30px 24px; max-width: 100%; }
     .hero-title    { font-size: 2rem; }
     .hero-sidebar  { display: none; }
-}
-/* Current page — toutes les classes WordPress */
-#primary-menu > li.current-menu-item > a,
-#primary-menu > li.current-menu-ancestor > a,
-#primary-menu > li.current-page-ancestor > a,
-#primary-menu > li.current_page_item > a,
-#primary-menu > li.current_page_ancestor > a {
-    color: #C58E80;
-    text-decoration: underline;
-    text-underline-offset: 5px;
-    text-decoration-color: #C58E80;
-}
-.hero-sidebar {
-    position: fixed; /* fixed au lieu de absolute */
-    right: 0;
-    top: 30%;
-    transform: translateY(-50%);
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    opacity: 0;
-    animation: fadeInRight 0.7s ease 0.9s forwards;
 }
