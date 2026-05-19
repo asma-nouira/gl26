@@ -546,20 +546,20 @@ body::-webkit-scrollbar-thumb {
 
 .cd-gallery-slider {
     position: relative;
-    padding-bottom: 60px;
+    padding-bottom: 280px;
     overflow: hidden;
 
     /* Flèches */
     .cd-slider-prev,
     .cd-slider-next {
         position: absolute;
-        bottom: 0;
+        bottom: -110px;
         width: 42px;
         height: 42px;
         border-radius: 50%;
-        border: 1.5px solid #242424;
+        border: 4px solid #BF9F94;
         background: transparent;
-        color: #242424;
+        color: #BF9F94;
         cursor: pointer;
         display: flex;
         align-items: center;
