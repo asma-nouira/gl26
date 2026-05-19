@@ -257,10 +257,12 @@ ul {
   .cd-hero .vce-content-background-container::after {
     background: rgba(36, 36, 36, 0.45);
   }
-  .cd-hero-col .vce-col-inner,
-  .cd-hero-col .vce-col-content {
+  .cd-hero-col .vce-col-inner {
     padding: 40px 24px !important;
     max-width: 100%;
+  }
+  .cd-hero-col .vce-col-content {
+    padding: 0 !important;
   }
   .hero-title {
     font-size: 2rem;

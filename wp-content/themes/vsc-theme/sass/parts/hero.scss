@@ -177,11 +177,13 @@
     }
 
     .cd-hero-col {
-        .vce-col-inner,
-        .vce-col-content {
+        .vce-col-inner{
             padding: 40px 24px !important;
             max-width: 100%;
         }
+         .vce-col-content{
+            padding: 0!important;
+         }
     }
 
     .hero-title             { font-size: 2rem; }
