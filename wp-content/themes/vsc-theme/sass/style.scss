@@ -548,33 +548,4 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   padding-bottom: 60px;
 
-  .vce-row-content {
-    overflow: hidden;
-  }
-
-  .slick-track {
-    display: flex;
-    align-items: stretch;
-  }
-
-  .slick-slide {
-    width: 25vw !important;
-    transition: width 0.4s ease, opacity 0.4s ease;
-  }
-
-  .slick-slide.slick-center {
-    width: 50vw !important;
-  }
-
-  .cd-gallery-slide {
-    padding: 0 6px;
-    height: 100%;
-  }
-
-  img.vce-single-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: none;
-  }
 }

@@ -1352,28 +1352,4 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   padding-bottom: 60px;
 }
-.cd-gallery-slider .vce-row-content {
-  overflow: hidden;
-}
-.cd-gallery-slider .slick-track {
-  display: flex;
-  align-items: stretch;
-}
-.cd-gallery-slider .slick-slide {
-  width: 25vw !important;
-  transition: width 0.4s ease, opacity 0.4s ease;
-}
-.cd-gallery-slider .slick-slide.slick-center {
-  width: 50vw !important;
-}
-.cd-gallery-slider .cd-gallery-slide {
-  padding: 0 6px;
-  height: 100%;
-}
-.cd-gallery-slider img.vce-single-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transform: none;
-}
 /*# sourceMappingURL=../css/style.css.map */
