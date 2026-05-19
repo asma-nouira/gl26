@@ -1,7 +1,8 @@
 @import './statics.scss';
 @import './parts/fonts.scss';
 @import './parts/hero.scss';
-@import './parts/components.scss';
+@import './parts/_components.scss';
+@import './parts/blog.scss';
 /**************/
 .wpcf7-not-valid-tip{
 	display:none !important;

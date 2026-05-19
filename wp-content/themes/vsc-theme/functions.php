@@ -195,4 +195,11 @@ function vsc_theme_header_js() {
     );
 }
 
+
+add_shortcode('cd_blog_section', function() {
+    ob_start();
+    get_template_part('template-parts/blog-section');
+    return ob_get_clean();
+});
+
 include_once "integrated_vc.php";
