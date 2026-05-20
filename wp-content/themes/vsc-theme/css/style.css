@@ -1977,6 +1977,9 @@ body {
   }
 }
 @media (max-width: 768px) {
+  p {
+    padding-bottom: 15px !important;
+  }
   .cd-hero-page .cd-hero-col-page {
     padding: 12.76vw 21vw 13.39vw 7.29vw !important;
   }
