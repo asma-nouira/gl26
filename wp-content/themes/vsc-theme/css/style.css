@@ -570,6 +570,10 @@ ul {
 .hero-address span {
   display: block;
   line-height: 1.33;
+  max-width: 20vw;
+}
+.hero-address img {
+  max-width: 4vw;
 }
 .hero-address > p {
   display: none;

@@ -91,7 +91,11 @@
     transform: translateX(-20px);
     animation: cdFadeInLeft 0.7s ease 0.6s forwards;
     span { display: block;  
-    line-height: 1.33;}
+    line-height: 1.33;
+max-width:20vw ;}
+img{
+    max-width: 4vw;
+}
 
     /* Nettoyage balises parasites générées par VC Text Block */
     > p   { display: none; }
