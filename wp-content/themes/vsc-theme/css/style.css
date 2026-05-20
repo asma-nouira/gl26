@@ -595,6 +595,7 @@ ul {
   padding: 60px 60px !important;
 }
 .cd-hero-sm .hero-title {
+  max-width: 25vw;
   margin-bottom: 0;
 }
 
