@@ -1669,10 +1669,9 @@ body {
    ============================================================ */
 .cd-hero-page {
   position: relative;
-  min-height: 22vw;
   display: flex;
   align-items: center;
-  margin-top: 7.5vw;
+  margin-top: 145px;
 }
 .cd-hero-page .vce-asset-background-simple-item {
   background-position: center center !important;
