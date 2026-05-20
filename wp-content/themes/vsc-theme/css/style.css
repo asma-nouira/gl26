@@ -1685,20 +1685,9 @@ body {
   z-index: 1;
   pointer-events: none;
 }
-.cd-hero-page .vce-row-content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-}
-
-.cd-hero-page .cd-hero-col .vce-col-inner,
-.cd-hero-page .cd-hero-col .vce-col-content {
-  padding: 5vw 7vw !important;
+.cd-hero-page .cd-hero-col-page {
   text-align: left !important;
-}
-.cd-hero-page .cd-hero-col .vce-text-block,
-.cd-hero-page .cd-hero-col .vce-text-block-wrapper {
-  text-align: left !important;
+  padding: 12.76vw 60.94vw 13.39vw 7.29vw;
 }
 
 .hero-title_page {

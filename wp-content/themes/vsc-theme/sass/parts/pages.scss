@@ -32,25 +32,12 @@
         pointer-events: none;
     }
 
-    .vce-row-content {
-        position: relative;
-        z-index: 2;
-        width: 100%;
-    }
+   .cd-hero-col-page {
+     text-align: left !important;
+     padding: 12.76vw 60.94vw 13.39vw 7.29vw;
+   }
 }
 
-.cd-hero-page .cd-hero-col {
-    .vce-col-inner,
-    .vce-col-content {
-        padding: 5vw 7vw !important;
-        text-align: left !important;
-    }
-
-    .vce-text-block,
-    .vce-text-block-wrapper {
-        text-align: left !important;
-    }
-}
 
 .hero-title_page {
     font-family: 'SuperBlue', serif;
