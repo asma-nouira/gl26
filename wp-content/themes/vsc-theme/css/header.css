@@ -471,6 +471,11 @@
    ============================================================ */
 @media (max-width: 1024px) {
   .site-header {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 1024px) {
+  .site-header {
     padding: 0 24px;
   }
   #primary-menu {
