@@ -1735,8 +1735,8 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: clamp(0.875rem, 0.94vw, 1.125rem);
   color: var(--cd-text);
-  line-height: 1.75;
-  margin-bottom: 1.5vw;
+  line-height: 1.38;
+  margin-bottom: 1.7vw;
 }
 .cd-content-section p:last-child {
   margin-bottom: 0;
@@ -1747,10 +1747,10 @@ body {
    ============================================================ */
 .cd-quote-section p {
   font-family: "SuperBlue", serif;
-  font-size: clamp(1rem, 1.35vw, 1.625rem);
-  color: var(--cd-brown);
+  font-size: clamp(1rem, 1.25vw, 1.625rem);
+  color: #BF9F94;
   line-height: 1.5;
-  font-style: italic;
+  font-weight: 700;
   margin: 0;
 }
 
