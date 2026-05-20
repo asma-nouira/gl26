@@ -349,27 +349,20 @@
    .bb-3{
     padding-bottom: 30px;
    }
-    .cd-technologies-section { padding: 10vw 5vw !important; }
+    .cd-technologies-section { 
+        padding: 10vw 5vw !important; 
+        h3{
+            padding-bottom: 3vw!important;
+        }
+    }
 
     .cd-technologies-section .cd-tech-intro {
         max-width: 100% !important;
         margin-bottom: 8vw !important;
     }
 
-    /* Empilé sur mobile */
-    .cd-tech-item,
-    .cd-tech-item.cd-tech-item--reverse {
-        flex-direction: column !important;
-        gap: 6vw !important;
-        margin-bottom: 10vw !important;
-    }
+    
 
-    /* Image centrée au-dessus */
-    .cd-tech-img {
-        flex: 0 0 50vw !important;
-        width: 50vw !important;
-        margin: 0 auto !important;
-    }
 
     .cd-tech-text {
         width: 100% !important;
