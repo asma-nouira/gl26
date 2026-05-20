@@ -20,7 +20,7 @@ jQuery(document).on('ready', function() {
                 }
             },
             {
-                breakpoint: 766,
+                breakpoint: 768,
                 settings: {
                     arrows: true,
                     centerMode: true,
