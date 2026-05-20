@@ -555,7 +555,7 @@ ul {
    ============================================================ */
 .hero-address {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 10px;
   font-style: normal;
   color: rgba(255, 255, 255, 0.88);

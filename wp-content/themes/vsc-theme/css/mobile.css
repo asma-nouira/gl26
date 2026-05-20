@@ -163,11 +163,9 @@ html, body {
     max-width: 100% !important;
   }
   .hero-title {
-    font-size: 2rem !important;
     margin-bottom: 26px !important;
   }
   .hero-address {
-    font-size: 0.85rem !important;
     gap: 8px !important;
     margin-bottom: 0 !important;
   }
@@ -178,7 +176,7 @@ html, body {
   }
   .hero-address span {
     line-height: 1.4 !important;
-    font-size: 1.18rem !important;
+    max-width: inherit !important;
   }
   .hero-address svg {
     width: 16px !important;
@@ -205,13 +203,9 @@ html, body {
   }
   .cd-about-title {
     padding: 32px 0 16px !important;
-    font-size: 1.8rem !important;
     word-break: normal !important;
     white-space: normal !important;
     overflow-wrap: break-word !important;
-  }
-  .cd-about-intro {
-    font-size: 1.1rem !important;
   }
   .cd-deco-tooth {
     display: none !important;
@@ -222,7 +216,6 @@ html, body {
     width: 100% !important;
   }
   .horaire table td {
-    font-size: 0.8rem !important;
     padding: 3px 2px !important;
     word-break: break-word;
   }
@@ -349,10 +342,6 @@ html, body {
   }
   .vce-single-image-figure-inner {
     max-width: 100% !important;
-  }
-  /* ---- H2 global ---- */
-  h2, .cd-h2, .cd-section-title {
-    font-size: 1.8rem !important;
   }
 }
 /*# sourceMappingURL=../css/mobile.css.map */
