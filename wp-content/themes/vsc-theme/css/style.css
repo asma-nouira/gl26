@@ -197,7 +197,6 @@ ul {
 }
 #primary-menu > li > a {
   font-family: "SuperBlue", serif;
-  font-size: 1.25rem;
   font-weight: 400;
   color: #383839;
   text-decoration: none;
@@ -238,7 +237,6 @@ ul {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 12px;
   color: #C58E80;
   transition: transform 0.3s ease;
 }
@@ -282,7 +280,6 @@ ul {
   display: block;
   padding: 10px 20px;
   font-family: "Manrope", sans-serif;
-  font-size: 15px;
   font-weight: 500;
   color: #383839;
   text-decoration: none;
@@ -317,7 +314,6 @@ ul {
   background: #C58E80;
   color: #ffffff !important;
   font-family: "Manrope", sans-serif;
-  font-size: 15px;
   font-weight: 600;
   border-radius: 50px;
   text-decoration: none !important;
@@ -347,7 +343,6 @@ ul {
   background: #242424;
   color: #ffffff !important;
   font-family: "Manrope", sans-serif;
-  font-size: 15px;
   font-weight: 600;
   border-radius: 50px;
   text-decoration: none !important;
@@ -542,7 +537,6 @@ ul {
    ============================================================ */
 .hero-title {
   font-family: "SuperBlue", serif;
-  font-size: 4.7rem;
   font-weight: 400;
   color: #ffffff;
   line-height: 1;
@@ -575,7 +569,6 @@ ul {
 }
 .hero-address span {
   display: block;
-  font-size: 1.5rem;
   line-height: 1.33;
 }
 .hero-address > p {
@@ -598,7 +591,6 @@ ul {
   padding: 60px 60px !important;
 }
 .cd-hero-sm .hero-title {
-  font-size: 2.4rem;
   margin-bottom: 0;
 }
 
@@ -648,12 +640,6 @@ ul {
   .cd-hero-col .vce-col-content {
     padding: 0 !important;
   }
-  .hero-title {
-    font-size: 2.6rem;
-  }
-  .cd-hero-sm .hero-title {
-    font-size: 2rem;
-  }
 }
 @media (max-width: 768px) {
   .cd-hero {
@@ -680,15 +666,6 @@ ul {
   }
   .cd-hero-col .vce-col-content {
     padding: 0 !important;
-  }
-  .hero-title {
-    font-size: 2rem;
-  }
-  .cd-hero-sm {
-    min-height: 220px;
-  }
-  .cd-hero-sm .hero-title {
-    font-size: 1.6rem;
   }
 }
 /* ============================================================
@@ -1264,14 +1241,12 @@ h2 {
 }
 .cd-blog-header h2 {
   font-family: var(--cd-font-heading);
-  font-size: 2.8125rem;
   font-weight: 400;
   color: #ffffff;
   margin: 0 0 20px;
 }
 .cd-blog-header p {
   font-family: var(--cd-font-body);
-  font-size: 0.95rem;
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.7;
   max-width: 620px;
@@ -1324,7 +1299,6 @@ h2 {
 }
 .cd-blog-card .cd-blog-card-title {
   font-family: var(--cd-font-heading);
-  font-size: 1.25rem;
   font-weight: 400;
   color: #ffffff;
   margin: 0 0 12px;
@@ -1340,7 +1314,6 @@ h2 {
 }
 .cd-blog-card .cd-blog-card-excerpt {
   font-family: var(--cd-font-body);
-  font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.7;
   margin-bottom: 16px;
@@ -1351,7 +1324,6 @@ h2 {
 }
 .cd-blog-card .cd-blog-card-link {
   font-family: var(--cd-font-body);
-  font-size: 0.875rem;
   color: #ffffff;
   text-decoration: underline;
   text-underline-offset: 3px;
@@ -1418,7 +1390,6 @@ h2 {
 .cd-footer-address {
   font-style: normal;
   font-family: var(--cd-font-body);
-  font-size: 1.25rem;
   color: #625756;
   line-height: 1.35;
 }
@@ -1426,7 +1397,6 @@ h2 {
 /* --- Titres colonnes --- */
 .cd-footer-title {
   font-family: "SuperBlue", serif;
-  font-size: 1.37rem;
   font-weight: 400;
   color: #BF9F94;
   margin: 0 0 0.8vw;
@@ -1452,7 +1422,6 @@ h2 {
 }
 .cd-footer-menu-list a {
   font-family: "SuperBlue", serif;
-  font-size: 1.12rem;
   font-weight: 700;
   color: #625756;
   text-decoration: none;
@@ -1498,7 +1467,6 @@ h2 {
   width: 100%;
   border-collapse: collapse;
   font-family: var(--cd-font-body);
-  font-size: 1.12rem;
 }
 .cd-footer-hours-table td {
   padding: 0.15vw 0;
@@ -1522,7 +1490,6 @@ h2 {
   margin: 0 auto;
 }
 .cd-footer-bottom p {
-  font-size: 1.12rem;
   color: var(--cd-text-light);
   margin: 0;
 }
@@ -1535,365 +1502,196 @@ h2 {
 }
 
 /* ============================================================
-   MOBILE.SCSS — Clinique Dentaire Geneviève Lafrance
-   Simplifié grâce aux vw — ne gère que les changements structurels
+   GUIDE DES TAILLES DE POLICE EN clamp()
+   Clinique Dentaire Geneviève Lafrance
+
+   Formule : clamp(min-mobile, valeur-vw, max-desktop)
+   Calcul vw : taille-px / 1920 * 100
+
+   Remplacez chaque font-size dans vos fichiers
    ============================================================ */
-html, body {
-  overflow-x: hidden;
-  max-width: 100%;
+/* ============================================================
+   TITRES
+   ============================================================ */
+/* H1 Hero — 75px sur 1920 */
+.hero-title {
+  font-size: clamp(2rem, 3.9vw, 4.7rem); /* min 32px → 3.9vw → max 75px */
 }
 
-.vce-row-container,
-.vce-row,
-.vce-col,
-.vce-row-content {
-  max-width: 100% !important;
+/* H2 Section — 45px sur 1920 */
+h2,
+.cd-h2,
+.cd-section-title,
+h2.cd-title-service,
+.cd-about-title {
+  font-size: clamp(1.5rem, 2.35vw, 2.8125rem); /* min 24px → 2.35vw → max 45px */
+}
+
+/* H3 Carte service — 35px sur 1920 */
+.cd-service-card h3 {
+  font-size: clamp(1.1rem, 1.82vw, 2.18rem); /* min 18px → 1.82vw → max 35px */
+}
+
+/* H2 Blog header */
+.cd-blog-header h2 {
+  font-size: clamp(1.5rem, 2.35vw, 2.8125rem); /* min 24px → max 45px */
 }
 
 /* ============================================================
-   TABLETTE — max 1024px
-   Changements structurels uniquement
+   SOUS-TITRES / INTRO
    ============================================================ */
-@media (max-width: 1024px) {
-  /* ---- HEADER — hamburger ---- */
-  .site-header {
-    height: 70px !important;
-    padding: 0 24px !important;
-  }
-  .hamburger {
-    display: flex !important;
-  }
-  .site-header nav {
-    display: none !important;
-    position: absolute !important;
-    top: 70px !important;
-    left: 0 !important;
-    right: 0 !important;
-    background: #ffffff !important;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
-    z-index: 999 !important;
-  }
-  .site-header nav.open {
-    display: block !important;
-  }
-  .site-header nav > div {
-    display: block !important;
-  }
-  #primary-menu {
-    flex-direction: column !important;
-    gap: 0 !important;
-    padding: 12px 0 !important;
-  }
-  #primary-menu > li {
-    width: 100% !important;
-    opacity: 1 !important;
-    animation: none !important;
-  }
-  #primary-menu > li > a {
-    display: block !important;
-    padding: 14px 24px !important;
-    font-size: 18px !important;
-    border-bottom: 1px solid #f0efeb !important;
-  }
-  #primary-menu > li > a::after, #primary-menu > li > a::before {
-    display: none !important;
-  }
-  #primary-menu > li.menu-item-has-children > .sub-menu {
-    position: static !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-    transform: none !important;
-    box-shadow: none !important;
-    border-radius: 0 !important;
-    display: none !important;
-    background: #F3F1ED !important;
-    padding: 0 !important;
-    min-width: 100% !important;
-  }
-  #primary-menu > li.menu-item-has-children > .sub-menu::before {
-    display: none !important;
-  }
-  #primary-menu > li.menu-item-has-children > .sub-menu li a {
-    padding-left: 40px !important;
-    font-size: 15px !important;
-    border-bottom: 1px solid #e5e3df !important;
-    border-left: none !important;
-  }
-  #primary-menu > li.menu-item-has-children.open > .sub-menu {
-    display: block !important;
-  }
-  #primary-menu li.btn-phone,
-  #primary-menu li.btn-coin-enfant {
-    text-align: center !important;
-  }
-  #primary-menu li.btn-phone > a,
-  #primary-menu li.btn-coin-enfant > a {
-    display: inline-flex !important;
-    margin: 8px 16px !important;
-    border-radius: 50px !important;
-    justify-content: center !important;
-    border-bottom: none !important;
-  }
-  /* ---- HERO ---- */
-  .cd-hero {
-    margin-top: 70px !important;
-  }
-  .hero-sidebar {
-    display: none !important;
-  }
-  .cd-deco-tooth {
-    display: none !important;
-  }
-  /* ---- COLONNES VC ---- */
-  .vce-col {
-    flex: 0 0 100% !important;
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-  /* ---- BLOG ---- */
-  .cd-blog-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-  /* ---- FOOTER ---- */
-  .cd-footer-inner {
-    grid-template-columns: 1fr 1fr !important;
-    gap: 40px !important;
-  }
-  .cd-footer-hours {
-    grid-column: 1/-1 !important;
-  }
+/* Intro about — SuperBlue 24px sur 1920 */
+.cd-about-intro {
+  font-size: clamp(1rem, 1.25vw, 1.5rem); /* min 16px → max 24px */
 }
+
+/* Sous-titre services — 24px sur 1920 */
+.cd-text-service {
+  font-size: clamp(1rem, 1.25vw, 1.5rem); /* min 16px → max 24px */
+}
+
 /* ============================================================
-   MOBILE — max 768px
+   CORPS DE TEXTE
    ============================================================ */
-@media (max-width: 768px) {
-  /* ---- HEADER ---- */
-  .site-header {
-    height: 60px !important;
-    min-height: 60px !important;
-    padding: 0 16px !important;
-  }
-  .site-header nav {
-    top: 60px !important;
-  }
-  .custom-logo-link img.custom-logo {
-    height: 38px !important;
-  }
-  /* ---- HERO — fond couleur sur mobile ---- */
-  .cd-hero {
-    margin-top: 60px !important;
-    min-height: 85vh !important;
-    align-items: flex-end !important;
-    background-color: #625756 !important;
-  }
-  .cd-hero .vce-asset-background-simple-item {
-    display: none !important;
-  }
-  .cd-hero .vce-content-background-container::after {
-    display: none !important;
-  }
-  .cd-hero-col .vce-col-inner,
-  .cd-hero-col .vce-col-content {
-    padding: 0 24px 48px !important;
-    max-width: 100% !important;
-  }
-  .hero-title {
-    font-size: 2rem !important;
-    margin-bottom: 26px !important;
-  }
-  .hero-address {
-    font-size: 0.85rem !important;
-    gap: 8px !important;
-    margin-bottom: 0 !important;
-  }
-  .hero-address img {
-    width: 40px !important;
-    height: auto !important;
-    flex-shrink: 0 !important;
-  }
-  .hero-address span {
-    line-height: 1.4 !important;
-    font-size: 1.18rem !important;
-  }
-  .hero-address svg {
-    width: 16px !important;
-    height: 16px !important;
-    flex-shrink: 0 !important;
-  }
-  .hero-sidebar {
-    display: none !important;
-  }
-  /* ---- ABOUT ---- */
-  .cd-about-section {
-    padding: 48px 20px !important;
-  }
-  .cd-about-col-left {
-    padding-right: 0 !important;
-    padding-bottom: 20px;
-  }
-  .cd-about-col-left .details {
-    margin-bottom: 20px !important;
-  }
-  .cd-logo-img {
-    padding-bottom: 25px;
-    text-align: left;
-  }
-  .cd-about-title {
-    padding: 32px 0 16px !important;
-    font-size: 1.8rem !important;
-    word-break: normal !important;
-    white-space: normal !important;
-    overflow-wrap: break-word !important;
-  }
-  .cd-about-intro {
-    font-size: 1.1rem !important;
-  }
-  .cd-deco-tooth {
-    display: none !important;
-  }
-  /* ---- HORAIRES ---- */
-  .horaire table {
-    table-layout: fixed;
-    width: 100% !important;
-  }
-  .horaire table td {
-    font-size: 0.8rem !important;
-    padding: 3px 2px !important;
-    word-break: break-word;
-  }
-  .horaire table td:first-child {
-    width: 27% !important;
-    padding-right: 6px !important;
-  }
-  .horaire table td:last-child {
-    width: 30% !important;
-  }
-  /* ---- TEAM ---- */
-  .cd-team-circles {
-    justify-content: center !important;
-    gap: 8px !important;
-    padding-bottom: 20px !important;
-  }
-  .cd-team-circle-item {
-    margin-left: 0 !important;
-  }
-  .cd-team-circle-item img {
-    width: 90px !important;
-    height: 90px !important;
-  }
-  /* ---- SERVICES ---- */
-  .cd-service-col > .vce-col-inner {
-    padding: 48px 20px !important;
-  }
-  h2.cd-title-service {
-    font-size: 1.8rem !important;
-  }
-  .cd-text-service {
-    margin-bottom: 32px !important;
-  }
-  .cd-service-card h3 {
-    font-size: 1.18rem !important;
-    margin-top: -63px !important;
-    padding: 10px 35px !important;
-  }
-  .cd-desc-service {
-    padding: 23px 35px 25px !important;
-  }
-  /* ---- GALLERY ---- */
-  .cd-txt-gallery {
-    padding: 40px 20px 20px !important;
-  }
-  .cd-gallery-slider {
-    padding-bottom: 60px !important;
-  }
-  .cd-gallery-slider .cd-slider-prev,
-  .cd-gallery-slider .cd-slider-next {
-    bottom: -50px !important;
-    width: 36px !important;
-    height: 36px !important;
-  }
-  .cd-gallery-slider .cd-slider-prev {
-    left: calc(50% - 44px) !important;
-  }
-  .cd-gallery-slider .cd-slider-next {
-    left: calc(50% + 8px) !important;
-  }
-  /* ---- APPOINTMENT ---- */
-  .cd-appoint-section {
-    padding: 48px 20px !important;
-  }
-  /* ---- URGENCE ---- */
-  .cd-urgence-section {
-    padding: 48px 20px !important;
-  }
-  .cd-urgence-title-wrapper .vce-text-block-wrapper {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    flex-direction: column !important;
-    text-align: center !important;
-    margin-bottom: 32px !important;
-  }
-  .cd-deco-tooth-urgence {
-    width: 60px !important;
-  }
-  /* ---- CF7 ---- */
-  .cd-form-row {
-    grid-template-columns: 1fr !important;
-  }
-  .contact-form {
-    padding: 20px 16px !important;
-  }
-  /* ---- BOUTONS ---- */
-  .btn-action-brown,
-  .btn-services {
-    width: 100% !important;
-    justify-content: center !important;
-    text-align: center !important;
-    padding: 12px 24px !important;
-  }
-  /* ---- BLOG ---- */
-  .cd-blog-section {
-    padding: 48px 20px !important;
-  }
-  .cd-blog-grid {
-    grid-template-columns: 1fr !important;
-  }
-  /* ---- FOOTER ---- */
-  .cd-footer {
-    padding: 40px 20px 0 !important;
-  }
-  .cd-footer-inner {
-    grid-template-columns: 1fr !important;
-    gap: 32px !important;
-  }
-  .cd-footer-menu-grid {
-    grid-template-columns: 1fr 1fr !important;
-  }
-  .cd-footer-actions {
-    flex-wrap: wrap !important;
-    gap: 10px !important;
-  }
-  .cd-footer-col.cd-footer-nav {
-    padding-left: 0 !important;
-  }
-  .cd-footer-bottom {
-    flex-direction: column !important;
-    text-align: center !important;
-    gap: 8px !important;
-  }
-  /* ---- IMAGES ---- */
-  img {
-    max-width: 100% !important;
-  }
-  .vce-single-image-figure-inner {
-    max-width: 100% !important;
-  }
-  /* ---- H2 global ---- */
-  h2, .cd-h2, .cd-section-title {
-    font-size: 1.8rem !important;
-  }
+/* Body text — 18px sur 1920 */
+body {
+  font-size: clamp(0.875rem, 0.94vw, 1.125rem); /* min 14px → max 18px */
 }
-/* EN DERNIER */
+
+/* Texte about droite — 18px sur 1920 */
+.cd-about-text .vce-text-block-wrapper p {
+  font-size: clamp(0.875rem, 0.94vw, 1.125rem); /* min 14px → max 18px */
+}
+
+/* Description carte service — 18px sur 1920 */
+.cd-desc-service {
+  font-size: clamp(0.875rem, 0.94vw, 1.12rem); /* min 14px → max 18px */
+}
+
+/* ============================================================
+   ADRESSES / HERO
+   ============================================================ */
+/* Adresse hero span — 24px sur 1920 */
+.hero-address span {
+  font-size: clamp(0.9rem, 1.25vw, 1.5rem); /* min 14px → max 24px */
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+/* Menu principal — 20px sur 1920 */
+#primary-menu > li > a {
+  font-size: clamp(0.875rem, 1.04vw, 1.25rem); /* min 14px → max 20px */
+}
+
+/* Sous-menu — 15px sur 1920 */
+#primary-menu .sub-menu li a {
+  font-size: clamp(0.8rem, 0.78vw, 0.94rem); /* min 13px → max 15px */
+}
+
+/* ============================================================
+   BOUTONS
+   ============================================================ */
+/* Bouton action brown — 20px sur 1920 */
+.btn-action-brown {
+  font-size: clamp(0.9rem, 1.04vw, 1.25rem); /* min 14px → max 20px */
+}
+
+/* Boutons header phone/coin enfant — 15px sur 1920 */
+#primary-menu li.btn-phone > a,
+#primary-menu li.btn-coin-enfant > a {
+  font-size: clamp(0.75rem, 0.78vw, 0.94rem); /* min 12px → max 15px */
+}
+
+/* Bouton services — 16px sur 1920 */
+.btn-services {
+  font-size: clamp(0.8rem, 0.83vw, 1rem); /* min 13px → max 16px */
+}
+
+/* Bouton CD global — 20px sur 1920 */
+.cd-btn {
+  font-size: clamp(0.9rem, 1.04vw, 1.25rem); /* min 14px → max 20px */
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+/* Footer adresse — 20px sur 1920 */
+.cd-footer-address {
+  font-size: clamp(0.875rem, 1.04vw, 1.25rem); /* min 14px → max 20px */
+}
+
+/* Footer titre colonne — 22px sur 1920 */
+.cd-footer-title {
+  font-size: clamp(0.9rem, 1.15vw, 1.37rem); /* min 14px → max 22px */
+}
+
+/* Footer menu liens — 18px sur 1920 */
+.cd-footer-menu-list a {
+  font-size: clamp(0.8rem, 0.94vw, 1.12rem); /* min 13px → max 18px */
+}
+
+/* Footer heures — 18px sur 1920 */
+.cd-footer-hours-table {
+  font-size: clamp(0.8rem, 0.94vw, 1.12rem); /* min 13px → max 18px */
+}
+
+/* Footer bottom — 18px sur 1920 */
+.cd-footer-bottom p {
+  font-size: clamp(0.75rem, 0.94vw, 1.12rem); /* min 12px → max 18px */
+}
+
+/* ============================================================
+   HORAIRES (section about)
+   ============================================================ */
+.horaire table {
+  font-size: clamp(0.75rem, 0.73vw, 0.875rem); /* min 12px → max 14px */
+}
+
+/* ============================================================
+   FORMULAIRE CF7
+   ============================================================ */
+/* Labels */
+.wpcf7 label {
+  font-size: clamp(0.875rem, 0.94vw, 1.12rem); /* min 14px → max 18px */
+}
+
+/* Inputs */
+.wpcf7 input[type=text],
+.wpcf7 input[type=email],
+.wpcf7 input[type=tel],
+.wpcf7 textarea.wpcf7-textarea {
+  font-size: clamp(0.875rem, 0.94vw, 1.12rem); /* min 14px → max 18px */
+}
+
+/* Bouton submit */
+.wpcf7 input[type=submit].wpcf7-submit {
+  font-size: clamp(0.8rem, 0.83vw, 1rem); /* min 13px → max 16px */
+}
+
+/* ============================================================
+   BLOG
+   ============================================================ */
+/* Blog header paragraphe */
+.cd-blog-header p {
+  font-size: clamp(0.8rem, 0.78vw, 0.95rem); /* min 13px → max 15px */
+}
+
+/* Blog card titre — 20px sur 1920 */
+.cd-blog-card-title {
+  font-size: clamp(0.9rem, 1.04vw, 1.25rem); /* min 14px → max 20px */
+}
+
+/* Blog card extrait */
+.cd-blog-card-excerpt {
+  font-size: clamp(0.75rem, 0.73vw, 0.875rem); /* min 12px → max 14px */
+}
+
+/* Blog card lien */
+.cd-blog-card-link {
+  font-size: clamp(0.75rem, 0.73vw, 0.875rem); /* min 12px → max 14px */
+}
+
 /* ============================================================
    GLOBAL
    ============================================================ */
@@ -2005,7 +1803,6 @@ body .wpcf7-mail-sent-ok {
 
 .cd-about-title {
   font-family: "SuperBlue", serif;
-  font-size: 2.8rem;
   font-weight: 400;
   color: #625756;
   line-height: 1.33;
@@ -2017,7 +1814,6 @@ body .wpcf7-mail-sent-ok {
 
 .cd-about-intro {
   font-family: "SuperBlue", serif;
-  font-size: 1.5rem;
   color: #625756;
   line-height: 1.25;
   margin: 0 0 1.5vw 0;
@@ -2044,7 +1840,6 @@ body .wpcf7-mail-sent-ok {
   background: #625756;
   color: #ffffff !important;
   font-family: "SuperBlue", serif;
-  font-size: 1.25rem;
   font-weight: 400;
   border-radius: 50px;
   text-decoration: none !important;
@@ -2060,7 +1855,6 @@ body .wpcf7-mail-sent-ok {
   width: 100%;
   border-collapse: collapse;
   font-family: "Manrope", sans-serif;
-  font-size: 0.875rem;
 }
 .horaire td {
   color: #625756;
@@ -2125,7 +1919,6 @@ body .wpcf7-mail-sent-ok {
 }
 .cd-about-text .vce-text-block-wrapper p {
   font-family: "Manrope", sans-serif;
-  font-size: 1.125rem;
   color: #383839;
   line-height: 1.38;
   margin-bottom: 0.8vw;
@@ -2171,7 +1964,6 @@ body .wpcf7-mail-sent-ok {
   text-align: center;
   margin: 0 0 0.8vw 0;
   padding: 0;
-  font-size: 2.8rem;
   line-height: 1.1111;
   max-width: 513px;
   margin-left: auto;
@@ -2180,7 +1972,6 @@ body .wpcf7-mail-sent-ok {
 
 .cd-text-service {
   font-family: "Manrope", sans-serif;
-  font-size: 1.5rem;
   color: #383839;
   line-height: 1.25;
   text-align: center;
@@ -2206,7 +1997,6 @@ body .wpcf7-mail-sent-ok {
   transform: translateY(-6px);
 }
 .cd-service-card h3 {
-  font-size: 2.18rem;
   line-height: 1.14;
   text-align: left;
   color: #625756;
@@ -2218,11 +2008,6 @@ body .wpcf7-mail-sent-ok {
   background-color: #F4F3EF;
   max-width: 16vw;
   padding: 0.5vw 2.8vw;
-}
-@media (max-width: 1200px) {
-  .cd-service-card h3 {
-    font-size: 1.5rem;
-  }
 }
 
 .cd-img-service {
@@ -2249,7 +2034,6 @@ body .wpcf7-mail-sent-ok {
 
 .cd-desc-service {
   font-family: "Manrope", sans-serif;
-  font-size: 1.12rem;
   color: #625756;
   line-height: 1.38;
   margin: 0;
@@ -2270,7 +2054,6 @@ body .wpcf7-mail-sent-ok {
   background: transparent;
   color: #242424 !important;
   font-family: "Manrope", sans-serif;
-  font-size: 1rem;
   font-weight: 600;
   border: 2px solid #242424;
   border-radius: 50px;
@@ -2351,7 +2134,6 @@ body .wpcf7-mail-sent-ok {
   justify-content: center;
   transition: all 0.3s ease;
   z-index: 10;
-  font-size: 1.25rem;
 }
 .cd-gallery-slider .cd-slider-prev:hover,
 .cd-gallery-slider .cd-slider-next:hover {
@@ -2423,7 +2205,6 @@ body .wpcf7-mail-sent-ok {
 }
 .wpcf7 label {
   font-family: var(--cd-font-body);
-  font-size: 1.12rem;
   font-weight: 400;
   color: var(--cd-text);
   display: block;
@@ -2441,7 +2222,6 @@ body .wpcf7-mail-sent-ok {
   min-height: 42px;
   padding: 0 1vw;
   font-family: var(--cd-font-body);
-  font-size: 1.12rem;
   color: var(--cd-dark);
   background: #ffffff;
   border: none;
@@ -2467,7 +2247,6 @@ body .wpcf7-mail-sent-ok {
   min-height: 6.5vw;
   padding: 0.7vw 1vw;
   font-family: var(--cd-font-body);
-  font-size: 1.12rem;
   color: var(--cd-dark);
   background: #ffffff;
   border: none;
@@ -2489,7 +2268,6 @@ body .wpcf7-mail-sent-ok {
   background: var(--cd-brown);
   color: #ffffff;
   font-family: var(--cd-font-body);
-  font-size: 1rem;
   font-weight: 600;
   border: none;
   border-radius: var(--cd-radius-full);
@@ -2509,7 +2287,6 @@ body .wpcf7-mail-sent-ok {
   margin-top: 0.8vw;
   padding: 0.6vw 0.8vw;
   border-radius: 8px;
-  font-size: 0.875rem;
   font-family: var(--cd-font-body);
   border: none !important;
 }

@@ -1,0 +1,201 @@
+/* ============================================================
+   GUIDE DES TAILLES DE POLICE EN clamp()
+   Clinique Dentaire Geneviève Lafrance
+   
+   Formule : clamp(min-mobile, valeur-vw, max-desktop)
+   Calcul vw : taille-px / 1920 * 100
+   
+   Remplacez chaque font-size dans vos fichiers
+   ============================================================ */
+
+/* ============================================================
+   TITRES
+   ============================================================ */
+
+/* H1 Hero — 75px sur 1920 */
+.hero-title {
+    font-size: clamp(2rem, 3.9vw, 4.7rem);      /* min 32px → 3.9vw → max 75px */
+}
+
+/* H2 Section — 45px sur 1920 */
+h2,
+.cd-h2,
+.cd-section-title,
+h2.cd-title-service,
+.cd-about-title {
+    font-size: clamp(1.5rem, 2.35vw, 2.8125rem); /* min 24px → 2.35vw → max 45px */
+}
+
+/* H3 Carte service — 35px sur 1920 */
+.cd-service-card h3 {
+    font-size: clamp(1.1rem, 1.82vw, 2.18rem);   /* min 18px → 1.82vw → max 35px */
+}
+
+/* H2 Blog header */
+.cd-blog-header h2 {
+    font-size: clamp(1.5rem, 2.35vw, 2.8125rem); /* min 24px → max 45px */
+}
+
+/* ============================================================
+   SOUS-TITRES / INTRO
+   ============================================================ */
+
+/* Intro about — SuperBlue 24px sur 1920 */
+.cd-about-intro {
+    font-size: clamp(1rem, 1.25vw, 1.5rem);      /* min 16px → max 24px */
+}
+
+/* Sous-titre services — 24px sur 1920 */
+.cd-text-service {
+    font-size: clamp(1rem, 1.25vw, 1.5rem);      /* min 16px → max 24px */
+}
+
+/* ============================================================
+   CORPS DE TEXTE
+   ============================================================ */
+
+/* Body text — 18px sur 1920 */
+body {
+    font-size: clamp(0.875rem, 0.94vw, 1.125rem); /* min 14px → max 18px */
+}
+
+/* Texte about droite — 18px sur 1920 */
+.cd-about-text .vce-text-block-wrapper p {
+    font-size: clamp(0.875rem, 0.94vw, 1.125rem); /* min 14px → max 18px */
+}
+
+/* Description carte service — 18px sur 1920 */
+.cd-desc-service {
+    font-size: clamp(0.875rem, 0.94vw, 1.12rem);  /* min 14px → max 18px */
+}
+
+/* ============================================================
+   ADRESSES / HERO
+   ============================================================ */
+
+/* Adresse hero span — 24px sur 1920 */
+.hero-address span {
+    font-size: clamp(0.9rem, 1.25vw, 1.5rem);    /* min 14px → max 24px */
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+/* Menu principal — 20px sur 1920 */
+#primary-menu > li > a {
+    font-size: clamp(0.875rem, 1.04vw, 1.25rem);  /* min 14px → max 20px */
+}
+
+/* Sous-menu — 15px sur 1920 */
+#primary-menu .sub-menu li a {
+    font-size: clamp(0.8rem, 0.78vw, 0.94rem);    /* min 13px → max 15px */
+}
+
+/* ============================================================
+   BOUTONS
+   ============================================================ */
+
+/* Bouton action brown — 20px sur 1920 */
+.btn-action-brown {
+    font-size: clamp(0.9rem, 1.04vw, 1.25rem);    /* min 14px → max 20px */
+}
+
+/* Boutons header phone/coin enfant — 15px sur 1920 */
+#primary-menu li.btn-phone > a,
+#primary-menu li.btn-coin-enfant > a {
+    font-size: clamp(0.75rem, 0.78vw, 0.94rem);   /* min 12px → max 15px */
+}
+
+/* Bouton services — 16px sur 1920 */
+.btn-services {
+    font-size: clamp(0.8rem, 0.83vw, 1rem);       /* min 13px → max 16px */
+}
+
+/* Bouton CD global — 20px sur 1920 */
+.cd-btn {
+    font-size: clamp(0.9rem, 1.04vw, 1.25rem);    /* min 14px → max 20px */
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+/* Footer adresse — 20px sur 1920 */
+.cd-footer-address {
+    font-size: clamp(0.875rem, 1.04vw, 1.25rem);  /* min 14px → max 20px */
+}
+
+/* Footer titre colonne — 22px sur 1920 */
+.cd-footer-title {
+    font-size: clamp(0.9rem, 1.15vw, 1.37rem);    /* min 14px → max 22px */
+}
+
+/* Footer menu liens — 18px sur 1920 */
+.cd-footer-menu-list a {
+    font-size: clamp(0.8rem, 0.94vw, 1.12rem);    /* min 13px → max 18px */
+}
+
+/* Footer heures — 18px sur 1920 */
+.cd-footer-hours-table {
+    font-size: clamp(0.8rem, 0.94vw, 1.12rem);    /* min 13px → max 18px */
+}
+
+/* Footer bottom — 18px sur 1920 */
+.cd-footer-bottom p {
+    font-size: clamp(0.75rem, 0.94vw, 1.12rem);   /* min 12px → max 18px */
+}
+
+/* ============================================================
+   HORAIRES (section about)
+   ============================================================ */
+
+.horaire table {
+    font-size: clamp(0.75rem, 0.73vw, 0.875rem);  /* min 12px → max 14px */
+}
+
+/* ============================================================
+   FORMULAIRE CF7
+   ============================================================ */
+
+/* Labels */
+.wpcf7 label {
+    font-size: clamp(0.875rem, 0.94vw, 1.12rem);  /* min 14px → max 18px */
+}
+
+/* Inputs */
+.wpcf7 input[type="text"],
+.wpcf7 input[type="email"],
+.wpcf7 input[type="tel"],
+.wpcf7 textarea.wpcf7-textarea {
+    font-size: clamp(0.875rem, 0.94vw, 1.12rem);  /* min 14px → max 18px */
+}
+
+/* Bouton submit */
+.wpcf7 input[type="submit"].wpcf7-submit {
+    font-size: clamp(0.8rem, 0.83vw, 1rem);       /* min 13px → max 16px */
+}
+
+/* ============================================================
+   BLOG
+   ============================================================ */
+
+/* Blog header paragraphe */
+.cd-blog-header p {
+    font-size: clamp(0.8rem, 0.78vw, 0.95rem);    /* min 13px → max 15px */
+}
+
+/* Blog card titre — 20px sur 1920 */
+.cd-blog-card-title {
+    font-size: clamp(0.9rem, 1.04vw, 1.25rem);    /* min 14px → max 20px */
+}
+
+/* Blog card extrait */
+.cd-blog-card-excerpt {
+    font-size: clamp(0.75rem, 0.73vw, 0.875rem);  /* min 12px → max 14px */
+}
+
+/* Blog card lien */
+.cd-blog-card-link {
+    font-size: clamp(0.75rem, 0.73vw, 0.875rem);  /* min 12px → max 14px */
+}

@@ -5,7 +5,7 @@
 @import './parts/components';
 @import './parts/blog.scss';
 @import './parts/footer.scss';
-@import './mobile.scss'; /* EN DERNIER */
+@import './parts/font-sizes-guide.scss';
 
 /* ============================================================
    GLOBAL
@@ -104,7 +104,6 @@ body .wpcf7-mail-sent-ok {
 
 .cd-about-title {
     font-family: 'SuperBlue', serif;
-    font-size: 2.8rem;
     font-weight: 400;
     color: #625756;
     line-height: 1.33;
@@ -116,7 +115,6 @@ body .wpcf7-mail-sent-ok {
 
 .cd-about-intro {
     font-family: 'SuperBlue', serif;
-    font-size: 1.5rem;
     color: #625756;
     line-height: 1.25;
     margin: 0 0 1.5vw 0;
@@ -140,7 +138,7 @@ body .wpcf7-mail-sent-ok {
     background: #625756;
     color: #ffffff !important;
     font-family: 'SuperBlue', serif;
-    font-size: 1.25rem;
+   
     font-weight: 400;
     border-radius: 50px;
     text-decoration: none !important;
@@ -157,7 +155,7 @@ body .wpcf7-mail-sent-ok {
         width: 100%;
         border-collapse: collapse;
         font-family: 'Manrope', sans-serif;
-        font-size: 0.875rem;
+       
     }
     td {
         color: #625756;
@@ -210,7 +208,7 @@ body .wpcf7-mail-sent-ok {
 .cd-about-text {
     .vce-text-block-wrapper p {
         font-family: 'Manrope', sans-serif;
-        font-size: 1.125rem;
+       
         color: #383839;
         line-height: 1.38;
         margin-bottom: 0.8vw;
@@ -248,7 +246,7 @@ body .wpcf7-mail-sent-ok {
     text-align: center;
     margin: 0 0 0.8vw 0;
     padding: 0;
-    font-size: 2.8rem;
+    
     line-height: 1.1111;
     max-width: 513px;
     margin-left: auto;
@@ -257,7 +255,7 @@ body .wpcf7-mail-sent-ok {
 
 .cd-text-service {
     font-family: 'Manrope', sans-serif;
-    font-size: 1.5rem;
+   
     color: #383839;
     line-height: 1.25;
     text-align: center;
@@ -285,7 +283,7 @@ body .wpcf7-mail-sent-ok {
     }
 
     h3 {
-        font-size: 2.18rem;
+       
         line-height: 1.14;
         text-align: left;
         color: #625756;
@@ -297,9 +295,7 @@ body .wpcf7-mail-sent-ok {
         background-color: #F4F3EF;
         max-width:16vw;
         padding: 0.5vw 2.8vw;
-        @media(max-width:1200px){
-            font-size: 1.5rem;
-        }
+       
     }
 }
 
@@ -330,7 +326,7 @@ body .wpcf7-mail-sent-ok {
 
 .cd-desc-service {
     font-family: 'Manrope', sans-serif;
-    font-size: 1.12rem;
+    
     color: #625756;
     line-height: 1.38;
     margin: 0;
@@ -353,7 +349,7 @@ body .wpcf7-mail-sent-ok {
     background: transparent;
     color: #242424 !important;
     font-family: 'Manrope', sans-serif;
-    font-size: 1rem;
+  
     font-weight: 600;
     border: 2px solid #242424;
     border-radius: 50px;
@@ -426,7 +422,7 @@ body .wpcf7-mail-sent-ok {
         justify-content: center;
         transition: all 0.3s ease;
         z-index: 10;
-        font-size: 1.25rem;
+      
 
         &:hover {
             background: #242424;
@@ -488,7 +484,7 @@ body .wpcf7-mail-sent-ok {
 
     label {
         font-family: var(--cd-font-body);
-        font-size: 1.12rem;
+       
         font-weight: 400;
         color: var(--cd-text);
         display: block;
@@ -508,7 +504,7 @@ body .wpcf7-mail-sent-ok {
         min-height: 42px;
         padding: 0 1vw;
         font-family: var(--cd-font-body);
-        font-size: 1.12rem;
+      
         color: var(--cd-dark);
         background: #ffffff;
         border: none;
@@ -530,7 +526,7 @@ body .wpcf7-mail-sent-ok {
         min-height: 6.5vw;
         padding: 0.7vw 1vw;
         font-family: var(--cd-font-body);
-        font-size: 1.12rem;
+        
         color: var(--cd-dark);
         background: #ffffff;
         border: none;
@@ -554,7 +550,7 @@ body .wpcf7-mail-sent-ok {
         background: var(--cd-brown);
         color: #ffffff;
         font-family: var(--cd-font-body);
-        font-size: 1rem;
+       
         font-weight: 600;
         border: none;
         border-radius: var(--cd-radius-full);
@@ -575,7 +571,7 @@ body .wpcf7-mail-sent-ok {
         margin-top: 0.8vw;
         padding: 0.6vw 0.8vw;
         border-radius: 8px;
-        font-size: 0.875rem;
+       
         font-family: var(--cd-font-body);
         border: none !important;
 

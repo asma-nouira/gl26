@@ -13,7 +13,7 @@
 
     h2 {
         font-family: var(--cd-font-heading);
-        font-size: 2.8125rem;
+     
         font-weight: 400;
         color: #ffffff;
         margin: 0 0 20px;
@@ -21,7 +21,7 @@
 
     p {
         font-family: var(--cd-font-body);
-        font-size: 0.95rem;
+        
         color: rgba(255,255,255,0.85);
         line-height: 1.7;
         max-width: 620px;
@@ -77,7 +77,7 @@
     /* Titre */
     .cd-blog-card-title {
         font-family: var(--cd-font-heading);
-        font-size: 1.25rem;
+    
         font-weight: 400;
         color: #ffffff;
         margin: 0 0 12px;
@@ -95,7 +95,7 @@
     /* Extrait */
     .cd-blog-card-excerpt {
         font-family: var(--cd-font-body);
-        font-size: 0.875rem;
+        
         color: rgba(255,255,255,0.8);
         line-height: 1.7;
         margin-bottom: 16px;
@@ -107,7 +107,7 @@
     /* Lien lire plus */
     .cd-blog-card-link {
         font-family: var(--cd-font-body);
-        font-size: 0.875rem;
+     
         color: #ffffff;
         text-decoration: underline;
         text-underline-offset: 3px;

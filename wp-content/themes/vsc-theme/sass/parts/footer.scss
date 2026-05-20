@@ -38,7 +38,7 @@
 .cd-footer-address {
     font-style: normal;
     font-family: var(--cd-font-body);
-    font-size: 1.25rem;
+  
     color: #625756;
     line-height: 1.35;
 }
@@ -46,7 +46,7 @@
 /* --- Titres colonnes --- */
 .cd-footer-title {
     font-family: 'SuperBlue', serif;
-    font-size: 1.37rem;
+   
     font-weight: 400;
     color: #BF9F94;
     margin: 0 0 0.8vw;
@@ -73,7 +73,7 @@
 
     a {
         font-family: 'SuperBlue', serif;
-        font-size: 1.12rem;
+        
         font-weight: 700;
         color: #625756;
         text-decoration: none;
@@ -120,7 +120,7 @@
     width: 100%;
     border-collapse: collapse;
     font-family: var(--cd-font-body);
-    font-size: 1.12rem;
+    
 
     td {
         padding: 0.15vw 0;
@@ -145,7 +145,7 @@
     margin: 0 auto;
 
     p {
-        font-size: 1.12rem;
+   
         color: var(--cd-text-light);
         margin: 0;
     }
