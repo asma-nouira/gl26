@@ -1813,33 +1813,8 @@ body {
 /* ============================================================
    SECTION ÉQUIPE CTA — cd-team-cta
    ============================================================ */
-.cd-team-cta {
-  background: var(--cd-bg-warm);
-  overflow: hidden;
-}
-.cd-team-cta > .vce-row-content {
-  align-items: stretch;
-}
-
-.cd-team-cta-img > .vce-col-inner {
-  padding: 0 !important;
-}
-.cd-team-cta-img .vce-single-image-figure-inner {
-  width: 100% !important;
-}
-.cd-team-cta-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-  display: block;
-}
-
 .cd-team-cta-text {
-  background: #BF9F94;
-}
-.cd-team-cta-text > .vce-col-inner {
-  padding: 5vw 4vw !important;
+  padding: 9.37vw 6.77vw 9.37vw 18vw !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
