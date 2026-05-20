@@ -1760,7 +1760,8 @@ body {
 .cd-txt-visite h2 {
   padding-bottom: 1.04vw;
 }
-.cd-txt-visite .cd-gallery-slider {
+
+.cd-visite-col .cd-gallery-slider {
   padding-bottom: 10vw;
 }
 
