@@ -1769,11 +1769,11 @@ body {
    SECTION VALEURS — cd-values-section + cd-value-card
    ============================================================ */
 .cd-values-section {
-  padding: 5vw 7vw;
+  padding: 5vw 7.8vw;
 }
 .cd-values-section h2 {
   text-align: center;
-  margin-bottom: 3vw;
+  margin-bottom: 3.65vw;
 }
 
 .cd-value-card > .vce-col-inner {
