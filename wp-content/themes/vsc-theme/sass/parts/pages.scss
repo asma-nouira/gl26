@@ -58,7 +58,7 @@
    ============================================================ */
 
 .cd-content-section {
-    padding: 5vw 20vw;
+    padding: 1.20vw 18vw;
     text-align: center;
     background: #ffffff;
 
@@ -86,10 +86,6 @@
    ============================================================ */
 
 .cd-quote-section {
-    padding: 3vw 15vw;
-    text-align: center;
-    background: var(--cd-bg-warm);
-
     p {
         font-family: 'SuperBlue', serif;
         font-size: clamp(1rem, 1.35vw, 1.625rem);
