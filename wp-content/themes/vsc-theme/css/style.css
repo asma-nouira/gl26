@@ -1790,7 +1790,7 @@ body {
 }
 .cd-value-card h3, .cd-value-card h4 {
   font-family: "SuperBlue", serif;
-  font-size: clamp(1rem, 1.56vw, 1.5rem);
+  font-size: clamp(1rem, 1.5625vw, 1.875rem);
   font-weight: 400;
   color: #ffffff;
   margin: 0 0 0.8vw;
