@@ -1446,15 +1446,19 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3vw;
-  height: 3vw;
-  min-width: 5vw;
-  min-height: 5vw;
+  width: 2.5vw;
+  height: 2.5vw;
+  min-width: 3.5vw;
+  min-height: 3.5vw;
   border-radius: 50%;
   border: 1.5px solid var(--cd-dark);
   color: var(--cd-dark);
   text-decoration: none;
   transition: all 0.3s ease;
+}
+.cd-footer-facebook svg {
+  width: 1vw;
+  height: auto;
 }
 .cd-footer-facebook:hover {
   background: #1877f2;
