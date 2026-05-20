@@ -2407,6 +2407,11 @@ body .wpcf7-mail-sent-ok {
 .cd-urgence-section {
   padding: 4.5vw 16vw 10vw 17vw;
 }
+@media (max-width: 1200px) {
+  .cd-urgence-section {
+    padding: 4.5vw 10vw 10vw;
+  }
+}
 
 .cd-urgence-title-wrapper .vce-text-block-wrapper {
   display: flex;
