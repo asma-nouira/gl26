@@ -1355,7 +1355,7 @@ h2 {
 .cd-footer {
   background: #ffffff;
   border-top: 1px solid var(--cd-border);
-  padding: 4.2vw 19.3vw 4.2vw 16.8vw;
+  padding: 4.2vw 16.8vw 4.2vw 16.8vw;
 }
 @media (max-width: 1200px) {
   .cd-footer {
