@@ -460,7 +460,7 @@ html, body {
     gap: 8px !important;
   }
   .vce-row--col-gap-30 > .vce-row-content > .vce-col {
-    margin-right: 15px !important;
+    margin-right: 15px;
   }
 }
 /*# sourceMappingURL=../css/mobile.css.map */
