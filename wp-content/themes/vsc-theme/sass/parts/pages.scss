@@ -287,7 +287,10 @@
 }
 
 .cd-urgence-txt-form{
-    padding: 2.6vw 0;
+    > .vce-col-inner{
+ padding: 2.6vw 0!important;
+    }
+   
     .cd-img-teeth{
         width:6.6vw;
         height: auto;
