@@ -144,6 +144,10 @@
         color: #ffffff;
         margin: 0 0 0.8vw;
         line-height: 1.16;
+        min-height: 3.5vw;
+        &:last-child{
+            padding-right: 1vw;
+        }
     }
 
     p {

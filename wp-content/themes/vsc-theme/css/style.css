@@ -1795,6 +1795,10 @@ body {
   color: #ffffff;
   margin: 0 0 0.8vw;
   line-height: 1.16;
+  min-height: 3.5vw;
+}
+.cd-value-card h3:last-child, .cd-value-card h4:last-child {
+  padding-right: 1vw;
 }
 .cd-value-card p {
   font-family: "Manrope", sans-serif;
