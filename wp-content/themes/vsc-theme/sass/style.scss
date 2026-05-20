@@ -127,7 +127,11 @@ body .wpcf7-mail-sent-ok {
 }
 
 .cd-about-col-left .details .vce-single-image-container.full-width {
-    .vce-single-image-figure-inner { width: 13.5vw !important; }
+    .vce-single-image-figure-inner { width: 13.5vw !important; 
+    @media(max-width:768px){
+        width:26vw!important;
+    }
+    }
     img { width: 100%; height: auto; }
 }
 
