@@ -1798,7 +1798,7 @@ body {
 }
 .cd-value-card p {
   font-family: "Manrope", sans-serif;
-  font-size: clamp(0.8rem, 0.93vw, 1rem);
+  font-size: clamp(0.8rem, 0.93vw, 1.125rem);
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.38;
   margin: 0;
