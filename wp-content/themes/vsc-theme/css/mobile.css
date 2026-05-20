@@ -58,6 +58,7 @@ html, body {
   .site-header {
     height: 70px !important;
     padding: 0 24px !important;
+    min-height: 80px !important;
   }
   .hamburger {
     display: flex !important;
