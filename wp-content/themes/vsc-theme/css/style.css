@@ -1703,6 +1703,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   transition: all 0.3s ease;
   z-index: 10;
+  font-size: 1.25rem;
 }
 .cd-gallery-slider .cd-slider-prev:hover,
 .cd-gallery-slider .cd-slider-next:hover {
