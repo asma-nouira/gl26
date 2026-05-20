@@ -198,7 +198,16 @@ html, body {
     /* ---- GALLERY ---- */
     .cd-txt-gallery         { padding: 60px 120px 30px !important; }
     .cd-gallery-slider      { padding-bottom: 80px !important; }
+ .cd-gallery-slider .cd-gallery-slide .vce-single-image-inner {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
 
+    .cd-gallery-slider .cd-gallery-slide img {
+        width: 100% !important;
+        height: auto !important;
+        object-fit: cover !important;
+    }
     /* ---- URGENCE ---- */
     .cd-urgence-section     { padding: 60px 40px !important; }
 
