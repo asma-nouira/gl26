@@ -75,6 +75,9 @@ body .wpcf7-mail-sent-ok {
     > .vce-row-content {
         align-items: stretch;
     }
+    @media(max-width:1200px){
+        padding: 8vw 10vw 7vw;
+    }
 }
 
 .cd-deco-tooth {
@@ -383,6 +386,9 @@ body .wpcf7-mail-sent-ok {
 .cd-txt-gallery {
     padding: 8vw 28vw 3.5vw;
     h2 { padding-bottom: 1vw; }
+    @media(max-width:1200px){
+         padding: 8vw 21vw 3.5vw;
+    }
 }
 
 .cd-gallery-slider {
@@ -440,6 +446,9 @@ body .wpcf7-mail-sent-ok {
     padding: 10vw 5vw 9vw 14vw;
     h2 { padding-bottom: 1.2vw; }
     a { margin-top: 1.3vw; }
+    @media(max-width:1200px){
+        padding: 10vw 5vw 9vw 8vw;
+    }
 }
 
 /* ============================================================

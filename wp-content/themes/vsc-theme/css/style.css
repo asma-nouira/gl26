@@ -1991,6 +1991,11 @@ body .wpcf7-mail-sent-ok {
 .cd-about-section > .vce-row-content {
   align-items: stretch;
 }
+@media (max-width: 1200px) {
+  .cd-about-section {
+    padding: 8vw 10vw 7vw;
+  }
+}
 
 .cd-deco-tooth {
   position: absolute !important;
@@ -2326,6 +2331,11 @@ body .wpcf7-mail-sent-ok {
 .cd-txt-gallery h2 {
   padding-bottom: 1vw;
 }
+@media (max-width: 1200px) {
+  .cd-txt-gallery {
+    padding: 8vw 21vw 3.5vw;
+  }
+}
 
 .cd-gallery-slider {
   position: relative;
@@ -2384,6 +2394,11 @@ body .wpcf7-mail-sent-ok {
 }
 .cd-appoint-section a {
   margin-top: 1.3vw;
+}
+@media (max-width: 1200px) {
+  .cd-appoint-section {
+    padding: 10vw 5vw 9vw 8vw;
+  }
 }
 
 /* ============================================================
