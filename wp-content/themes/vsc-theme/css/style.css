@@ -1665,6 +1665,9 @@ body::-webkit-scrollbar-thumb {
 .cd-txt-gallery {
   padding: 157px 554px 65px;
 }
+.cd-txt-gallery h2 {
+  padding-bottom: 20px;
+}
 
 /* ============================================================
    GALLERY SLIDER
