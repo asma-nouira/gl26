@@ -1377,34 +1377,36 @@ h2 {
   }
 }
 /* ============================================================
-   FOOTER
+   FOOTER — Clinique Dentaire Geneviève Lafrance
+   Tous les px convertis en vw
    ============================================================ */
 .cd-footer {
   background: #ffffff;
   border-top: 1px solid var(--cd-border);
-  padding: 80px 370px 80px 323px;
+  padding: 4.2vw 19.3vw 4.2vw 16.8vw;
 }
 
 .cd-footer-inner {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
-  gap: 30px;
+  gap: 1.5vw;
   margin: 0 auto;
-  padding-bottom: 48px;
+  padding-bottom: 2.5vw;
 }
 
 /* --- Logo + Adresse --- */
 .cd-footer-brand .cd-footer-logo {
   display: block;
-  margin-bottom: 27px;
+  margin-bottom: 1.4vw;
 }
 .cd-footer-brand .cd-footer-logo img {
-  max-width: 338px;
+  max-width: 17.6vw;
+  min-width: 160px;
   height: auto;
 }
 
 .cd-footer-col.cd-footer-nav {
-  padding-left: 60px;
+  padding-left: 3.1vw;
 }
 
 .cd-footer-address {
@@ -1421,8 +1423,8 @@ h2 {
   font-size: 1.37rem;
   font-weight: 400;
   color: #BF9F94;
-  margin: 0 0 16px;
-  padding-bottom: 12px;
+  margin: 0 0 0.8vw;
+  padding-bottom: 0.6vw;
   border-bottom: 1px solid #BF9F94;
 }
 
@@ -1430,8 +1432,8 @@ h2 {
 .cd-footer-menu-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0 20px;
-  margin-bottom: 28px;
+  gap: 0 1vw;
+  margin-bottom: 1.5vw;
 }
 
 .cd-footer-menu-list {
@@ -1440,7 +1442,7 @@ h2 {
   padding: 0;
 }
 .cd-footer-menu-list li {
-  padding-bottom: 5px;
+  padding-bottom: 0.26vw;
 }
 .cd-footer-menu-list a {
   font-family: "SuperBlue", serif;
@@ -1461,7 +1463,7 @@ h2 {
 .cd-footer-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 0.6vw;
   flex-wrap: wrap;
 }
 
@@ -1469,8 +1471,10 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 58px;
-  height: 58px;
+  width: 3vw;
+  height: 3vw;
+  min-width: 40px;
+  min-height: 40px;
   border-radius: 50%;
   border: 1.5px solid var(--cd-dark);
   color: var(--cd-dark);
@@ -1491,12 +1495,12 @@ h2 {
   font-size: 1.12rem;
 }
 .cd-footer-hours-table td {
-  padding: 3px 0;
+  padding: 0.15vw 0;
   color: var(--cd-text);
 }
 .cd-footer-hours-table td:first-child {
   color: #625756;
-  padding-right: 20px;
+  padding-right: 1vw;
 }
 .cd-footer-hours-table td:last-child {
   text-align: right;
@@ -1505,11 +1509,10 @@ h2 {
 /* --- Bas de footer --- */
 .cd-footer-bottom {
   border-top: 1px solid var(--cd-border);
-  padding: 20px 0;
+  padding: 1vw 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
   margin: 0 auto;
 }
 .cd-footer-bottom p {
@@ -1525,33 +1528,6 @@ h2 {
   color: var(--cd-accent);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .cd-footer {
-    padding: 48px 40px 0;
-  }
-  .cd-footer-inner {
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-  }
-  .cd-footer-hours {
-    grid-column: 1/-1;
-  }
-}
-@media (max-width: 768px) {
-  .cd-footer {
-    padding: 40px 24px 0;
-  }
-  .cd-footer-inner {
-    grid-template-columns: 1fr;
-    gap: 32px;
-  }
-  .cd-footer-bottom {
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
-  }
-}
 /* ============================================================
    MOBILE.SCSS — Clinique Dentaire Geneviève Lafrance
    Simplifié grâce aux vw — ne gère que les changements structurels
