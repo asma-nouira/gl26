@@ -1673,18 +1673,6 @@ body {
   align-items: center;
   margin-top: 145px;
 }
-.cd-hero-page .vce-asset-background-simple-item {
-  background-position: center center !important;
-  background-size: cover !important;
-}
-.cd-hero-page .vce-content-background-container::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, rgba(36, 36, 36, 0.65) 0%, rgba(36, 36, 36, 0.3) 55%, rgba(36, 36, 36, 0.05) 100%);
-  z-index: 1;
-  pointer-events: none;
-}
 .cd-hero-page .cd-hero-col-page {
   text-align: left !important;
   padding: 12.76vw 60.94vw 13.39vw 7.29vw;
