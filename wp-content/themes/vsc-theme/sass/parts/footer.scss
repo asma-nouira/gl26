@@ -107,6 +107,10 @@
     color: var(--cd-dark);
     text-decoration: none;
     transition: all 0.3s ease;
+    @media(max-width:768px){
+        width:40px;
+        height: 40px;
+    }
   svg{
     width:1vw;
     height: auto;
