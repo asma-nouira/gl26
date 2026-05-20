@@ -220,6 +220,9 @@ html, body {
     .cd-footer              { padding: 48px 40px 0 !important; }
     .cd-footer-inner        { grid-template-columns: 1fr 1fr !important; gap: 40px !important; }
     .cd-footer-hours        { grid-column: 1 / -1 !important; }
+    .cd-gallery-slider .cd-slider-prev, .cd-gallery-slider .cd-slider-next{
+        bottom:-34%!important;
+    }
 }
 
 /* ============================================================

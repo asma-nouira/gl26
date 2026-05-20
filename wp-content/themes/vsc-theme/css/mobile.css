@@ -242,6 +242,9 @@ html, body {
   .cd-footer-hours {
     grid-column: 1/-1 !important;
   }
+  .cd-gallery-slider .cd-slider-prev, .cd-gallery-slider .cd-slider-next {
+    bottom: -34% !important;
+  }
 }
 /* ============================================================
    MOBILE — max 768px
