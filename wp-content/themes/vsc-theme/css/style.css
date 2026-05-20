@@ -2561,7 +2561,7 @@ body .wpcf7-mail-sent-ok {
 }
 .wpcf7 textarea.wpcf7-textarea {
   width: 100%;
-  min-height: 6.5vw;
+  height: 6.5vw;
   padding: 0.7vw 1vw;
   font-family: var(--cd-font-body);
   color: var(--cd-dark);
