@@ -388,10 +388,10 @@ html, body {
   .cd-service-card h3 {
     font-size: 1.18rem !important;
     margin-top: -63px !important;
-    padding: 10px 35px !important;
+    padding: 10px 23px !important;
   }
   .cd-desc-service {
-    padding: 23px 35px 25px !important;
+    padding: 23px 23px 25px !important;
   }
   /* ---- GALLERY ---- */
   .cd-txt-gallery {
@@ -458,6 +458,9 @@ html, body {
     flex-direction: column !important;
     text-align: center !important;
     gap: 8px !important;
+  }
+  .vce-row--col-gap-30 > .vce-row-content > .vce-col {
+    margin-right: 15px !important;
   }
 }
 /*# sourceMappingURL=../css/mobile.css.map */
