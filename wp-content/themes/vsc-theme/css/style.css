@@ -1661,6 +1661,282 @@ body {
 }
 
 /* ============================================================
+   PAGES INTÉRIEURES — sass/parts/pages.scss
+   100% vw + clamp() — zéro px/rem
+   ============================================================ */
+/* ============================================================
+   HERO PAGE INTÉRIEURE — cd-hero-page
+   ============================================================ */
+.cd-hero-page {
+  position: relative;
+  min-height: 22vw;
+  display: flex;
+  align-items: center;
+  margin-top: 7.5vw;
+}
+.cd-hero-page .vce-asset-background-simple-item {
+  background-position: center center !important;
+  background-size: cover !important;
+}
+.cd-hero-page .vce-content-background-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(36, 36, 36, 0.65) 0%, rgba(36, 36, 36, 0.3) 55%, rgba(36, 36, 36, 0.05) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+.cd-hero-page .vce-row-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+
+.cd-hero-page .cd-hero-col .vce-col-inner,
+.cd-hero-page .cd-hero-col .vce-col-content {
+  padding: 5vw 7vw !important;
+  text-align: left !important;
+}
+.cd-hero-page .cd-hero-col .vce-text-block,
+.cd-hero-page .cd-hero-col .vce-text-block-wrapper {
+  text-align: left !important;
+}
+
+.hero-title_page {
+  font-family: "SuperBlue", serif;
+  font-size: clamp(1.8rem, 3.9vw, 4.7rem);
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.12;
+  margin: 0;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: cdFadeInLeft 0.8s ease 0.3s forwards;
+}
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+.cd-breadcrumb {
+  padding: 0.8vw 7.3vw;
+  background: #ffffff;
+  border-bottom: 0.05vw solid var(--cd-border);
+}
+.cd-breadcrumb a, .cd-breadcrumb span {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.75rem, 0.73vw, 0.875rem);
+  color: var(--cd-text-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.cd-breadcrumb a:hover {
+  color: var(--cd-accent);
+}
+.cd-breadcrumb .separator {
+  margin: 0 0.4vw;
+  color: var(--cd-border);
+}
+.cd-breadcrumb .current {
+  color: var(--cd-brown);
+  font-weight: 600;
+}
+
+/* ============================================================
+   SECTION TEXTE CENTRÉ — cd-content-section
+   ============================================================ */
+.cd-content-section {
+  padding: 5vw 20vw;
+  text-align: center;
+  background: #ffffff;
+}
+.cd-content-section .vce-col-inner,
+.cd-content-section .vce-col-content {
+  padding: 0 !important;
+}
+.cd-content-section p {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.875rem, 0.94vw, 1.125rem);
+  color: var(--cd-text);
+  line-height: 1.75;
+  margin-bottom: 1.5vw;
+}
+.cd-content-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* ============================================================
+   CITATION — cd-quote-section
+   ============================================================ */
+.cd-quote-section {
+  padding: 3vw 15vw;
+  text-align: center;
+  background: var(--cd-bg-warm);
+}
+.cd-quote-section p {
+  font-family: "SuperBlue", serif;
+  font-size: clamp(1rem, 1.35vw, 1.625rem);
+  color: var(--cd-brown);
+  line-height: 1.5;
+  font-style: italic;
+  margin: 0;
+}
+
+/* ============================================================
+   SECTION VALEURS — cd-values-section + cd-value-card
+   ============================================================ */
+.cd-values-section {
+  padding: 5vw 7vw;
+  background: var(--cd-bg-warm);
+}
+.cd-values-section h2 {
+  text-align: center;
+  margin-bottom: 3vw;
+}
+
+.cd-value-card > .vce-col-inner {
+  padding: 2.5vw 2vw !important;
+  background: #625756;
+  border-radius: 1.04vw;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+.cd-value-card:hover > .vce-col-inner {
+  background: #4e4342;
+  transform: translateY(-0.21vw);
+  box-shadow: 0 0.42vw 1.25vw rgba(98, 87, 86, 0.3);
+}
+.cd-value-card h3, .cd-value-card h4 {
+  font-family: "SuperBlue", serif;
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0 0 0.8vw;
+  line-height: 1.3;
+}
+.cd-value-card p {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.8rem, 0.83vw, 1rem);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ============================================================
+   SECTION ÉQUIPE CTA — cd-team-cta
+   ============================================================ */
+.cd-team-cta {
+  background: var(--cd-bg-warm);
+  overflow: hidden;
+}
+.cd-team-cta > .vce-row-content {
+  align-items: stretch;
+}
+
+.cd-team-cta-img > .vce-col-inner {
+  padding: 0 !important;
+}
+.cd-team-cta-img .vce-single-image-figure-inner {
+  width: 100% !important;
+}
+.cd-team-cta-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.cd-team-cta-text {
+  background: #BF9F94;
+}
+.cd-team-cta-text > .vce-col-inner {
+  padding: 5vw 4vw !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+.cd-team-cta-text h2 {
+  font-size: clamp(1.5rem, 2.35vw, 2.8125rem);
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0 0 1.5vw;
+}
+.cd-team-cta-text p {
+  font-size: clamp(0.875rem, 0.94vw, 1.125rem);
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.7;
+  margin-bottom: 1.2vw;
+}
+.cd-team-cta-text p:last-of-type {
+  margin-bottom: 2vw;
+}
+.cd-team-cta-text a.btn-action-brown,
+.cd-team-cta-text .cd-btn {
+  align-self: flex-start;
+  background: #625756 !important;
+  color: #ffffff !important;
+}
+.cd-team-cta-text a.btn-action-brown:hover,
+.cd-team-cta-text .cd-btn:hover {
+  background: #4e4342 !important;
+}
+
+/* ============================================================
+   RESPONSIVE — uniquement les changements structurels
+   Les vw + clamp() gèrent les tailles automatiquement
+   ============================================================ */
+@media (max-width: 1024px) {
+  .cd-content-section {
+    padding: 5vw 10vw;
+  }
+  .cd-quote-section {
+    padding: 3vw 8vw;
+  }
+  .cd-values-section {
+    padding: 5vw 4vw;
+  }
+}
+@media (max-width: 768px) {
+  /* Hero */
+  .cd-hero-page {
+    min-height: 55vw !important;
+    margin-top: 60px !important;
+  }
+  .cd-hero-page .cd-hero-col .vce-col-inner,
+  .cd-hero-page .cd-hero-col .vce-col-content {
+    padding: 10vw 5vw !important;
+  }
+  /* Breadcrumb */
+  .cd-breadcrumb {
+    padding: 3vw 5vw !important;
+  }
+  /* Content */
+  .cd-content-section {
+    padding: 10vw 5vw !important;
+  }
+  .cd-quote-section {
+    padding: 8vw 5vw !important;
+  }
+  /* Valeurs — empilées */
+  .cd-values-section {
+    padding: 10vw 5vw !important;
+  }
+  .cd-value-card > .vce-col-inner {
+    padding: 5vw !important;
+    margin-bottom: 3vw !important;
+    border-radius: 3vw !important;
+  }
+  /* Team CTA — image dessus, texte dessous */
+  .cd-team-cta-text > .vce-col-inner {
+    padding: 10vw 5vw !important;
+  }
+  .cd-team-cta-text a.btn-action-brown {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+}
+/* ============================================================
    GLOBAL
    ============================================================ */
 *, *::before, *::after {
