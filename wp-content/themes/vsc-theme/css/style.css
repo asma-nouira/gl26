@@ -1806,7 +1806,7 @@ body {
   padding-bottom: 0;
 }
 
-.cd-value-card:last-child h3 {
+.cd-value-card.last h3 {
   padding-right: 1vw;
 }
 
