@@ -107,11 +107,7 @@ html, body {
     .cd-deco-tooth { display: none !important; }
 
     /* ---- COLONNES VC ---- */
-    .vce-col {
-        flex: 0 0 100% !important;
-        max-width: 100% !important;
-        width: 100% !important;
-    }
+
 
     /* ---- BLOG ---- */
     .cd-blog-grid { grid-template-columns: repeat(2, 1fr) !important; }
