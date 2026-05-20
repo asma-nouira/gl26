@@ -7,6 +7,10 @@
     background: #ffffff;
     border-top: 1px solid var(--cd-border);
     padding: 4.2vw 19.3vw 4.2vw 16.8vw;
+    @media(max-width:1200px){
+        padding-left: 5vw;
+        padding-right: 5vw;
+    }
 }
 
 .cd-footer-inner {
@@ -96,8 +100,8 @@
     justify-content: center;
     width: 3vw;
     height: 3vw;
-    min-width: 40px;
-    min-height: 40px;
+    min-width: 5vw;
+    min-height: 5vw;
     border-radius: 50%;
     border: 1.5px solid var(--cd-dark);
     color: var(--cd-dark);
