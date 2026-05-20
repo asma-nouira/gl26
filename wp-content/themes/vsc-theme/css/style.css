@@ -1797,9 +1797,6 @@ body {
   line-height: 1.16;
   min-height: 3.5vw;
 }
-.cd-value-card h3:last-child, .cd-value-card h4:last-child {
-  padding-right: 1vw;
-}
 .cd-value-card p {
   font-family: "Manrope", sans-serif;
   font-size: clamp(0.8rem, 0.93vw, 1.125rem);
@@ -1807,6 +1804,10 @@ body {
   line-height: 1.38;
   margin: 0;
   padding-bottom: 0;
+}
+
+.cd-value-card:last-child h3 {
+  padding-right: 1vw;
 }
 
 /* ============================================================

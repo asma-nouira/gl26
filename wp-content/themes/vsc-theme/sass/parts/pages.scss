@@ -145,9 +145,7 @@
         margin: 0 0 0.8vw;
         line-height: 1.16;
         min-height: 3.5vw;
-        &:last-child{
-            padding-right: 1vw;
-        }
+       
     }
 
     p {
@@ -159,6 +157,9 @@
         padding-bottom: 0;
     }
 }
+  .cd-value-card:last-child h3{
+            padding-right: 1vw;
+        }
 
 /* ============================================================
    SECTION ÉQUIPE CTA — cd-team-cta
