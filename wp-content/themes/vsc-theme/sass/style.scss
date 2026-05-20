@@ -294,6 +294,9 @@ body .wpcf7-mail-sent-ok {
         background-color: #F4F3EF;
         max-width:16vw;
         padding: 0.5vw 2.8vw;
+        @media(max-width:1200px){
+            font-size: 1.5rem;
+        }
     }
 }
 

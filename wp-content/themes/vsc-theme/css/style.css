@@ -2232,6 +2232,11 @@ body .wpcf7-mail-sent-ok {
   max-width: 16vw;
   padding: 0.5vw 2.8vw;
 }
+@media (max-width: 1200px) {
+  .cd-service-card h3 {
+    font-size: 1.5rem;
+  }
+}
 
 .cd-img-service {
   position: relative;
