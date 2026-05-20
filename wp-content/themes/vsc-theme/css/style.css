@@ -1419,6 +1419,11 @@ h2 {
   width: 1vw;
   height: auto;
 }
+@media (max-width: 768px) {
+  .cd-footer-facebook svg {
+    width: 10px;
+  }
+}
 .cd-footer-facebook:hover {
   background: #1877f2;
   border-color: #1877f2;
