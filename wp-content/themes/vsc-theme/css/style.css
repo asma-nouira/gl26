@@ -88,6 +88,608 @@ ul {
 }
 
 /* ============================================================
+   HEADER — Clinique Dentaire Geneviève Lafrance
+   Fichier : sass/header.scss
+   Adapté à la structure WordPress wp_nav_menu (menu-1 / #primary-menu)
+   ============================================================ */
+/* --- Variables locales --- */
+/* ============================================================
+   HEADER PRINCIPAL
+   ============================================================ */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #ffffff;
+  padding: 0 140px;
+  min-height: 144px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo gauche | nav+boutons droite */
+  transition: box-shadow 0.4s ease, height 0.4s ease, background 0.4s ease;
+}
+.site-header.scrolled {
+  height: 60px;
+  min-height: 30px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(8px);
+}
+
+/* ============================================================
+   LOGO (custom logo WordPress)
+   ============================================================ */
+.custom-logo-link,
+.site-logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLeft 0.6s ease 0.1s forwards;
+}
+.custom-logo-link img.custom-logo,
+.site-logo img.custom-logo {
+  height: 50px;
+  width: auto;
+  display: block;
+  transition: all 0.3s ease;
+}
+.custom-logo-link:hover img,
+.site-logo:hover img {
+  opacity: 0.85;
+}
+
+/* ============================================================
+   NAVIGATION WORDPRESS — #primary-menu
+   wp_nav_menu génère : <div class="menu-..."><ul id="primary-menu">
+   ============================================================ */
+/* Wrapper généré par WordPress — on le neutralise */
+.site-header nav > div {
+  display: flex;
+  align-items: center;
+}
+
+/* La <ul> principale */
+#primary-menu {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  /* Animation cascade sur les <li> */
+  /* ============================================================
+   BOUTONS DANS LE MENU (via classe CSS dans WordPress)
+   Classes ajoutées dans Apparence > Menus > Classes CSS
+   ============================================================ */
+  /* btn-phone → li avec classe btn-phone */
+  /* btn-coin-enfant → li avec classe btn-coin-enfant */
+}
+#primary-menu > li {
+  position: relative;
+  opacity: 0;
+  animation: fadeInDown 0.5s ease forwards;
+  /* Lien par défaut */
+  /* Lien actif — WordPress ajoute current-menu-item */
+  /* ---- Item avec sous-menu (Services) ---- */
+}
+#primary-menu > li:nth-child(1) {
+  animation-delay: 0.15s;
+}
+#primary-menu > li:nth-child(2) {
+  animation-delay: 0.22s;
+}
+#primary-menu > li:nth-child(3) {
+  animation-delay: 0.29s;
+}
+#primary-menu > li:nth-child(4) {
+  animation-delay: 0.36s;
+}
+#primary-menu > li:nth-child(5) {
+  animation-delay: 0.43s;
+}
+#primary-menu > li:nth-child(6) {
+  animation-delay: 0.5s;
+}
+#primary-menu > li:nth-child(7) {
+  animation-delay: 0.57s;
+}
+#primary-menu > li:nth-child(8) {
+  animation-delay: 0.64s;
+}
+#primary-menu > li:nth-child(9) {
+  animation-delay: 0.71s;
+}
+#primary-menu > li > a {
+  font-family: "SuperBlue", serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #383839;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 3px;
+  white-space: nowrap;
+  transition: color 0.3s ease;
+  display: inline-block;
+  /* Underline animé au hover */
+}
+#primary-menu > li > a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: #C58E80;
+  transition: width 0.3s ease;
+}
+#primary-menu > li > a:hover {
+  color: #C58E80;
+}
+#primary-menu > li > a:hover::after {
+  width: 100%;
+}
+#primary-menu > li.current-menu-item > a, #primary-menu > li.current-menu-ancestor > a {
+  color: #C58E80;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-color: #C58E80;
+}
+#primary-menu > li.menu-item-has-children {
+  /* ---- SOUS-MENU dropdown ---- */
+  /* Afficher le sous-menu au hover */
+}
+#primary-menu > li.menu-item-has-children > a {
+  padding-right: 18px;
+  /* Flèche discrète */
+}
+#primary-menu > li.menu-item-has-children > a::before {
+  content: "▾";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #C58E80;
+  transition: transform 0.3s ease;
+}
+#primary-menu > li.menu-item-has-children:hover > a::before {
+  transform: translateY(-50%) rotate(180deg);
+}
+#primary-menu > li.menu-item-has-children > .sub-menu {
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 280px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  padding: 8px 0;
+  list-style: none;
+  margin: 0;
+  transform: translateY(-8px);
+  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  z-index: 999;
+  /* Petite flèche pointant vers le haut */
+}
+#primary-menu > li.menu-item-has-children > .sub-menu::before {
+  content: "";
+  position: absolute;
+  top: -6px;
+  left: 24px;
+  width: 12px;
+  height: 12px;
+  background: #ffffff;
+  transform: rotate(45deg);
+  box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.05);
+}
+#primary-menu > li.menu-item-has-children > .sub-menu li {
+  opacity: 1;
+  animation: none;
+}
+#primary-menu > li.menu-item-has-children > .sub-menu li a {
+  display: block;
+  padding: 10px 20px;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #383839;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+}
+#primary-menu > li.menu-item-has-children > .sub-menu li a:hover {
+  color: #C58E80;
+  background: #F3F1ED;
+  border-left-color: #C58E80;
+  padding-left: 24px;
+}
+#primary-menu > li.menu-item-has-children > .sub-menu li.current-menu-item a {
+  color: #C58E80;
+  border-left-color: #C58E80;
+  padding-left: 24px;
+  background: #F3F1ED;
+}
+#primary-menu > li.menu-item-has-children:hover > .sub-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+#primary-menu li.btn-phone {
+  opacity: 1;
+  animation: fadeInRight 0.6s ease 0.5s forwards;
+}
+#primary-menu li.btn-phone > a {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 18px;
+  background: #C58E80;
+  color: #ffffff !important;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none !important;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  /* Pas d'underline sur le bouton */
+}
+#primary-menu li.btn-phone > a::after {
+  display: none;
+}
+#primary-menu li.btn-phone > a::before {
+  display: none;
+}
+#primary-menu li.btn-phone > a:hover {
+  background: #b87564;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(197, 142, 128, 0.35);
+  color: #ffffff !important;
+}
+#primary-menu li.btn-coin-enfant {
+  opacity: 1;
+  animation: fadeInRight 0.6s ease 0.58s forwards;
+}
+#primary-menu li.btn-coin-enfant > a {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 20px;
+  background: #242424;
+  color: #ffffff !important;
+  font-family: "Manrope", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none !important;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+#primary-menu li.btn-coin-enfant > a::after {
+  display: none;
+}
+#primary-menu li.btn-coin-enfant > a::before {
+  display: none;
+}
+#primary-menu li.btn-coin-enfant > a:hover {
+  background: #4a4a4a;
+  transform: translateY(-1px);
+  color: #ffffff !important;
+}
+
+/* ============================================================
+   HAMBURGER — MOBILE
+   ============================================================ */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+  background: none;
+  border: none;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #242424;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 70px;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  transform: scale(1.05);
+  animation: heroZoom 8s ease forwards;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(36, 36, 36, 0.55) 0%, rgba(36, 36, 36, 0.2) 50%, rgba(36, 36, 36, 0) 80%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 60px 80px;
+  max-width: 550px;
+}
+
+.hero-title {
+  font-family: "SuperBlue", serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: fadeInLeft 0.8s ease 0.4s forwards;
+}
+
+.hero-address {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: "Manrope", sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeInLeft 0.7s ease 0.7s forwards;
+}
+.hero-address svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #C58E80;
+}
+
+.hero-sidebar {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  animation: fadeInRight 0.7s ease 0.9s forwards;
+}
+
+.hero-sidebar-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  background: #BF9F94;
+  color: #ffffff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+.hero-sidebar-item svg {
+  width: 70px;
+  height: 65px;
+}
+.hero-sidebar-item:hover {
+  background: #625756;
+  width: 150px;
+}
+
+/* ============================================================
+   ANIMATIONS KEYFRAMES
+   ============================================================ */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes heroZoom {
+  from {
+    transform: scale(1.05);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/* ============================================================
+   RESPONSIVE — TABLETTE (1024px)
+   ============================================================ */
+@media (max-width: 1440px) {
+  .site-header {
+    padding: 0 100px;
+  }
+}
+@media (max-width: 1024px) {
+  .site-header {
+    padding: 0 24px;
+  }
+  #primary-menu {
+    gap: 18px;
+  }
+  #primary-menu > li > a {
+    font-size: 16px;
+  }
+  .hero-content {
+    padding: 40px;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
+/* Current page — toutes les classes WordPress */
+#primary-menu > li.current-menu-item > a,
+#primary-menu > li.current-menu-ancestor > a,
+#primary-menu > li.current-page-ancestor > a,
+#primary-menu > li.current_page_item > a,
+#primary-menu > li.current_page_ancestor > a {
+  color: #C58E80;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-color: #C58E80;
+}
+
+.hero-sidebar {
+  position: fixed; /* fixed au lieu de absolute */
+  right: 0;
+  top: 30%;
+  transform: translateY(-50%);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  animation: fadeInRight 0.7s ease 0.9s forwards;
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (768px)
+   ============================================================ */
+@media (max-width: 768px) {
+  .site-header {
+    padding: 0 20px;
+  }
+  .hamburger {
+    display: flex;
+  }
+  /* Nav mobile : dropdown depuis le haut */
+  .site-header nav > div {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    display: none;
+    background: #ffffff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+  .site-header nav > div.open {
+    display: block;
+  }
+  #primary-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 12px 0;
+  }
+  #primary-menu > li {
+    width: 100%;
+    opacity: 1 !important;
+    animation: none !important;
+    /* Sous-menu mobile : visible en accordéon */
+    /* Boutons en mobile : pleine largeur */
+  }
+  #primary-menu > li > a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 1rem;
+    border-bottom: 1px solid #f0efeb;
+  }
+  #primary-menu > li > a::after {
+    display: none;
+  }
+  #primary-menu > li.menu-item-has-children > .sub-menu {
+    position: static;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    display: none;
+    background: #F3F1ED;
+  }
+  #primary-menu > li.menu-item-has-children > .sub-menu::before {
+    display: none;
+  }
+  #primary-menu > li.menu-item-has-children > .sub-menu li a {
+    padding-left: 36px;
+    font-size: 14px;
+    border-left: none;
+    border-bottom: 1px solid #ece9e4;
+  }
+  #primary-menu > li.menu-item-has-children.open > .sub-menu {
+    display: block;
+  }
+  #primary-menu > li.btn-phone > a, #primary-menu > li.btn-coin-enfant > a {
+    margin: 8px 16px;
+    justify-content: center;
+    border-radius: 50px;
+  }
+  .hero-content {
+    padding: 30px 24px;
+    max-width: 100%;
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .hero-sidebar {
+    display: none;
+  }
+}
+/* ============================================================
    HERO SECTION — Clinique Dentaire Geneviève Lafrance
    Fichier : sass/hero.scss
    Classes réutilisables — pas d'IDs Visual Composer
@@ -1147,12 +1749,406 @@ h2 {
     text-align: center;
   }
 }
-/**************/
+/* ============================================================
+   MOBILE.SCSS — Clinique Dentaire Geneviève Lafrance
+   Simplifié grâce aux vw — ne gère que les changements structurels
+   ============================================================ */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.vce-row-container,
+.vce-row,
+.vce-col,
+.vce-row-content {
+  max-width: 100% !important;
+}
+
+/* ============================================================
+   TABLETTE — max 1024px
+   Changements structurels uniquement
+   ============================================================ */
+@media (max-width: 1024px) {
+  /* ---- HEADER — hamburger ---- */
+  .site-header {
+    height: 70px !important;
+    padding: 0 24px !important;
+  }
+  .hamburger {
+    display: flex !important;
+  }
+  .site-header nav {
+    display: none !important;
+    position: absolute !important;
+    top: 70px !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: #ffffff !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1) !important;
+    z-index: 999 !important;
+  }
+  .site-header nav.open {
+    display: block !important;
+  }
+  .site-header nav > div {
+    display: block !important;
+  }
+  #primary-menu {
+    flex-direction: column !important;
+    gap: 0 !important;
+    padding: 12px 0 !important;
+  }
+  #primary-menu > li {
+    width: 100% !important;
+    opacity: 1 !important;
+    animation: none !important;
+  }
+  #primary-menu > li > a {
+    display: block !important;
+    padding: 14px 24px !important;
+    font-size: 18px !important;
+    border-bottom: 1px solid #f0efeb !important;
+  }
+  #primary-menu > li > a::after, #primary-menu > li > a::before {
+    display: none !important;
+  }
+  #primary-menu > li.menu-item-has-children > .sub-menu {
+    position: static !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    display: none !important;
+    background: #F3F1ED !important;
+    padding: 0 !important;
+    min-width: 100% !important;
+  }
+  #primary-menu > li.menu-item-has-children > .sub-menu::before {
+    display: none !important;
+  }
+  #primary-menu > li.menu-item-has-children > .sub-menu li a {
+    padding-left: 40px !important;
+    font-size: 15px !important;
+    border-bottom: 1px solid #e5e3df !important;
+    border-left: none !important;
+  }
+  #primary-menu > li.menu-item-has-children.open > .sub-menu {
+    display: block !important;
+  }
+  #primary-menu li.btn-phone,
+  #primary-menu li.btn-coin-enfant {
+    text-align: center !important;
+  }
+  #primary-menu li.btn-phone > a,
+  #primary-menu li.btn-coin-enfant > a {
+    display: inline-flex !important;
+    margin: 8px 16px !important;
+    border-radius: 50px !important;
+    justify-content: center !important;
+    border-bottom: none !important;
+  }
+  /* ---- HERO ---- */
+  .cd-hero {
+    margin-top: 70px !important;
+  }
+  .hero-sidebar {
+    display: none !important;
+  }
+  .cd-deco-tooth {
+    display: none !important;
+  }
+  /* ---- COLONNES VC ---- */
+  .vce-col {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+  /* ---- BLOG ---- */
+  .cd-blog-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  /* ---- FOOTER ---- */
+  .cd-footer-inner {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 40px !important;
+  }
+  .cd-footer-hours {
+    grid-column: 1/-1 !important;
+  }
+}
+/* ============================================================
+   MOBILE — max 768px
+   ============================================================ */
+@media (max-width: 768px) {
+  /* ---- HEADER ---- */
+  .site-header {
+    height: 60px !important;
+    min-height: 60px !important;
+    padding: 0 16px !important;
+  }
+  .site-header nav {
+    top: 60px !important;
+  }
+  .custom-logo-link img.custom-logo {
+    height: 38px !important;
+  }
+  /* ---- HERO — fond couleur sur mobile ---- */
+  .cd-hero {
+    margin-top: 60px !important;
+    min-height: 85vh !important;
+    align-items: flex-end !important;
+    background-color: #625756 !important;
+  }
+  .cd-hero .vce-asset-background-simple-item {
+    display: none !important;
+  }
+  .cd-hero .vce-content-background-container::after {
+    display: none !important;
+  }
+  .cd-hero-col .vce-col-inner,
+  .cd-hero-col .vce-col-content {
+    padding: 0 24px 48px !important;
+    max-width: 100% !important;
+  }
+  .hero-title {
+    font-size: 2rem !important;
+    margin-bottom: 26px !important;
+  }
+  .hero-address {
+    font-size: 0.85rem !important;
+    gap: 8px !important;
+    margin-bottom: 0 !important;
+  }
+  .hero-address img {
+    width: 40px !important;
+    height: auto !important;
+    flex-shrink: 0 !important;
+  }
+  .hero-address span {
+    line-height: 1.4 !important;
+    font-size: 1.18rem !important;
+  }
+  .hero-address svg {
+    width: 16px !important;
+    height: 16px !important;
+    flex-shrink: 0 !important;
+  }
+  .hero-sidebar {
+    display: none !important;
+  }
+  /* ---- ABOUT ---- */
+  .cd-about-section {
+    padding: 48px 20px !important;
+  }
+  .cd-about-col-left {
+    padding-right: 0 !important;
+    padding-bottom: 20px;
+  }
+  .cd-about-col-left .details {
+    margin-bottom: 20px !important;
+  }
+  .cd-logo-img {
+    padding-bottom: 25px;
+    text-align: left;
+  }
+  .cd-about-title {
+    padding: 32px 0 16px !important;
+    font-size: 1.8rem !important;
+    word-break: normal !important;
+    white-space: normal !important;
+    overflow-wrap: break-word !important;
+  }
+  .cd-about-intro {
+    font-size: 1.1rem !important;
+  }
+  .cd-deco-tooth {
+    display: none !important;
+  }
+  /* ---- HORAIRES ---- */
+  .horaire table {
+    table-layout: fixed;
+    width: 100% !important;
+  }
+  .horaire table td {
+    font-size: 0.8rem !important;
+    padding: 3px 2px !important;
+    word-break: break-word;
+  }
+  .horaire table td:first-child {
+    width: 27% !important;
+    padding-right: 6px !important;
+  }
+  .horaire table td:last-child {
+    width: 30% !important;
+  }
+  /* ---- TEAM ---- */
+  .cd-team-circles {
+    justify-content: center !important;
+    gap: 8px !important;
+    padding-bottom: 20px !important;
+  }
+  .cd-team-circle-item {
+    margin-left: 0 !important;
+  }
+  .cd-team-circle-item img {
+    width: 90px !important;
+    height: 90px !important;
+  }
+  /* ---- SERVICES ---- */
+  .cd-service-col > .vce-col-inner {
+    padding: 48px 20px !important;
+  }
+  h2.cd-title-service {
+    font-size: 1.8rem !important;
+  }
+  .cd-text-service {
+    margin-bottom: 32px !important;
+  }
+  .cd-service-card h3 {
+    font-size: 1.18rem !important;
+    margin-top: -63px !important;
+    padding: 10px 35px !important;
+  }
+  .cd-desc-service {
+    padding: 23px 35px 25px !important;
+  }
+  /* ---- GALLERY ---- */
+  .cd-txt-gallery {
+    padding: 40px 20px 20px !important;
+  }
+  .cd-gallery-slider {
+    padding-bottom: 60px !important;
+  }
+  .cd-gallery-slider .cd-slider-prev,
+  .cd-gallery-slider .cd-slider-next {
+    bottom: -50px !important;
+    width: 36px !important;
+    height: 36px !important;
+  }
+  .cd-gallery-slider .cd-slider-prev {
+    left: calc(50% - 44px) !important;
+  }
+  .cd-gallery-slider .cd-slider-next {
+    left: calc(50% + 8px) !important;
+  }
+  /* ---- APPOINTMENT ---- */
+  .cd-appoint-section {
+    padding: 48px 20px !important;
+  }
+  /* ---- URGENCE ---- */
+  .cd-urgence-section {
+    padding: 48px 20px !important;
+  }
+  .cd-urgence-title-wrapper .vce-text-block-wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    flex-direction: column !important;
+    text-align: center !important;
+    margin-bottom: 32px !important;
+  }
+  .cd-deco-tooth-urgence {
+    width: 60px !important;
+  }
+  /* ---- CF7 ---- */
+  .cd-form-row {
+    grid-template-columns: 1fr !important;
+  }
+  .contact-form {
+    padding: 20px 16px !important;
+  }
+  /* ---- BOUTONS ---- */
+  .btn-action-brown,
+  .btn-services {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 12px 24px !important;
+  }
+  /* ---- BLOG ---- */
+  .cd-blog-section {
+    padding: 48px 20px !important;
+  }
+  .cd-blog-grid {
+    grid-template-columns: 1fr !important;
+  }
+  /* ---- FOOTER ---- */
+  .cd-footer {
+    padding: 40px 20px 0 !important;
+  }
+  .cd-footer-inner {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .cd-footer-menu-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .cd-footer-actions {
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+  }
+  .cd-footer-col.cd-footer-nav {
+    padding-left: 0 !important;
+  }
+  .cd-footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+  /* ---- IMAGES ---- */
+  img {
+    max-width: 100% !important;
+  }
+  .vce-single-image-figure-inner {
+    max-width: 100% !important;
+  }
+  /* ---- H2 global ---- */
+  h2, .cd-h2, .cd-section-title {
+    font-size: 1.8rem !important;
+  }
+}
+/* EN DERNIER */
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+body::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+body::-webkit-scrollbar-track {
+  background: #BF9F94;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+  border: 5px solid #BF9F94;
+}
+
+p {
+  padding-bottom: 0.8vw;
+}
+
+/* ============================================================
+   CF7 VALIDATION
+   ============================================================ */
 .wpcf7-not-valid-tip {
   display: none !important;
 }
 
-body input[type=text].wpcf7-not-valid, body input[type=email].wpcf7-not-valid, body input[type=tel].wpcf7-not-valid, body textarea.wpcf7-not-valid {
+body input[type=text].wpcf7-not-valid,
+body input[type=email].wpcf7-not-valid,
+body input[type=tel].wpcf7-not-valid,
+body textarea.wpcf7-not-valid {
   border: 1px solid #ec3c06;
 }
 
@@ -1166,8 +2162,6 @@ body div.wpcf7-response-output {
   margin: 10px 0;
   padding: 20px;
   box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   border-radius: 5px;
 }
 
@@ -1183,56 +2177,28 @@ body .wpcf7-mail-sent-ok {
   color: #1ea524;
 }
 
-/***************/
-body {
-  margin: 0;
-}
-
-body::-webkit-scrollbar {
-  width: 5px !important;
-}
-
-body::-webkit-scrollbar-track {
-  background: #BF9F94; /* color of the tracking area */
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: white; /* color of the scroll thumb */
-  border-radius: 20px; /* roundness of the scroll thumb */
-  border: 5px solid #BF9F94; /* creates padding around scroll thumb */
-}
-
 /* ============================================================
-   ABOUT SECTION — "Votre dentiste à Rivière-du-Loup"
-   Fichier : sass/about.scss
-   ============================================================ */
-/* ============================================================
-   ROW PRINCIPALE
+   ABOUT SECTION
    ============================================================ */
 .cd-about-section {
   position: relative;
   overflow: hidden;
-  padding: 160px 296px 140px 278px;
-  /* Les deux colonnes égales */
+  padding: 8vw 15vw 7vw 14vw;
 }
 .cd-about-section > .vce-row-content {
   align-items: stretch;
 }
 
-/* ============================================================
-   IMAGE DÉCORATIVE DENT (+🦷)
-   Classe : cd-deco-tooth — sur le vce-single-image-container
-   ============================================================ */
 .cd-deco-tooth {
   position: absolute !important;
   top: 15%;
-  right: -60px;
+  right: -3vw;
   transform: translateY(-50%);
   z-index: 0;
   pointer-events: none;
 }
 .cd-deco-tooth .vce-single-image-figure-inner {
-  width: 288px !important;
+  width: 15vw !important;
   height: auto;
 }
 .cd-deco-tooth img {
@@ -1241,60 +2207,50 @@ body::-webkit-scrollbar-thumb {
   display: block;
 }
 
-/* ============================================================
-   COLONNE GAUCHE
-   Classe : cd-about-col-left
-   ============================================================ */
 .cd-about-col-left {
   position: relative;
   z-index: 1;
-  padding-right: 120px;
+  padding-right: 6vw;
 }
 
-/* Titre H2 */
 .cd-about-title {
   font-family: "SuperBlue", serif;
   font-size: 2.8rem;
   font-weight: 400;
   color: #625756;
   line-height: 1.33;
-  padding: 97px 0 30px 0;
-  /* Animation */
+  padding: 5vw 0 1.5vw 0;
   opacity: 0;
   transform: translateX(-20px);
   animation: cdFadeInLeft 0.7s ease 0.2s forwards;
 }
 
-/* Paragraphe intro */
 .cd-about-intro {
   font-family: "SuperBlue", serif;
   font-size: 1.5rem;
   color: #625756;
   line-height: 1.25;
-  margin: 0 0 30px 0;
+  margin: 0 0 1.5vw 0;
   opacity: 0;
   animation: cdFadeInLeft 0.7s ease 0.35s forwards;
 }
 
-/* ---- Sous-row : logo + horaires ---- */
 .cd-about-col-left .details {
-  margin-bottom: 40px;
+  margin-bottom: 2vw;
 }
 
-/* Logo clinique */
 .cd-about-col-left .details .vce-single-image-container.full-width .vce-single-image-figure-inner {
-  width: 260px !important;
+  width: 13.5vw !important;
 }
 .cd-about-col-left .details .vce-single-image-container.full-width img {
   width: 100%;
   height: auto;
 }
 
-/* Bouton Notre équipe */
 .btn-action-brown {
   display: inline-flex;
   align-items: center;
-  padding: 15px 32px;
+  padding: 0.8vw 1.7vw;
   background: #625756;
   color: #ffffff !important;
   font-family: "SuperBlue", serif;
@@ -1310,7 +2266,6 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0 4px 12px rgba(98, 87, 86, 0.3);
 }
 
-/* ---- Horaires ---- */
 .horaire table {
   width: 100%;
   border-collapse: collapse;
@@ -1323,28 +2278,21 @@ body::-webkit-scrollbar-thumb {
   font-weight: 400;
 }
 
-/* ============================================================
-   COLONNE DROITE
-   Classe : cd-about-right
-   ============================================================ */
 .cd-about-right {
   position: relative;
   z-index: 1;
 }
 
-/* ============================================================
-   PHOTOS ÉQUIPE — HTML custom (Raw HTML dans VC)
-   ============================================================ */
 .cd-team-circles {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
   padding-left: 0;
-  padding-bottom: 58px;
+  padding-bottom: 3vw;
 }
 
 .cd-team-circle-item {
-  margin-left: -30px;
+  margin-left: -1.5vw;
   position: relative;
   transition: all 0.3s ease;
   cursor: pointer;
@@ -1369,8 +2317,8 @@ body::-webkit-scrollbar-thumb {
   z-index: 10;
 }
 .cd-team-circle-item img {
-  width: 196px;
-  height: 196px;
+  width: 10.2vw;
+  height: 10.2vw;
   object-fit: cover;
   object-position: top center;
   display: block;
@@ -1381,12 +2329,7 @@ body::-webkit-scrollbar-thumb {
   border-color: #C58E80;
 }
 
-/* ============================================================
-   TEXTE DESCRIPTIF DROITE
-   Classe : cd-about-text
-   ============================================================ */
 .cd-about-text {
-  /* Animation */
   opacity: 0;
   animation: cdFadeIn 0.8s ease 0.4s forwards;
 }
@@ -1395,7 +2338,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 1.125rem;
   color: #383839;
   line-height: 1.38;
-  margin-bottom: 16px;
+  margin-bottom: 0.8vw;
 }
 .cd-about-text .vce-text-block-wrapper p:last-child {
   margin-bottom: 0;
@@ -1404,9 +2347,6 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
 }
 
-/* ============================================================
-   ANIMATIONS
-   ============================================================ */
 @keyframes cdFadeInLeft {
   from {
     opacity: 0;
@@ -1428,71 +2368,26 @@ body::-webkit-scrollbar-thumb {
   }
 }
 /* ============================================================
-   RESPONSIVE
-   ============================================================ */
-@media (max-width: 1024px) {
-  .cd-about-col-left > .vce-col-inner {
-    padding: 60px 40px 60px 40px;
-  }
-  .cd-about-right > .vce-col-inner {
-    padding: 60px 40px;
-  }
-  .cd-about-title {
-    font-size: 2.2rem;
-  }
-}
-@media (max-width: 768px) {
-  .cd-about-section > .vce-row-content {
-    flex-direction: column;
-  }
-  .cd-about-col-left > .vce-col-inner,
-  .cd-about-right > .vce-col-inner {
-    padding: 48px 24px;
-  }
-  .cd-about-title {
-    font-size: 1.8rem;
-  }
-  .cd-deco-tooth {
-    display: none; /* Cachée sur mobile */
-  }
-  .cd-team-circles .vce-row-content {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-  }
-  .cd-team-circle-item .vce-single-image-figure-inner {
-    margin-left: 0 !important;
-  }
-}
-/* ============================================================
-   SERVICES SECTION — "Des soins variés pour toute la famille"
-   Fichier : sass/services.scss
-   ============================================================ */
-/* ============================================================
-   ROW PRINCIPALE
-   Extra class name VC : cd-service-col (sur la colonne wrapper)
+   SERVICES SECTION
    ============================================================ */
 .cd-service-col > .vce-col-inner {
-  padding: 130px 175px !important;
+  padding: 6.5vw 9vw !important;
 }
 
-/* Titre principal centré */
 .cd-title-service {
   font-family: "SuperBlue", serif;
   font-weight: 400;
   color: #625756;
   text-align: center;
-  margin: 0 0 16px 0;
+  margin: 0 0 0.8vw 0;
   padding: 0;
   font-size: 2.8rem;
   line-height: 1.1111;
-  margin-bottom: 16px;
   max-width: 513px;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* Sous-titre de section */
 .cd-text-service {
   font-family: "Manrope", sans-serif;
   font-size: 1.5rem;
@@ -1500,16 +2395,11 @@ body::-webkit-scrollbar-thumb {
   line-height: 1.25;
   text-align: center;
   max-width: 670px;
-  margin: 0 auto 65px;
+  margin: 0 auto 3.4vw;
 }
 
-/* ============================================================
-   CARTES DE SERVICE
-   Extra class name VC : cd-service-card (sur chaque colonne)
-   ============================================================ */
 .cd-service-card {
-  margin-bottom: 60px;
-  /* H3 — titre de carte */
+  margin-bottom: 3vw;
 }
 .cd-service-card > .vce-col-inner {
   padding: 0 !important;
@@ -1530,17 +2420,16 @@ body::-webkit-scrollbar-thumb {
   line-height: 1.14;
   text-align: left;
   color: #625756;
-  margin: 0 0 12px 0;
+  margin: 0 0 0.6vw 0;
   font-family: "SuperBlue", serif;
-  margin-top: -98px;
+  margin-top: -5vw;
   z-index: 555;
   position: relative;
   background-color: #F4F3EF;
   max-width: 200px;
-  padding: 10px 54px;
+  padding: 0.5vw 2.8vw;
 }
 
-/* ---- Image de la carte ---- */
 .cd-img-service {
   position: relative;
   overflow: hidden;
@@ -1563,8 +2452,6 @@ body::-webkit-scrollbar-thumb {
   transform: scale(1.05);
 }
 
-/* ---- Contenu texte de la carte ---- */
-/* Description de la carte */
 .cd-desc-service {
   font-family: "Manrope", sans-serif;
   font-size: 1.12rem;
@@ -1572,26 +2459,19 @@ body::-webkit-scrollbar-thumb {
   line-height: 1.38;
   margin: 0;
   flex-grow: 1;
-  padding: 23px 54px 25px;
+  padding: 1.2vw 2.8vw 1.3vw;
 }
 
-/* ============================================================
-   BOUTON "Nos services" — centré sous les cartes
-   ============================================================ */
-.cd-service-col {
-  /* Wrapper du bouton */
-}
 .cd-service-col > .vce-col-content > .vce-text-block {
   text-align: center;
-  margin-top: 48px;
+  margin-top: 2.5vw;
 }
 
-/* Le bouton lui-même — ajoutez la classe btn-services sur le lien */
 .btn-services,
 .cd-service-col a.btn-services {
   display: inline-flex;
   align-items: center;
-  padding: 13px 40px;
+  padding: 0.7vw 2vw;
   background: transparent;
   color: #242424 !important;
   font-family: "Manrope", sans-serif;
@@ -1610,14 +2490,10 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0 4px 14px rgba(36, 36, 36, 0.2);
 }
 
-/* ============================================================
-   ANIMATIONS AU SCROLL
-   Ajoutez cd-fade-in sur chaque cd-service-card dans VC
-   ============================================================ */
 .cd-service-card {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.35s ease; /* garde la transition hover */
+  transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.35s ease;
 }
 .cd-service-card.cd-visible {
   opacity: 1;
@@ -1634,49 +2510,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* ============================================================
-   RESPONSIVE
+   GALLERY
    ============================================================ */
-@media (max-width: 1024px) {
-  .cd-service-col > .vce-col-inner {
-    padding: 60px 40px !important;
-  }
-  h2.cd-title-service {
-    font-size: 2.2rem;
-  }
-}
-@media (max-width: 768px) {
-  .cd-service-col > .vce-col-inner {
-    padding: 48px 24px !important;
-  }
-  h2.cd-title-service {
-    font-size: 1.8rem;
-  }
-  .cd-text-service {
-    margin-bottom: 36px;
-  }
-  /* Cartes en colonne sur mobile */
-  .cd-service-card:nth-child(2) {
-    transition-delay: 0.1s;
-  }
-  .cd-service-card:nth-child(3) {
-    transition-delay: 0.2s;
-  }
-}
 .cd-txt-gallery {
-  padding: 157px 554px 65px;
+  padding: 8vw 28vw 3.5vw;
 }
 .cd-txt-gallery h2 {
-  padding-bottom: 20px;
+  padding-bottom: 1vw;
 }
 
-/* ============================================================
-   GALLERY SLIDER
-   ============================================================ */
 .cd-gallery-slider {
   position: relative;
-  padding-bottom: 280px;
+  padding-bottom: 14vw;
   overflow: hidden;
-  /* Flèches */
 }
 .cd-gallery-slider .vce-row-content .vce-single-image-inner {
   max-width: none !important;
@@ -1690,9 +2536,11 @@ body::-webkit-scrollbar-thumb {
 .cd-gallery-slider .cd-slider-prev,
 .cd-gallery-slider .cd-slider-next {
   position: absolute;
-  bottom: -110px;
-  width: 42px;
-  height: 42px;
+  bottom: -5.5vw;
+  width: 2.2vw;
+  height: 2.2vw;
+  min-width: 36px;
+  min-height: 36px;
   border-radius: 50%;
   border: 4px solid #BF9F94;
   background: transparent;
@@ -1711,60 +2559,51 @@ body::-webkit-scrollbar-thumb {
   color: #ffffff;
 }
 .cd-gallery-slider .cd-slider-prev {
-  left: calc(50% - 50px);
+  left: calc(50% - 2.6vw);
 }
 .cd-gallery-slider .cd-slider-next {
-  left: calc(50% + 8px);
+  left: calc(50% + 0.4vw);
 }
 
+/* ============================================================
+   APPOINTMENT
+   ============================================================ */
 .cd-appoint-section {
-  padding: 205px 100px 170px 278px;
+  padding: 10vw 5vw 9vw 14vw;
 }
 .cd-appoint-section h2 {
-  padding-bottom: 24px;
+  padding-bottom: 1.2vw;
 }
 .cd-appoint-section a {
-  margin-top: 25px;
+  margin-top: 1.3vw;
 }
 
-p {
-  padding-bottom: 15px;
-}
-
+/* ============================================================
+   URGENCE
+   ============================================================ */
 .cd-urgence-section {
-  padding: 90px 306px 190px 323px;
+  padding: 4.5vw 16vw 10vw 17vw;
 }
 
 .cd-urgence-title-wrapper .vce-text-block-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 23px;
-  padding-left: 300px;
-  padding-right: 100px;
-  margin-bottom: 90px;
+  gap: 1.2vw;
+  padding-left: 15vw;
+  padding-right: 5vw;
+  margin-bottom: 4.5vw;
 }
 
-/* Image dent décorative */
 .cd-deco-tooth-urgence {
-  width: 183px;
+  width: 9.5vw;
   height: auto;
   flex-shrink: 0;
 }
 
 /* ============================================================
-   CONTACT FORM 7 — Section Urgence
+   CONTACT FORM 7
    ============================================================ */
-.wpcf7 {
-  /* Reset général */
-  /* Labels */
-  /* Champs texte, email, tel */
-  /* Textarea */
-  /* Bouton Soumettre */
-  /* Spinner */
-  /* Messages validation */
-  /* Champs invalides */
-}
 .wpcf7 p {
   margin: 0;
   padding-bottom: 0;
@@ -1778,18 +2617,19 @@ p {
   font-weight: 400;
   color: var(--cd-text);
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 1.2vw;
 }
 .wpcf7 .wpcf7-form-control-wrap {
   display: block;
-  margin-top: 16px;
+  margin-top: 0.8vw;
 }
 .wpcf7 input[type=text],
 .wpcf7 input[type=email],
 .wpcf7 input[type=tel] {
   width: 100%;
-  height: 50px;
-  padding: 0 18px;
+  height: 2.6vw;
+  min-height: 42px;
+  padding: 0 1vw;
   font-family: var(--cd-font-body);
   font-size: 1.12rem;
   color: var(--cd-dark);
@@ -1814,8 +2654,8 @@ p {
 }
 .wpcf7 textarea.wpcf7-textarea {
   width: 100%;
-  min-height: 124px;
-  padding: 14px 18px;
+  min-height: 6.5vw;
+  padding: 0.7vw 1vw;
   font-family: var(--cd-font-body);
   font-size: 1.12rem;
   color: var(--cd-dark);
@@ -1835,7 +2675,7 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 13px 48px;
+  padding: 0.7vw 2.5vw;
   background: var(--cd-brown);
   color: #ffffff;
   font-family: var(--cd-font-body);
@@ -1845,7 +2685,7 @@ p {
   border-radius: var(--cd-radius-full);
   cursor: pointer;
   transition: var(--cd-transition);
-  margin-top: 8px;
+  margin-top: 0.4vw;
 }
 .wpcf7 input[type=submit].wpcf7-submit:hover {
   background: var(--cd-brown-dark);
@@ -1855,21 +2695,13 @@ p {
 .wpcf7 .wpcf7-spinner {
   margin-left: 10px;
 }
-.wpcf7 .wpcf7-not-valid-tip {
-  font-size: 0.8rem;
-  color: #e53e3e;
-  margin-top: 4px;
-  display: block;
-}
 .wpcf7 .wpcf7-response-output {
-  margin-top: 16px;
-  padding: 12px 16px;
+  margin-top: 0.8vw;
+  padding: 0.6vw 0.8vw;
   border-radius: 8px;
   font-size: 0.875rem;
   font-family: var(--cd-font-body);
   border: none !important;
-  /* Succès */
-  /* Erreur */
 }
 .wpcf7 .wpcf7-response-output.wpcf7-mail-sent-ok {
   background: #d4edda;
@@ -1883,25 +2715,23 @@ p {
   border: 1.5px solid #e53e3e !important;
 }
 
-/* Téléphone + Courriel sur la même ligne */
 .c-appointment-form_label-firstname {
   display: block;
   width: 100%;
 }
 
-/* Wrapper 2 colonnes — à ajouter dans le HTML du form CF7 */
 .cd-form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 1vw;
   margin-bottom: 0;
 }
 
 .cd-txt-form {
-  padding-top: 30px;
+  padding-top: 1.5vw;
 }
 
 .contact-form {
-  padding: 35px 30px 20px 30px;
+  padding: 1.8vw 1.5vw 1vw 1.5vw;
 }
 /*# sourceMappingURL=../css/style.css.map */

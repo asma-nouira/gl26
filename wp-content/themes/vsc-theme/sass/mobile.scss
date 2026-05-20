@@ -1,8 +1,7 @@
 /* ============================================================
    MOBILE.SCSS — Clinique Dentaire Geneviève Lafrance
+   Simplifié grâce aux vw — ne gère que les changements structurels
    ============================================================ */
-
-*, *::before, *::after { box-sizing: border-box; }
 
 html, body {
     overflow-x: hidden;
@@ -17,44 +16,19 @@ html, body {
 }
 
 /* ============================================================
-   TABLETTE LARGE — max 1200px
-   ============================================================ */
-
-@media (max-width: 1200px) {
-
-    /* Paddings — réduction proportionnelle */
-    .cd-about-section       { padding: 100px 80px !important; }
-    .cd-about-col-left      { padding-right: 60px !important; }
-    .cd-service-col > .vce-col-inner { padding: 80px 60px !important; }
-    .cd-txt-gallery         { padding: 80px 80px 40px !important; }
-    .cd-appoint-section     { padding: 100px 80px !important; }
-    .cd-urgence-section     { padding: 80px 80px !important; }
-
-    .cd-urgence-title-wrapper .vce-text-block-wrapper {
-        padding-left: 60px !important;
-        padding-right: 60px !important;
-        margin-bottom: 60px !important;
-    }
-
-    .cd-deco-tooth-urgence  { width: 120px !important; }
-}
-
-/* ============================================================
    TABLETTE — max 1024px
+   Changements structurels uniquement
    ============================================================ */
 
 @media (max-width: 1024px) {
 
-    /* ---- HEADER ---- */
+    /* ---- HEADER — hamburger ---- */
     .site-header {
         height: 70px !important;
         padding: 0 24px !important;
-        min-height: 80px!important;
     }
 
-    .hamburger {
-        display: flex !important;
-    }
+    .hamburger { display: flex !important; }
 
     .site-header nav {
         display: none !important;
@@ -65,15 +39,10 @@ html, body {
         background: #ffffff !important;
         box-shadow: 0 8px 24px rgba(0,0,0,0.1) !important;
         z-index: 999 !important;
-
-        &.open {
-            display: block !important;
-        }
+        &.open { display: block !important; }
     }
 
-    .site-header nav > div {
-        display: block !important;
-    }
+    .site-header nav > div { display: block !important; }
 
     #primary-menu {
         flex-direction: column !important;
@@ -133,106 +102,23 @@ html, body {
     }
 
     /* ---- HERO ---- */
-    .cd-hero {
-        margin-top: 70px !important;
-        min-height: calc(100vh - 70px) !important;
-    }
+    .cd-hero { margin-top: 70px !important; }
+    .hero-sidebar { display: none !important; }
+    .cd-deco-tooth { display: none !important; }
 
-    .cd-hero-col .vce-col-inner {
-        padding: 80px 48px !important;
-        max-width: 600px !important;
-    }
-    .cd-hero-col .vce-col-content {
-        padding: 0 !important;
-    }
-
-    .hero-title {
-        font-size: 3.2rem !important;
-        margin-bottom: 30px !important;
-    }
-
-    .hero-address span {
-        font-size: 1.2rem !important;
-    }
-
-    /* ---- SIDEBAR ---- */
-    .hero-sidebar {
-        display: none !important;
-    }
-
-    /* ---- ABOUT ---- */
-    .cd-about-section       { padding: 60px 40px !important; }
-    .cd-about-col-left      { padding-right: 30px !important; }
-    .cd-about-title         { font-size: 2.2rem !important; padding-top: 40px !important; }
-    .cd-about-intro         { font-size: 1.2rem !important; }
-
-    .cd-team-circle-item img {
-        width: 110px !important;
-        height: 110px !important;
-    }
-
-    .cd-about-text .vce-text-block-wrapper p {
-        font-size: 1rem !important;
-    }
-
-    .cd-deco-tooth {
-        display: none !important;
-    }
-
-    /* ---- SERVICES ---- */
-    .cd-service-col > .vce-col-inner { padding: 60px 40px !important; }
-    .cd-title-service       { font-size: 2.2rem !important; }
-    .cd-text-service         { font-size: 1.2rem !important; margin-bottom: 40px !important; }
-
-    .cd-service-card h3 {
-        font-size: 1.12rem !important;
-        margin-top: -60px !important;
-        padding: 10px 40px !important;
-    }
-
-    .cd-desc-service {
-        font-size: 1rem !important;
-        padding: 16px 40px 24px !important;
-    }
-
-    /* ---- GALLERY ---- */
-    .cd-txt-gallery         { padding: 60px 120px 30px !important; }
-    .cd-gallery-slider      { padding-bottom: 80px !important; }
- .cd-gallery-slider .cd-gallery-slide .vce-single-image-inner {
+    /* ---- COLONNES VC ---- */
+    .vce-col {
+        flex: 0 0 100% !important;
         max-width: 100% !important;
         width: 100% !important;
     }
 
-    .cd-gallery-slider .cd-gallery-slide img {
-        width: 100% !important;
-        height: auto !important;
-        object-fit: cover !important;
-    }
-    /* ---- URGENCE ---- */
-    .cd-urgence-section     { padding: 60px 40px !important; }
-
-    .cd-urgence-title-wrapper .vce-text-block-wrapper {
-        padding-left: 40px !important;
-        padding-right: 40px !important;
-        margin-bottom: 48px !important;
-    }
-
-    .cd-deco-tooth-urgence  { width: 90px !important; }
-
-    /* ---- APPOINTMENT ---- */
-    .cd-appoint-section     { padding: 60px 40px !important; }
-
     /* ---- BLOG ---- */
-    .cd-blog-section        { padding: 60px 40px !important; }
-    .cd-blog-grid           { grid-template-columns: repeat(2, 1fr) !important; gap: 24px !important; }
+    .cd-blog-grid { grid-template-columns: repeat(2, 1fr) !important; }
 
     /* ---- FOOTER ---- */
-    .cd-footer              { padding: 48px 40px 0 !important; }
-    .cd-footer-inner        { grid-template-columns: 1fr 1fr !important; gap: 40px !important; }
-    .cd-footer-hours        { grid-column: 1 / -1 !important; }
-    .cd-gallery-slider .cd-slider-prev, .cd-gallery-slider .cd-slider-next{
-        bottom:-34%!important;
-    }
+    .cd-footer-inner { grid-template-columns: 1fr 1fr !important; gap: 40px !important; }
+    .cd-footer-hours { grid-column: 1 / -1 !important; }
 }
 
 /* ============================================================
@@ -248,15 +134,13 @@ html, body {
         padding: 0 16px !important;
     }
 
-    .site-header nav {
-        top: 60px !important;
-    }
+    .site-header nav { top: 60px !important; }
 
     .custom-logo-link img.custom-logo {
         height: 38px !important;
     }
 
-    /* ---- HERO ---- */
+    /* ---- HERO — fond couleur sur mobile ---- */
     .cd-hero {
         margin-top: 60px !important;
         min-height: 85vh !important;
@@ -264,13 +148,8 @@ html, body {
         background-color: #625756 !important;
     }
 
-    .cd-hero .vce-asset-background-simple-item {
-        display: none !important;
-    }
-
-    .cd-hero .vce-content-background-container::after {
-        display: none !important;
-    }
+    .cd-hero .vce-asset-background-simple-item { display: none !important; }
+    .cd-hero .vce-content-background-container::after { display: none !important; }
 
     .cd-hero-col .vce-col-inner,
     .cd-hero-col .vce-col-content {
@@ -286,47 +165,20 @@ html, body {
     .hero-address {
         font-size: 0.85rem !important;
         gap: 8px !important;
+        margin-bottom: 0 !important;
 
-        img {
-            width: 40px !important;
-            height: auto !important;
-            flex-shrink: 0 !important;
-        }
-
-        span {
-            line-height: 1.4 !important;
-            font-size: 1.18rem !important;
-        }
-
-        svg {
-            width: 16px !important;
-            height: 16px !important;
-            flex-shrink: 0 !important;
-        }
+        img { width: 40px !important; height: auto !important; flex-shrink: 0 !important; }
+        span { line-height: 1.4 !important; font-size: 1.18rem !important; }
+        svg { width: 16px !important; height: 16px !important; flex-shrink: 0 !important; }
     }
 
     .hero-sidebar { display: none !important; }
 
     /* ---- ABOUT ---- */
-    .cd-about-section,
-    .cd-urgence-section,
-    .cd-appoint-section {
-        padding: 48px 20px !important;
-    }
-
-    .cd-about-col-left {
-        padding-right: 0 !important;
-        padding-bottom: 20px;
-    }
-
-    .cd-about-col-left .details {
-        margin-bottom: 20px !important;
-    }
-
-    .cd-logo-img {
-        padding-bottom: 25px;
-        text-align: left;
-    }
+    .cd-about-section { padding: 48px 20px !important; }
+    .cd-about-col-left { padding-right: 0 !important; padding-bottom: 20px; }
+    .cd-about-col-left .details { margin-bottom: 20px !important; }
+    .cd-logo-img { padding-bottom: 25px; text-align: left; }
 
     .cd-about-title {
         padding: 32px 0 16px !important;
@@ -337,30 +189,27 @@ html, body {
     }
 
     .cd-about-intro { font-size: 1.1rem !important; }
-    .cd-deco-tooth  { display: none !important; }
-
+    .cd-deco-tooth { display: none !important; }
 
     /* ---- HORAIRES ---- */
     .horaire table {
         table-layout: fixed;
         width: 100% !important;
-
         td {
             font-size: 0.8rem !important;
             padding: 3px 2px !important;
             word-break: break-word;
             &:first-child { width: 27% !important; padding-right: 6px !important; }
-            &:last-child  { width: 30% !important; }
+            &:last-child { width: 30% !important; }
         }
     }
 
-    /* ---- TEAM CIRCLES ---- */
+    /* ---- TEAM ---- */
     .cd-team-circles {
         justify-content: center !important;
         gap: 8px !important;
         padding-bottom: 20px !important;
     }
-
     .cd-team-circle-item {
         margin-left: 0 !important;
         img { width: 90px !important; height: 90px !important; }
@@ -370,16 +219,12 @@ html, body {
     .cd-service-col > .vce-col-inner { padding: 48px 20px !important; }
     h2.cd-title-service { font-size: 1.8rem !important; }
     .cd-text-service { margin-bottom: 32px !important; }
-
     .cd-service-card h3 {
         font-size: 1.18rem !important;
         margin-top: -63px !important;
-        padding: 10px 23px !important;
+        padding: 10px 35px !important;
     }
-
-    .cd-desc-service {
-        padding: 23px 23px 25px !important;
-    }
+    .cd-desc-service { padding: 23px 35px 25px !important; }
 
     /* ---- GALLERY ---- */
     .cd-txt-gallery { padding: 40px 20px 20px !important; }
@@ -387,9 +232,17 @@ html, body {
     .cd-gallery-slider .cd-slider-prev,
     .cd-gallery-slider .cd-slider-next {
         bottom: -50px !important;
+        width: 36px !important;
+        height: 36px !important;
     }
+    .cd-gallery-slider .cd-slider-prev { left: calc(50% - 44px) !important; }
+    .cd-gallery-slider .cd-slider-next { left: calc(50% + 8px) !important; }
+
+    /* ---- APPOINTMENT ---- */
+    .cd-appoint-section { padding: 48px 20px !important; }
 
     /* ---- URGENCE ---- */
+    .cd-urgence-section { padding: 48px 20px !important; }
     .cd-urgence-title-wrapper .vce-text-block-wrapper {
         padding-left: 0 !important;
         padding-right: 0 !important;
@@ -397,10 +250,9 @@ html, body {
         text-align: center !important;
         margin-bottom: 32px !important;
     }
-
     .cd-deco-tooth-urgence { width: 60px !important; }
 
-    /* ---- FORMULAIRE CF7 ---- */
+    /* ---- CF7 ---- */
     .cd-form-row { grid-template-columns: 1fr !important; }
     .contact-form { padding: 20px 16px !important; }
 
@@ -410,6 +262,7 @@ html, body {
         width: 100% !important;
         justify-content: center !important;
         text-align: center !important;
+        padding: 12px 24px !important;
     }
 
     /* ---- BLOG ---- */
@@ -427,7 +280,11 @@ html, body {
         text-align: center !important;
         gap: 8px !important;
     }
-    .vce-row--col-gap-30>.vce-row-content>.vce-col{
-        margin-right: 15px;
-    }
+
+    /* ---- IMAGES ---- */
+    img { max-width: 100% !important; }
+    .vce-single-image-figure-inner { max-width: 100% !important; }
+
+    /* ---- H2 global ---- */
+    h2, .cd-h2, .cd-section-title { font-size: 1.8rem !important; }
 }

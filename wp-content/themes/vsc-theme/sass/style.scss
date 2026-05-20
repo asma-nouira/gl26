@@ -1,163 +1,142 @@
 @import './statics.scss';
 @import './parts/fonts.scss';
+@import './header.scss';
 @import './parts/hero.scss';
 @import './parts/components';
 @import './parts/blog.scss';
 @import './parts/footer.scss';
-/**************/
-.wpcf7-not-valid-tip{
-	display:none !important;
+@import './mobile.scss'; /* EN DERNIER */
+
+/* ============================================================
+   GLOBAL
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body { margin: 0; }
+
+body::-webkit-scrollbar { width: 5px !important; }
+body::-webkit-scrollbar-track { background: #BF9F94; }
+body::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 20px;
+    border: 5px solid #BF9F94;
 }
-body input[type=text].wpcf7-not-valid, body input[type=email].wpcf7-not-valid, body input[type=tel].wpcf7-not-valid, body textarea.wpcf7-not-valid {
-border: 1px solid #ec3c06;
+
+p { padding-bottom: 0.8vw; }
+
+/* ============================================================
+   CF7 VALIDATION
+   ============================================================ */
+
+.wpcf7-not-valid-tip { display: none !important; }
+
+body input[type=text].wpcf7-not-valid,
+body input[type=email].wpcf7-not-valid,
+body input[type=tel].wpcf7-not-valid,
+body textarea.wpcf7-not-valid {
+    border: 1px solid #ec3c06;
 }
 
 body div.wpcf7-validation-errors {
-background: #ffe2e2;
-border: 1px solid #ff8a8a;
-color: #ec3c06;
+    background: #ffe2e2;
+    border: 1px solid #ff8a8a;
+    color: #ec3c06;
 }
 
 body div.wpcf7-response-output {
-margin: 10px 0;
-padding: 20px;
-box-sizing: border-box;
--webkit-box-sizing: border-box;
--moz-box-sizing: border-box;
-border-radius: 5px;
+    margin: 10px 0;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 5px;
 }
 
 body .wpcf7-mail-sent-ng {
-background: #fff2e2;
-border: 1px solid #ffbc8a;
-color: #e17731;
+    background: #fff2e2;
+    border: 1px solid #ffbc8a;
+    color: #e17731;
 }
 
 body .wpcf7-mail-sent-ok {
-background: #e8ffe2;
-border: 1px solid #6fdf51;
-color: #1ea524;
+    background: #e8ffe2;
+    border: 1px solid #6fdf51;
+    color: #1ea524;
 }
-/***************/
-
-body{
-	margin:0;
-}
-body::-webkit-scrollbar {
-	width: 5px !important
-}
-
-body::-webkit-scrollbar-track {
-	background: #BF9F94; /* color of the tracking area */
-}
-body::-webkit-scrollbar-thumb {
-	background-color: white; /* color of the scroll thumb */
-	border-radius: 20px; /* roundness of the scroll thumb */
-	border: 5px solid #BF9F94; /* creates padding around scroll thumb */
-}
-/* ============================================================
-   ABOUT SECTION — "Votre dentiste à Rivière-du-Loup"
-   Fichier : sass/about.scss
-   ============================================================ */
 
 /* ============================================================
-   ROW PRINCIPALE
+   ABOUT SECTION
    ============================================================ */
 
 .cd-about-section {
     position: relative;
     overflow: hidden;
-	padding: 160px 296px 140px 278px ;
+    padding: 8vw 15vw 7vw 14vw;
 
-    /* Les deux colonnes égales */
     > .vce-row-content {
         align-items: stretch;
     }
 }
 
-/* ============================================================
-   IMAGE DÉCORATIVE DENT (+🦷)
-   Classe : cd-deco-tooth — sur le vce-single-image-container
-   ============================================================ */
-
 .cd-deco-tooth {
     position: absolute !important;
     top: 15%;
-    right: -60px;
+    right: -3vw;
     transform: translateY(-50%);
     z-index: 0;
     pointer-events: none;
 
     .vce-single-image-figure-inner {
-        width: 288px !important;
-		height: auto;
-    }
-
-    img {
-        width: 100%;
+        width: 15vw !important;
         height: auto;
-        display: block;
     }
-}
 
-/* ============================================================
-   COLONNE GAUCHE
-   Classe : cd-about-col-left
-   ============================================================ */
+    img { width: 100%; height: auto; display: block; }
+}
 
 .cd-about-col-left {
     position: relative;
     z-index: 1;
-	padding-right: 120px;
+    padding-right: 6vw;
 }
 
-/* Titre H2 */
 .cd-about-title {
     font-family: 'SuperBlue', serif;
     font-size: 2.8rem;
     font-weight: 400;
     color: #625756;
     line-height: 1.33;
-   padding: 97px 0 30px 0;
-
-    /* Animation */
+    padding: 5vw 0 1.5vw 0;
     opacity: 0;
     transform: translateX(-20px);
     animation: cdFadeInLeft 0.7s ease 0.2s forwards;
 }
 
-/* Paragraphe intro */
 .cd-about-intro {
-      font-family: 'SuperBlue', serif;
+    font-family: 'SuperBlue', serif;
     font-size: 1.5rem;
     color: #625756;
     line-height: 1.25;
-    margin: 0 0 30px 0;
+    margin: 0 0 1.5vw 0;
     opacity: 0;
     animation: cdFadeInLeft 0.7s ease 0.35s forwards;
 }
 
-/* ---- Sous-row : logo + horaires ---- */
 .cd-about-col-left .details {
-    margin-bottom: 40px;
+    margin-bottom: 2vw;
 }
 
-/* Logo clinique */
-.cd-about-col-left  .details .vce-single-image-container.full-width {
-    .vce-single-image-figure-inner {
-        width: 260px !important;
-    }
+.cd-about-col-left .details .vce-single-image-container.full-width {
+    .vce-single-image-figure-inner { width: 13.5vw !important; }
     img { width: 100%; height: auto; }
 }
 
-/* Bouton Notre équipe */
 .btn-action-brown {
     display: inline-flex;
     align-items: center;
-    padding: 15px 32px;
+    padding: 0.8vw 1.7vw;
     background: #625756;
     color: #ffffff !important;
-       font-family: 'SuperBlue', serif;
+    font-family: 'SuperBlue', serif;
     font-size: 1.25rem;
     font-weight: 400;
     border-radius: 50px;
@@ -170,67 +149,49 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-/* ---- Horaires ---- */
 .horaire {
     table {
         width: 100%;
         border-collapse: collapse;
         font-family: 'Manrope', sans-serif;
         font-size: 0.875rem;
-	
     }
-
     td {
-       	color:#625756;
+        color: #625756;
         vertical-align: top;
-		font-weight: 400;
+        font-weight: 400;
     }
 }
-
-/* ============================================================
-   COLONNE DROITE
-   Classe : cd-about-right
-   ============================================================ */
 
 .cd-about-right {
     position: relative;
     z-index: 1;
 }
 
-/* ============================================================
-   PHOTOS ÉQUIPE — HTML custom (Raw HTML dans VC)
-   ============================================================ */
-
 .cd-team-circles {
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
     padding-left: 0;
-	padding-bottom: 58px;
+    padding-bottom: 3vw;
 }
 
 .cd-team-circle-item {
-    margin-left: -30px;
+    margin-left: -1.5vw;
     position: relative;
     transition: all 0.3s ease;
     cursor: pointer;
 
-    &:first-child {
-        margin-left: 0;
-        z-index: 1;
-    }
-
+    &:first-child { margin-left: 0; z-index: 1; }
     &:nth-child(1) { z-index: 1; }
     &:nth-child(2) { z-index: 2; }
     &:nth-child(3) { z-index: 3; }
     &:nth-child(4) { z-index: 4; }
-
     &:hover { z-index: 10; }
 
     img {
-        width: 196px;
-        height: 196px;
-      
+        width: 10.2vw;
+        height: 10.2vw;
         object-fit: cover;
         object-position: top center;
         display: block;
@@ -243,36 +204,19 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-/* ============================================================
-   TEXTE DESCRIPTIF DROITE
-   Classe : cd-about-text
-   ============================================================ */
-
 .cd-about-text {
-    .vce-text-block-wrapper {
-        p {
-            font-family: 'Manrope', sans-serif;
-            font-size: 1.125rem;
-            color: #383839;
-            line-height: 1.38;
-            margin-bottom: 16px;
-
-            &:last-child { margin-bottom: 0; }
-
-            strong {
-                font-weight: 700;
-            }
-        }
+    .vce-text-block-wrapper p {
+        font-family: 'Manrope', sans-serif;
+        font-size: 1.125rem;
+        color: #383839;
+        line-height: 1.38;
+        margin-bottom: 0.8vw;
+        &:last-child { margin-bottom: 0; }
+        strong { font-weight: 700; }
     }
-
-    /* Animation */
     opacity: 0;
     animation: cdFadeIn 0.8s ease 0.4s forwards;
 }
-
-/* ============================================================
-   ANIMATIONS
-   ============================================================ */
 
 @keyframes cdFadeInLeft {
     from { opacity: 0; transform: translateX(-20px); }
@@ -285,85 +229,29 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* ============================================================
-   RESPONSIVE
-   ============================================================ */
-
-@media (max-width: 1024px) {
-    .cd-about-col-left > .vce-col-inner {
-        padding: 60px 40px 60px 40px;
-    }
-
-    .cd-about-right > .vce-col-inner {
-        padding: 60px 40px;
-    }
-
-    .cd-about-title { font-size: 2.2rem; }
-}
-
-@media (max-width: 768px) {
-    .cd-about-section > .vce-row-content {
-        flex-direction: column;
-    }
-
-    .cd-about-col-left > .vce-col-inner,
-    .cd-about-right > .vce-col-inner {
-        padding: 48px 24px;
-    }
-
-    .cd-about-title { font-size: 1.8rem; }
-
-    .cd-deco-tooth {
-        display: none; /* Cachée sur mobile */
-    }
-
-    .cd-team-circles .vce-row-content {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 12px;
-    }
-
-    .cd-team-circle-item .vce-single-image-figure-inner {
-        margin-left: 0 !important;
-    }
-}
-
-/* ============================================================
-   SERVICES SECTION — "Des soins variés pour toute la famille"
-   Fichier : sass/services.scss
-   ============================================================ */
-
-/* ============================================================
-   ROW PRINCIPALE
-   Extra class name VC : cd-service-col (sur la colonne wrapper)
+   SERVICES SECTION
    ============================================================ */
 
 .cd-service-col {
     > .vce-col-inner {
-        padding: 130px 175px !important;
+        padding: 6.5vw 9vw !important;
     }
-	
 }
 
-/* Titre principal centré */
 .cd-title-service {
     font-family: 'SuperBlue', serif;
     font-weight: 400;
     color: #625756;
     text-align: center;
-    margin: 0 0 16px 0;
+    margin: 0 0 0.8vw 0;
     padding: 0;
-	   font-size: 2.8rem;
-        line-height: 1.1111;
-        margin-bottom: 16px;
-		max-width: 513px;
-		    margin-left: auto;
+    font-size: 2.8rem;
+    line-height: 1.1111;
+    max-width: 513px;
+    margin-left: auto;
     margin-right: auto;
 }
 
-    
-
-
-/* Sous-titre de section */
 .cd-text-service {
     font-family: 'Manrope', sans-serif;
     font-size: 1.5rem;
@@ -371,22 +259,17 @@ body::-webkit-scrollbar-thumb {
     line-height: 1.25;
     text-align: center;
     max-width: 670px;
-    margin: 0 auto 65px;
+    margin: 0 auto 3.4vw;
 }
 
-/* ============================================================
-   CARTES DE SERVICE
-   Extra class name VC : cd-service-card (sur chaque colonne)
-   ============================================================ */
-
 .cd-service-card {
-	margin-bottom:60px;
+    margin-bottom: 3vw;
+
     > .vce-col-inner {
         padding: 0 !important;
         border-radius: 40px;
         overflow: hidden;
         background: #F3F1ED;
-    
         transition: all 0.35s ease;
         display: flex;
         flex-direction: column;
@@ -397,24 +280,23 @@ body::-webkit-scrollbar-thumb {
         box-shadow: 0 12px 36px rgba(0,0,0,0.12);
         transform: translateY(-6px);
     }
-	/* H3 — titre de carte */
+
     h3 {
         font-size: 2.18rem;
         line-height: 1.14;
         text-align: left;
         color: #625756;
-        margin: 0 0 12px 0;
-		 font-family: 'SuperBlue', serif;
-	margin-top: -98px;
-    z-index: 555;
-    position: relative;
-    background-color: #F4F3EF;
-    max-width: 200px;
-	  padding: 10px 54px;
+        margin: 0 0 0.6vw 0;
+        font-family: 'SuperBlue', serif;
+        margin-top: -5vw;
+        z-index: 555;
+        position: relative;
+        background-color: #F4F3EF;
+        max-width: 200px;
+        padding: 0.5vw 2.8vw;
     }
 }
 
-/* ---- Image de la carte ---- */
 .cd-img-service {
     position: relative;
     overflow: hidden;
@@ -440,10 +322,6 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-/* ---- Contenu texte de la carte ---- */
-
-
-/* Description de la carte */
 .cd-desc-service {
     font-family: 'Manrope', sans-serif;
     font-size: 1.12rem;
@@ -451,27 +329,21 @@ body::-webkit-scrollbar-thumb {
     line-height: 1.38;
     margin: 0;
     flex-grow: 1;
-	  padding: 23px 54px 25px;
+    padding: 1.2vw 2.8vw 1.3vw;
 }
 
-/* ============================================================
-   BOUTON "Nos services" — centré sous les cartes
-   ============================================================ */
-
 .cd-service-col {
-    /* Wrapper du bouton */
     > .vce-col-content > .vce-text-block {
         text-align: center;
-        margin-top: 48px;
+        margin-top: 2.5vw;
     }
 }
 
-/* Le bouton lui-même — ajoutez la classe btn-services sur le lien */
 .btn-services,
 .cd-service-col a.btn-services {
     display: inline-flex;
     align-items: center;
-    padding: 13px 40px;
+    padding: 0.7vw 2vw;
     background: transparent;
     color: #242424 !important;
     font-family: 'Manrope', sans-serif;
@@ -490,87 +362,51 @@ body::-webkit-scrollbar-thumb {
     }
 }
 
-/* ============================================================
-   ANIMATIONS AU SCROLL
-   Ajoutez cd-fade-in sur chaque cd-service-card dans VC
-   ============================================================ */
-
 .cd-service-card {
     opacity: 0;
     transform: translateY(24px);
-    transition: opacity 0.6s ease, transform 0.6s ease,
-                box-shadow 0.35s ease; /* garde la transition hover */
+    transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.35s ease;
 
-    &.cd-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
+    &.cd-visible { opacity: 1; transform: translateY(0); }
     &:nth-child(1) { transition-delay: 0.1s; }
     &:nth-child(2) { transition-delay: 0.25s; }
     &:nth-child(3) { transition-delay: 0.4s; }
 }
 
 /* ============================================================
-   RESPONSIVE
+   GALLERY
    ============================================================ */
 
-@media (max-width: 1024px) {
-    .cd-service-col > .vce-col-inner {
-        padding: 60px 40px !important;
-    }
-
-    h2.cd-title-service { font-size: 2.2rem; }
+.cd-txt-gallery {
+    padding: 8vw 28vw 3.5vw;
+    h2 { padding-bottom: 1vw; }
 }
-
-@media (max-width: 768px) {
-    .cd-service-col > .vce-col-inner {
-        padding: 48px 24px !important;
-    }
-
-    h2.cd-title-service { font-size: 1.8rem; }
-
-    .cd-text-service { margin-bottom: 36px; }
-
-    /* Cartes en colonne sur mobile */
-    .cd-service-card {
-        &:nth-child(2) { transition-delay: 0.1s; }
-        &:nth-child(3) { transition-delay: 0.2s; }
-    }
-}
-.cd-txt-gallery{
-	padding: 157px 554px 65px;
-    h2{
-        padding-bottom: 20px;;
-    }
-}
-/* ============================================================
-   GALLERY SLIDER
-   ============================================================ */
 
 .cd-gallery-slider {
-     .vce-row-content{
-  .vce-single-image-inner{
-    max-width: none !important;
-    position: unset !important;
-    img{
-      display: block;
-      width: 97% !important;
-      margin: 0 auto;
+    .vce-row-content {
+        .vce-single-image-inner {
+            max-width: none !important;
+            position: unset !important;
+            img {
+                display: block;
+                width: 97% !important;
+                margin: 0 auto;
+            }
+        }
     }
-  }
-}
+
     position: relative;
-    padding-bottom: 280px;
+    padding-bottom: 14vw;
     overflow: hidden;
 
-    /* Flèches */
     .cd-slider-prev,
     .cd-slider-next {
         position: absolute;
-        bottom: -110px;
-        width: 42px;
-        height: 42px;
+        bottom: -5.5vw;
+        width: 2.2vw;
+        height: 2.2vw;
+        min-width: 36px;
+        min-height: 36px;
         border-radius: 50%;
         border: 4px solid #BF9F94;
         background: transparent;
@@ -581,82 +417,81 @@ body::-webkit-scrollbar-thumb {
         justify-content: center;
         transition: all 0.3s ease;
         z-index: 10;
-font-size: 1.25rem;
+        font-size: 1.25rem;
+
         &:hover {
             background: #242424;
             color: #ffffff;
         }
     }
 
-    .cd-slider-prev { left: calc(50% - 50px); }
-    .cd-slider-next { left: calc(50% + 8px); }
+    .cd-slider-prev { left: calc(50% - 2.6vw); }
+    .cd-slider-next { left: calc(50% + 0.4vw); }
 }
 
-.cd-appoint-section{
-    padding: 205px 100px 170px 278px;
-   h2{
-    padding-bottom: 24px;
-   }
-   a{
-    margin-top:25px;
-   }
-}
-p{
-    padding-bottom: 15px;
+/* ============================================================
+   APPOINTMENT
+   ============================================================ */
+
+.cd-appoint-section {
+    padding: 10vw 5vw 9vw 14vw;
+    h2 { padding-bottom: 1.2vw; }
+    a { margin-top: 1.3vw; }
 }
 
-.cd-urgence-section{
-    padding: 90px 306px 190px 323px;
+/* ============================================================
+   URGENCE
+   ============================================================ */
+
+.cd-urgence-section {
+    padding: 4.5vw 16vw 10vw 17vw;
 }
+
 .cd-urgence-title-wrapper .vce-text-block-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 23px;
-    padding-left: 300px;
-    padding-right: 100px;
-    margin-bottom: 90px;
+    gap: 1.2vw;
+    padding-left: 15vw;
+    padding-right: 5vw;
+    margin-bottom: 4.5vw;
 }
 
-/* Image dent décorative */
 .cd-deco-tooth-urgence {
-    width: 183px;
+    width: 9.5vw;
     height: auto;
     flex-shrink: 0;
 }
+
 /* ============================================================
-   CONTACT FORM 7 — Section Urgence
+   CONTACT FORM 7
    ============================================================ */
 
 .wpcf7 {
+    p { margin: 0; padding-bottom: 0; }
+    br { display: none; }
 
-    /* Reset général */
-    p { margin: 0; padding-bottom: 0;}
-  br{
-    display: none;
-  }
-    /* Labels */
     label {
         font-family: var(--cd-font-body);
         font-size: 1.12rem;
         font-weight: 400;
         color: var(--cd-text);
         display: block;
-        margin-bottom: 24px;
+        margin-bottom: 1.2vw;
     }
 
-    /* Champs texte, email, tel */
     .wpcf7-form-control-wrap {
         display: block;
-        margin-top: 16px;
+        margin-top: 0.8vw;
     }
 
     input[type="text"],
     input[type="email"],
     input[type="tel"] {
         width: 100%;
-        height: 50px;
-        padding: 0 18px;
+        height: 2.6vw;
+        min-height: 42px;
+        padding: 0 1vw;
         font-family: var(--cd-font-body);
         font-size: 1.12rem;
         color: var(--cd-dark);
@@ -672,17 +507,13 @@ p{
             border: 1.5px solid var(--cd-primary);
             box-shadow: 0 0 0 3px rgba(132,153,148,0.15);
         }
-
-        &::placeholder {
-            color: var(--cd-text-light);
-        }
+        &::placeholder { color: var(--cd-text-light); }
     }
 
-    /* Textarea */
     textarea.wpcf7-textarea {
         width: 100%;
-        min-height: 124px;
-        padding: 14px 18px;
+        min-height: 6.5vw;
+        padding: 0.7vw 1vw;
         font-family: var(--cd-font-body);
         font-size: 1.12rem;
         color: var(--cd-dark);
@@ -700,12 +531,11 @@ p{
         }
     }
 
-    /* Bouton Soumettre */
     input[type="submit"].wpcf7-submit {
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        padding: 13px 48px;
+        padding: 0.7vw 2.5vw;
         background: var(--cd-brown);
         color: #ffffff;
         font-family: var(--cd-font-body);
@@ -715,7 +545,7 @@ p{
         border-radius: var(--cd-radius-full);
         cursor: pointer;
         transition: var(--cd-transition);
-        margin-top: 8px;
+        margin-top: 0.4vw;
 
         &:hover {
             background: var(--cd-brown-dark);
@@ -724,63 +554,38 @@ p{
         }
     }
 
-    /* Spinner */
-    .wpcf7-spinner {
-        margin-left: 10px;
-    }
-
-    /* Messages validation */
-    .wpcf7-not-valid-tip {
-        font-size: 0.8rem;
-        color: #e53e3e;
-        margin-top: 4px;
-        display: block;
-    }
+    .wpcf7-spinner { margin-left: 10px; }
 
     .wpcf7-response-output {
-        margin-top: 16px;
-        padding: 12px 16px;
+        margin-top: 0.8vw;
+        padding: 0.6vw 0.8vw;
         border-radius: 8px;
         font-size: 0.875rem;
         font-family: var(--cd-font-body);
         border: none !important;
 
-        /* Succès */
-        &.wpcf7-mail-sent-ok {
-            background: #d4edda;
-            color: #155724;
-        }
-
-        /* Erreur */
+        &.wpcf7-mail-sent-ok { background: #d4edda; color: #155724; }
         &.wpcf7-mail-sent-ng,
-        &.wpcf7-validation-errors {
-            background: #f8d7da;
-            color: #721c24;
-        }
+        &.wpcf7-validation-errors { background: #f8d7da; color: #721c24; }
     }
 
-    /* Champs invalides */
-    .wpcf7-not-valid {
-        border: 1.5px solid #e53e3e !important;
-    }
+    .wpcf7-not-valid { border: 1.5px solid #e53e3e !important; }
 }
-/* Téléphone + Courriel sur la même ligne */
+
 .c-appointment-form_label-firstname {
     display: block;
     width: 100%;
 }
 
-/* Wrapper 2 colonnes — à ajouter dans le HTML du form CF7 */
 .cd-form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 1vw;
     margin-bottom: 0;
 }
- .cd-txt-form{
-        padding-top: 30px;
-    }
-.contact-form{
-    padding: 35px 30px 20px 30px;
-   
+
+.cd-txt-form { padding-top: 1.5vw; }
+
+.contact-form {
+    padding: 1.8vw 1.5vw 1vw 1.5vw;
 }
