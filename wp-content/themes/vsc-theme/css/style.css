@@ -1680,7 +1680,7 @@ body {
 
 .hero-title_page {
   font-family: "SuperBlue", serif;
-  font-size: clamp(1.8rem, 3.9vw, 4.7rem);
+  font-size: clamp(2rem, 3.906vw, 4.688rem);
   font-weight: 400;
   color: #ffffff;
   line-height: 1.12;
