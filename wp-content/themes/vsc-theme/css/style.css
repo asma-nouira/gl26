@@ -1720,7 +1720,7 @@ body {
    SECTION TEXTE CENTRÉ — cd-content-section
    ============================================================ */
 .cd-content-section {
-  padding: 1.2vw 19vw;
+  padding: 1.2vw 19vw 7.5vw;
   text-align: center;
   background: #ffffff;
 }
@@ -1752,6 +1752,13 @@ body {
   line-height: 1.25;
   font-weight: 700;
   margin: 0;
+}
+
+.cd-txt-visite {
+  padding: 5.36vw 28.9vw 3.38vw;
+}
+.cd-txt-visite h2 {
+  padding-bottom: 1.04vw;
 }
 
 /* ============================================================
