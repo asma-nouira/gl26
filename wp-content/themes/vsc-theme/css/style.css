@@ -1926,6 +1926,7 @@ body {
 .cd-technologies-section h3 {
   font-size: clamp(1.5rem, 2.35vw, 2.8125rem);
   padding-bottom: 1vw;
+  color: #625756;
 }
 
 /* ---- Colonne texte ---- */
