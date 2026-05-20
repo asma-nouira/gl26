@@ -1923,6 +1923,10 @@ body {
   color: var(--cd-text);
   line-height: 1.38;
 }
+.cd-technologies-section h3 {
+  font-size: clamp(1.5rem, 2.35vw, 2.8125rem);
+  padding-bottom: 1vw;
+}
 
 /* ---- Colonne texte ---- */
 .cd-tech-text {

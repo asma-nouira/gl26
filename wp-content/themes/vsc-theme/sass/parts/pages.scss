@@ -276,6 +276,10 @@
             line-height: 1.38;
         }
     }
+    h3{
+        font-size: clamp(1.5rem, 2.35vw, 2.8125rem); 
+        padding-bottom: 1vw;
+    }
 }
 
 
