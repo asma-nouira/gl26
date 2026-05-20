@@ -1989,6 +1989,9 @@ body {
   .cd-value-card h3 {
     margin-bottom: 20px !important;
   }
+  .bb-3 {
+    padding-bottom: 30px;
+  }
   .cd-technologies-section {
     padding: 10vw 5vw !important;
   }
