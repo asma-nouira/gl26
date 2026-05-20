@@ -1906,7 +1906,7 @@ body {
    ============================================================ */
 /* Titre + intro section */
 .cd-technologies-section {
-  padding: 5vw 7vw;
+  padding: 6.45vw 20vw;
   background: #F4F3EF;
 }
 .cd-technologies-section .cd-tech-intro {
@@ -1915,28 +1915,13 @@ body {
   margin: 0 auto 4vw;
 }
 .cd-technologies-section .cd-tech-intro h2 {
-  margin-bottom: 1.2vw;
+  margin-bottom: 1.5vw;
 }
 .cd-technologies-section .cd-tech-intro p {
   font-family: "Manrope", sans-serif;
   font-size: clamp(0.875rem, 0.938vw, 1.125rem);
   color: var(--cd-text);
-  line-height: 1.75;
-}
-
-/* ---- Item zigzag ---- */
-.cd-tech-item {
-  display: flex;
-  align-items: center;
-  gap: 4vw;
-  margin-bottom: 5vw;
-  /* Inversé — image à gauche, texte à droite */
-}
-.cd-tech-item:last-of-type {
-  margin-bottom: 0;
-}
-.cd-tech-item.cd-tech-item--reverse {
-  flex-direction: row-reverse;
+  line-height: 1.38;
 }
 
 /* ---- Colonne texte ---- */
