@@ -250,16 +250,13 @@ html, body {
   .cd-service-col > .vce-col-inner {
     padding: 48px 20px !important;
   }
-  h2.cd-title-service {
-    font-size: 1.8rem !important;
-  }
   .cd-text-service {
     margin-bottom: 32px !important;
   }
   .cd-service-card h3 {
-    font-size: 1.18rem !important;
     margin-top: -63px !important;
-    padding: 10px 35px !important;
+    max-width: 20vw !important;
+    padding: 1.5vw 3vw !important;
   }
   .cd-desc-service {
     padding: 23px 35px 25px !important;
