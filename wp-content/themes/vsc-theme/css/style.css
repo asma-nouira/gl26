@@ -841,6 +841,11 @@ h2 {
   /* Tailles */
   /* --- Variantes --- */
 }
+@media (max-width: 768px) {
+  .cd-btn {
+    padding: 13px 20px;
+  }
+}
 .cd-btn.cd-btn-sm {
   padding: 0.47vw 1.25vw;
 }

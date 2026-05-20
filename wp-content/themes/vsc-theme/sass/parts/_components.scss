@@ -152,7 +152,9 @@ h2 {
     transition: var(--cd-transition);
     white-space: nowrap;
     line-height: 1.5;
-
+@media(max-width:768px){
+    padding: 13px 20px;
+}
     /* Tailles */
     &.cd-btn-sm {
         padding: 0.47vw 1.25vw;
