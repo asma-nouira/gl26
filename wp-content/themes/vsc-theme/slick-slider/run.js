@@ -10,29 +10,24 @@ jQuery(document).on('ready', function() {
     prevArrow: '<button class="cd-slider-prev">←</button>',
     nextArrow:  '<button class="cd-slider-next">→</button>',
         responsive: [
-            {
+       {
                 breakpoint: 1366,
                 settings: {
-                    arrows: true,
-                    centerMode: true,
-                    centerPadding: '360px',
+                    centerPadding: '280px',
                     slidesToShow: 1
                 }
             },
             {
-                breakpoint: 769,
+                breakpoint: 1024,
                 settings: {
-                    arrows: true,
-                    centerMode: true,
-                    centerPadding: '0',
+                    centerPadding: '120px',
                     slidesToShow: 1
                 }
             },
             {
-                breakpoint: 400,
+                breakpoint: 768,
                 settings: {
-                    arrows: true,
-                    centerMode: true,
+                    centerMode: false,
                     centerPadding: '0',
                     slidesToShow: 1
                 }
