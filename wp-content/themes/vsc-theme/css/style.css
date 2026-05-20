@@ -1782,7 +1782,7 @@ body .wpcf7-mail-sent-ok {
 }
 @media (max-width: 768px) {
   .cd-about-col-left .details .vce-single-image-container.full-width .vce-single-image-figure-inner {
-    width: 26vw !important;
+    width: 200px !important;
   }
 }
 .cd-about-col-left .details .vce-single-image-container.full-width img {
