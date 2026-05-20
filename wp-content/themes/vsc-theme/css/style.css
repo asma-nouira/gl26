@@ -1728,6 +1728,9 @@ body {
 .cd-content-section .vce-col-content {
   padding: 0 !important;
 }
+.cd-content-section h2 {
+  padding-bottom: 2.6vw;
+}
 .cd-content-section p {
   font-family: "Manrope", sans-serif;
   font-size: clamp(0.875rem, 0.94vw, 1.125rem);
