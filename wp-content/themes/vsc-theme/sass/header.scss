@@ -1,7 +1,7 @@
 /* ============================================================
    HEADER — Clinique Dentaire Geneviève Lafrance
    Fichier : sass/header.scss
-   Adapté à la structure WordPress wp_nav_menu (menu-1 / #primary-menu)
+   Tous les px convertis en vw pour responsive fluide
    ============================================================ */
 
 /* --- Variables locales --- */
@@ -26,16 +26,15 @@ $transition:   all 0.3s ease;
     right: 0;
     z-index: 1000;
     background: $white;
-    padding: 0 140px;
-    min-height: 144px;
+    padding: 0 7.3vw;
+    min-height: 7.5vw;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* logo gauche | nav+boutons droite */
+    justify-content: space-between;
     transition: box-shadow 0.4s ease, height 0.4s ease, background 0.4s ease;
 
     &.scrolled {
-        height: 60px;
-        min-height: 30px;
+        min-height: 3.1vw;
         box-shadow: 0 2px 20px rgba(0,0,0,0.08);
         background: rgba(255,255,255,0.97);
         backdrop-filter: blur(8px);
@@ -57,7 +56,8 @@ $transition:   all 0.3s ease;
     animation: fadeInLeft 0.6s ease 0.1s forwards;
 
     img.custom-logo {
-        height: 50px;
+        height: 2.6vw;
+        min-height: 36px;
         width: auto;
         display: block;
         transition: $transition;
@@ -70,25 +70,21 @@ $transition:   all 0.3s ease;
 
 /* ============================================================
    NAVIGATION WORDPRESS — #primary-menu
-   wp_nav_menu génère : <div class="menu-..."><ul id="primary-menu">
    ============================================================ */
 
-/* Wrapper généré par WordPress — on le neutralise */
 .site-header nav > div {
     display: flex;
     align-items: center;
 }
 
-/* La <ul> principale */
 #primary-menu {
     display: flex;
     align-items: center;
-    gap: 22px;
+    gap: 1.15vw;
     list-style: none;
     margin: 0;
     padding: 0;
 
-    /* Animation cascade sur les <li> */
     > li {
         position: relative;
         opacity: 0;
@@ -104,7 +100,6 @@ $transition:   all 0.3s ease;
         &:nth-child(8) { animation-delay: 0.64s; }
         &:nth-child(9) { animation-delay: 0.71s; }
 
-        /* Lien par défaut */
         > a {
             font-family: $font-heading;
             font-size: 1.25rem;
@@ -117,7 +112,6 @@ $transition:   all 0.3s ease;
             transition: color 0.3s ease;
             display: inline-block;
 
-            /* Underline animé au hover */
             &::after {
                 content: '';
                 position: absolute;
@@ -135,7 +129,6 @@ $transition:   all 0.3s ease;
             }
         }
 
-        /* Lien actif — WordPress ajoute current-menu-item */
         &.current-menu-item > a,
         &.current-menu-ancestor > a {
             color: $accent;
@@ -144,12 +137,11 @@ $transition:   all 0.3s ease;
             text-decoration-color: $accent;
         }
 
-        /* ---- Item avec sous-menu (Services) ---- */
+        /* ---- Sous-menu (Services) ---- */
         &.menu-item-has-children {
             > a {
                 padding-right: 18px;
 
-                /* Flèche discrète */
                 &::before {
                     content: '▾';
                     position: absolute;
@@ -166,7 +158,6 @@ $transition:   all 0.3s ease;
                 transform: translateY(-50%) rotate(180deg);
             }
 
-            /* ---- SOUS-MENU dropdown ---- */
             > .sub-menu {
                 display: block;
                 visibility: hidden;
@@ -185,7 +176,6 @@ $transition:   all 0.3s ease;
                 transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
                 z-index: 999;
 
-                /* Petite flèche pointant vers le haut */
                 &::before {
                     content: '';
                     position: absolute;
@@ -230,7 +220,6 @@ $transition:   all 0.3s ease;
                 }
             }
 
-            /* Afficher le sous-menu au hover */
             &:hover > .sub-menu {
                 visibility: visible;
                 opacity: 1;
@@ -240,11 +229,9 @@ $transition:   all 0.3s ease;
     }
 
     /* ============================================================
-     BOUTONS DANS LE MENU (via classe CSS dans WordPress)
-     Classes ajoutées dans Apparence > Menus > Classes CSS
-     ============================================================ */
+       BOUTONS DANS LE MENU
+       ============================================================ */
 
-    /* btn-phone → li avec classe btn-phone */
     li.btn-phone {
         opacity: 1;
         animation: fadeInRight 0.6s ease 0.5s forwards;
@@ -252,7 +239,7 @@ $transition:   all 0.3s ease;
         > a {
             display: inline-flex;
             align-items: center;
-            padding: 9px 18px;
+            padding: 0.47vw 0.94vw;
             background: $accent;
             color: $white !important;
             font-family: $font-body;
@@ -263,7 +250,6 @@ $transition:   all 0.3s ease;
             white-space: nowrap;
             transition: $transition;
 
-            /* Pas d'underline sur le bouton */
             &::after { display: none; }
             &::before { display: none; }
 
@@ -276,7 +262,6 @@ $transition:   all 0.3s ease;
         }
     }
 
-    /* btn-coin-enfant → li avec classe btn-coin-enfant */
     li.btn-coin-enfant {
         opacity: 1;
         animation: fadeInRight 0.6s ease 0.58s forwards;
@@ -284,7 +269,7 @@ $transition:   all 0.3s ease;
         > a {
             display: inline-flex;
             align-items: center;
-            padding: 9px 20px;
+            padding: 0.47vw 1vw;
             background: $dark;
             color: $white !important;
             font-family: $font-body;
@@ -337,80 +322,15 @@ $transition:   all 0.3s ease;
 }
 
 /* ============================================================
-   HERO SECTION
+   HERO SIDEBAR — Fixed
    ============================================================ */
 
-.hero-section {
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    margin-top: 70px;
-}
-
-.hero-bg {
-    position: absolute;
-    inset: 0;
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    transform: scale(1.05);
-    animation: heroZoom 8s ease forwards;
-}
-
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to right,
-        rgba(36,36,36,0.55) 0%,
-        rgba(36,36,36,0.2) 50%,
-        rgba(36,36,36,0) 80%
-    );
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    padding: 60px 80px;
-    max-width: 550px;
-}
-
-.hero-title {
-    font-family: $font-heading;
-    font-size: 3.2rem;
-    font-weight: 400;
-    color: $white;
-    line-height: 1.15;
-    margin-bottom: 24px;
-    opacity: 0;
-    transform: translateX(-30px);
-    animation: fadeInLeft 0.8s ease 0.4s forwards;
-}
-
-.hero-address {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    color: rgba(255,255,255,0.85);
-    font-family: $font-body;
-    font-size: 0.9rem;
-    line-height: 1.5;
-    opacity: 0;
-    transform: translateX(-20px);
-    animation: fadeInLeft 0.7s ease 0.7s forwards;
-
-    svg { flex-shrink: 0; margin-top: 2px; color: $accent; }
-}
-
 .hero-sidebar {
-    position: absolute;
+    position: fixed;
     right: 0;
-    top: 50%;
+    top: 30%;
     transform: translateY(-50%);
-    z-index: 10;
+    z-index: 999;
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -422,19 +342,26 @@ $transition:   all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 140px;
-    height: 140px;
+    width: 7.3vw;
+    height: 7.3vw;
+    min-width: 60px;
+    min-height: 60px;
     background: #BF9F94;
     color: $white;
     text-decoration: none;
     transition: $transition;
     backdrop-filter: blur(4px);
 
-    svg { width: 70px; height: 65px; }
+    svg {
+        width: 3.6vw;
+        height: 3.4vw;
+        min-width: 28px;
+        min-height: 26px;
+    }
 
     &:hover {
         background: #625756;
-        width: 150px;
+        width: 7.8vw;
     }
 }
 
@@ -463,24 +390,9 @@ $transition:   all 0.3s ease;
 }
 
 /* ============================================================
-   RESPONSIVE — TABLETTE (1024px)
+   Current page — toutes les classes WordPress
    ============================================================ */
-@media (max-width: 1440px) {
-    .site-header { padding: 0 100px; }
-}
-@media (max-width: 1024px) {
-    .site-header { padding: 0 24px; }
 
-    #primary-menu {
-        gap: 18px;
-        > li > a { font-size: 16px; }
-    }
-
-    .hero-content { padding: 40px; }
-    .hero-title   { font-size: 2.5rem; }
-}
-
-/* Current page — toutes les classes WordPress */
 #primary-menu > li.current-menu-item > a,
 #primary-menu > li.current-menu-ancestor > a,
 #primary-menu > li.current-page-ancestor > a,
@@ -490,99 +402,4 @@ $transition:   all 0.3s ease;
     text-decoration: underline;
     text-underline-offset: 5px;
     text-decoration-color: #C58E80;
-}
-.hero-sidebar {
-    position: fixed; /* fixed au lieu de absolute */
-    right: 0;
-    top: 30%;
-    transform: translateY(-50%);
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    opacity: 0;
-    animation: fadeInRight 0.7s ease 0.9s forwards;
-}
-
-/* ============================================================
-   RESPONSIVE — MOBILE (768px)
-   ============================================================ */
-
-@media (max-width: 768px) {
-    .site-header { padding: 0 20px; }
-
-    .hamburger { display: flex; }
-
-    /* Nav mobile : dropdown depuis le haut */
-    .site-header nav > div {
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        display: none;
-        background: $white;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
-        z-index: 999;
-
-        &.open { display: block; }
-    }
-
-    #primary-menu {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0;
-        padding: 12px 0;
-
-        > li {
-            width: 100%;
-            opacity: 1 !important;
-            animation: none !important;
-
-            > a {
-                display: block;
-                padding: 14px 24px;
-                font-size: 1rem;
-                border-bottom: 1px solid #f0efeb;
-                &::after { display: none; }
-            }
-
-            /* Sous-menu mobile : visible en accordéon */
-            &.menu-item-has-children {
-                > .sub-menu {
-                    position: static;
-                    visibility: visible;
-                    opacity: 1;
-                    transform: none;
-                    box-shadow: none;
-                    border-radius: 0;
-                    padding: 0;
-                    display: none;
-                    background: $bg-warm;
-
-                    &::before { display: none; }
-
-                    li a {
-                        padding-left: 36px;
-                        font-size: 14px;
-                        border-left: none;
-                        border-bottom: 1px solid #ece9e4;
-                    }
-                }
-
-                &.open > .sub-menu { display: block; }
-            }
-
-            /* Boutons en mobile : pleine largeur */
-            &.btn-phone > a,
-            &.btn-coin-enfant > a {
-                margin: 8px 16px;
-                justify-content: center;
-                border-radius: 50px;
-            }
-        }
-    }
-
-    .hero-content  { padding: 30px 24px; max-width: 100%; }
-    .hero-title    { font-size: 2rem; }
-    .hero-sidebar  { display: none; }
 }
