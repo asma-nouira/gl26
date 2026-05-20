@@ -124,9 +124,9 @@ html, body {
   }
 }
 /* ============================================================
-   MOBILE — max 767px
+   MOBILE — max 768px
    ============================================================ */
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   /* ---- HEADER ---- */
   .site-header {
     height: 60px !important;
