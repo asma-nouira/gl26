@@ -1428,8 +1428,15 @@ h2 {
   font-family: "Manrope", sans-serif;
   font-size: clamp(0.875rem, 0.9375vw, 1.125rem);
   color: var(--cd-text);
+  flex-grow: 1;
+  margin-bottom: 1vw;
+  /* Limite à 3 lignes exactement */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   line-height: 1.65;
-  margin: 0 0 1vw;
+  min-height: 4.95em; /* Force la hauteur de 3 lignes */
 }
 .cd-blog-card .cd-blog-card-link {
   font-family: "Manrope", sans-serif;
