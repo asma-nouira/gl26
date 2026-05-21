@@ -1733,14 +1733,14 @@ h2 {
   font-weight: 400;
   color: #ffffff;
   line-height: 1.11;
-  margin: 0;
+  margin-bottom: 0.5vw;
 }
 .cd-urgence-cta .cd-urgence-cta-text p {
   font-family: "Manrope", sans-serif;
   font-size: clamp(0.875rem, 0.94vw, 1.125rem);
   color: #fff;
   line-height: 1.38;
-  margin: 0;
+  margin-bottom: 0.5vw;
 }
 
 /* Responsive */
