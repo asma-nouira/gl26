@@ -261,7 +261,7 @@
 
     .cd-blog-card-excerpt {
         font-family: 'Manrope', sans-serif;
-        font-size: clamp(0.8rem, 0.73vw, 0.875rem);
+       font-size: clamp(0.875rem, 0.9375vw, 1.125rem);
         color: var(--cd-text);
         line-height: 1.65;
         margin: 0 0 1vw;
@@ -269,7 +269,7 @@
 
     .cd-blog-card-link {
         font-family: 'Manrope', sans-serif;
-        font-size: clamp(0.75rem, 0.73vw, 0.875rem);
+       font-size: clamp(0.875rem, 0.9375vw, 1.125rem);
         color: var(--cd-brown);
         text-decoration: underline;
         text-underline-offset: 0.2vw;
