@@ -1749,6 +1749,9 @@ body {
 .cd-team-circles-section {
   padding: 0 24.47vw 6.9vw 25.15vw;
 }
+.cd-team-circles-section .cd-team-circles {
+  padding-bottom: 0;
+}
 
 /* ============================================================
    CITATION — cd-quote-section
