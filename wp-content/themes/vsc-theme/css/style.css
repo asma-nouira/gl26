@@ -1788,6 +1788,9 @@ body {
 .cd-other-team h2 {
   padding-bottom: 3.12vw;
 }
+.cd-other-team .cd-team-grid-item {
+  margin-bottom: 3.64vw;
+}
 .cd-other-team .cd-team-grid-item .vce-single-image-figure-inner {
   width: 15.62vw !important;
   height: 15.62vw !important;
