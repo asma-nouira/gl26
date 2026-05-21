@@ -52,6 +52,8 @@ get_header(); ?>
     </div>
 
 
+
+</article>
 <div class="cd-back-to-blog">
     <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="cd-back-link">
         ← Revenir aux articles
@@ -60,7 +62,7 @@ get_header(); ?>
 
 <section class="cd-urgence-cta">
     <div class="cd-urgence-cta-img">
-        <img src="<?php echo get_template_directory_uri(); ?>/images/urgence-secretaire.jpg" 
+        <img src="/wp-content/uploads/2026/05/Une-urgence.jpg" 
              alt="Urgence dentaire">
     </div>
     <div class="cd-urgence-cta-text">
@@ -69,6 +71,4 @@ get_header(); ?>
         <a href="tel:+14188672260" class="cd-btn cd-btn-dark">418 867-2260</a>
     </div>
 </section>
-</article>
-
 <?php get_footer(); ?>
