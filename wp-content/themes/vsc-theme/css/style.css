@@ -1802,6 +1802,9 @@ body {
   line-height: 1.6;
   padding-bottom: 1vw;
 }
+.cd-other-team .cd-team-grid-item:last-child {
+  margin-bottom: 0;
+}
 
 /* ============================================================
    CITATION — cd-quote-section
