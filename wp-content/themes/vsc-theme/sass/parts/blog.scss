@@ -324,16 +324,6 @@
 .cd-article-header {
     text-align: center;
     margin-bottom: 2vw;
-
-    /* Grand titre section "Blogue" */
-    &::before {
-        content: 'Blogue';
-        display: block;
-        font-family: 'SuperBlue', serif;
-        font-size: clamp(1.5rem, 2.35vw, 2.8125rem);
-        color: #625756;
-        margin-bottom: 4.68vw;
-    }
 }
 
 .cd-article-title {
@@ -514,7 +504,7 @@
     font-family: 'SuperBlue', serif;
     font-size: clamp(1.5rem, 2.35vw, 2.8125rem);
     font-weight: 400;
-    color: var(--cd-dark);
+    color:#625756;
     text-align: center;
     margin: 0 0 1.5vw;
 }
