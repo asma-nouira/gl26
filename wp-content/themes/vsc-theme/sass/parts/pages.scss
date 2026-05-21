@@ -129,9 +129,12 @@
         padding-bottom: 3.12vw;
     }
     .cd-team-grid-item{
-        img{
+        .vce-single-image-figure-inner {
+            width: 15.62vw !important;
+            height: 15.62vw !important;
             padding-bottom: 2.08vw;
         }
+   
         .name{
         font-family: 'SuperBlue', serif;
          font-size: clamp(1rem, 1.5625vw, 1.875rem); 
