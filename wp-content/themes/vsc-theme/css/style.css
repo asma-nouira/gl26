@@ -1474,9 +1474,7 @@ h2 {
    PAGE ARTICLE SINGLE
    ============================================================ */
 .cd-single-article {
-  max-width: 48vw;
-  margin: 0 auto;
-  padding: 4vw 0 6vw;
+  padding: 4vw 21.66vw;
 }
 
 /* En-tête */
