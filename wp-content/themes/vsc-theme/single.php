@@ -12,7 +12,6 @@ get_header(); ?>
         <div class="vce-asset-background-simple-item"
              style="background-image: url('/wp-content/uploads/2026/05/Articles-informatifs.jpg');">
         </div>
-        <div class="vce-content-background-container" style="position:absolute;inset:0;background:rgba(36,36,36,0.45);z-index:1;"></div>
     </div>
     <div class="cd-hero-col" style="position:relative;z-index:2;">
         <h1 class="hero-title_page">Articles informatifs</h1>
