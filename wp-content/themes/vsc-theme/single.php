@@ -28,12 +28,7 @@ get_header(); ?>
     <h2 class="cd-blog-main-title">Blogue</h2>
 
     <p class="cd-blog-intro">
-        Dre Geneviève Lafrance, Dre Mylène Gagnon et leur équipe de la Clinique dentaire 
-        Geneviève Lafrance de Rivière-du-Loup vous proposent ces quelques articles informatifs. 
-        Vous pourrez apprendre davantage sur les conséquences de vos brosses sur les maladies 
-        et conditions qui peuvent les toucher, de même que sur les moyens de les prévenir ou 
-        d'y remédier. C'est pour nous une autre manière, en plus des soins de qualité que nous 
-        offrons, de vous accompagner sur le chemin de la santé buccodentaire.
+        Dre Geneviève Lafrance , Dre Mylène Gagnon et leur équipe de la Clinique dentaire Geneviève Lafrance de Rivière-du-Loup vous proposent ces quelques articles informatifs. Vous pourrez ainsi en apprendre davantage sur les composantes de votre bouche, sur les maladies et conditions qui peuvent les toucher, de même que sur les moyens de les prévenir ou d’y remédier. C’est pour nous une autre manière, en plus des soins de qualité que nous offrons,de vous accompagner sur le chemin de la santé buccodentaire !
     </p>
 
     <h3 class="cd-article-title"><?php the_title(); ?></h3>
