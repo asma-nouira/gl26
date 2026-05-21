@@ -275,4 +275,97 @@ function print_menuf_shortcode($atts, $content = null) {
 }
 add_shortcode('footer_menu2', 'print_menuf_shortcode');
 
+add_shortcode('cd_blog_grid', function($atts) {
+
+    $atts = shortcode_atts(array(
+        'posts'    => 6,
+        'category' => '',
+    ), $atts);
+
+    /* Page courante */
+    $paged = get_query_var('paged') ? get_query_var('paged') : 1;
+
+    $args = array(
+        'post_type'      => 'post',
+        'posts_per_page' => intval($atts['posts']),
+        'post_status'    => 'publish',
+        'orderby'        => 'date',
+        'order'          => 'DESC',
+        'paged'          => $paged,
+    );
+
+    if (!empty($atts['category'])) {
+        $args['category_name'] = sanitize_text_field($atts['category']);
+    }
+
+    $query = new WP_Query($args);
+
+    if (!$query->have_posts()) return '<p>Aucun article trouvé.</p>';
+
+    $html = '<div class="cd-blog-grid-wrap">';
+
+    while ($query->have_posts()) {
+        $query->the_post();
+
+        $title     = get_the_title();
+        $permalink = get_the_permalink();
+        $excerpt   = get_the_excerpt();
+
+        $thumb = has_post_thumbnail()
+            ? get_the_post_thumbnail(get_the_ID(), 'large', array('class' => 'cd-blog-card-img'))
+            : '<div class="cd-blog-card-no-img"></div>';
+
+        $html .= '
+        <article class="cd-blog-card">
+            <a href="' . esc_url($permalink) . '" class="cd-blog-card-img-wrap">
+                ' . $thumb . '
+            </a>
+            <div class="cd-blog-card-body">
+                <h3 class="cd-blog-card-title">
+                    <a href="' . esc_url($permalink) . '">' . esc_html($title) . '</a>
+                </h3>
+                <p class="cd-blog-card-excerpt">' . esc_html($excerpt) . '</p>
+                <a href="' . esc_url($permalink) . '" class="cd-blog-card-link">Lire plus</a>
+            </div>
+        </article>';
+    }
+
+    $html .= '</div>';
+
+    /* ---- PAGINATION ---- */
+    $total_pages = $query->max_num_pages;
+
+    if ($total_pages > 1) {
+
+        $current_page = max(1, $paged);
+
+        $html .= '<div class="cd-blog-pagination">';
+
+        /* Bouton Précédent */
+        if ($current_page > 1) {
+            $html .= '<a href="' . esc_url(get_pagenum_link($current_page - 1)) . '" 
+                         class="cd-page-btn cd-page-prev">←</a>';
+        }
+
+        /* Numéros de pages */
+        for ($i = 1; $i <= $total_pages; $i++) {
+            $active = ($i == $current_page) ? ' cd-page-active' : '';
+            $html .= '<a href="' . esc_url(get_pagenum_link($i)) . '" 
+                         class="cd-page-btn' . $active . '">' . $i . '</a>';
+        }
+
+        /* Bouton Suivant */
+        if ($current_page < $total_pages) {
+            $html .= '<a href="' . esc_url(get_pagenum_link($current_page + 1)) . '" 
+                         class="cd-page-btn cd-page-next">→</a>';
+        }
+
+        $html .= '</div>';
+    }
+
+    wp_reset_postdata();
+
+    return $html;
+});
+
 include_once "integrated_vc.php";

@@ -130,3 +130,62 @@
 .cd-content-section.blog-cd{
     padding: 1.56vw 21.66vw 2.86vw;
 }
+
+/* ---- Pagination ---- */
+.cd-blog-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    padding: 3vw 0 4vw;
+
+    .cd-page-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5vw;
+        height: 2.5vw;
+        min-width: 36px;
+        min-height: 36px;
+        border-radius: 50%;
+        border: 0.1vw solid var(--cd-border);
+        background: #ffffff;
+        color: var(--cd-brown);
+        font-family: 'Manrope', sans-serif;
+        font-size: clamp(0.8rem, 0.83vw, 1rem);
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: var(--cd-brown);
+            border-color: var(--cd-brown);
+            color: #ffffff;
+        }
+
+        /* Page active */
+        &.cd-page-active {
+            background: var(--cd-brown);
+            border-color: var(--cd-brown);
+            color: #ffffff;
+            font-weight: 700;
+        }
+    }
+
+    /* Flèches légèrement plus grandes */
+    .cd-page-prev,
+    .cd-page-next {
+        border-color: var(--cd-brown);
+        color: var(--cd-brown);
+        font-size: clamp(0.9rem, 1vw, 1.2rem);
+    }
+
+    @media (max-width: 768px) {
+        gap: 2vw;
+        padding: 6vw 0 8vw;
+
+        .cd-page-btn {
+            width: 8vw;
+            height: 8vw;
+        }
+    }
+}
