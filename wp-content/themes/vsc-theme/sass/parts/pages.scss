@@ -142,9 +142,12 @@
          line-height: 1.6;
          padding-bottom: 1vw;
         }
-        &:last-child{
-        margin-bottom: 0;
+       
     }
+    .cd-team-grid:last-child{
+        .cd-team-grid-item{
+            margin-bottom: 0;
+        }
     }
     
 }

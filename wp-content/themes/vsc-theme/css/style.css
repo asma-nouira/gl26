@@ -1802,7 +1802,7 @@ body {
   line-height: 1.6;
   padding-bottom: 1vw;
 }
-.cd-other-team .cd-team-grid-item:last-child {
+.cd-other-team .cd-team-grid:last-child .cd-team-grid-item {
   margin-bottom: 0;
 }
 
