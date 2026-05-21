@@ -1791,7 +1791,7 @@ body {
 .cd-other-team .cd-team-grid-item .vce-single-image-figure-inner {
   width: 15.62vw !important;
   height: 15.62vw !important;
-  padding-bottom: 2.08vw;
+  margin-bottom: 2.08vw;
 }
 .cd-other-team .cd-team-grid-item .name {
   font-family: "SuperBlue", serif;
