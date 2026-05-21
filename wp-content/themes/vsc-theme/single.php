@@ -51,25 +51,25 @@ get_header(); ?>
         <?php the_content(); ?>
     </div>
 
-    <!-- Navigation entre articles -->
-    <nav class="cd-article-nav">
-        <?php
-        $prev = get_previous_post();
-        $next = get_next_post();
+/* Lien retour */
+<div class="cd-back-to-blog">
+    <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="cd-back-link">
+        ← Revenir aux articles
+    </a>
+</div>
 
-        if ($prev) : ?>
-            <a href="<?php echo get_permalink($prev); ?>" class="cd-article-nav-btn cd-article-nav-prev">
-                ← <?php echo esc_html(get_the_title($prev)); ?>
-            </a>
-        <?php endif;
-
-        if ($next) : ?>
-            <a href="<?php echo get_permalink($next); ?>" class="cd-article-nav-btn cd-article-nav-next">
-                <?php echo esc_html(get_the_title($next)); ?> →
-            </a>
-        <?php endif; ?>
-    </nav>
-
+/* Section urgence */
+<section class="cd-urgence-cta">
+    <div class="cd-urgence-cta-img">
+        <img src="<?php echo get_template_directory_uri(); ?>/images/urgence-secretaire.jpg" 
+             alt="Urgence dentaire">
+    </div>
+    <div class="cd-urgence-cta-text">
+        <h2>Une urgence ?<br>N'attendez pas plus longtemps !</h2>
+        <p>En cas d'urgence, contactez-nous et nous trouverons un moment, à l'intérieur de nos heures d'ouverture, pour évaluer votre cas et vous proposer des soins pour vous soulager et vous éviter bien des complications.</p>
+        <a href="tel:+14188672260" class="cd-btn cd-btn-dark">418 867-2260</a>
+    </div>
+</section>
 </article>
 
 <?php get_footer(); ?>
