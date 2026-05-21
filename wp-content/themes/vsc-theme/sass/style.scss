@@ -617,6 +617,7 @@ body .wpcf7-mail-sent-ok {
       }
 }
 .cd-services-list {
+    padding-bottom:2.08vw ;
     h3 {
         font-family: 'SuperBlue', serif;
         font-size: clamp(1rem, 1.25vw, 1.5rem);
@@ -634,14 +635,14 @@ body .wpcf7-mail-sent-ok {
             font-family: 'Manrope', sans-serif;
             font-size: clamp(0.875rem, 0.94vw, 1.125rem);
             color: var(--cd-text);
-            padding: 0.5vw 0;
+            padding: 0.2vw 0;
             display: flex;
             align-items: center;
             font-weight: 700;
 
             &::before {
                 content: '›';
-                color: var(--cd-accent);
+                color: #383839;
                 font-size: clamp(0.875rem, 0.94vw, 1.125rem);
                 font-weight: 700;
             }
