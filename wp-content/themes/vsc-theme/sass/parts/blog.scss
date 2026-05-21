@@ -326,11 +326,19 @@
 
 .cd-article-title {
     font-family: 'SuperBlue', serif;
-    font-size: clamp(1.2rem, 1.875vw, 2.25rem);
+    font-size: clamp(1.5rem, 2.34375vw, 2.8125rem);
     font-weight: 400;
-    color: var(--cd-dark);
+    color: #625756;
     margin: 0 0 0.8vw;
-    line-height: 1.2;
+    line-height: 1.11;
+     &::after {
+        content: '•';
+        display: block;
+        color: #BF9F94;
+        font-size: clamp(1rem, 1.25vw, 1.5rem);
+        margin-top: 0.5vw;
+        line-height: 1;
+    }
 }
 
 .cd-article-meta {
