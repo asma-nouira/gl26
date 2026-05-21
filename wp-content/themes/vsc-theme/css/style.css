@@ -1371,7 +1371,6 @@ h2 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2vw;
-  padding: 4vw 7vw;
 }
 
 .cd-blog-card {
