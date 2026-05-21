@@ -97,12 +97,16 @@
          font-family: 'SuperBlue', serif;
          font-size: clamp(1rem, 1.5625vw, 1.875rem);
          padding-bottom: 1.56vw;
+         color: #BF9F94;
 
     }
     .cd-team-member-img{
         img{
             border-radius: 40px;
         }
+    }
+    &:last-child{
+        padding-bottom:5.8vw ;
     }
 
 }
