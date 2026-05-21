@@ -612,7 +612,7 @@ body .wpcf7-mail-sent-ok {
 }
 .cd-infos-contact{
      padding: 0  21.66vw  5vw;
-      .cd-img-clinic{
+      .cd-img-clinic img{
         border-radius: 40px;
       }
 }
@@ -622,7 +622,7 @@ body .wpcf7-mail-sent-ok {
         font-family: 'SuperBlue', serif;
         font-size: clamp(1rem, 1.25vw, 1.5rem);
         color: #BF9F94;
-        margin-bottom: 1.5vw;
+        margin-bottom: 1vw;
         font-weight: 700;
     }
 
@@ -645,6 +645,7 @@ body .wpcf7-mail-sent-ok {
                 color: #383839;
                 font-size: clamp(0.875rem, 0.94vw, 1.125rem);
                 font-weight: 700;
+                padding-right: 1.1vw;
             }
 
             a {
