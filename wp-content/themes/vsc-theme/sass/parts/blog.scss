@@ -331,8 +331,8 @@
         display: block;
         font-family: 'SuperBlue', serif;
         font-size: clamp(1.5rem, 2.35vw, 2.8125rem);
-        color: var(--cd-dark);
-        margin-bottom: 1vw;
+        color: #625756;
+        margin-bottom: 4.68vw;
     }
 }
 
@@ -509,4 +509,25 @@
             padding: 10vw 5vw !important;
         }
     }
+}
+.cd-blog-main-title {
+    font-family: 'SuperBlue', serif;
+    font-size: clamp(1.5rem, 2.35vw, 2.8125rem);
+    font-weight: 400;
+    color: var(--cd-dark);
+    text-align: center;
+    margin: 0 0 1.5vw;
+}
+
+.cd-blog-intro {
+    font-family: 'Manrope', sans-serif;
+    font-size: clamp(0.875rem, 0.9375vw, 1.125rem);
+    color: var(--cd-text);
+    line-height: 1.75;
+    text-align: center;
+    max-width: 48vw;
+    margin: 0 auto 3vw;
+    padding: 1.5vw 2vw;
+    border: 0.05vw dashed var(--cd-border);
+    border-radius: 0.5vw;
 }

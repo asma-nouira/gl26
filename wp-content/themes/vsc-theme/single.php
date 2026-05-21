@@ -20,16 +20,30 @@ get_header(); ?>
 
 <!-- Contenu article -->
 <article class="cd-single-article">
-
+     
     <!-- En-tête article -->
-    <header class="cd-article-header">
-        <h2 class="cd-article-title"><?php the_title(); ?></h2>
-        <div class="cd-article-meta">
-            Publié le <?php echo get_the_date('Y / m / d'); ?>
-            par <?php the_author(); ?>
-        </div>
-    </header>
+  <!-- En-tête article -->
+<header class="cd-article-header">
 
+    <h2 class="cd-blog-main-title">Blogue</h2>
+
+    <p class="cd-blog-intro">
+        Dre Geneviève Lafrance, Dre Mylène Gagnon et leur équipe de la Clinique dentaire 
+        Geneviève Lafrance de Rivière-du-Loup vous proposent ces quelques articles informatifs. 
+        Vous pourrez apprendre davantage sur les conséquences de vos brosses sur les maladies 
+        et conditions qui peuvent les toucher, de même que sur les moyens de les prévenir ou 
+        d'y remédier. C'est pour nous une autre manière, en plus des soins de qualité que nous 
+        offrons, de vous accompagner sur le chemin de la santé buccodentaire.
+    </p>
+
+    <h3 class="cd-article-title"><?php the_title(); ?></h3>
+
+    <div class="cd-article-meta">
+        Publié le <?php echo get_the_date('Y / m / d'); ?>
+        par <?php the_author(); ?>
+    </div>
+
+</header>
     <!-- Image mise en avant -->
     <?php if (has_post_thumbnail()) : ?>
     <div class="cd-article-thumbnail">
