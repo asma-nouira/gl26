@@ -3180,4 +3180,55 @@ body .wpcf7-mail-sent-ok {
 .contact-form {
   padding: 1.8vw 1.5vw 1vw 1.5vw;
 }
+
+.cd-content-section.cd-contact {
+  padding: 1.19vw 21.66vw 3.64vw;
+}
+
+.cd-infos-contact {
+  padding: 0 21.66vw 5vw;
+}
+.cd-infos-contact .cd-img-clinic {
+  border-radius: 40px;
+}
+
+.cd-services-list h3 {
+  font-family: "SuperBlue", serif;
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
+  color: #BF9F94;
+  margin-bottom: 1.5vw;
+}
+.cd-services-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cd-services-list ul li {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.875rem, 0.9375vw, 1.125rem);
+  color: var(--cd-text);
+  padding: 0.5vw 0;
+  border-bottom: 0.05vw solid var(--cd-border);
+  display: flex;
+  align-items: center;
+  gap: 0.8vw;
+  font-weight: 700;
+}
+.cd-services-list ul li::before {
+  content: "›";
+  color: var(--cd-accent);
+  font-size: 1.2em;
+  font-weight: 700;
+}
+.cd-services-list ul li a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.cd-services-list ul li a:hover {
+  color: var(--cd-accent);
+}
+.cd-services-list ul li:last-child {
+  border-bottom: none;
+}
 /*# sourceMappingURL=../css/style.css.map */
