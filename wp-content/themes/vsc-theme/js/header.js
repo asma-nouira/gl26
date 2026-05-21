@@ -68,5 +68,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ).forEach(function (el) {
         observer.observe(el);
     });
-
+document.querySelectorAll(
+    '.cd-fade-in, .cd-fade-left, .cd-fade-right, .cd-service-card, .cd-team-member'
+).forEach(el => observer.observe(el));
 });
