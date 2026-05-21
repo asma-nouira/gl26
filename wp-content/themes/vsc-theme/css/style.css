@@ -1785,6 +1785,18 @@ body {
 .cd-other-team {
   padding: 6.66vw 14.47vw 12.13vw 14.79vw;
 }
+.cd-other-team h2 {
+  padding-bottom: 3.12vw;
+}
+.cd-other-team .cd-team-grid-item img {
+  padding-bottom: 2.08vw;
+}
+.cd-other-team .cd-team-grid-item .name {
+  font-family: "SuperBlue", serif;
+  font-size: clamp(1rem, 1.5625vw, 1.875rem);
+  line-height: 1.6;
+  padding-bottom: 1vw;
+}
 
 /* ============================================================
    CITATION — cd-quote-section
