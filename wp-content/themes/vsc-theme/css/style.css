@@ -1471,6 +1471,143 @@ h2 {
   }
 }
 /* ============================================================
+   PAGE ARTICLE SINGLE
+   ============================================================ */
+.cd-single-article {
+  max-width: 48vw;
+  margin: 0 auto;
+  padding: 4vw 0 6vw;
+}
+
+/* En-tête */
+.cd-article-header {
+  text-align: center;
+  margin-bottom: 2vw;
+  /* Grand titre section "Blogue" */
+}
+.cd-article-header::before {
+  content: "Blogue";
+  display: block;
+  font-family: "SuperBlue", serif;
+  font-size: clamp(1.5rem, 2.35vw, 2.8125rem);
+  color: var(--cd-dark);
+  margin-bottom: 1vw;
+}
+
+.cd-article-title {
+  font-family: "SuperBlue", serif;
+  font-size: clamp(1.2rem, 1.875vw, 2.25rem);
+  font-weight: 400;
+  color: var(--cd-dark);
+  margin: 0 0 0.8vw;
+  line-height: 1.2;
+}
+
+.cd-article-meta {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.75rem, 0.73vw, 0.875rem);
+  color: var(--cd-text-light);
+  margin-bottom: 2vw;
+}
+
+/* Image */
+.cd-article-thumbnail {
+  margin-bottom: 2vw;
+  border-radius: 1vw;
+  overflow: hidden;
+}
+.cd-article-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Contenu */
+.cd-article-content {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.875rem, 0.9375vw, 1.125rem);
+  color: var(--cd-text);
+  line-height: 1.75;
+}
+.cd-article-content p {
+  margin-bottom: 1.2vw;
+}
+.cd-article-content h2, .cd-article-content h3 {
+  font-family: "SuperBlue", serif;
+  color: var(--cd-brown);
+  margin: 2vw 0 1vw;
+}
+.cd-article-content img {
+  max-width: 100%;
+  border-radius: 0.5vw;
+  margin: 1vw 0;
+}
+.cd-article-content a {
+  color: var(--cd-accent);
+  text-decoration: underline;
+}
+.cd-article-content a:hover {
+  color: var(--cd-brown);
+}
+.cd-article-content strong {
+  color: var(--cd-dark);
+}
+.cd-article-content ul, .cd-article-content ol {
+  padding-left: 1.5vw;
+  margin-bottom: 1.2vw;
+}
+.cd-article-content ul li, .cd-article-content ol li {
+  margin-bottom: 0.4vw;
+}
+
+/* Navigation entre articles */
+.cd-article-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 2vw;
+  margin-top: 4vw;
+  padding-top: 2vw;
+  border-top: 0.05vw solid var(--cd-border);
+}
+
+.cd-article-nav-btn {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.8rem, 0.83vw, 1rem);
+  color: var(--cd-brown);
+  text-decoration: none;
+  transition: color 0.3s ease;
+  max-width: 45%;
+  line-height: 1.4;
+}
+.cd-article-nav-btn:hover {
+  color: var(--cd-accent);
+}
+.cd-article-nav-btn.cd-article-nav-next {
+  text-align: right;
+  margin-left: auto;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cd-single-article {
+    max-width: 70vw;
+  }
+}
+@media (max-width: 768px) {
+  .cd-single-article {
+    max-width: 100%;
+    padding: 8vw 5vw 10vw;
+  }
+  .cd-article-nav {
+    flex-direction: column;
+    gap: 4vw;
+  }
+  .cd-article-nav-btn.cd-article-nav-next {
+    text-align: left;
+    margin-left: 0;
+  }
+}
+/* ============================================================
    FOOTER — Clinique Dentaire Geneviève Lafrance
    Tous les px convertis en vw
    ============================================================ */
