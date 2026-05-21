@@ -1526,9 +1526,6 @@ h2 {
   color: var(--cd-text);
   line-height: 1.75;
 }
-.cd-article-content p {
-  margin-bottom: 1.2vw;
-}
 .cd-article-content h2, .cd-article-content h3 {
   font-family: "SuperBlue", serif;
   color: #BF9F94;
