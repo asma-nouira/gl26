@@ -1301,6 +1301,10 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+.cd-content-section.blog-cd {
+  padding: 1.56vw 21.66vw 2.86vw;
+}
+
 /* ============================================================
    FOOTER — Clinique Dentaire Geneviève Lafrance
    Tous les px convertis en vw
