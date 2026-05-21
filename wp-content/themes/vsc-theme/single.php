@@ -51,14 +51,13 @@ get_header(); ?>
         <?php the_content(); ?>
     </div>
 
-/* Lien retour */
+
 <div class="cd-back-to-blog">
     <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="cd-back-link">
         ← Revenir aux articles
     </a>
 </div>
 
-/* Section urgence */
 <section class="cd-urgence-cta">
     <div class="cd-urgence-cta-img">
         <img src="<?php echo get_template_directory_uri(); ?>/images/urgence-secretaire.jpg" 
