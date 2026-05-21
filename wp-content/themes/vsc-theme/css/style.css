@@ -1531,7 +1531,7 @@ h2 {
 }
 .cd-article-content h2, .cd-article-content h3 {
   font-family: "SuperBlue", serif;
-  color: var(--cd-brown);
+  color: #BF9F94;
   margin: 2vw 0 1vw;
 }
 .cd-article-content img {
