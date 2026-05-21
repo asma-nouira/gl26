@@ -55,7 +55,7 @@ get_header(); ?>
 
 </article>
 <div class="cd-back-to-blog">
-    <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="cd-back-link">
+    <a href="/blogue" class="cd-back-link">
         ← Revenir aux articles
     </a>
 </div>
@@ -68,7 +68,7 @@ get_header(); ?>
     <div class="cd-urgence-cta-text">
         <h2>Une urgence ?<br>N'attendez pas plus longtemps !</h2>
         <p>En cas d'urgence, contactez-nous et nous trouverons un moment, à l'intérieur de nos heures d'ouverture, pour évaluer votre cas et vous proposer des soins pour vous soulager et vous éviter bien des complications.</p>
-        <a href="tel:+14188672260" class="cd-btn cd-btn-dark">418 867-2260</a>
+        <a href="tel:+14188672260" class="cd-btn cd-btn-brown">418 867-2260</a>
     </div>
 </section>
 <?php get_footer(); ?>
