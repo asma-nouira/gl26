@@ -313,7 +313,7 @@ add_shortcode('cd_blog_grid', function($atts) {
 $excerpt   = get_the_excerpt();
 
 /* Par : */
-$excerpt = wp_trim_words(get_the_excerpt(), 25, '...');
+$excerpt = wp_trim_words(get_the_excerpt(), 15, '...');
 /* 20 = nombre de mots — ajustez selon le rendu */
         $thumb = has_post_thumbnail()
             ? get_the_post_thumbnail(get_the_ID(), 'large', array('class' => 'cd-blog-card-img'))
