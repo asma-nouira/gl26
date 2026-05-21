@@ -194,6 +194,13 @@ function vsc_theme_header_js() {
         array(), '1.0.0', true // true = chargé en footer
     );
 }
+add_action('wp_enqueue_scripts', 'vsc_theme_team_js');
+function vsc_theme_header_js() {
+    wp_enqueue_script('cdgl-team',
+        get_template_directory_uri() . '/js/team-slider.js',
+        array(), '1.0.0', true // true = chargé en footer
+    );
+}
 
 /* Dans functions.php */
 add_shortcode('cd_blog_section', function() {
