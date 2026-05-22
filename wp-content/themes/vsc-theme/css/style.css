@@ -2642,6 +2642,13 @@ body {
   padding-top: 4vw;
 }
 
+.h3-title {
+  font-family: "SuperBlue", serif;
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
+  color: #BF9F94;
+  margin-bottom: 0.5vw;
+}
+
 /* ============================================================
    GLOBAL
    ============================================================ */
