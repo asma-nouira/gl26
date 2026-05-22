@@ -1496,6 +1496,15 @@ h2 {
   color: #625756;
   text-align: center;
   margin: 0 0 1.5vw;
+  /* Point décoratif en dessous */
+}
+.cd-blog-main-title::after {
+  content: "•";
+  display: block;
+  color: var(--cd-accent);
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
+  margin-top: 0.5vw;
+  line-height: 1;
 }
 
 .cd-blog-intro {
@@ -2553,6 +2562,12 @@ body {
 
 .cd-conseil {
   padding: 0 21.66vw 5.88vw;
+}
+.cd-conseil h2 {
+  font-family: "SuperBlue", serif;
+  font-size: clamp(1rem, 1.5625vw, 1.875rem);
+  color: #BF9F94;
+  margin-bottom: 1vw;
 }
 
 /* ============================================================

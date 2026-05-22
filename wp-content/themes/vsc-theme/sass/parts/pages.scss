@@ -451,4 +451,10 @@
 }
 .cd-conseil{
     padding: 0 21.66vw 5.88vw;
+    h2{
+         font-family: 'SuperBlue', serif;
+        font-size: clamp(1rem, 1.5625vw, 1.875rem);
+        color: #BF9F94;
+        margin-bottom: 1vw;
+    }
 }
