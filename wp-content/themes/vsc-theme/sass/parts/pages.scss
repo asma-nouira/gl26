@@ -467,10 +467,14 @@
         line-height: 1;
     }
     }
-    .cd-list-soins{
+       .cd-row{
+        padding-top: 5.88vw;
+    }
         img{
             border-radius: 40px;
         }
+    .cd-list-soins{
+    
         h3 {
         font-family: 'SuperBlue', serif;
         font-size: clamp(1rem, 1.25vw, 1.5rem);
@@ -501,8 +505,6 @@
 
         }
     }
-    .cd-row{
-        padding-top: 5.88vw;
-    }
+ 
     }
 }

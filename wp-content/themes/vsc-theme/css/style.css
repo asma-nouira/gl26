@@ -2571,7 +2571,10 @@ body {
   margin-top: 0.5vw;
   line-height: 1;
 }
-.cd-conseil .cd-list-soins img {
+.cd-conseil .cd-row {
+  padding-top: 5.88vw;
+}
+.cd-conseil img {
   border-radius: 40px;
 }
 .cd-conseil .cd-list-soins h3 {
@@ -2598,9 +2601,6 @@ body {
   color: #383839;
   font-size: clamp(0.875rem, 0.94vw, 1.125rem);
   padding-right: 1.1vw;
-}
-.cd-conseil .cd-list-soins .cd-row {
-  padding-top: 5.88vw;
 }
 
 /* ============================================================
