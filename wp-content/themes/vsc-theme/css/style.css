@@ -1194,7 +1194,7 @@ h2 {
    ============================================================ */
 .cd-blog-section {
   background: #625756;
-  padding: 4.16vw 3.12vw;
+  padding: 4.47vw 8.33vw;
 }
 
 .cd-blog-header {
@@ -1219,7 +1219,7 @@ h2 {
 .cd-blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.45vw;
+  gap: 2.86vw;
   max-width: 100%;
   margin: 0 auto;
 }
