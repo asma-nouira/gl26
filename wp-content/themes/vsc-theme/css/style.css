@@ -2648,8 +2648,7 @@ body {
   padding-top: 2.7vw;
   padding-bottom: 4.27vw;
 }
-
-.h3-title {
+.cd-conseil.cd-coin .h3-title {
   font-family: "SuperBlue", serif;
   font-size: clamp(1rem, 1.25vw, 1.5rem);
   color: #BF9F94;
