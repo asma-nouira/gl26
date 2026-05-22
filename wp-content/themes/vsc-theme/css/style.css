@@ -2627,7 +2627,7 @@ body {
   padding: 1.87vw 1.66vw;
 }
 .cd-infos h3 {
-  padding-bottom: 1.04vw !important;
+  margin-bottom: 1.04vw !important;
 }
 
 /* ============================================================
