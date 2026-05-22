@@ -2592,13 +2592,15 @@ body {
   color: var(--cd-text);
   padding: 0.2vw 0;
   display: flex;
-  align-items: center;
 }
 .cd-conseil .cd-list-soins ul li::before {
   content: "›";
   color: #383839;
   font-size: clamp(0.875rem, 0.94vw, 1.125rem);
   padding-right: 1.1vw;
+}
+.cd-conseil .cd-list-soins .cd-row {
+  padding-top: 5.88vw;
 }
 
 /* ============================================================
