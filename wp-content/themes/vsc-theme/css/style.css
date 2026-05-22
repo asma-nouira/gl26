@@ -1232,7 +1232,7 @@ h2 {
   min-width: 0; /* ← Empêche le débordement */
   width: 100%; /* ← Prend toute la colonne */
 }
-.cd-blog-section .cd-blog-card .cd-blog-card-img-link {
+.cd-blog-section .cd-blog-card .cd-blog-card-img {
   display: block;
   border-radius: 1.04vw;
   overflow: hidden;
@@ -1240,7 +1240,7 @@ h2 {
   aspect-ratio: 4/3;
   background: var(--cd-bg-warm);
 }
-.cd-blog-section .cd-blog-card .cd-blog-card-img-link img {
+.cd-blog-section .cd-blog-card .cd-blog-card-img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -1248,7 +1248,7 @@ h2 {
   display: block;
   transition: transform 0.4s ease;
 }
-.cd-blog-section .cd-blog-card .cd-blog-card-img-link:hover img {
+.cd-blog-section .cd-blog-card .cd-blog-card-img:hover img {
   transform: scale(1.05);
 }
 .cd-blog-section .cd-blog-card .cd-blog-card-no-img {
