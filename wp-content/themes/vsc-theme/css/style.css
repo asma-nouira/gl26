@@ -2568,6 +2568,15 @@ body {
   font-size: clamp(1rem, 1.5625vw, 1.875rem);
   color: #BF9F94;
   margin-bottom: 1vw;
+  /* Point décoratif en dessous */
+}
+.cd-conseil h2::after {
+  content: "•";
+  display: block;
+  color: var(--cd-accent);
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
+  margin-top: 0.5vw;
+  line-height: 1;
 }
 
 /* ============================================================
