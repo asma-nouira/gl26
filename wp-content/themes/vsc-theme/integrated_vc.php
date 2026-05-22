@@ -8,7 +8,7 @@
  */
 function vsc_map()
 {
-    $map = '<div id="map1" style="width: 100%;height:430px;min-height: 100%;"></div>';
+    $map = '<div id="map1" style="width: 100%;height:1000px;min-height: 100%;"></div>';
     ?>
     <script>
 
@@ -17,12 +17,12 @@ function vsc_map()
             if (!addedMap && jQuery(document).scrollTop() > 100) {
                 addedMap = true;
                 jQuery(function () {
-                    var points = new google.maps.LatLng(45.50769580633233, -73.56435486050708);
+                    var points = new google.maps.LatLng(47.82299985402214, -69.55683797190048);
                     var styles = [
                         {
                             "stylers": [
                                 {"visibility": "on"},
-                                {"hue": "#F1ECE9"}
+                                {"hue": "#625756"}
                             ]
                         }
                     ];
@@ -43,8 +43,8 @@ function vsc_map()
                     var marker = new google.maps.Marker({
                         position: points,
                         map: map1,
-                        icon: '/wp-content/themes/vsc-theme/css/img/icon-map.svg',
-                        url: 'https://www.google.com/maps/place/Complexe+Desjardins/@45.5075266,-73.5669083,17z/data=!3m1!5s0x4cc91a45a1cf65b7:0x3310f1891dd11e56!4m14!1m7!3m6!1s0x4cc91a4fca1ae933:0x9e1c26554e8a2355!2sComplexe+Desjardins!8m2!3d45.5075229!4d-73.5643334!16zL20vMDR2NTJo!3m5!1s0x4cc91a4fca1ae933:0x9e1c26554e8a2355!8m2!3d45.5075229!4d-73.5643334!16zL20vMDR2NTJo?entry=ttu'
+                        icon: '/wp-content/uploads/2026/05/icon-map.svg',
+                        url: 'https://www.google.com/maps/place/Clinique+Dentaire+Genevi%C3%A8ve+Lafrance/@47.8228378,-69.5594987,17z/data=!3m1!5s0x4cbe4738722c69b5:0xec2f976b3fa46b66!4m14!1m7!3m6!1s0x4cbe4738528aa981:0x29cb5731c66adcd7!2sClinique+Dentaire+Genevi%C3%A8ve+Lafrance!8m2!3d47.8228342!4d-69.5569237!16s%2Fg%2F11b6yj66kx!3m5!1s0x4cbe4738528aa981:0x29cb5731c66adcd7!8m2!3d47.8228342!4d-69.5569237!16s%2Fg%2F11b6yj66kx?entry=ttu&g_ep=EgoyMDI2MDUxNy4wIKXMDSoASAFQAw%3D%3D'
                     });
                     marker.setAnimation(google.maps.Animation.BOUNCE);
 
