@@ -2574,6 +2574,9 @@ body {
 .cd-conseil .cd-row {
   padding-top: 5.88vw;
 }
+.cd-conseil .cd-row.row2 {
+  padding-top: 2.34vw;
+}
 .cd-conseil img {
   border-radius: 40px;
 }
@@ -2582,6 +2585,9 @@ body {
   font-size: clamp(1rem, 1.25vw, 1.5rem);
   color: #BF9F94;
   margin-bottom: 1.5vw;
+}
+.cd-conseil .cd-list-soins h3.cd-pb {
+  margin-bottom: 2.8vw;
 }
 .cd-conseil .cd-list-soins ul {
   list-style: none;
@@ -2601,6 +2607,13 @@ body {
   color: #383839;
   font-size: clamp(0.875rem, 0.94vw, 1.125rem);
   padding-right: 1.1vw;
+}
+
+.txt-infos {
+  font-family: "SuperBlue", serif;
+  font-size: clamp(0.875rem, 1.04vw, 1.25rem);
+  color: #BF9F94;
+  line-height: 1.2;
 }
 
 /* ============================================================

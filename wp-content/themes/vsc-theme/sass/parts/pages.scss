@@ -470,6 +470,9 @@
        .cd-row{
         padding-top: 5.88vw;
     }
+    .cd-row.row2{
+        padding-top:2.34vw ;
+    }
         img{
             border-radius: 40px;
         }
@@ -480,6 +483,9 @@
         font-size: clamp(1rem, 1.25vw, 1.5rem);
         color: #BF9F94;
         margin-bottom: 1.5vw;
+    }
+    h3.cd-pb{
+         margin-bottom: 2.8vw;
     }
 
     ul {
@@ -507,4 +513,10 @@
     }
  
     }
+}
+.txt-infos{
+    font-family: 'SuperBlue', serif;
+    font-size: clamp(0.875rem, 1.04vw, 1.25rem);
+    color: #BF9F94;
+    line-height: 1.2;
 }
