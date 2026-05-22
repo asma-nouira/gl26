@@ -1498,14 +1498,6 @@ h2 {
   margin: 0 0 1.5vw;
   /* Point décoratif en dessous */
 }
-.cd-blog-main-title::after {
-  content: "•";
-  display: block;
-  color: var(--cd-accent);
-  font-size: clamp(1rem, 1.25vw, 1.5rem);
-  margin-top: 0.5vw;
-  line-height: 1;
-}
 
 .cd-blog-intro {
   font-family: "Manrope", sans-serif;
@@ -2568,7 +2560,8 @@ body {
   font-size: clamp(1rem, 1.5625vw, 1.875rem);
   color: #BF9F94;
   margin-bottom: 1vw;
-  /* Point décoratif en dessous */
+  padding-left: 11vw;
+  padding-right: 11vw;
 }
 .cd-conseil h2::after {
   content: "•";
@@ -2577,6 +2570,36 @@ body {
   font-size: clamp(1rem, 1.25vw, 1.5rem);
   margin-top: 0.5vw;
   line-height: 1;
+}
+.cd-conseil .cd-list-soins img {
+  border-radius: 40px;
+}
+.cd-conseil .cd-list-soins h3 {
+  font-family: "SuperBlue", serif;
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
+  color: #BF9F94;
+  margin-bottom: 1.5vw;
+}
+.cd-conseil .cd-list-soins ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 1.71vw;
+}
+.cd-conseil .cd-list-soins ul li {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.875rem, 0.94vw, 1.125rem);
+  color: var(--cd-text);
+  padding: 0.2vw 0;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+}
+.cd-conseil .cd-list-soins ul li::before {
+  content: "›";
+  color: #383839;
+  font-size: clamp(0.875rem, 0.94vw, 1.125rem);
+  padding-right: 1.1vw;
 }
 
 /* ============================================================
