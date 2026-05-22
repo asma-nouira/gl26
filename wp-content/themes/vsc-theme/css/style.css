@@ -3192,9 +3192,6 @@ body .wpcf7-mail-sent-ok {
   border-radius: 40px;
 }
 
-.cd-services-list {
-  padding-bottom: 2.08vw;
-}
 .cd-services-list h3 {
   font-family: "SuperBlue", serif;
   font-size: clamp(1rem, 1.25vw, 1.5rem);
