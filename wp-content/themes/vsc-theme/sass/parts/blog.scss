@@ -42,7 +42,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.45vw;
-    max-width: 62.5vw;
+  max-width: 100%;
     margin: 0 auto;
 }
 
@@ -51,7 +51,8 @@
     display: flex;
     flex-direction: column;
     background: transparent;
-
+ min-width: 0; /* ← Empêche le débordement */
+    width: 100%; /* ← Prend toute la colonne */
     .cd-blog-card-img-link {
         display: block;
         border-radius: 1.04vw;
