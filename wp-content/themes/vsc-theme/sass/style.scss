@@ -630,6 +630,7 @@ body .wpcf7-mail-sent-ok {
         list-style: none;
         padding: 0;
         margin: 0;
+        padding-bottom:1.71vw ;
 
         li {
             font-family: 'Manrope', sans-serif;
@@ -658,4 +659,7 @@ body .wpcf7-mail-sent-ok {
             &:last-child { border-bottom: none; }
         }
     }
+}
+.cd-qst{
+    padding-bottom:2.44vw ;
 }
