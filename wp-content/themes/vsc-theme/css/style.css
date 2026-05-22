@@ -2673,7 +2673,7 @@ body {
 .cd-conseil.cd-carie {
   color: white;
 }
-.cd-conseil.cd-carie h3, .cd-conseil.cd-carie h2, .cd-conseil.cd-carie h2::after {
+.cd-conseil.cd-carie h3, .cd-conseil.cd-carie h2, .cd-conseil.cd-carie h2::after, .cd-conseil.cd-carie ul li, .cd-conseil.cd-carie ul li::before {
   color: white;
 }
 
