@@ -2688,6 +2688,18 @@ body {
   color: white;
 }
 
+.cd-service-quote {
+  font-family: "SuperBlue", serif;
+  font-size: clamp(1rem, 1.5625vw, 1.875rem);
+  color: #BF9F94;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.5;
+  padding: 2vw 15vw;
+  background: var(--cd-bg-warm);
+  margin: 0;
+}
+
 /* ============================================================
    GLOBAL
    ============================================================ */
