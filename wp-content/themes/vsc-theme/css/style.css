@@ -2749,6 +2749,19 @@ body {
   padding: 0 23.69vw 5.78vw;
 }
 
+.cd-techno-service {
+  padding: 0 22.08vw 6.87vw 21.66vw;
+}
+.cd-techno-service h2 {
+  padding-bottom: 0.78vw;
+}
+.cd-techno-service p {
+  padding-bottom: 1.04vw;
+}
+.cd-techno-service img {
+  border-radius: 40px;
+}
+
 /* ============================================================
    GLOBAL
    ============================================================ */
