@@ -2735,7 +2735,7 @@ body {
   font-family: "Manrope", sans-serif;
   font-size: clamp(0.875rem, 0.94vw, 1.125rem);
   color: var(--cd-text);
-  padding: 0.2vw 0;
+  padding: 0.1vw 0;
   display: flex;
 }
 .cd-service-infos ul li::before {
