@@ -2774,19 +2774,26 @@ ul.list li {
   color: white;
   padding: 0.5vw 0;
   display: flex;
-  align-items: baseline;
-  gap: 0.5vw;
+  align-items: flex-start;
+  gap: 0.8vw;
+  margin-bottom: 0.8vw;
+  /* Contenu texte */
 }
 ul.list li::before {
   content: "›";
   color: white;
   font-size: clamp(0.875rem, 0.94vw, 1.125rem);
-  padding-right: 0.5vw;
-  flex-shrink: 0; /* ← Empêche le › de rétrécir */
+  flex-shrink: 0;
+  margin-top: 0.1vw;
+}
+ul.list li > span, ul.list li > div, ul.list li > p {
+  display: flex;
+  flex-direction: column; /* ← Titre au-dessus, texte en dessous */
+  gap: 0.3vw;
 }
 ul.list li strong {
-  flex-shrink: 0; /* ← Le titre reste sur une seule ligne */
-  white-space: nowrap;
+  display: block; /* ← Titre sur sa propre ligne */
+  font-weight: 700;
 }
 
 /* ============================================================
