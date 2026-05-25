@@ -2772,14 +2772,21 @@ ul.list li {
   font-family: "Manrope", sans-serif;
   font-size: clamp(0.875rem, 0.94vw, 1.125rem);
   color: white;
-  padding: 0.1vw 0;
+  padding: 0.5vw 0;
   display: flex;
+  align-items: baseline;
+  gap: 0.5vw;
 }
 ul.list li::before {
   content: "›";
   color: white;
   font-size: clamp(0.875rem, 0.94vw, 1.125rem);
-  padding-right: 1.1vw;
+  padding-right: 0.5vw;
+  flex-shrink: 0; /* ← Empêche le › de rétrécir */
+}
+ul.list li strong {
+  flex-shrink: 0; /* ← Le titre reste sur une seule ligne */
+  white-space: nowrap;
 }
 
 /* ============================================================
