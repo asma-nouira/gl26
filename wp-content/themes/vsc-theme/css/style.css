@@ -2722,7 +2722,8 @@ body {
   border-radius: 40px;
 }
 .cd-service-infos h2 {
-  padding-bottom: 1.3vw;
+  padding-bottom: 1.2vw;
+  line-height: 1.1;
 }
 .cd-service-infos ul {
   list-style: none;
