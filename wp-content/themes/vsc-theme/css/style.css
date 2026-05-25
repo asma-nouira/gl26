@@ -2673,6 +2673,13 @@ body {
   padding-bottom: 3.54vw;
   padding-top: 2.9vw;
 }
+.cd-txt-color p {
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
+  color: #BF9F94;
+  line-height: 1.5;
+  padding-bottom: 3.54vw;
+  padding-top: 2.9vw;
+}
 
 .cd-conseil.cd-carie {
   color: white;
