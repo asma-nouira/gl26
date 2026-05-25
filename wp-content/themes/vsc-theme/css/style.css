@@ -2773,26 +2773,18 @@ ul.list li {
   font-size: clamp(0.875rem, 0.94vw, 1.125rem);
   color: white;
   padding: 0.5vw 0;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.8vw;
-  margin-bottom: 0.8vw;
-  /* Contenu texte */
+  margin-bottom: 0.5vw;
+  padding-left: 1.5vw;
+  position: relative;
 }
 ul.list li::before {
   content: "›";
   color: white;
-  font-size: clamp(0.875rem, 0.94vw, 1.125rem);
-  flex-shrink: 0;
-  margin-top: 0.1vw;
-}
-ul.list li > span, ul.list li > div, ul.list li > p {
-  display: flex;
-  flex-direction: column; /* ← Titre au-dessus, texte en dessous */
-  gap: 0.3vw;
+  position: absolute;
+  left: 0;
+  top: 0.1vw;
 }
 ul.list li strong {
-  display: block; /* ← Titre sur sa propre ligne */
   font-weight: 700;
 }
 
