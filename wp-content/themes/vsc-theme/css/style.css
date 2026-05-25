@@ -2715,6 +2715,29 @@ body {
   padding-bottom: 1.04vw;
 }
 
+.cd-service-infos {
+  padding-top: 6.77vw 21.66vw 3.64vw;
+}
+.cd-service-infos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 1.71vw;
+}
+.cd-service-infos ul li {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.875rem, 0.94vw, 1.125rem);
+  color: var(--cd-text);
+  padding: 0.2vw 0;
+  display: flex;
+}
+.cd-service-infos ul li::before {
+  content: "›";
+  color: #383839;
+  font-size: clamp(0.875rem, 0.94vw, 1.125rem);
+  padding-right: 1.1vw;
+}
+
 /* ============================================================
    GLOBAL
    ============================================================ */
