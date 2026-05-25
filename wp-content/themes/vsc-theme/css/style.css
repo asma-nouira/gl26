@@ -882,6 +882,15 @@ h2 {
   transform: translateY(-2px);
   box-shadow: 0 4px 14px rgba(98, 87, 86, 0.3);
 }
+.cd-btn.cd-btn-rose {
+  background: var(--cd-rose);
+  color: #ffffff !important;
+}
+.cd-btn.cd-btn-rose:hover {
+  background: var(--cd-brown-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(98, 87, 86, 0.3);
+}
 .cd-btn.cd-btn-dark {
   background: var(--cd-dark);
   color: #ffffff !important;
