@@ -2709,6 +2709,9 @@ body {
 .cd-service-block {
   padding: 4.6vw 18.5vw 6.35vw 21.66vw;
 }
+.cd-service-block h2 {
+  color: white;
+}
 
 /* ============================================================
    GLOBAL
