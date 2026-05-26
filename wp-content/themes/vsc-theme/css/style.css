@@ -2818,7 +2818,7 @@ ul.list-black li::before {
   color: #383839;
   position: absolute;
   left: 0;
-  top: 0.3vw;
+  top: 0;
 }
 ul.list-black li strong {
   font-weight: 700;
