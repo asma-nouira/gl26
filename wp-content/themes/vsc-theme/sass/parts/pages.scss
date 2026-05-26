@@ -681,15 +681,15 @@ ul.list {
    ============================================================ */
 
 .cd-axes-section {
-    padding: 5vw 7vw;
-    background: var(--cd-bg-warm);
+    padding: 5.5vw 8.5vw 8vw;
+    background: #BF9F94;
     text-align: center;
 
     h2 {
         font-family: 'SuperBlue', serif;
         font-size: clamp(1.5rem, 2.34375vw, 2.8125rem);
         font-weight: 400;
-        color: #625756;
+        color: white;
         margin: 0 0 3vw;
         text-align: center;
     }
@@ -699,7 +699,7 @@ ul.list {
 .cd-axe-card {
     > .vce-col-inner {
         padding: 0 !important;
-        border-radius: 1.5vw;
+        border-radius: 2.08vw;
         overflow: hidden;
         background: #ffffff;
         transition: all 0.35s ease;
@@ -720,22 +720,22 @@ ul.list {
 
     /* Contenu texte */
     .vce-text-block {
-        padding: 1.5vw 1.8vw 2vw;
+        padding: 1.3vw 2.3vw 1.56vw;
         text-align: left;
     }
 
     h3 {
         font-family: 'SuperBlue', serif;
-        font-size: clamp(1rem, 1.25vw, 1.5rem);
+        font-size: clamp(0.9rem, 1.25vw, 1.5rem);
         font-weight: 400;
-        color: #625756;
+        color: #BF9F94;
         margin: 0 0 0.8vw;
         line-height: 1.3;
     }
 
     p {
         font-family: 'Manrope', sans-serif;
-        font-size: clamp(0.8rem, 0.83vw, 1rem);
+        font-size: clamp(0.875rem, 0.94vw, 1.12rem);
         color: var(--cd-text);
         line-height: 1.65;
         margin: 0;
