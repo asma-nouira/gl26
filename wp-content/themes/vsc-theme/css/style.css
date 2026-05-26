@@ -2983,6 +2983,9 @@ body::-webkit-scrollbar-thumb {
 p {
   padding-bottom: 0.8vw;
 }
+p:last-child {
+  padding-bottom: 0;
+}
 
 /* ============================================================
    CF7 VALIDATION

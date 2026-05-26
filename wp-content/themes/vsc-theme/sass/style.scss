@@ -24,7 +24,10 @@ body::-webkit-scrollbar-thumb {
     border: 5px solid #BF9F94;
 }
 
-p { padding-bottom: 0.8vw; }
+p { padding-bottom: 0.8vw; 
+&:last-child{
+    padding-bottom: 0;
+}}
 
 /* ============================================================
    CF7 VALIDATION
