@@ -675,3 +675,87 @@ ul.list {
         }
     }
 }
+/* ============================================================
+   SECTION AXES DE PRATIQUE — Réutilisable
+   Même style que cd-service-card avec fond crème
+   ============================================================ */
+
+.cd-axes-section {
+    padding: 5vw 7vw;
+    background: var(--cd-bg-warm);
+    text-align: center;
+
+    h2 {
+        font-family: 'SuperBlue', serif;
+        font-size: clamp(1.5rem, 2.34375vw, 2.8125rem);
+        font-weight: 400;
+        color: #625756;
+        margin: 0 0 3vw;
+        text-align: center;
+    }
+}
+
+
+.cd-axe-card {
+    > .vce-col-inner {
+        padding: 0 !important;
+        border-radius: 1.5vw;
+        overflow: hidden;
+        background: #ffffff;
+        transition: all 0.35s ease;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &:hover > .vce-col-inner {
+        box-shadow: 0 0.6vw 1.8vw rgba(0,0,0,0.12);
+        transform: translateY(-0.3vw);
+    }
+
+
+    &:hover img {
+        transform: scale(1.04);
+    }
+
+    /* Contenu texte */
+    .vce-text-block {
+        padding: 1.5vw 1.8vw 2vw;
+        text-align: left;
+    }
+
+    h3 {
+        font-family: 'SuperBlue', serif;
+        font-size: clamp(1rem, 1.25vw, 1.5rem);
+        font-weight: 400;
+        color: #625756;
+        margin: 0 0 0.8vw;
+        line-height: 1.3;
+    }
+
+    p {
+        font-family: 'Manrope', sans-serif;
+        font-size: clamp(0.8rem, 0.83vw, 1rem);
+        color: var(--cd-text);
+        line-height: 1.65;
+        margin: 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .cd-axes-section { padding: 5vw 4vw; }
+}
+
+@media (max-width: 768px) {
+    .cd-axes-section { padding: 8vw 5vw !important; }
+
+    .cd-axes-grid > .vce-row-content {
+        flex-direction: column !important;
+        gap: 5vw !important;
+    }
+
+    .cd-axe-card .vce-text-block {
+        padding: 4vw !important;
+    }
+}
