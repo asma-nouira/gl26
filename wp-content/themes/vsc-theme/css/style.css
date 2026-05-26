@@ -2943,6 +2943,10 @@ ul.list-style li::before {
   padding-top: 5.2vw;
 }
 
+.pt-80.cd-service-text-center {
+  padding-top: 4.1vw;
+}
+
 .cd-techno-service.pt-130 {
   padding-top: 6.77vw;
 }
