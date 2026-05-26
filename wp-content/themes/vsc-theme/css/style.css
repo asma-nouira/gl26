@@ -2799,6 +2799,31 @@ ul.list li strong {
   font-weight: 700;
 }
 
+ul.list-black {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 0;
+}
+ul.list-black li {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.875rem, 0.94vw, 1.125rem);
+  color: #383839;
+  padding: 0;
+  padding-left: 1.5vw;
+  position: relative;
+}
+ul.list-black li::before {
+  content: "›";
+  color: #383839;
+  position: absolute;
+  left: 0;
+  top: 0.3vw;
+}
+ul.list-black li strong {
+  font-weight: 700;
+}
+
 /* ============================================================
    SECTION AXES DE PRATIQUE — Réutilisable
    Même style que cd-service-card avec fond crème

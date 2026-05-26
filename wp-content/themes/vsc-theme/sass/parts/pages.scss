@@ -674,6 +674,33 @@ ul.list {
         }
     }
 }
+ul.list-black {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 0;
+
+    li {
+        font-family: 'Manrope', sans-serif;
+        font-size: clamp(0.875rem, 0.94vw, 1.125rem);
+        color: #383839;
+        padding: 0;
+        padding-left: 1.5vw;
+        position: relative;
+
+        &::before {
+            content: '›';
+            color: #383839;
+            position: absolute;
+            left: 0;
+            top: 0.3vw;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+    }
+}
 /* ============================================================
    SECTION AXES DE PRATIQUE — Réutilisable
    Même style que cd-service-card avec fond crème
