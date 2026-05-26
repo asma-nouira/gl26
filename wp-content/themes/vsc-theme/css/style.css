@@ -2835,7 +2835,7 @@ ul.list li strong {
   transform: scale(1.04);
 }
 .cd-axe-card .vce-text-block {
-  padding: 1.3vw 2.3vw 1.56vw;
+  padding: 1.3vw 2.5vw 1.56vw;
   text-align: left;
 }
 .cd-axe-card h3 {
@@ -2853,6 +2853,7 @@ ul.list li strong {
   color: var(--cd-text);
   line-height: 1.38;
   margin: 0;
+  padding-bottom: 0;
 }
 
 /* Responsive */
@@ -2873,6 +2874,10 @@ ul.list li strong {
     padding: 4vw !important;
   }
 }
+.cd-top {
+  padding-top: 6.9vw;
+}
+
 /* ============================================================
    GLOBAL
    ============================================================ */
