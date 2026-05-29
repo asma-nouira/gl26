@@ -2740,6 +2740,11 @@ body {
   padding-bottom: 1.04vw;
 }
 
+.cd-service-block.min {
+  padding-top: 3.38vw;
+  padding-bottom: 2.96vw;
+}
+
 .cd-service-infos {
   padding: 6.77vw 21.66vw 3.64vw;
 }
