@@ -852,4 +852,9 @@ ul.list-black {
     .cd-bloc-solution{
         padding: 3.9vw 19.63vw 4.27vw 21.66vw;
         color:white;
+        h3{
+             font-family: 'SuperBlue', serif;
+        font-size: clamp(0.9rem, 1.25vw, 1.5rem);
+        line-height: 1.16;
+        }
     }
