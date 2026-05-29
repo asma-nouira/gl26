@@ -677,6 +677,11 @@ ul.list {
         }
     }
 }
+ul.list.fixed{
+    li::before{
+        top:0;
+    }
+}
 ul.list-black {
     list-style: none;
     padding: 0;

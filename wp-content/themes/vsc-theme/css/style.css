@@ -2816,6 +2816,10 @@ ul.list li strong {
   font-weight: 700;
 }
 
+ul.list.fixed li::before {
+  top: 0;
+}
+
 ul.list-black {
   list-style: none;
   padding: 0;
