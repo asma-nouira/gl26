@@ -2846,6 +2846,10 @@ ul.list-black li strong {
   padding-left: 15.62vw;
   padding-right: 15.62vw;
 }
+.cd-axes-section.p-dentaire h3 {
+  min-height: 4vw;
+  padding-right: 5vw;
+}
 
 .cd-axe-card {
   /* Contenu texte */
