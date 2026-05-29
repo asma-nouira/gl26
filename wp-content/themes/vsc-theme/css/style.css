@@ -2842,6 +2842,11 @@ ul.list-black li strong {
   text-align: center;
 }
 
+.cd-axes-section.p-dentaire {
+  padding-left: 15.62vw;
+  padding-right: 15.62vw;
+}
+
 .cd-axe-card {
   /* Contenu texte */
 }
