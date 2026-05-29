@@ -1213,6 +1213,11 @@ h2 {
   padding-bottom: 2.6vw;
 }
 
+.plr-100 {
+  padding-left: 10vw;
+  padding-right: 10vw;
+}
+
 /* ============================================================
    BLOG.SCSS — Clinique Dentaire Geneviève Lafrance
    Sections : 
