@@ -2201,6 +2201,10 @@ body {
   animation: cdFadeInLeft 0.8s ease 0.3s forwards;
 }
 
+.hero-title_page.pr-text {
+  padding-right: 10vw;
+}
+
 /* ============================================================
    BREADCRUMB
    ============================================================ */
