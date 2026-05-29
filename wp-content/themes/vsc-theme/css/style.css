@@ -2965,6 +2965,11 @@ ul.list-style li::before {
   padding-right: 21.66vw;
 }
 
+.cd-service-text-center.medium-pd {
+  padding-left: 22.66vw;
+  padding-right: 22.66vw;
+}
+
 .cd-content-section.cd-pb-min {
   padding-bottom: 2.34vw;
 }
