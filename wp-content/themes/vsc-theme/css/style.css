@@ -2982,8 +2982,9 @@ h2.pb-45 {
 }
 .cd-bloc-solution h3 {
   font-family: "SuperBlue", serif;
-  font-size: clamp(0.9rem, 1.25vw, 1.5rem);
+  font-size: clamp(1rem, 1.5625vw, 1.875rem);
   line-height: 1.16;
+  padding-bottom: 15px;
 }
 
 /* ============================================================
