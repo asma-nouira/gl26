@@ -1209,6 +1209,10 @@ h2 {
   padding-top: 6.77vw;
 }
 
+.pb-50 {
+  padding-bottom: 2.6vw;
+}
+
 /* ============================================================
    BLOG.SCSS — Clinique Dentaire Geneviève Lafrance
    Sections : 
@@ -2974,6 +2978,7 @@ h2.pb-45 {
 
 .cd-bloc-solution {
   padding: 3.9vw 19.63vw 4.27vw 21.66vw;
+  color: white;
 }
 
 /* ============================================================
