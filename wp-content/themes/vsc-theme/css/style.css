@@ -2735,9 +2735,19 @@ body {
   padding: 4.6vw 18.5vw 6.35vw 21.66vw;
   color: white;
 }
+@media (max-width: 768px) {
+  .cd-service-block {
+    padding: 5vw 8vw;
+  }
+}
 .cd-service-block h2 {
   color: white;
   padding-bottom: 1.04vw;
+}
+@media (max-width: 768px) {
+  .cd-service-block h2 {
+    padding-bottom: 2.5vw;
+  }
 }
 
 .cd-service-block.min {
