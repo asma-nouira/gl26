@@ -70,7 +70,7 @@
                 </tr>
             </table>
 
-            <a href="/politique-de-confidentialite/" class="underline">Politique de confidentialité</a>
+            <a href="/politique-de-confidentialite/" class="underline pt-100">Politique de confidentialité</a>
         </div>
 
     </div>
