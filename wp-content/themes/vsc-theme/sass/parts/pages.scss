@@ -612,12 +612,18 @@ letter-spacing: 0.5px;
 }
 .cd-service-infos{
     padding: 6.77vw  21.66vw 3.64vw;
+      @media(max-width:768px){
+        padding:5vw 6vw ;
+    }
     img{
         border-radius: 40px;
     }
     h2{
         padding-bottom: 1.2vw;
         line-height: 1.1;
+         @media(max-width:768px){
+            padding-bottom: 2.5vw;
+        }
     }
         ul {
         list-style: none;

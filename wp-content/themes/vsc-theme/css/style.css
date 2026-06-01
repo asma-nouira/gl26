@@ -2758,12 +2758,22 @@ body {
 .cd-service-infos {
   padding: 6.77vw 21.66vw 3.64vw;
 }
+@media (max-width: 768px) {
+  .cd-service-infos {
+    padding: 5vw 6vw;
+  }
+}
 .cd-service-infos img {
   border-radius: 40px;
 }
 .cd-service-infos h2 {
   padding-bottom: 1.2vw;
   line-height: 1.1;
+}
+@media (max-width: 768px) {
+  .cd-service-infos h2 {
+    padding-bottom: 2.5vw;
+  }
 }
 .cd-service-infos ul {
   list-style: none;
