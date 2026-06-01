@@ -3629,7 +3629,7 @@ body .wpcf7-mail-sent-ok {
   color: #625756;
   margin: 0 0 0.6vw 0;
   font-family: "SuperBlue", serif;
-  margin-top: -5vw;
+  margin-top: -17%;
   z-index: 555;
   position: relative;
   background-color: #F4F3EF;
@@ -3665,7 +3665,7 @@ body .wpcf7-mail-sent-ok {
   line-height: 1.38;
   margin: 0;
   flex-grow: 1;
-  padding: 1.2vw 2.8vw 1.3vw;
+  padding: 1.2vw 2.8vw 1.3vw !important;
 }
 
 .cd-service-col > .vce-col-content > .vce-text-block {
