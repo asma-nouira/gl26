@@ -111,7 +111,7 @@
 
     </a>
 
-    <a href="https://maps.google.com/?q=290+boul+Hotel-de-Ville+Riviere-du-Loup"
+    <a href="https://maps.app.goo.gl/agie1N5n84mR5iAr6"
        class="hero-sidebar-item"
        title="Notre adresse"
        target="_blank"
