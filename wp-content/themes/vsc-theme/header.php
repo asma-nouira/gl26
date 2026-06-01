@@ -83,7 +83,7 @@
 
     </a>
 
-    <a href="/contact#rendez-vous" class="hero-sidebar-item" title="Prendre rendez-vous">
+    <a href="#" class="hero-sidebar-item cd-rdv-trigger" title="Prendre rendez-vous">
        <svg xmlns="http://www.w3.org/2000/svg" width="62.044" height="72.794" viewBox="0 0 62.044 72.794">
   <g id="Groupe_159" data-name="Groupe 159" transform="translate(-1817.596 -665.462)">
     <g id="Groupe_60" data-name="Groupe 60" transform="translate(1817.596 667.212)">
