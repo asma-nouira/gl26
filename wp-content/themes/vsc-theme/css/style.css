@@ -3041,7 +3041,7 @@ ul.list-black li strong {
 @media (max-width: 768px) {
   .cd-axe-card h3 {
     min-height: inherit;
-    margin-bottom: 2w;
+    margin-bottom: 2vw;
   }
 }
 .cd-axe-card p {
