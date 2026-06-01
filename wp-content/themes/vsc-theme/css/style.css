@@ -3038,6 +3038,12 @@ ul.list-black li strong {
   line-height: 1.25;
   min-height: 5vw;
 }
+@media (max-width: 768px) {
+  .cd-axe-card h3 {
+    min-height: inherit;
+    margin-bottom: 2w;
+  }
+}
 .cd-axe-card p {
   font-family: "Manrope", sans-serif;
   font-size: clamp(0.875rem, 0.94vw, 1.12rem);
