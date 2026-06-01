@@ -3078,7 +3078,7 @@ h2.pb-25 {
 }
 @media (max-width: 768px) {
   h2.pb-25 {
-    padding-bottom: 2vw;
+    padding-bottom: 4vw;
   }
 }
 
@@ -3087,7 +3087,7 @@ h2.pb-45 {
 }
 @media (max-width: 768px) {
   h2.pb-45 {
-    padding-bottom: 2vw;
+    padding-bottom: 4.5vw;
   }
 }
 
