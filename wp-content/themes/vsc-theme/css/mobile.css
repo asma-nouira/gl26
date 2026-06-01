@@ -339,5 +339,8 @@ html, body {
   .pb-30-mob {
     padding-bottom: 30px;
   }
+  .cd-axe-card {
+    margin-bottom: 30px !important;
+  }
 }
 /*# sourceMappingURL=../css/mobile.css.map */
