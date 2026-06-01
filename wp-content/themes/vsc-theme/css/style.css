@@ -3629,12 +3629,14 @@ body .wpcf7-mail-sent-ok {
   color: #625756;
   margin: 0 0 0.6vw 0;
   font-family: "SuperBlue", serif;
-  margin-top: -17%;
+  margin-top: 0;
   z-index: 555;
   position: relative;
   background-color: #F4F3EF;
   max-width: 16vw;
   padding: 0.5vw 2.8vw;
+  margin-bottom: -4.5vw;
+  transform: translateY(-4.5vw);
 }
 
 .cd-img-service {
