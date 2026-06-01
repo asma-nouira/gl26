@@ -3207,6 +3207,12 @@ ul.list-style li::before {
   padding-left: 22.66vw;
   padding-right: 22.66vw;
 }
+@media (max-width: 1200px) and (min-width: 769px) {
+  .cd-service-text-center.medium-pd {
+    padding-left: 17vw;
+    padding-right: 17vw;
+  }
+}
 @media (max-width: 768px) {
   .cd-service-text-center.medium-pd {
     padding-left: 6vw;
@@ -3271,6 +3277,12 @@ h2.pb-45 {
 .cd-section-center {
   padding: 6.87vw 21.66vw 6.66vw;
 }
+@media (max-width: 1200px) and (min-width: 769px) {
+  .cd-section-center {
+    padding-left: 17vw;
+    padding-right: 17vw;
+  }
+}
 @media (max-width: 768px) {
   .cd-section-center {
     padding: 5vw 6vw;
@@ -3280,6 +3292,12 @@ h2.pb-45 {
 .cd-bloc-solution {
   padding: 3.9vw 19.63vw 4.27vw 21.66vw;
   color: white;
+}
+@media (max-width: 1200px) and (min-width: 769px) {
+  .cd-bloc-solution {
+    padding-left: 17vw;
+    padding-right: 17vw;
+  }
 }
 @media (max-width: 768px) {
   .cd-bloc-solution {

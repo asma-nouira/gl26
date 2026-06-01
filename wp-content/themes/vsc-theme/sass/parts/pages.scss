@@ -951,6 +951,10 @@ ul.list-black {
        .cd-service-text-center.medium-pd{
         padding-left: 22.66vw;
          padding-right: 22.66vw;
+         @media (max-width: 1200px) and (min-width:769px){
+          padding-left: 17vw;
+            padding-right: 17vw;
+         }
           @media(max-width:768px){
             padding-left: 6vw;
             padding-right: 6vw;
@@ -994,6 +998,10 @@ ul.list-black {
     }
     .cd-section-center{
         padding: 6.87vw 21.66vw 6.66vw;
+   @media (max-width: 1200px) and (min-width:769px){
+          padding-left: 17vw;
+            padding-right: 17vw;
+         }
          @media(max-width:768px){
             padding: 5vw 6vw;
         }
@@ -1001,6 +1009,10 @@ ul.list-black {
     .cd-bloc-solution{
         padding: 3.9vw 19.63vw 4.27vw 21.66vw;
         color:white;
+           @media (max-width: 1200px) and (min-width:769px){
+          padding-left: 17vw;
+            padding-right: 17vw;
+         }
          @media(max-width:768px){
             padding: 4vw 6vw;
         }
