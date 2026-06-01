@@ -875,22 +875,42 @@ ul.list-black {
     .cd-service-text-center.min{
         padding-left: 21.66vw;
          padding-right: 21.66vw;
+         @media(max-width:768px){
+            padding-left: 6vw;
+            padding-right: 6vw;
+         }
     }
        .cd-service-text-center.medium-pd{
         padding-left: 22.66vw;
          padding-right: 22.66vw;
+          @media(max-width:768px){
+            padding-left: 6vw;
+            padding-right: 6vw;
+         }
     }
     .cd-content-section.cd-pb-min{
         padding-bottom:2.34vw ;
+        @media(max-width:768px){
+            padding-bottom: 4vw;
+        }
     }
     .pt-100.cd-service-text-center{
         padding-top: 5.20vw;
+         @media(max-width:768px){
+            padding-bottom: 6vw;
+        }
     }
      .pt-80.cd-service-text-center{
         padding-top: 4.10vw;
+        @media(max-width:768px){
+            padding-top: 8vw;
+        }
     }
         .cd-techno-service.pt-130{
         padding-top: 6.77vw;
+          @media(max-width:768px){
+            padding-top: 8vw;
+        }
     }
     h2.pb-25{
         padding-bottom: 1.28vw;
