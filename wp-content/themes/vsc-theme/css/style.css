@@ -2888,6 +2888,12 @@ ul.list li::before {
   left: 0;
   top: 0.3vw;
 }
+@media (max-width: 768px) {
+  ul.list li::before {
+    top: 0;
+    left: -10px;
+  }
+}
 ul.list li strong {
   font-weight: 700;
 }

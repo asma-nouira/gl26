@@ -699,6 +699,10 @@ ul.list {
             position: absolute;
             left: 0;
             top: 0.3vw;
+            @media(max-width:768px){
+                top:0;
+                left:-10px;
+            }
         }
 
         strong {
