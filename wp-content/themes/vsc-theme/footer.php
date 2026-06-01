@@ -32,7 +32,7 @@
                 <a href="tel:+14188672260" class="cd-btn cd-btn-accent">
                     (418) 867-2260
                 </a>
-                <a href="/coin-enfant" class="cd-btn cd-btn-brown ">
+                <a href="/conseils-post-operatoires/#coin-enfant" class="cd-btn cd-btn-brown ">
                     Coin enfant
                 </a>
                 <a href="https://www.facebook.com/cliniquedentairegl"
