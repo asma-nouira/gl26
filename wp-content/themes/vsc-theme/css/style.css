@@ -2593,6 +2593,12 @@ body {
   padding: 6.45vw 20vw;
   background: #F4F3EF;
 }
+@media (max-width: 1200px) and (min-width: 769px) {
+  .cd-technologies-section {
+    padding-left: 17vw;
+    padding-right: 17vw;
+  }
+}
 .cd-technologies-section .cd-tech-intro {
   text-align: center;
   max-width: 45vw;
@@ -2646,9 +2652,6 @@ body {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 1024px) {
-  .cd-technologies-section {
-    padding: 5vw 4vw;
-  }
   .cd-tech-item {
     gap: 3vw;
   }

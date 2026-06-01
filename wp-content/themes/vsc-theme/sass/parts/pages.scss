@@ -357,7 +357,10 @@
 .cd-technologies-section {
     padding: 6.45vw 20vw ;
     background: #F4F3EF;
-
+  @media(max-width:1200px) and (min-width:769px){
+    padding-left: 17vw;
+    padding-right: 17vw;
+  }
     .cd-tech-intro {
         text-align: center;
         max-width: 45vw;
@@ -417,7 +420,7 @@
    ============================================================ */
 
 @media (max-width: 1024px) {
-    .cd-technologies-section { padding: 5vw 4vw; }
+    
 
     .cd-tech-item { gap: 3vw; }
 
