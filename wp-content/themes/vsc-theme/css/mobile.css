@@ -60,9 +60,6 @@ html, body {
     font-size: 18px !important;
     border-bottom: 1px solid #f0efeb !important;
   }
-  #primary-menu > li > a::after, #primary-menu > li > a::before {
-    display: none !important;
-  }
   #primary-menu > li.menu-item-has-children > .sub-menu {
     position: static !important;
     visibility: visible !important;
