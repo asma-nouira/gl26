@@ -735,6 +735,9 @@ ul.list-black {
             position: absolute;
             left: 0;
             top: 0;
+            @media(max-width:768px){
+                left:-10px;
+            }
         }
 
         strong {

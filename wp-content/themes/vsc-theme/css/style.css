@@ -2953,6 +2953,11 @@ ul.list-black li::before {
   left: 0;
   top: 0;
 }
+@media (max-width: 768px) {
+  ul.list-black li::before {
+    left: -10px;
+  }
+}
 ul.list-black li strong {
   font-weight: 700;
 }
