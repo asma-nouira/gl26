@@ -246,6 +246,9 @@
         flex-direction: column;
         justify-content: center;
         height: 100%;
+        @media(max-width:768px){
+            padding: 5vw 6vw;
+        }
 
     h2 {
         font-size: clamp(1.5rem, 2.35vw, 2.8125rem);
