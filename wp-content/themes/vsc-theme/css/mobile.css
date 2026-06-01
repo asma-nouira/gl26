@@ -342,5 +342,8 @@ html, body {
   .cd-axe-card {
     margin-bottom: 30px !important;
   }
+  .mt-30-mob {
+    margin-top: 30px;
+  }
 }
 /*# sourceMappingURL=../css/mobile.css.map */
