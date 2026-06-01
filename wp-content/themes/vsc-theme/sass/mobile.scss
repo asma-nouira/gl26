@@ -21,16 +21,7 @@ html, body {
    ============================================================ */
 
 @media (max-width: 1024px) {
- /* Sous-menu caché par défaut */
-    #primary-menu > li.menu-item-has-children > .sub-menu {
-        display: none !important;
-    }
 
-    /* Sous-menu ouvert quand .open est ajouté par JS */
-    #primary-menu > li.menu-item-has-children.open > .sub-menu {
-        display: block !important;
-    }
-    /* ---- HEADER — hamburger ---- */
     .site-header {
         height: 70px !important;
         padding: 0 24px !important;
@@ -67,10 +58,11 @@ html, body {
                 padding: 14px 24px !important;
                 font-size: 18px !important;
                 border-bottom: 1px solid #f0efeb !important;
-               
+                &::after { display: none !important; }
             }
         }
 
+        /* Sous-menu — caché par défaut */
         > li.menu-item-has-children > .sub-menu {
             position: static !important;
             visibility: visible !important;
@@ -78,7 +70,7 @@ html, body {
             transform: none !important;
             box-shadow: none !important;
             border-radius: 0 !important;
-            display: none !important;
+            display: none !important; /* ← Caché */
             background: #F3F1ED !important;
             padding: 0 !important;
             min-width: 100% !important;
@@ -92,8 +84,9 @@ html, body {
             }
         }
 
+        /* Sous-menu — ouvert (DOIT être APRÈS le display:none) */
         > li.menu-item-has-children.open > .sub-menu {
-            display: block !important;
+            display: block !important; /* ← Ouvert */
         }
 
         li.btn-phone,
