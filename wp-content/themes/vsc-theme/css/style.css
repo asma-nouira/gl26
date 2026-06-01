@@ -2510,6 +2510,11 @@ body {
   line-height: 1.11;
   margin: 0 0 0.5vw;
 }
+@media (max-width: 768px) {
+  .cd-team-cta-text h2 {
+    margin-bottom: 2vw;
+  }
+}
 .cd-team-cta-text p {
   font-size: clamp(0.875rem, 0.94vw, 1.125rem);
   color: rgba(255, 255, 255, 0.9);

@@ -277,6 +277,9 @@
         color: #ffffff;
         line-height: 1.11;
         margin: 0 0 0.5vw;
+        @media(max-width:768px){
+            margin-bottom: 2vw;
+        }
     }
 
     p {
