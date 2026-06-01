@@ -1,61 +1,41 @@
-/* ============================================================
-   HEADER JS — Clinique Dentaire Geneviève Lafrance
-   Fichier : js/header.js
-   ============================================================ */
-
 document.addEventListener('DOMContentLoaded', function () {
 
-    const header    = document.querySelector('.site-header');
-    const hamburger = document.querySelector('.hamburger');
-    const navWrapper = document.querySelector('.site-header nav');
+    var header    = document.querySelector('.site-header');
+    var hamburger = document.querySelector('.hamburger');
+    var navWrapper = document.querySelector('.site-header nav');
 
-    /* --- Header sticky au scroll --- */
+    /* --- Header sticky --- */
     if (header) {
         window.addEventListener('scroll', function () {
             header.classList.toggle('scrolled', window.scrollY > 30);
         }, { passive: true });
     }
 
-    /* --- Hamburger mobile --- */
+    /* --- Hamburger --- */
     if (hamburger && navWrapper) {
         hamburger.addEventListener('click', function () {
-            const isOpen = navWrapper.classList.toggle('open');
+            var isOpen = navWrapper.classList.toggle('open');
             hamburger.classList.toggle('open', isOpen);
-            hamburger.setAttribute('aria-expanded', isOpen);
         });
 
-        /* Fermer au clic en dehors */
         document.addEventListener('click', function (e) {
             if (!header.contains(e.target)) {
                 navWrapper.classList.remove('open');
                 hamburger.classList.remove('open');
-                //hamburger.setAttribute('aria-expanded', false);
             }
         });
     }
 
-    /* --- Sous-menu mobile en accordéon --- */
-    if (window.innerWidth <= 768) {
-        document.querySelectorAll('#primary-menu .menu-item-has-children > a')
-            .forEach(function (link) {
-                link.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const parent = this.closest('li');
-                    parent.classList.toggle('open');
-                });
-            });
-    }
-
-    /* --- Lien actif selon URL courante --- */
-    const currentUrl = window.location.href;
+    /* --- Lien actif --- */
+    var currentUrl = window.location.href;
     document.querySelectorAll('#primary-menu a').forEach(function (link) {
         if (link.href === currentUrl) {
             link.closest('li').classList.add('current-menu-item');
         }
     });
 
-    /* --- Animations au scroll (IntersectionObserver) --- */
-    const observer = new IntersectionObserver(function (entries) {
+    /* --- Observer animations --- */
+    var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
             if (entry.isIntersecting) {
                 entry.target.classList.add('cd-visible');
@@ -64,11 +44,27 @@ document.addEventListener('DOMContentLoaded', function () {
     }, { threshold: 0.1 });
 
     document.querySelectorAll(
-        '.cd-fade-in, .cd-fade-left, .cd-fade-right, .cd-service-card'
+        '.cd-fade-in, .cd-fade-left, .cd-fade-right, .cd-service-card, .cd-team-member, .cd-team-grid-item'
     ).forEach(function (el) {
         observer.observe(el);
     });
-document.querySelectorAll(
-    '.cd-fade-in, .cd-fade-left, .cd-fade-right, .cd-service-card, .cd-team-member'
-).forEach(el => observer.observe(el));
+});
+
+/* --- Sous-menu accordéon (délégation sur document) --- */
+document.addEventListener('click', function(e) {
+    if (window.innerWidth > 1024) return;
+
+    var link = e.target.closest('#primary-menu > .menu-item-has-children > a');
+    if (!link) return;
+
+    e.preventDefault();
+    e.stopPropagation();
+
+    var parent = link.closest('li');
+    var isOpen = parent.classList.contains('open');
+
+    document.querySelectorAll('#primary-menu > .menu-item-has-children.open')
+        .forEach(function(item) { item.classList.remove('open'); });
+
+    if (!isOpen) parent.classList.add('open');
 });
