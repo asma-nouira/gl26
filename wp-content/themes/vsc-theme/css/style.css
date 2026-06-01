@@ -1251,6 +1251,11 @@ h2 {
 .pr-txt {
   padding-right: 25vw;
 }
+@media (max-width: 768px) {
+  .pr-txt {
+    padding-right: 0;
+  }
+}
 
 /* ============================================================
    BLOG.SCSS — Clinique Dentaire Geneviève Lafrance

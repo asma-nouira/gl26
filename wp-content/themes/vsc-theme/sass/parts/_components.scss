@@ -494,4 +494,7 @@ h2 {
 }
 .pr-txt{
 padding-right: 25vw;
+@media(max-width:768px){
+    padding-right: 0;
+}
 }
