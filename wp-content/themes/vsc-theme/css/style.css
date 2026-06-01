@@ -2465,6 +2465,11 @@ body {
   justify-content: center;
   height: 100%;
 }
+@media (max-width: 1200px) and (min-width: 769px) {
+  .cd-team-cta-text {
+    padding-right: 10vw;
+  }
+}
 @media (max-width: 768px) {
   .cd-team-cta-text {
     padding: 5vw 6vw;
