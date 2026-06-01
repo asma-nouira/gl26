@@ -90,6 +90,10 @@
 
 .cd-team-circles-section{
     padding: 0  24.47vw 6.9vw 25.15vw;
+    @media(max-width:1200px){
+        padding-left: 17vw;
+        padding-right: 17vw;
+    }
     .cd-team-circles{
       padding-bottom: 0;
     }
