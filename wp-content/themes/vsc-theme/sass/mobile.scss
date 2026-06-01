@@ -21,7 +21,9 @@ html, body {
    ============================================================ */
 
 @media (max-width: 1024px) {
-
+.vce-row--col-gap-45>.vce-row-content>.vce-col{
+    margin-right: 15px!important;
+}
     .site-header {
         height: 70px !important;
         padding: 0 24px !important;
