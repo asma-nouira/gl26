@@ -1249,12 +1249,22 @@ h2 {
   color: #ffffff;
   margin: 0 0 1.04vw;
 }
+@media (max-width: 768px) {
+  .cd-blog-header h2 {
+    margin-bottom: 2vw;
+  }
+}
 .cd-blog-header p {
   font-family: var(--cd-font-body);
   color: rgba(255, 255, 255, 0.85);
   line-height: 1.7;
   max-width: 32.29vw;
   margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .cd-blog-header p {
+    max-width: 90%;
+  }
 }
 
 /* Grille accueil */

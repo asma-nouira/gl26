@@ -26,6 +26,9 @@
         font-weight: 400;
         color: #ffffff;
         margin: 0 0 1.04vw;
+        @media(max-width:768px){
+            margin-bottom:2vw;
+        }
     }
 
     p {
@@ -34,6 +37,9 @@
         line-height: 1.7;
         max-width: 32.29vw;
         margin: 0 auto;
+        @media(max-width:768px){
+            max-width: 90%;
+        }
     }
 }
 
