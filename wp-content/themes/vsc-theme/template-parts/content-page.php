@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php vsc_theme_post_thumbnail(); ?>
+
 
 	<div class="entry-content">
 		<?php
