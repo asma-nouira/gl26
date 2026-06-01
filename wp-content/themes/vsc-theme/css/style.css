@@ -3933,11 +3933,21 @@ body .wpcf7-mail-sent-ok {
 .cd-map-section {
   padding: 6.25vw 21.66vw 7.81vw;
 }
+@media (max-width: 768px) {
+  .cd-map-section {
+    padding: 8vw 6vw;
+  }
+}
 .cd-map-section h3 {
   font-family: "SuperBlue", serif;
   font-size: clamp(1rem, 1.5625vw, 1.875rem);
   color: #BF9F94;
   margin-bottom: 1vw;
+}
+@media (max-width: 768px) {
+  .cd-map-section h3 {
+    margin-bottom: 2vw;
+  }
 }
 .cd-map-section .cd-txt1 {
   padding-bottom: 2.6vw;

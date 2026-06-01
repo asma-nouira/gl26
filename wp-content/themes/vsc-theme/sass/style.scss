@@ -682,11 +682,17 @@ body .wpcf7-mail-sent-ok {
 }
 .cd-map-section{
     padding: 6.25vw 21.66vw 7.81vw;
+    @media(max-width:768px){
+        padding: 8vw 6vw;
+    }
     h3{
         font-family: 'SuperBlue', serif;
         font-size: clamp(1rem, 1.5625vw, 1.875rem);
         color: #BF9F94;
         margin-bottom: 1vw;
+        @media(max-width:768px){
+            margin-bottom: 2vw;
+        }
     }
     .cd-txt1{
      padding-bottom: 2.6vw;
