@@ -133,6 +133,11 @@ html, body {
   .site-header nav {
     top: 60px !important;
   }
+  .site-header nav.open {
+    max-height: calc(100vh - 70px) !important; /* Hauteur écran moins header */
+    overflow-y: auto !important; /* Scroll vertical */
+    -webkit-overflow-scrolling: touch; /* Scroll fluide iOS */
+  }
   .custom-logo-link img.custom-logo {
     height: 38px !important;
   }
