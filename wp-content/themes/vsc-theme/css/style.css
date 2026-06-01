@@ -3867,6 +3867,12 @@ body .wpcf7-mail-sent-ok {
 .cd-content-section.cd-contact {
   padding: 1.19vw 21.66vw 3.64vw;
 }
+@media (max-width: 1200px) {
+  .cd-content-section.cd-contact {
+    padding-left: 17vw;
+    padding-right: 17vw;
+  }
+}
 
 .cd-infos-contact {
   padding: 0 21.66vw 5vw;

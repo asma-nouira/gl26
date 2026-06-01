@@ -617,6 +617,10 @@ body .wpcf7-mail-sent-ok {
 
 .cd-content-section.cd-contact{
     padding: 1.19vw  21.66vw  3.64vw;
+    @media(max-width:1200px){
+     padding-left: 17vw;
+     padding-right: 17vw;
+    }
 
 }
 .cd-infos-contact{
