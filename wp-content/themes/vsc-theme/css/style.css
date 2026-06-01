@@ -3312,6 +3312,123 @@ h2.pb-45 {
 }
 
 /* ============================================================
+PAGE 404
+============================================================ */
+.cd-404 {
+  min-height: calc(100vh - 7.5vw);
+  margin-top: 7.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cd-bg-warm);
+  position: relative;
+  overflow: hidden;
+  padding: 5vw;
+  text-align: center;
+}
+
+.cd-404-content {
+  position: relative;
+  z-index: 2;
+  max-width: 35vw;
+}
+
+.cd-404-number {
+  font-family: "SuperBlue", serif;
+  font-size: clamp(5rem, 10.4vw, 12.5rem);
+  font-weight: 400;
+  color: #BF9F94;
+  opacity: 0.3;
+  display: block;
+  line-height: 1;
+  margin-bottom: 1vw;
+}
+
+.cd-404-title {
+  font-family: "SuperBlue", serif;
+  font-size: clamp(1.5rem, 2.34375vw, 2.8125rem);
+  font-weight: 400;
+  color: #625756;
+  margin: 0 0 1.5vw;
+  line-height: 1.2;
+}
+
+.cd-404-text {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.875rem, 0.9375vw, 1.125rem);
+  color: var(--cd-text);
+  line-height: 1.75;
+  margin: 0 0 2.5vw;
+}
+
+.cd-404-actions {
+  display: flex;
+  gap: 1vw;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cd-btn-outline-brown {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7vw 2vw;
+  background: transparent;
+  color: #625756 !important;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  border: 0.1vw solid #625756;
+  border-radius: 50px;
+  text-decoration: none !important;
+  transition: all 0.3s ease;
+}
+.cd-btn-outline-brown:hover {
+  background: #625756;
+  color: #ffffff !important;
+  transform: translateY(-0.2vw);
+}
+
+/* Image décorative dent */
+.cd-404-deco {
+  position: absolute;
+  bottom: -3vw;
+  right: -2vw;
+  width: 25vw;
+  opacity: 0.06;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cd-404-content {
+    max-width: 60vw;
+  }
+}
+@media (max-width: 768px) {
+  .cd-404 {
+    margin-top: 60px !important;
+    padding: 15vw 5vw;
+  }
+  .cd-404-content {
+    max-width: 100%;
+  }
+  .cd-404-actions {
+    flex-direction: column;
+    gap: 3vw;
+  }
+  .cd-404-actions .cd-btn,
+  .cd-404-actions .cd-btn-outline-brown {
+    width: 100%;
+    justify-content: center;
+    padding: 3vw 5vw;
+  }
+  .cd-404-deco {
+    width: 40vw;
+    bottom: -5vw;
+    right: -5vw;
+  }
+}
+/* ============================================================
    GLOBAL
    ============================================================ */
 *, *::before, *::after {

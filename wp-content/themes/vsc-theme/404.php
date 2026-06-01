@@ -1,31 +1,28 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package vsc-theme
+ * 404.php — Page non trouvée
+ * Clinique Dentaire Geneviève Lafrance
  */
 
-get_header();
-?>
+get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<section class="cd-404">
+    <div class="cd-404-content">
+        <span class="cd-404-number">404</span>
+        <h1 class="cd-404-title">Oups ! Page introuvable</h1>
+        <p class="cd-404-text">La page que vous recherchez semble avoir été déplacée ou n'existe plus. Pas d'inquiétude, nous allons vous aider à retrouver votre chemin !</p>
+        <div class="cd-404-actions">
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="cd-btn cd-btn-brown">
+                Retour à l'accueil
+            </a>
+            <a href="<?php echo esc_url(home_url('/contact')); ?>" class="cd-btn cd-btn-outline-brown">
+                Nous contacter
+            </a>
+        </div>
+    </div>
+    <img class="cd-404-deco" 
+         src="<?php echo get_template_directory_uri(); ?>/images/Tooth.svg" 
+         alt="" aria-hidden="true">
+</section>
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"> Oups ! La page que vous recherchez est introuvable.</h1>
-				</header><!-- .page-header -->
-
-				<div class="page-content">
-					<p class="404">Il n'y a pas de contenu à cet emplacement. Visitez notre <a href="/">page d'accueil !</a></p>
-
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_footer();
+<?php get_footer(); ?>
