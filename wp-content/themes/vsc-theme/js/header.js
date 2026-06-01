@@ -68,3 +68,40 @@ document.addEventListener('click', function(e) {
 
     if (!isOpen) parent.classList.add('open');
 });
+/* --- Popup Rendez-vous --- */
+var overlay = document.getElementById('cdRdvOverlay');
+
+if (overlay) {
+
+    /* Ouvrir — tous les boutons avec classe cd-rdv-trigger */
+    document.addEventListener('click', function(e) {
+        var trigger = e.target.closest('.cd-rdv-trigger');
+        if (trigger) {
+            e.preventDefault();
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    });
+
+    /* Fermer — bouton X */
+    overlay.querySelector('.cd-rdv-close').addEventListener('click', function() {
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    });
+
+    /* Fermer — clic sur overlay */
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+
+    /* Fermer — touche Escape */
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && overlay.classList.contains('active')) {
+            overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+    });
+}

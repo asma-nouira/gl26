@@ -80,7 +80,19 @@
     </div>
 
 </footer>
-
+<!-- Popup Rendez-vous -->
+<div class="cd-rdv-overlay" id="cdRdvOverlay">
+    <div class="cd-rdv-popup">
+        <button class="cd-rdv-close" aria-label="Fermer">✕</button>
+        <div class="cd-rdv-header">
+            <h2>Prendre rendez-vous</h2>
+            <p>Remplissez le formulaire et nous vous contacterons dans les plus brefs délais.</p>
+        </div>
+        <div class="cd-rdv-form">
+            <?php echo do_shortcode('[contact-form-7 id="VOTRE_ID" title="Rendez-vous"]'); ?>
+        </div>
+    </div>
+</div>
 <?php wp_footer(); ?>
 </body>
 </html>

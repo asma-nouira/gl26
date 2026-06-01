@@ -2047,6 +2047,163 @@ h2 {
 }
 
 /* ============================================================
+   POPUP RENDEZ-VOUS
+   ============================================================ */
+.cd-rdv-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(36, 36, 36, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2vw;
+  /* Ouvert */
+}
+.cd-rdv-overlay.active {
+  display: flex;
+}
+
+.cd-rdv-popup {
+  background: #ffffff;
+  border-radius: 1.5vw;
+  max-width: 35vw;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 3vw;
+  position: relative;
+  box-shadow: 0 1.5vw 4vw rgba(0, 0, 0, 0.2);
+  /* Animation entrée */
+  transform: translateY(1.5vw);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+.cd-rdv-overlay.active .cd-rdv-popup {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Bouton fermer */
+.cd-rdv-close {
+  position: absolute;
+  top: 1.2vw;
+  right: 1.2vw;
+  width: 2vw;
+  height: 2vw;
+  min-width: 32px;
+  min-height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: var(--cd-bg-warm);
+  color: #625756;
+  font-size: clamp(0.9rem, 1vw, 1.2rem);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+.cd-rdv-close:hover {
+  background: #625756;
+  color: #ffffff;
+}
+
+/* Header */
+.cd-rdv-header {
+  text-align: center;
+  margin-bottom: 2vw;
+}
+.cd-rdv-header h2 {
+  font-family: "SuperBlue", serif;
+  font-size: clamp(1.2rem, 1.875vw, 2.25rem);
+  font-weight: 400;
+  color: #625756;
+  margin: 0 0 0.8vw;
+}
+.cd-rdv-header p {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.8rem, 0.83vw, 1rem);
+  color: var(--cd-text);
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* Override CF7 dans le popup */
+.cd-rdv-form .wpcf7 label {
+  font-size: clamp(0.8rem, 0.83vw, 1rem);
+  margin-bottom: 0.8vw;
+}
+.cd-rdv-form .wpcf7 input[type=text],
+.cd-rdv-form .wpcf7 input[type=email],
+.cd-rdv-form .wpcf7 input[type=tel],
+.cd-rdv-form .wpcf7 select {
+  height: 2.5vw;
+  min-height: 40px;
+  border-radius: 0.5vw;
+  border: 0.05vw solid var(--cd-border);
+  padding: 0 1vw;
+  font-size: clamp(0.8rem, 0.83vw, 1rem);
+}
+.cd-rdv-form .wpcf7 input[type=text]:focus,
+.cd-rdv-form .wpcf7 input[type=email]:focus,
+.cd-rdv-form .wpcf7 input[type=tel]:focus,
+.cd-rdv-form .wpcf7 select:focus {
+  border-color: #BF9F94;
+  box-shadow: 0 0 0 0.15vw rgba(191, 159, 148, 0.15);
+}
+.cd-rdv-form .wpcf7 textarea {
+  min-height: 5vw;
+  border-radius: 0.5vw;
+  border: 0.05vw solid var(--cd-border);
+  padding: 0.8vw 1vw;
+  font-size: clamp(0.8rem, 0.83vw, 1rem);
+  resize: vertical;
+}
+.cd-rdv-form .wpcf7 textarea:focus {
+  border-color: #BF9F94;
+  box-shadow: 0 0 0 0.15vw rgba(191, 159, 148, 0.15);
+}
+.cd-rdv-form .wpcf7 input[type=submit] {
+  width: 100%;
+  padding: 0.7vw 2vw;
+  background: #625756;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.875rem, 0.9375vw, 1.125rem);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.cd-rdv-form .wpcf7 input[type=submit]:hover {
+  background: #4e4342;
+  transform: translateY(-0.1vw);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cd-rdv-popup {
+    max-width: 60vw;
+  }
+}
+@media (max-width: 768px) {
+  .cd-rdv-overlay {
+    padding: 5vw;
+  }
+  .cd-rdv-popup {
+    max-width: 100%;
+    padding: 6vw;
+    border-radius: 3vw;
+  }
+  .cd-rdv-close {
+    top: 3vw;
+    right: 3vw;
+  }
+}
+/* ============================================================
    GUIDE DES TAILLES DE POLICE EN clamp()
    Clinique Dentaire Geneviève Lafrance
 
