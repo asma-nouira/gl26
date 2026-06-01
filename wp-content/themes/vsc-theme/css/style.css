@@ -1192,25 +1192,55 @@ h2 {
 .pb-25 {
   padding-bottom: 1.3vw;
 }
+@media (max-width: 768px) {
+  .pb-25 {
+    padding-bottom: 2.5vw;
+  }
+}
 
 .pb-45 {
   padding-bottom: 2.3vw;
+}
+@media (max-width: 768px) {
+  .pb-45 {
+    padding-bottom: 4.5vw;
+  }
 }
 
 .pb-35 {
   padding-bottom: 1.82vw;
 }
+@media (max-width: 768px) {
+  .pb-35 {
+    padding-bottom: 3.5vw;
+  }
+}
 
 .pt-100 {
   padding-top: 5.2vw;
+}
+@media (max-width: 768px) {
+  .pt-100 {
+    padding-top: 8vw;
+  }
 }
 
 .pt-130 {
   padding-top: 6.77vw;
 }
+@media (max-width: 768px) {
+  .pt-130 {
+    padding-top: 8vw;
+  }
+}
 
 .pb-50 {
   padding-bottom: 2.6vw;
+}
+@media (max-width: 768px) {
+  .pb-50 {
+    padding-bottom: 5.5vw;
+  }
 }
 
 .plr-100 {
