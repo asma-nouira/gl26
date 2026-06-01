@@ -1294,7 +1294,7 @@ h2 {
 }
 @media (max-width: 768px) {
   .cd-blog-section .cd-blog-card .cd-blog-card-img {
-    margin-bottom: 2vw;
+    margin-bottom: 4vw;
   }
 }
 .cd-blog-section .cd-blog-card .cd-blog-card-img img {
@@ -1317,7 +1317,8 @@ h2 {
 }
 @media (max-width: 768px) {
   .cd-blog-section .cd-blog-card .cd-blog-card-no-img {
-    margin-bottom: 2vw;
+    margin-bottom: 4vw;
+    border-radius: 20px;
   }
 }
 .cd-blog-section .cd-blog-card .cd-blog-card-title {
@@ -1330,7 +1331,7 @@ h2 {
 }
 @media (max-width: 768px) {
   .cd-blog-section .cd-blog-card .cd-blog-card-title {
-    margin-bottom: 1.5vw;
+    margin-bottom: 2.5vw;
   }
 }
 .cd-blog-section .cd-blog-card .cd-blog-card-title a {
