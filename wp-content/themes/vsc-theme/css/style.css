@@ -3918,6 +3918,11 @@ body .wpcf7-mail-sent-ok {
 .cd-urgence-text {
   padding: 11.61vw 16.51vw 8.33vw 6.77vw;
 }
+@media (max-width: 768px) {
+  .cd-urgence-text {
+    padding: 8vw 6vw;
+  }
+}
 .cd-urgence-text h2 {
   color: white;
 }
