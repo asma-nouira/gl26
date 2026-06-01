@@ -2853,6 +2853,12 @@ body {
   padding: 4.6vw 18.5vw 6.35vw 21.66vw;
   color: white;
 }
+@media (max-width: 1200px) and (min-width: 769px) {
+  .cd-service-block {
+    padding-left: 17vw;
+    padding-right: 17vw;
+  }
+}
 @media (max-width: 768px) {
   .cd-service-block {
     padding: 5vw 6vw;
@@ -2881,6 +2887,12 @@ body {
 
 .cd-service-infos {
   padding: 6.77vw 21.66vw 3.64vw;
+}
+@media (max-width: 1200px) and (min-width: 769px) {
+  .cd-service-infos {
+    padding-left: 17vw;
+    padding-right: 17vw;
+  }
 }
 @media (max-width: 768px) {
   .cd-service-infos {
@@ -2922,6 +2934,12 @@ body {
 .cd-service-text-center {
   padding: 0 23.69vw 5.78vw;
 }
+@media (max-width: 1200px) and (min-width: 769px) {
+  .cd-service-text-center {
+    padding-left: 17vw;
+    padding-right: 17vw;
+  }
+}
 @media (max-width: 768px) {
   .cd-service-text-center {
     padding: 0 5vw 5vw;
@@ -2930,6 +2948,12 @@ body {
 
 .cd-techno-service {
   padding: 0 22.08vw 6.87vw 21.66vw;
+}
+@media (max-width: 1200px) and (min-width: 769px) {
+  .cd-techno-service {
+    padding-left: 17vw;
+    padding-right: 17vw;
+  }
 }
 @media (max-width: 768px) {
   .cd-techno-service {
@@ -2953,6 +2977,12 @@ body {
 
 .cd-service-block.simple {
   padding: 5.9vw 22.76vw 6.14vw 21.92vw;
+}
+@media (max-width: 1200px) and (min-width: 769px) {
+  .cd-service-block.simple {
+    padding-left: 17vw;
+    padding-right: 17vw;
+  }
 }
 @media (max-width: 768px) {
   .cd-service-block.simple {
