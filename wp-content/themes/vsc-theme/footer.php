@@ -69,6 +69,8 @@
                     <td>Fermé</td>
                 </tr>
             </table>
+
+            <a href="/politique-de-confidentialite/" class="underline">Politique de confidentialité</a>
         </div>
 
     </div>
