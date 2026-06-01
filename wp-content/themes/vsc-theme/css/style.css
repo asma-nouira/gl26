@@ -2825,6 +2825,12 @@ body {
   padding-top: 3.38vw;
   padding-bottom: 2.96vw;
 }
+@media (max-width: 768px) {
+  .cd-service-block.min {
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+  }
+}
 
 .cd-service-infos {
   padding: 6.77vw 21.66vw 3.64vw;
