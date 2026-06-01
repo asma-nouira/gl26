@@ -247,11 +247,11 @@
         justify-content: center;
         height: 100%;
          @media(max-width:1200px) and (min-width:769px){
-            padding-right: 10vw;
+            padding-right: 10vw!important;
             
          }
         @media(max-width:768px){
-            padding: 5vw 6vw;
+            padding: 5vw 6vw!important;
         }
 
     h2 {
