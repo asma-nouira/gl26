@@ -21,7 +21,15 @@ html, body {
    ============================================================ */
 
 @media (max-width: 1024px) {
+ /* Sous-menu caché par défaut */
+    #primary-menu > li.menu-item-has-children > .sub-menu {
+        display: none !important;
+    }
 
+    /* Sous-menu ouvert quand .open est ajouté par JS */
+    #primary-menu > li.menu-item-has-children.open > .sub-menu {
+        display: block !important;
+    }
     /* ---- HEADER — hamburger ---- */
     .site-header {
         height: 70px !important;
