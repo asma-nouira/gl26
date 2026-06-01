@@ -2984,6 +2984,11 @@ ul.list-black li strong {
   margin: 0 20vw 3vw;
   text-align: center;
 }
+@media (max-width: 768px) {
+  .cd-axes-section h2 {
+    margin: 0 13vw 3vw;
+  }
+}
 
 .cd-axes-section.p-dentaire {
   padding-left: 15.62vw;
