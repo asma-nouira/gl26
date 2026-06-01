@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!header.contains(e.target)) {
                 navWrapper.classList.remove('open');
                 hamburger.classList.remove('open');
-                hamburger.setAttribute('aria-expanded', false);
+                //hamburger.setAttribute('aria-expanded', false);
             }
         });
     }
