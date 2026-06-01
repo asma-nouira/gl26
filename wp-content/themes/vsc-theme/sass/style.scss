@@ -615,6 +615,9 @@ body .wpcf7-mail-sent-ok {
 }
 .cd-infos-contact{
      padding: 0  21.66vw  5vw;
+     @media(max-width:768px){
+        padding: 0 6vw 6vw;
+     }
       .cd-img-clinic img{
         border-radius: 40px;
       }
