@@ -454,7 +454,7 @@ body .wpcf7-mail-sent-ok {
         padding: 10vw 5vw 9vw 8vw;
     }
     @media(max-width:768px){
-        padding: 0 6vw 5vw;
+        padding: 0 6vw 5vw!important;
     }
 }
 
@@ -466,6 +466,9 @@ body .wpcf7-mail-sent-ok {
     padding: 4.5vw 16vw 10vw 17vw;
     @media(max-width:1200px){
         padding: 4.5vw 10vw 10vw;
+    }
+     @media(max-width:768px){
+        padding: 4vw 6vw 5vw!important;
     }
 }
 

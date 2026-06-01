@@ -3698,7 +3698,7 @@ body .wpcf7-mail-sent-ok {
 }
 @media (max-width: 768px) {
   .cd-appoint-section {
-    padding: 0 6vw 5vw;
+    padding: 0 6vw 5vw !important;
   }
 }
 
@@ -3711,6 +3711,11 @@ body .wpcf7-mail-sent-ok {
 @media (max-width: 1200px) {
   .cd-urgence-section {
     padding: 4.5vw 10vw 10vw;
+  }
+}
+@media (max-width: 768px) {
+  .cd-urgence-section {
+    padding: 4vw 6vw 5vw !important;
   }
 }
 
