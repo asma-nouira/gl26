@@ -51,7 +51,7 @@
 <!-- Barre latérale icônes — répétée sur toutes les pages -->
 <div class="hero-sidebar">
 
-    <a href="/services" class="hero-sidebar-item" title="Nos services">
+    <a href="/contact/#urgence" class="hero-sidebar-item" title="Nos services">
        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61.162" height="64.201" viewBox="0 0 61.162 64.201">
   <defs>
     <clipPath id="clip-path">
@@ -70,7 +70,7 @@
 
     </a>
 
-    <a href="/contact" class="hero-sidebar-item" title="Nous contacter">
+    <a href="/contact/" class="hero-sidebar-item" title="Nous contacter">
       <svg xmlns="http://www.w3.org/2000/svg" width="69.824" height="64.804" viewBox="0 0 69.824 64.804">
   <g id="Groupe_162" data-name="Groupe 162" transform="translate(-1822.335 -541.388)">
     <path id="Tracé_40" data-name="Tracé 40" d="M1878.195,612.52c-.9-4.662-4.686-7.681-9.649-7.692-10.623-.027-20.388-.026-29.849,0-5.881.016-9.84,4-9.854,9.916q-.015,6.658,0,13.32v.888c.006,6.136,4,10.1,10.164,10.107l3.281,0c6.385,0,12.776.009,19.167-.019h.027a4.46,4.46,0,0,1,3.015,1.047c1.866,1.531,3.753,3.036,5.639,4.541q2.3,1.835,4.592,3.684c1.085.88,1.741,1.066,2.512.7s1.054-.985,1.049-2.376q-.024-6.029-.011-12.059l0-8.57q0-5.33,0-10.661c0-.258,0-.518.01-.778A9.878,9.878,0,0,0,1878.195,612.52Zm-3.489,31.046-1.147-.917c-.729-.582-1.446-1.138-2.147-1.684-1.605-1.248-3.121-2.426-4.56-3.728a7.094,7.094,0,0,0-5.335-1.886c-5.458.091-11,.074-16.364.059q-2.986-.009-5.967-.012c-4.367,0-6.678-2.294-6.681-6.631q-.005-6.923,0-13.847c.006-4.09,2.373-6.437,6.489-6.437q14.619,0,29.242,0c4.109,0,6.466,2.349,6.468,6.442l0,20.231Z" transform="translate(13.861 -43.002)" fill="#fff"/>
