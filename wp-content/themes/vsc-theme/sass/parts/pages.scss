@@ -90,9 +90,13 @@
 
 .cd-team-circles-section{
     padding: 0  24.47vw 6.9vw 25.15vw;
-    @media(max-width:1200px){
+    @media(max-width:1200px) and (min-width:769px){
         padding-left: 17vw;
         padding-right: 17vw;
+    }
+    @media(max-width:768px){
+        padding-left: 6vw;
+        padding-right: 6vw;
     }
     .cd-team-circles{
       padding-bottom: 0;
@@ -104,7 +108,14 @@
   
     transform: translateY(1.5vw);
     transition: opacity 0.7s ease, transform 0.7s ease;
-
+@media(max-width:1200px) and (min-width:769px){
+        padding-left: 17vw;
+        padding-right: 17vw;
+    }
+     @media(max-width:768px){
+        padding-left: 6vw;
+        padding-right: 6vw;
+    }
     &.cd-visible {
         transform: translateY(0);
     }
