@@ -3045,18 +3045,38 @@ ul.list-style li::before {
 h2.pb-25 {
   padding-bottom: 1.28vw;
 }
+@media (max-width: 768px) {
+  h2.pb-25 {
+    padding-bottom: 2vw;
+  }
+}
 
 h2.pb-45 {
   padding-bottom: 2.3vw;
+}
+@media (max-width: 768px) {
+  h2.pb-45 {
+    padding-bottom: 2vw;
+  }
 }
 
 .cd-section-center {
   padding: 6.87vw 21.66vw 6.66vw;
 }
+@media (max-width: 768px) {
+  .cd-section-center {
+    padding: 5vw 6vw;
+  }
+}
 
 .cd-bloc-solution {
   padding: 3.9vw 19.63vw 4.27vw 21.66vw;
   color: white;
+}
+@media (max-width: 768px) {
+  .cd-bloc-solution {
+    padding: 4vw 6vw;
+  }
 }
 .cd-bloc-solution h3 {
   font-family: "SuperBlue", serif;

@@ -890,16 +890,28 @@ ul.list-black {
     }
     h2.pb-25{
         padding-bottom: 1.28vw;
+        @media(max-width:768px){
+            padding-bottom: 2vw;
+        }
     }
     h2.pb-45{
         padding-bottom: 2.3vw;
+         @media(max-width:768px){
+            padding-bottom: 2vw;
+        }
     }
     .cd-section-center{
         padding: 6.87vw 21.66vw 6.66vw;
+         @media(max-width:768px){
+            padding: 5vw 6vw;
+        }
     }
     .cd-bloc-solution{
         padding: 3.9vw 19.63vw 4.27vw 21.66vw;
         color:white;
+         @media(max-width:768px){
+            padding: 4vw 6vw;
+        }
         h3{
              font-family: 'SuperBlue', serif;
         font-size:clamp(1rem, 1.5625vw, 1.875rem);
