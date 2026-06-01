@@ -696,6 +696,10 @@ body .wpcf7-mail-sent-ok {
 }
 .cd-map-section{
     padding: 6.25vw 21.66vw 7.81vw;
+    @media(max-width:1200px) and (min-width:769px){
+        padding-left: 17vw;
+        padding-right: 17vw;
+    }
     @media(max-width:768px){
         padding: 8vw 6vw;
     }
