@@ -589,6 +589,9 @@ letter-spacing: 0.5px;
     text-align: center;
     line-height: 1.3;
     padding: 2vw 7vw;
+    @media(max-width:768px){
+        padding: 2vw 4vw;
+    }
 
 }
 .cd-service-block{

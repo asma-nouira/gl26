@@ -2791,6 +2791,11 @@ body {
   line-height: 1.3;
   padding: 2vw 7vw;
 }
+@media (max-width: 768px) {
+  .cd-service-quote p {
+    padding: 2vw 4vw;
+  }
+}
 
 .cd-service-block {
   padding: 4.6vw 18.5vw 6.35vw 21.66vw;
