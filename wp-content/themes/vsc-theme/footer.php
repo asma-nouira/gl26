@@ -78,7 +78,7 @@
     <!-- Bas de footer -->
     <div class="cd-footer-bottom">
         <p>© <?php echo date('Y'); ?> Clinique dentaire Geneviève Lafrance. Tous droits réservés.</p>
-        <p>Conception web : <a href="https://virussantecommunication.ca" target="_blank" rel="noopener">Virus Santé Communication</a></p>
+        <p>Conception web : <a href="/remerciement/" target="_blank" rel="noopener">Virus Santé Communication</a></p>
     </div>
 
 </footer>
