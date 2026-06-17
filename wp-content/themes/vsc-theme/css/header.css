@@ -244,11 +244,11 @@
   box-shadow: 0 4px 12px rgba(197, 142, 128, 0.35);
   color: #ffffff !important;
 }
-#primary-menu li a.btn-coin-enfant {
+#primary-menu li.btn-coin-enfant {
   opacity: 1;
   animation: fadeInRight 0.6s ease 0.58s forwards;
 }
-#primary-menu li a.btn-coin-enfant > a {
+#primary-menu li.btn-coin-enfant > a {
   display: inline-flex;
   align-items: center;
   padding: 0.47vw 1vw;
@@ -261,13 +261,13 @@
   white-space: nowrap;
   transition: all 0.3s ease;
 }
-#primary-menu li a.btn-coin-enfant > a::after {
+#primary-menu li.btn-coin-enfant > a::after {
   display: none;
 }
-#primary-menu li a.btn-coin-enfant > a::before {
+#primary-menu li.btn-coin-enfant > a::before {
   display: none;
 }
-#primary-menu li a.btn-coin-enfant > a:hover {
+#primary-menu li.btn-coin-enfant > a:hover {
   background: #4a4a4a;
   transform: translateY(-1px);
   color: #ffffff !important;
