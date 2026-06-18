@@ -155,6 +155,10 @@
             width: 15.62vw !important;
             height: 15.62vw !important;
             margin-bottom: 2.08vw;
+            @media(max-width:767px){
+                width:300px!important;
+                height: auto!important;
+            }
         }
    
         .name{

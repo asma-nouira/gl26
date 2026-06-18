@@ -2618,6 +2618,12 @@ body {
   height: 15.62vw !important;
   margin-bottom: 2.08vw;
 }
+@media (max-width: 767px) {
+  .cd-other-team .cd-team-grid-item .vce-single-image-figure-inner {
+    width: 300px !important;
+    height: auto !important;
+  }
+}
 .cd-other-team .cd-team-grid-item .name {
   font-family: "SuperBlue", serif;
   font-size: clamp(1rem, 1.5625vw, 1.875rem);
