@@ -249,8 +249,12 @@ html, body {
   .cd-text-service {
     margin-bottom: 32px !important;
   }
+  .cd-service-card {
+    margin-bottom: 25px !important;
+  }
   .cd-service-card h3 {
-    margin-top: -52px !important;
+    margin-top: -7vw !important;
+    margin-bottom: 0 !important;
     max-width: 170px !important;
     padding: 1.5vw 3vw !important;
   }
