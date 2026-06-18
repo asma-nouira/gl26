@@ -307,7 +307,7 @@ html, body {
     grid-template-columns: 1fr !important;
   }
   .contact-form {
-    padding: 20px 16px !important;
+    padding: 0 !important;
   }
   /* ---- BOUTONS ---- */
   .btn-action-brown,

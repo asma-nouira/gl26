@@ -513,11 +513,17 @@ body .wpcf7-mail-sent-ok {
         color: var(--cd-text);
         display: block;
         margin-bottom: 1.2vw;
+        @media(max-width:768px){
+            margin-bottom: 15px;
+        }
     }
 
     .wpcf7-form-control-wrap {
         display: block;
         margin-top: 0.8vw;
+         @media(max-width:768px){
+            margin-top: 15px;
+         }
     }
 
     input[type="text"],
@@ -528,7 +534,6 @@ body .wpcf7-mail-sent-ok {
         min-height: 42px;
         padding: 0 1vw;
         font-family: var(--cd-font-body);
-      
         color: var(--cd-dark);
         background: #ffffff;
         border: none;
@@ -537,6 +542,11 @@ body .wpcf7-mail-sent-ok {
         outline: none;
         transition: var(--cd-transition);
         box-sizing: border-box;
+         @media(max-width:768px){
+            height: 30px;
+            min-height: 30px;
+            padding: 0 15px;
+         }
 
         &:focus {
             border: 1.5px solid var(--cd-primary);
@@ -550,7 +560,6 @@ body .wpcf7-mail-sent-ok {
         height: 6.5vw;
         padding: 0.7vw 1vw;
         font-family: var(--cd-font-body);
-        
         color: var(--cd-dark);
         background: #ffffff;
         border: none;
@@ -559,6 +568,11 @@ body .wpcf7-mail-sent-ok {
         resize: vertical;
         transition: var(--cd-transition);
         box-sizing: border-box;
+         @media(max-width:768px){
+            height: 30vw;
+            padding: 15px;
+
+         }
 
         &:focus {
             border: 1.5px solid var(--cd-primary);
@@ -574,14 +588,13 @@ body .wpcf7-mail-sent-ok {
         background: var(--cd-brown);
         color: #ffffff;
         font-family: var(--cd-font-body);
-       
         font-weight: 600;
         border: none;
         border-radius: var(--cd-radius-full);
         cursor: pointer;
         transition: var(--cd-transition);
         margin-top: 0.4vw;
-         @media(max-width:767px){
+         @media(max-width:768px){
             padding: 15px 30px;
             margin-top: 20px;
               display: block;
