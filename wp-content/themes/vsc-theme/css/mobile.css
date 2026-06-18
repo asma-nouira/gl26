@@ -356,4 +356,9 @@ html, body {
     margin-top: 30px;
   }
 }
+@media (max-width: 767px) {
+  .no-mobile {
+    display: none !important;
+  }
+}
 /*# sourceMappingURL=../css/mobile.css.map */

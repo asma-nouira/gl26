@@ -131,6 +131,7 @@ html, body {
 
 @media (max-width: 768px) {
 
+
     /* ---- HEADER ---- */
     .site-header {
         height: 60px !important;
@@ -298,4 +299,9 @@ padding-bottom: 30px;
  .mt-30-mob{
     margin-top: 30px;
  }
+}
+@media(max-width:767px){
+    .no-mobile{
+        display: none!important;
+    }
 }
