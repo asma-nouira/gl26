@@ -4115,6 +4115,11 @@ body .wpcf7-mail-sent-ok {
 .cd-appoint-section h2 {
   padding-bottom: 1.2vw;
 }
+@media (max-width: 768px) {
+  .cd-appoint-section h2 {
+    padding-bottom: 20px;
+  }
+}
 .cd-appoint-section a {
   margin-top: 1.3vw;
 }

@@ -449,7 +449,12 @@ body .wpcf7-mail-sent-ok {
 
 .cd-appoint-section {
     padding: 10vw 5vw 9vw 14vw;
-    h2 { padding-bottom: 1.2vw; }
+    h2 { 
+        padding-bottom: 1.2vw;
+         @media(max-width:768px){
+        padding-bottom:20px;
+     }
+     }
     a { margin-top: 1.3vw; 
      @media(max-width:768px){
         margin-top:20px;

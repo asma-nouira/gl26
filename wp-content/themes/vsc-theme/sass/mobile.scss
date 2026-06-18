@@ -252,6 +252,11 @@ html, body {
 
     /* ---- URGENCE ---- */
     .cd-urgence-section { padding: 48px 20px !important; }
+    .cd-urgence-title-wrapper{
+        h2{
+            padding-bottom: 15px;
+        }
+    }
     .cd-urgence-title-wrapper .vce-text-block-wrapper {
         padding-left: 0 !important;
         padding-right: 0 !important;
