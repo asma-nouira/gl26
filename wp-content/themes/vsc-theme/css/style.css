@@ -3236,7 +3236,7 @@ body {
 }
 @media (max-width: 768px) {
   .cd-service-block.simple {
-    padding: 8vw 6vw;
+    padding: 30px 26px;
   }
 }
 
