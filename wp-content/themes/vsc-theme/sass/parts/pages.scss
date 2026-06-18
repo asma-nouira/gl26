@@ -403,19 +403,33 @@
         width:6.6vw;
         height: auto;
         padding-bottom: 1vw;
+        @media(max-width:767px){
+            width:100px;
+            padding-bottom: 20px;
+        }
     }
     h3{
    font-size: clamp(1.1rem, 1.82vw, 2.18rem);
    line-height: 1.14;
    padding-bottom: 0.5vw;
+   @media(max-width:767px){
+    padding-bottom: 20px;
+    font-size: 20px;
+   }
     }
     p{
         padding-bottom: 0.7vw;
+         @media(max-width:767px){
+    padding-bottom: 20px;
     }
+}
     .cd-tel{
         font-size: clamp(1rem, 1.5625vw, 1.875rem);
         font-weight: 700;
         font-family: 'SuperBlue', serif;
+         @media(max-width:767px){
+    font-size: 18px;
+   }
     }
 }
 
