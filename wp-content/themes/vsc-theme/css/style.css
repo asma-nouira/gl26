@@ -2882,6 +2882,11 @@ body {
   font-size: clamp(1rem, 1.5625vw, 1.875rem);
   font-weight: 700;
   font-family: "SuperBlue", serif;
+  cursor: pointer;
+}
+.cd-urgence-txt-form .cd-tel:hover {
+  color: #625756;
+  text-decoration: underline;
 }
 @media (max-width: 767px) {
   .cd-urgence-txt-form .cd-tel {
