@@ -4258,7 +4258,7 @@ body .wpcf7-mail-sent-ok {
   .wpcf7 input[type=email],
   .wpcf7 input[type=tel] {
     height: 30px;
-    min-height: 30px;
+    min-height: 40px;
     padding: 0 15px;
   }
 }
