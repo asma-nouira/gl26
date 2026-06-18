@@ -838,12 +838,17 @@ h2 {
   transition: var(--cd-transition);
   white-space: nowrap;
   line-height: 1.5;
+  text-align: center;
   /* Tailles */
   /* --- Variantes --- */
 }
 @media (max-width: 768px) {
   .cd-btn {
     padding: 13px 20px;
+    display: block;
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .cd-btn.cd-btn-sm {
